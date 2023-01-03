@@ -47,7 +47,7 @@ The code is licensed under the [MIT license](../LICENSE). Copyright © 2022.
 ## Citation 
 please cite the following paper if you used any part of this work. 
 
-`Ahmad Zainul Ihsan, Said Fathalla, and Stefan Sandfeld. 2023. A Domain
+`Ahmad Zainul Ihsan, Said Fathalla, and Stefan Sandfeld. 2023. DISO: A Domain
 Ontology for Modeling Dislocations in Crystalline Materials. In The 38th
 ACM/SIGAPP Symposium on Applied Computing (SAC ’23), March 27-March
 31, 2023, Tallinn, Estonia. ACM, New York, NY, USA, Article 4, 8 pages.

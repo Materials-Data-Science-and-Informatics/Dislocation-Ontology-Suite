@@ -10,7 +10,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="https://purls.helmholtz-metadaten.de/diso">
+    <owl:Ontology rdf:about="https://purls.helmholtz-metadaten.de/disos/diso">
         <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Said Fathalla</terms:contributor>
         <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stefan Sandfeld</terms:contributor>
         <terms:created xml:lang="en">21.03.2022</terms:created>

@@ -10,7 +10,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="https://purls.helmholtz-metadaten.de/cdo">
+    <owl:Ontology rdf:about="https://purls.helmholtz-metadaten.de/disos/cdo">
         <owl:imports rdf:resource="https://purls.helmholtz-metadaten.de/cso"/>
         <owl:imports rdf:resource="https://purls.helmholtz-metadaten.de/diso"/>
         <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Said Fathalla</terms:contributor>
@@ -91,21 +91,21 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/cdo#hasCrystalStructure -->
+    <!-- https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystalStructure -->
 
-    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/cdo#hasCrystalStructure">
-        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/cdo#CrystallineMaterial"/>
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystalStructure">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/cso#CrystalStructure"/>
         <rdfs:label xml:lang="en">has crystal structure</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/cdo#hasCrystallographicDefect -->
+    <!-- https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect -->
 
-    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/cdo#hasCrystallographicDefect">
-        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/cdo#CrystallineMaterial"/>
-        <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect"/>
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial"/>
+        <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect"/>
         <rdfs:label xml:lang="en">has crystallographic defect</rdfs:label>
     </owl:ObjectProperty>
     
@@ -132,19 +132,33 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/cdo#CrystallineMaterial -->
+    <!-- https://purls.helmholtz-metadaten.de/cso#CrystalStructure -->
 
-    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/cdo#CrystallineMaterial">
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/cso#CrystalStructure"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/diso#Dislocation -->
+
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#Dislocation">
+        <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial -->
+
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial">
         <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cdo#hasCrystalStructure"/>
+                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystalStructure"/>
                         <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/cso#CrystalStructure"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cdo#hasCrystalStructure"/>
+                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystalStructure"/>
                         <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/cso#CrystalStructure"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -154,12 +168,12 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cdo#hasCrystallographicDefect"/>
-                        <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect"/>
+                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect"/>
+                        <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cdo#hasCrystallographicDefect"/>
-                        <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect"/>
+                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect"/>
+                        <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -170,41 +184,27 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect -->
+    <!-- https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect -->
 
-    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect">
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect">
         <rdfs:comment xml:lang="en">Lattice irregularity having one or more of its dimensions on the order of an atomic diameter.</rdfs:comment>
         <rdfs:label xml:lang="en">Crystallographic Defect</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/cdo#GrainBoundary -->
+    <!-- https://purls.helmholtz-metadaten.de/disos/cdo#GrainBoundary -->
 
-    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/cdo#GrainBoundary">
-        <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect"/>
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/cdo#GrainBoundary">
+        <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect"/>
     </owl:Class>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/cdo#PointDefect -->
+    <!-- https://purls.helmholtz-metadaten.de/disos/cdo#PointDefect -->
 
-    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/cdo#PointDefect">
-        <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect"/>
-    </owl:Class>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/cso#CrystalStructure -->
-
-    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/cso#CrystalStructure"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/diso#Dislocation -->
-
-    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#Dislocation">
-        <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect"/>
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/cdo#PointDefect">
+        <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect"/>
     </owl:Class>
     <rdf:Description>
         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>

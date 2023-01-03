@@ -1,6 +1,6 @@
 # Dislocation Ontology (DISO)
 
-[![PID](https://img.shields.io/badge/PID-https%3A%2F%2Fpurls.helmholtz--metadaten.de%2Fdiso-brightgreen)](https://purls.helmholtz-metadaten.de/diso) 
+[![PID](https://img.shields.io/badge/PID-https%3A%2F%2Fpurls.helmholtz--metadaten.de%2Fdisos%2Fdiso-brightgreen)](https://purls.helmholtz-metadaten.de/disos/diso) 
 [![doc](https://img.shields.io/badge/doc-https%3A%2F%2Fmaterials--data--science--and--informatics.github.io%2Fdislocation--ontology%2F-blue)](https://materials-data-science-and-informatics.github.io/dislocation-ontology/) 
 
 ![GitHub contributors](https://img.shields.io/github/contributors/Materials-Data-Science-and-Informatics/dislocation-ontology) 
@@ -8,7 +8,7 @@
 ## Table of content
   1. [About DISOS](#about-diso)
   2. [Repository Description](#repository-description)
-  3. [Documentation](#Documentation)
+  3. [Documentation](#documentation)
   4. [Usage](#usage)
   5. [Contact](#contact)
   6. [License](#license)
@@ -47,14 +47,16 @@ The code is licensed under the [MIT license](../LICENSE). Copyright © 2022.
 ## Citation 
 please cite the following paper if you used any part of this work. 
 
-`Ahmad Zainul Ihsan, Said Fathalla, and Stefan Sandfeld. 2023. DISO: A Domain
+`
+Ahmad Zainul Ihsan, Said Fathalla, and Stefan Sandfeld. 2023. DISO: A Domain
 Ontology for Modeling Dislocations in Crystalline Materials. In The 38th
 ACM/SIGAPP Symposium on Applied Computing (SAC ’23), March 27-March
 31, 2023, Tallinn, Estonia. ACM, New York, NY, USA, Article 4, 8 pages.
 https://doi.org/10.1145/3555776.35787
 `
 
-`@inproceedings{ihsan2021steps,
+`
+@inproceedings{ihsan2021steps,
 title={Steps towards a Dislocation Ontology for Crystalline Materials},
 author={Ahmad Zainul Ihsan and Danilo Dessì and Mehwish Alam and Harald Sack and Stefan Sandfeld},
 booktitle={Second International Workshop on Semantic Digital Twins },

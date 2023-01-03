@@ -3,11 +3,11 @@ from rdflib.namespace import  Namespace, RDF, XSD
 
 
 #crystal structure ontology
-CSO = Namespace("https://purls.helmholtz-metadaten.de/cso#")
+CSO = Namespace("https://purls.helmholtz-metadaten.de/disos/cso#")
 #dislocation ontology
-DISO = Namespace("https://purls.helmholtz-metadaten.de/diso#")
+DISO = Namespace("https://purls.helmholtz-metadaten.de/disos/diso#")
 #crystalline-defect-ontology
-CDO = Namespace("https://purls.helmholtz-metadaten.de/cdo#")
+CDO = Namespace("https://purls.helmholtz-metadaten.de/disos/cdo#")
 MDO = Namespace("https://w3id.org/mdo/structure/")
 CHEBI = Namespace("http://purl.obolibrary.org/obo/")
 CHEBIdat = Namespace("http://purl.obolibrary.org/obo/chebi/")
@@ -18,7 +18,7 @@ def rdf_serializer(cif_dict, space_group_data, slip_configs, slip_plane_normals,
     #Material data URI
     example = Namespace(uri)
     g = Graph()
-    g.parse("../../crystal-structure-ontology/crystal-structure-ontology.owl", format="xml")
+    g.parse("../../CSO/crystal-structure-ontology.owl", format="xml")
     space_group_data = space_group_data['spacegroup']
     Bravais_lattice = example['{}_Bravais_lattice'.format(mat_id)]
     crystal_structure = example['{}_crystal_strcture'.format(mat_id)]

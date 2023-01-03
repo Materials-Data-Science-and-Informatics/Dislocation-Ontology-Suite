@@ -1,7 +1,9 @@
-@prefix : <https://purls.helmholtz-metadaten.de/cdo> .
-@prefix cdo: <https://purls.helmholtz-metadaten.de/cdo#> .
-@prefix cso: <https://purls.helmholtz-metadaten.de/cso#> .
-@prefix diso: <https://purls.helmholtz-metadaten.de/diso#> .
+@prefix : <https://purls.helmholtz-metadaten.de/disos/cso> .
+@prefix cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#> .
+@prefix cso: <https://purls.helmholtz-metadaten.de/disos/cso#> .
+@prefix default1: <https://purls.helmholtz-metadaten.de/disos/diso> .
+@prefix default2: <https://purls.helmholtz-metadaten.de/disos/cdo> .
+@prefix diso: <https://purls.helmholtz-metadaten.de/disos/diso#> .
 @prefix ex: <http://example.org/dislocation-microstructure/> .
 @prefix mdo: <https://w3id.org/mdo/structure/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -858,16 +860,26 @@ terms:created a owl:AnnotationProperty .
 
 terms:creator a owl:AnnotationProperty .
 
+terms:license a owl:AnnotationProperty .
+
 terms:title a owl:AnnotationProperty .
 
 vann:preferredNamespacePrefix a owl:AnnotationProperty .
 
+qudt:description a owl:AnnotationProperty .
+
+rdf:HTML a rdfs:Datatype .
+
+owl:equivalentClass a owl:AnnotationProperty .
+
 owl:qualifiedCardinality a owl:AnnotationProperty .
+
+skos:defintion a owl:AnnotationProperty .
 
 skos:prefLabel a owl:AnnotationProperty ;
     rdfs:subPropertyOf rdfs:label .
 
-: a owl:Ontology ;
+default2: a owl:Ontology ;
     terms:contributor "Said Fathalla"^^xsd:string,
         "Stefan Sandfeld"^^xsd:string ;
     terms:created "21.03.2022"@en ;
@@ -875,15 +887,83 @@ skos:prefLabel a owl:AnnotationProperty ;
     terms:license <http://creativecommons.org/licenses/by/3.0/> ;
     terms:title "Crystallographic Defect Ontology"@en ;
     vann:preferredNamespacePrefix "CDO"^^xsd:string ;
-    rdfs:seeAlso "https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology" ;
-    owl:imports <https://purls.helmholtz-metadaten.de/cso>,
-        <https://purls.helmholtz-metadaten.de/diso> .
+    rdfs:seeAlso "https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology" .
 
 cdo:GrainBoundary a owl:Class ;
     rdfs:subClassOf cdo:CrystallographicDefect .
 
 cdo:PointDefect a owl:Class ;
     rdfs:subClassOf cdo:CrystallographicDefect .
+
+: a owl:Ontology ;
+    terms:contributor "Said Fathalla"^^xsd:string,
+        "Stefan Sandfeld"^^xsd:string ;
+    terms:created "21.03.2022"@en ;
+    terms:creator "Ahmad Zainul Ihsan"@en ;
+    terms:license <http://creativecommons.org/licenses/by/3.0/> ;
+    terms:title "Crystal Structure Ontology"@en ;
+    vann:preferredNamespacePrefix "CSO"^^xsd:string ;
+    rdfs:seeAlso "https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology" .
+
+cso:Hexagonal a owl:Class ;
+    rdfs:label "Hexagonal"@en ;
+    rdfs:subClassOf cso:CrystalSystem .
+
+cso:Monoclinic a owl:Class ;
+    rdfs:label "Monoclinic"@en ;
+    rdfs:subClassOf cso:CrystalSystem .
+
+cso:Orthorhombic a owl:Class ;
+    rdfs:label "Orthorhombic"@en ;
+    rdfs:subClassOf cso:CrystalSystem .
+
+cso:Tetragonal a owl:Class ;
+    rdfs:label "Tetragonal"@en ;
+    rdfs:subClassOf cso:CrystalSystem .
+
+cso:Triclinic a owl:Class ;
+    rdfs:label "Triclinic"@en ;
+    rdfs:subClassOf cso:CrystalSystem .
+
+cso:Trigonal a owl:Class ;
+    rdfs:label "Trigonal"@en ;
+    rdfs:subClassOf cso:CrystalSystem .
+
+default1: a owl:Ontology ;
+    rdfs:label "Dislocation Ontology"@en ;
+    terms:contributor "Said Fathalla"^^xsd:string,
+        "Stefan Sandfeld"^^xsd:string ;
+    terms:created "21.03.2022"@en ;
+    terms:creator "Ahmad Zainul Ihsan"@en ;
+    terms:license <http://creativecommons.org/licenses/by/3.0/> ;
+    terms:title "Dislocation Ontology"@en ;
+    vann:preferredNamespacePrefix "DISO"^^xsd:string ;
+    rdfs:seeAlso "https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology" ;
+    owl:versionInfo 1.0 .
+
+diso:EdgeDislocation a owl:Class ;
+    rdfs:label "Edge Dislocation"@en ;
+    rdfs:comment "A dislocation that has a line sense perpendicular to its Burgers vector."@en ;
+    rdfs:subClassOf diso:Dislocation ;
+    owl:disjointWith diso:ScrewDislocation .
+
+diso:hasFamilyCrystalDirection a owl:ObjectProperty ;
+    rdfs:label "has family crystal direction"@en ;
+    rdfs:comment "hasFamilyCrystalDirection represents the relationship between lattice direction and family of crystal direction."@en ;
+    rdfs:domain diso:LatticeDirection ;
+    rdfs:range diso:FamilyOfCrystalDirection .
+
+diso:hasFamilyCrystalPlane a owl:ObjectProperty ;
+    rdfs:label "has family crystal plane"@en ;
+    rdfs:comment "hasFamilyCrystalPlane represents the relationship between the lattice plane and the family of crystal planes."@en ;
+    rdfs:domain diso:LatticePlane ;
+    rdfs:range diso:FamilyOfCrystalPlane .
+
+mdo:ElementRatio a owl:DatatypeProperty ;
+    rdfs:label "element ratio"@en ;
+    rdfs:comment "ElementRatio represents that a species has the ratio in a double."@en ;
+    rdfs:domain mdo:Species ;
+    rdfs:range xsd:double .
 
 <http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94> a owl:Class ;
     rdfs:comment "A instance of a material (e.g. nitrogen) can represent different states of matter. The fact that the individual also belongs to other classes (e.g. Gas) would reveal the actual form in which the material is found."@en,
@@ -3128,6 +3208,207 @@ ex:unit_cell a cso:UnitCell ;
     cso:hasLatticeParameterAngle ex:lattice_parameter_angle ;
     cso:hasLatticeParameterLength ex:lattice_parameter_length .
 
+<http://purl.obolibrary.org/obo/chebi/formula> a owl:DatatypeProperty ;
+    rdfs:domain <http://purl.obolibrary.org/obo/CHEBI_33250> ;
+    rdfs:range xsd:string .
+
+qudt:Quantity a owl:Class ;
+    rdfs:label "Quantity" ;
+    qudt:description """<p class="lm-para">A quantity is the measurement of an observable property of a particular object, event, or physical system. A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the underlying quantity kind is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as the speed of light in a vacuum, Planck's constant, the electric permittivity of free space, and the fine structure constant. </p>
+
+<p class="lm-para">In other words, quantities are quantifiable aspects of the world, such as time, distance, velocity, mass, momentum, energy, and weight, and units are used to describe their measure. Many of which are related to each other by various physical laws, and as a result the units of some of the quantities can be expressed as products (or ratios) of powers of other units (e.g., momentum is mass times velocity and velocity is measured in distance divided by time). These relationships are discussed in dimensional analysis. Those that cannot be so expressed can be regarded as &quot;fundamental&quot; in this sense.</p>
+<p class="lm-para">A quantity is distinguished from a &quot;quantity kind&quot; in that the former carries a value and the latter is a type specifier.</p>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <http://qudt.org/2.0/schema/qudt>,
+        <http://qudt.org/schema/qudt> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityValue ;
+            owl:onProperty qudt:quantityValue ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityValue ;
+            owl:onProperty qudt:quantityValue ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKind ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKind ;
+            owl:onProperty qudt:hasQuantityKind ] .
+
+cso:Cubic a owl:Class ;
+    rdfs:label "Cubic"@en ;
+    rdfs:subClassOf cso:CrystalSystem .
+
+cso:centering a owl:DatatypeProperty ;
+    rdfs:label "centering"@en ;
+    rdfs:comment "Centering type of a Bravais lattice, e.g., primitive (P), base-centered (S), face-centered (F), and body-centered (I)."@en ;
+    rdfs:domain cso:BravaisLattice ;
+    rdfs:range xsd:string .
+
+cso:hasLattice a owl:ObjectProperty ;
+    rdfs:label "has lattice"@en ;
+    rdfs:comment "hasLattice represents the relationship between a crystal structure and lattice."@en ;
+    rdfs:domain cso:CrystalStructure ;
+    rdfs:range cso:Lattice .
+
+cso:isSpaceGroupOf a owl:ObjectProperty ;
+    rdfs:label "is space group of"@en ;
+    rdfs:comment "inverse property of hasSpaceGroup"@en ;
+    rdfs:domain mdo:SpaceGroup ;
+    rdfs:range cso:CrystalStructure ;
+    owl:inverseOf mdo:hasSpaceGroup .
+
+cso:latticeParameterAngleAlpha a owl:DatatypeProperty ;
+    rdfs:label "lattice parameter angle alpha"@en ;
+    rdfs:comment "latticeParameterAngleAlpha represents lattice parameter angle alpha of lattice parameter angle in double."@en ;
+    rdfs:domain cso:LatticeParameterAngle ;
+    rdfs:range xsd:double .
+
+cso:latticeParameterAngleBeta a owl:DatatypeProperty ;
+    rdfs:label "lattice parameter angle beta"@en ;
+    rdfs:comment "latticeParameterAngleBeta represents lattice parameter angle beta of lattice parameter angle in double."@en ;
+    rdfs:domain cso:LatticeParameterAngle ;
+    rdfs:range xsd:double .
+
+cso:latticeParameterAngleGamma a owl:DatatypeProperty ;
+    rdfs:label "lattice parameter angle gamma"@en ;
+    rdfs:comment "latticeParameterAngleGamma represents lattice parameter angle gamma of lattice parameter angle in double."@en ;
+    rdfs:domain cso:LatticeParameterAngle ;
+    rdfs:range xsd:double .
+
+cso:latticeParameterLengthA a owl:DatatypeProperty ;
+    rdfs:label "lattice parameter length a"@en ;
+    rdfs:comment "latticeParameterLengthA represents lattice parameter length a of lattice parameter length in double."@en ;
+    rdfs:domain cso:LatticeParameterLength ;
+    rdfs:range xsd:double .
+
+cso:latticeParameterLengthB a owl:DatatypeProperty ;
+    rdfs:label "lattice parameter length b"@en ;
+    rdfs:comment "latticeParameterLengthB represents lattice parameter length b of lattice parameter length in double."@en ;
+    rdfs:domain cso:LatticeParameterLength ;
+    rdfs:range xsd:double .
+
+cso:latticeParameterLengthC a owl:DatatypeProperty ;
+    rdfs:label "lattice parameter length c"@en ;
+    rdfs:comment "latticeParameterLengthA represents lattice parameter length c of lattice parameter length in double."@en ;
+    rdfs:domain cso:LatticeParameterLength ;
+    rdfs:range xsd:double .
+
+diso:LineDefect a owl:Class ;
+    rdfs:label "Line Defect"@en ;
+    rdfs:comment "Linear or one-dimensional defect around which some of the atoms are misaligned."@en ;
+    rdfs:subClassOf cdo:CrystallographicDefect .
+
+diso:ScrewDislocation a owl:Class ;
+    rdfs:label "Screw Dislocation"@en ;
+    rdfs:comment "A dislocation that has a line sense parallel to its Burgers vector."@en ;
+    rdfs:subClassOf diso:Dislocation .
+
+diso:familyDirectionMillerIndice a owl:DatatypeProperty ;
+    rdfs:label "family direction miller indice"@en ;
+    rdfs:comment "familyDirectionMillerIndice represents a set of miller indices of lattice direction in string."@en ;
+    rdfs:domain diso:FamilyOfCrystalDirection ;
+    rdfs:range xsd:string .
+
+diso:familyPlaneMillerIndice a owl:DatatypeProperty ;
+    rdfs:label "family plane miller indice"@en ;
+    rdfs:comment "familyPlaneMillerIndice represents a set of Miller indice of lattice plane in string."@en ;
+    rdfs:domain diso:FamilyOfCrystalPlane ;
+    rdfs:range xsd:string .
+
+diso:hasEndNode a owl:ObjectProperty ;
+    rdfs:label "has end node"@en ;
+    rdfs:comment "Sub-property of hasNode that relates the segment with the end node."@en ;
+    rdfs:domain diso:Segment ;
+    rdfs:range diso:Node ;
+    rdfs:subPropertyOf diso:hasNode .
+
+diso:hasMathematicalRepresentation a owl:ObjectProperty ;
+    rdfs:label "has mathematical representation"@en ;
+    rdfs:comment "hasMathematicalRepresentation relates the entity with its mathematical representation."@en ;
+    rdfs:domain diso:Dislocation ;
+    rdfs:range diso:Line ;
+    rdfs:subPropertyOf diso:hasRepresentation .
+
+diso:hasNumericalRepresentation a owl:ObjectProperty ;
+    rdfs:label "has numerical representation"@en ;
+    rdfs:comment "hasNumericalRepresentation relates the entity with its numerical representation."@en ;
+    rdfs:domain diso:Line ;
+    rdfs:range diso:DiscretizedLine ;
+    rdfs:subPropertyOf diso:hasRepresentation .
+
+diso:hasSegment a owl:ObjectProperty ;
+    rdfs:label "has segment"@en ;
+    rdfs:comment "hasSegment represents the relationship between discretized line and segment."@en ;
+    rdfs:domain diso:DiscretizedLine ;
+    rdfs:range diso:Segment ;
+    owl:inverseOf diso:isSegmentOf .
+
+diso:hasShapeFunction a owl:ObjectProperty ;
+    rdfs:label "has shape function"@en ;
+    rdfs:comment "hasShapeFunction represents the relationship between discretized line and shape function."@en ;
+    rdfs:domain diso:DiscretizedLine ;
+    rdfs:range diso:ShapeFunction .
+
+diso:hasStartNode a owl:ObjectProperty ;
+    rdfs:label "has start node"@en ;
+    rdfs:comment "Sub-property of hasNode that relates the segment with the start node."@en ;
+    rdfs:domain diso:Segment ;
+    rdfs:range diso:Node ;
+    rdfs:subPropertyOf diso:hasNode .
+
+diso:hasVectorOrigin a owl:ObjectProperty ;
+    rdfs:label "has vector origin"@en ;
+    rdfs:comment "hasVectorOrigin represents the relationship between lattice plane and origin."@en ;
+    rdfs:domain diso:LatticePlane ;
+    rdfs:range diso:VectorOrigin .
+
+diso:movesOn a owl:ObjectProperty ;
+    rdfs:label "moves on"@en ;
+    rdfs:comment "movesOn represents the relationship between dislocation and slip plane."@en ;
+    rdfs:domain diso:Dislocation ;
+    rdfs:range diso:SlipPlane .
+
+diso:planeMillerIndice a owl:DatatypeProperty ;
+    rdfs:label "plane miller indice"@en ;
+    rdfs:comment "planeMillerIndice represents Miller indice of lattice plane in string."@en ;
+    rdfs:domain diso:LatticePlane ;
+    rdfs:range xsd:string .
+
+diso:resultsIn a owl:ObjectProperty ;
+    rdfs:label "results in"@en ;
+    rdfs:comment "resultsIn represents the relationship between dislocation and lattice displacement."@en ;
+    rdfs:domain diso:Dislocation ;
+    rdfs:range diso:LatticeDisplacement .
+
+diso:slipArea a owl:DatatypeProperty ;
+    rdfs:label "slipArea"@en ;
+    rdfs:comment "slipArea represents the slip area of discretized line in double."@en ;
+    rdfs:domain diso:DiscretizedLine ;
+    rdfs:range xsd:double .
+
+mdo:PointGroupHMName a owl:DatatypeProperty ;
+    rdfs:label "point group Hermann-Mauguin name"@en ;
+    rdfs:comment "PointGroupHMName represents that a point group has the Hermann-Mauguin in a string."@en ;
+    rdfs:domain mdo:PointGroup ;
+    rdfs:range xsd:string .
+
+mdo:SpaceGroupID a owl:DatatypeProperty ;
+    rdfs:label "space group ID"@en ;
+    rdfs:comment "SpaceGroupID represents that a space group has the unique ID in an integer."@en ;
+    rdfs:domain mdo:SpaceGroup ;
+    rdfs:range xsd:integer .
+
+mdo:SpaceGroupSymbol a owl:DatatypeProperty ;
+    rdfs:label "space group symbol"@en ;
+    rdfs:comment "SpaceGroupSymbol represents that a space group has the symbol in a string."@en ;
+    rdfs:domain mdo:SpaceGroup ;
+    rdfs:range xsd:string .
+
+mdo:hasElement a owl:ObjectProperty ;
+    rdfs:label "has element"@en ;
+    rdfs:comment "hasElement represents the relationship between a species and atoms it has."@en ;
+    rdfs:domain mdo:Species ;
+    rdfs:range <http://purl.obolibrary.org/obo/CHEBI_33250> .
+
 ex:crystal_system a cso:Cubic .
 
 ex:dislocation_0_slip_direction a diso:SlipDirection ;
@@ -3726,6 +4007,25 @@ ex:node_98 a diso:Node ;
 ex:node_99 a diso:Node ;
     cso:hasPositionVector ex:node_99_position_vector .
 
+qudt:hasQuantityKind a owl:ObjectProperty ;
+    rdfs:label "has quantity kind" ;
+    rdfs:isDefinedBy <http://qudt.org/2.0/schema/qudt>,
+        <http://qudt.org/schema/qudt> ;
+    rdfs:range qudt:QuantityKind .
+
+qudt:quantityValue a owl:ObjectProperty ;
+    rdfs:label "quantity value" ;
+    rdfs:isDefinedBy <http://qudt.org/2.0/schema/qudt>,
+        <http://qudt.org/schema/qudt> ;
+    rdfs:range qudt:QuantityValue .
+
+qudt:unit a owl:ObjectProperty ;
+    rdfs:label "unit" ;
+    qudt:description "A reference to the unit of measure of a quantity (variable or constant) of interest."^^rdf:HTML ;
+    rdfs:isDefinedBy <http://qudt.org/2.0/schema/qudt>,
+        <http://qudt.org/schema/qudt> ;
+    rdfs:range qudt:Unit .
+
 cdo:hasCrystalStructure a owl:ObjectProperty ;
     rdfs:label "has crystal structure"@en ;
     rdfs:domain cdo:CrystallineMaterial ;
@@ -3736,22 +4036,277 @@ cdo:hasCrystallographicDefect a owl:ObjectProperty ;
     rdfs:domain cdo:CrystallineMaterial ;
     rdfs:range cdo:CrystallographicDefect .
 
+cso:BravaisLattice a owl:Class ;
+    rdfs:label "Bravais Lattice"@en ;
+    rdfs:comment "Lattice types that has seven primitive lattices and seven non-primitive lattices."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty cso:centering ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        cso:Lattice .
+
+cso:firstAxisComponent a owl:DatatypeProperty ;
+    rdfs:label "first axis component"@en ;
+    rdfs:comment "A first vector component related to the first axis vector of a basis"@en ;
+    rdfs:domain cso:VectorComponentOfBasis ;
+    rdfs:range xsd:double .
+
+cso:hasCrystalSystem a owl:ObjectProperty ;
+    rdfs:label "has crystal system"@en ;
+    rdfs:comment "hasCrystalSystem represents the relationship between unit cell and crystal system."@en ;
+    rdfs:domain cso:Lattice ;
+    rdfs:range cso:CrystalSystem .
+
+cso:hasFirstAxisVector a owl:ObjectProperty ;
+    rdfs:label "has first axis vector"@en ;
+    rdfs:comment "hasFirstAxisVector represents the relationship between a basis and a coordinate vector to define the coordianates of the axis vector the first basis"@en ;
+    rdfs:domain mdo:Basis ;
+    rdfs:range mdo:CoordinateVector .
+
+cso:hasLatticeParameterAngle a owl:ObjectProperty ;
+    rdfs:label "has lattice parameter angle"@en ;
+    rdfs:domain cso:UnitCell ;
+    rdfs:range cso:LatticeParameterAngle .
+
+cso:hasLatticeParameterLength a owl:ObjectProperty ;
+    rdfs:label "has lattice parameter length"@en ;
+    rdfs:domain cso:UnitCell ;
+    rdfs:range cso:LatticeParameterLength .
+
+cso:hasPositionVector a owl:ObjectProperty ;
+    rdfs:label "has position vector"@en ;
+    rdfs:comment "hasPositionVector represents the relationship between entity and position vector."@en ;
+    rdfs:domain cso:Point ;
+    rdfs:range cso:PositionVector .
+
+cso:hasSecondAxisVector a owl:ObjectProperty ;
+    rdfs:label "has second axis vector"@en ;
+    rdfs:comment "hasSexondAxisVector represents the relationship between a basis and a coordinate vector to define the coordianates of the axis vector the second basis"@en ;
+    rdfs:domain mdo:Basis ;
+    rdfs:range mdo:CoordinateVector .
+
+cso:hasThirdAxisVector a owl:ObjectProperty ;
+    rdfs:label "has third axis vector"@en ;
+    rdfs:comment "hasThirdAxisVector represents the relationship between a basis and a coordinate vector to define the coordianates of the axis vector the third basis"@en ;
+    rdfs:domain mdo:Basis ;
+    rdfs:range mdo:CoordinateVector .
+
+cso:hasUnitCell a owl:ObjectProperty ;
+    rdfs:label "has unit cell"@en ;
+    rdfs:comment "hasUnitCell hasSpecies represents the relationship between a lattice and  unit cells."@en ;
+    rdfs:domain cso:Lattice ;
+    rdfs:range cso:UnitCell .
+
+cso:isPointGroupOf a owl:ObjectProperty ;
+    rdfs:label "is point group of"@en ;
+    rdfs:comment "inverse property of hasPointGroup"@en ;
+    rdfs:domain mdo:PointGroup ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( cso:CrystalSystem mdo:SpaceGroup ) ] ;
+    owl:inverseOf mdo:hasPointGroup .
+
+cso:secondAxisComponent a owl:DatatypeProperty ;
+    rdfs:label "second axis component"@en ;
+    rdfs:comment "A second vector component related to the second axis vector of a basis"@en ;
+    rdfs:domain cso:VectorComponentOfBasis ;
+    rdfs:range xsd:double .
+
+cso:thirdAxisComponent a owl:DatatypeProperty ;
+    rdfs:label "third axis component"@en ;
+    rdfs:comment "A third vector component related to the third axis vector of a basis"@en ;
+    rdfs:domain cso:VectorComponentOfBasis ;
+    rdfs:range xsd:double .
+
+cso:vectorMagnitude a owl:DatatypeProperty ;
+    rdfs:label "vector magnitude"@en ;
+    rdfs:domain cso:Vector ;
+    rdfs:range xsd:double .
+
+diso:FieldIonMicroscopy a owl:Class ;
+    rdfs:label "Field Ion Microscopy"@en ;
+    rdfs:comment "Field Ion Microscopy (FIM) is a microscopy technique that can be used to image the arrangement of atoms."@en ;
+    owl:disjointWith diso:TransmissionElectronMicroscopy .
+
+diso:LatticeDisplacement a owl:Class ;
+    rdfs:label "Lattice Displacement"@en ;
+    rdfs:comment "The displacement of atoms from their perfect lattice sites due to the existence of defects, e.g., point defect, line defect, and grain boundary."@en .
+
+diso:ShapeFunction a owl:Class ;
+    rdfs:label "Shape Function"@en ;
+    rdfs:comment "The shape function is the function that interpolates the solution between the discrete values obtained at the mesh nodes. In discretized dislocation, the shape function determines the shape of a segment and ultimately determines the shape of the line. Examples of shape function that is used to discretize the dislocation are circular, elliptic, spiral, linear, cubic, and quintic."@en .
+
+diso:directionMillerIndice a owl:DatatypeProperty ;
+    rdfs:label "direction miller indice"@en ;
+    rdfs:comment "directionMillerIndice represents Miller indice of lattice direction in string."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( diso:LatticeDirection diso:SlipPlaneNormal ) ] ;
+    rdfs:range xsd:string .
+
+diso:hasBurgersVector a owl:ObjectProperty ;
+    rdfs:label "has Burgers vector"@en ;
+    rdfs:comment "hasBurgersVector represents the relationship between dislocation to Burgers vector."@en ;
+    rdfs:domain diso:Dislocation ;
+    rdfs:range diso:BurgersVector .
+
+diso:hasLatticePlane a owl:ObjectProperty ;
+    rdfs:label "has lattice plane"@en ;
+    rdfs:comment "hasLatticePlane represents the relationship between a lattice and lattice planes."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( cso:CrystalStructure cso:Lattice ) ] ;
+    rdfs:range diso:LatticePlane .
+
+diso:hasLineSense a owl:ObjectProperty ;
+    rdfs:label "has line sense"@en ;
+    rdfs:comment "hasLineSense represents the relationship between dislocation and line sense."@en ;
+    rdfs:domain diso:Dislocation ;
+    rdfs:range diso:LineSense .
+
+diso:hasNode a owl:ObjectProperty ;
+    rdfs:label "has node"@en ;
+    rdfs:comment "hasNode represents the relationship between segment and node."@en ;
+    rdfs:domain diso:Segment ;
+    rdfs:range diso:Node .
+
+diso:hasRepresentation a owl:ObjectProperty ;
+    rdfs:label "has representation"@en ;
+    rdfs:comment "hasRepresentation relates the entity to another representation of entity."@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( diso:DiscretizedLine diso:Line ) ] .
+
+diso:hasSlipPlane a owl:ObjectProperty ;
+    rdfs:label "has slip plane"@en ;
+    rdfs:comment "hasSlipPlane represents the relationship between crystal structure and slip plane."@en ;
+    rdfs:domain cso:CrystalStructure ;
+    rdfs:range diso:SlipPlane ;
+    rdfs:subPropertyOf diso:hasLatticePlane .
+
+diso:hasSlipSystem a owl:ObjectProperty ;
+    rdfs:label "has slip system"@en ;
+    rdfs:comment "hasSlipSystem represents the relationship between a crystal structure and slip system."@en ;
+    rdfs:domain cso:CrystalStructure ;
+    rdfs:range diso:SlipSystem .
+
+diso:isSegmentOf a owl:ObjectProperty ;
+    rdfs:label "is segment of"@en ;
+    rdfs:comment "Inverse of hasSegment"@en ;
+    rdfs:domain diso:Segment ;
+    rdfs:range diso:DiscretizedLine .
+
+diso:observedBy a owl:ObjectProperty ;
+    rdfs:label "observed by"@en ;
+    rdfs:comment "observedBy represents the relationship between dislocation and microscopy techniques, e.g., TEM, FIM, etc."@en ;
+    rdfs:domain diso:Dislocation ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( diso:FieldIonMicroscopy diso:TransmissionElectronMicroscopy ) ] .
+
+mdo:X_axisCoordinate a owl:DatatypeProperty ;
+    rdfs:label "X_axis coordinate"@en ;
+    rdfs:comment "X_axisCoordinate represents that a coordinate vector has the value of a coordinate in a double in X axis."@en ;
+    rdfs:domain mdo:CoordinateVector ;
+    rdfs:range xsd:double .
+
+mdo:Y_axisCoordinate a owl:DatatypeProperty ;
+    rdfs:label "Y_axis coordinate"@en ;
+    rdfs:comment "Y_axisCoordinate represents that a coordinate vector has the value of a coordinate in a double in Y axis."@en ;
+    rdfs:domain mdo:CoordinateVector ;
+    rdfs:range xsd:double .
+
+mdo:Z_axisCoordinate a owl:DatatypeProperty ;
+    rdfs:label "Z_axis coordinate"@en ;
+    rdfs:comment "Z_axisCoordinate represents that a coordinate vector has the value of a coordinate in a double in Z axis."@en ;
+    rdfs:domain mdo:CoordinateVector ;
+    rdfs:range xsd:double .
+
+mdo:hasCartesianCoordinates a owl:ObjectProperty ;
+    rdfs:label "has cartesian coordinates"@en ;
+    rdfs:comment "hasCartesianCoordinates represents the relationship between a site and coordinates in cartesian format it has."@en ;
+    rdfs:domain mdo:Site ;
+    rdfs:range mdo:CoordinateVector .
+
+mdo:hasFractionalCoordinates a owl:ObjectProperty ;
+    rdfs:label "has fractional coordinates"@en ;
+    rdfs:comment "hasFractionalCoordinates represents the relationship between a site and coordinates in fractional format it has."@en ;
+    rdfs:domain mdo:Site ;
+    rdfs:range mdo:CoordinateVector .
+
+mdo:hasOccupancy a owl:ObjectProperty ;
+    rdfs:label "has occupancy"@en ;
+    rdfs:comment "hasOccupancy represents the relationship between a structure and occupancies it has."@en ;
+    rdfs:domain cso:CrystalStructure ;
+    rdfs:range mdo:Occupancy .
+
+mdo:hasSite a owl:ObjectProperty ;
+    rdfs:label "has site"@en ;
+    rdfs:comment "hasSite represents the relationship between an occupancy and sites it ties."@en ;
+    rdfs:domain mdo:Occupancy ;
+    rdfs:range mdo:Site .
+
+mdo:hasSpecies a owl:ObjectProperty ;
+    rdfs:label "has species"@en ;
+    rdfs:comment "hasSpecies represents the relationship between an occupancy and species it ties."@en ;
+    rdfs:domain mdo:Occupancy ;
+    rdfs:range mdo:Species .
+
+<http://purl.obolibrary.org/obo/CHEBI_33250> a owl:Class ;
+    rdfs:label "Atom"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty <http://purl.obolibrary.org/obo/chebi/formula> ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
+    skos:defintion "A chemical entity constituting the smallest component of an element having the chemical properties of the element."@en .
+
+qudt:QuantityKind a owl:Class ;
+    rdfs:label "Quantity Kind" ;
+    qudt:description "A <b>Quantity Kind</b> is any observable property that can be  measured and quantified numerically. Familiar examples include physical properties such as length, mass, time, force, energy, power, electric charge, etc. Less familiar examples include currency, interest rate, price to earning ratio, and information capacity."^^rdf:HTML ;
+    rdfs:isDefinedBy <http://qudt.org/2.0/schema/qudt>,
+        <http://qudt.org/schema/qudt> .
+
+qudt:Unit a owl:Class ;
+    rdfs:label "Unit" ;
+    qudt:description "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\(Q = nU\\)."^^rdf:HTML ;
+    rdfs:isDefinedBy <http://qudt.org/2.0/schema/qudt>,
+        <http://qudt.org/schema/qudt> .
+
 cdo:CrystallineMaterial a owl:Class ;
     rdfs:label "Crystalline Material"@en ;
     rdfs:comment "Crystalline material is material characterized by a periodic arrangement of the constituent atoms. The arrangement could be described its crystal structure."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cdo:hasCrystallographicDefect ;
-                        owl:someValuesFrom cdo:CrystallographicDefect ] [ a owl:Restriction ;
-                        owl:allValuesFrom cdo:CrystallographicDefect ;
-                        owl:onProperty cdo:hasCrystallographicDefect ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cdo:hasCrystalStructure ;
                         owl:someValuesFrom cso:CrystalStructure ] [ a owl:Restriction ;
                         owl:allValuesFrom cso:CrystalStructure ;
                         owl:onProperty cdo:hasCrystalStructure ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cdo:hasCrystallographicDefect ;
+                        owl:someValuesFrom cdo:CrystallographicDefect ] [ a owl:Restriction ;
+                        owl:allValuesFrom cdo:CrystallographicDefect ;
+                        owl:onProperty cdo:hasCrystallographicDefect ] ) ],
         <http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94> .
+
+diso:FamilyOfCrystalDirection a owl:Class ;
+    rdfs:label "Family of Crystal Direction"@en ;
+    rdfs:comment "A set of symmetrically equivalent directions in the lattice."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty diso:familyDirectionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
+    owl:disjointWith diso:FamilyOfCrystalPlane .
+
+diso:LineSense a owl:Class ;
+    rdfs:label "Line Sense"@en ;
+    rdfs:comment "A sense that characterizes a directed line, i.e., it has a start and an end."@en .
+
+diso:TransmissionElectronMicroscopy a owl:Class ;
+    rdfs:label "Transmission Electron Microscopy"@en ;
+    rdfs:comment "Transmission electron microscopy (TEM) is a microscopy technique in which a beam of electrons is transmitted through a specimen to form an image. The specimen is often an ultrathin section less than 100 nm thick."@en .
+
+mdo:hasSpaceGroup a owl:ObjectProperty ;
+    rdfs:label "has space group"@en ;
+    rdfs:comment "hasSpaceGroup represents the relationship between a structure and a space group it corresponds to."@en ;
+    rdfs:domain cso:CrystalStructure ;
+    rdfs:range mdo:SpaceGroup .
 
 ex:node_15 a diso:Node ;
     cso:hasPositionVector ex:node_15_position_vector .
@@ -3765,7 +4320,105 @@ ex:node_72 a diso:Node ;
 ex:node_96 a diso:Node ;
     cso:hasPositionVector ex:node_96_position_vector .
 
-cso:CrystalStructure a owl:Class .
+cso:Point a owl:Class ;
+    rdfs:label "Point"@en ;
+    rdfs:comment "In classical Euclidean geometry, a point is a primitive notion that models an exact location in the space, and has no length, width, or thickness."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom cso:PositionVector ;
+            owl:onProperty cso:hasPositionVector ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cso:PositionVector ;
+            owl:onProperty cso:hasPositionVector ] .
+
+cso:hasVectorComponent a owl:ObjectProperty ;
+    rdfs:label "has vector component"@en ;
+    rdfs:comment "hasVectorComponent relates the Vector with 'Vector Components of Basis'"@en ;
+    rdfs:domain cso:Vector ;
+    rdfs:range cso:VectorComponentOfBasis .
+
+diso:FamilyOfCrystalPlane a owl:Class ;
+    rdfs:label "Family of Crystal Plane"@en ;
+    rdfs:comment "A set of symmetrically equivalent planes in the lattice."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty diso:familyPlaneMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+
+diso:hasSlipDirection a owl:ObjectProperty ;
+    rdfs:label "has slip direction"@en ;
+    rdfs:comment "hasSlipDirection represents the relationship between the slip plane or slip system with the slip direction."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( diso:SlipPlane diso:SlipSystem ) ] ;
+    rdfs:range diso:SlipDirection ;
+    rdfs:subPropertyOf diso:hasLatticeDirection .
+
+diso:hasSlipPlaneNormal a owl:ObjectProperty ;
+    rdfs:label "has slip plane normal"@en ;
+    rdfs:comment "hasSlipPlaneNormal represents the relationship between a slip plane or slip system with slip plane normal."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( diso:SlipPlane diso:SlipSystem ) ] ;
+    rdfs:range diso:SlipPlaneNormal .
+
+qudt:QuantityValue a owl:Class ;
+    rdfs:label "Quantity value" ;
+    qudt:description "A <i>Quantity Value</i> expresses the magnitude and kind of a quantity and is given by the product of a numerical value <code>n</code> and a unit of measure <code>U</code>. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to <a href=\"http://physics.nist.gov/Pubs/SP811/sec07.html\">NIST SP 811 section 7</a> for more on quantity values."^^rdf:HTML ;
+    rdfs:isDefinedBy <http://qudt.org/2.0/schema/qudt>,
+        <http://qudt.org/schema/qudt> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Unit ;
+            owl:onProperty qudt:unit ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:Unit ;
+            owl:onProperty qudt:unit ] .
+
+mdo:Occupancy a owl:Class ;
+    rdfs:label "Occupancy"@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSite ;
+                        owl:someValuesFrom mdo:Site ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Site ;
+                        owl:onProperty mdo:hasSite ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSpecies ;
+                        owl:someValuesFrom mdo:Species ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Species ;
+                        owl:onProperty mdo:hasSpecies ] ) ] ;
+    skos:defintion "An occupancy ties a specific species to a site."@en .
+
+mdo:Site a owl:Class ;
+    rdfs:label "Site"@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] ) ] ;
+    skos:defintion "A site is a point in a lattice."@en .
+
+mdo:Species a owl:Class ;
+    rdfs:label "Species"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass <http://purl.obolibrary.org/obo/CHEBI_33250> ;
+            owl:onProperty mdo:hasElement ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
+    skos:defintion "A species is the combination of atoms on each site."@en .
+
+mdo:hasPointGroup a owl:ObjectProperty ;
+    rdfs:label "has point group"@en ;
+    rdfs:comment "hasPointGroup represents the relationship between a space group and point groups it corresponds to."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( cso:CrystalSystem mdo:SpaceGroup ) ] ;
+    rdfs:range mdo:PointGroup .
 
 ex:dislocation_8_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 2.313398e+03 .
@@ -3776,15 +4429,422 @@ ex:node_122 a diso:Node ;
 ex:node_58 a diso:Node ;
     cso:hasPositionVector ex:node_58_position_vector .
 
+cso:UnitCell a owl:Class ;
+    rdfs:label "Unit Cell"@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cso:hasLatticeParameterAngle ;
+                        owl:someValuesFrom cso:LatticeParameterAngle ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:LatticeParameterAngle ;
+                        owl:onProperty cso:hasLatticeParameterAngle ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cso:hasLatticeParameterLength ;
+                        owl:someValuesFrom cso:LatticeParameterLength ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:LatticeParameterLength ;
+                        owl:onProperty cso:hasLatticeParameterLength ] ) ] ;
+    skos:defintion "Basic structural unit or building block of the crystal structure and defines the crystal structure by virtue of its geometry and the atom positions within."@en .
+
+cso:Vector a owl:Class ;
+    rdfs:label "Vector"@en ;
+    rdfs:comment "(Euclidean) vector is used to represent quantities that both magnitude and direction."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty cso:vectorMagnitude ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cso:hasVectorComponent ;
+                        owl:someValuesFrom cso:VectorComponentOfBasis ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:VectorComponentOfBasis ;
+                        owl:onProperty cso:hasVectorComponent ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cso:hasVectorComponent ;
+                        owl:someValuesFrom cso:VectorComponentOfBasis ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:VectorComponentOfBasis ;
+                        owl:onProperty cso:hasVectorComponent ] ) ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty cso:vectorMagnitude ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
+    skos:defintion "(Euclidean) vector used to represent quantities that both magnitude and direction."@en .
+
+cso:hasBasis a owl:ObjectProperty ;
+    rdfs:label "has basis"@en ;
+    rdfs:comment "hasBasis represents the relationship between a lattice or coordinate vector basis and basis."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( cso:Lattice cso:VectorComponentOfBasis ) ] ;
+    rdfs:range mdo:Basis .
+
+diso:hasLatticeDirection a owl:ObjectProperty ;
+    rdfs:label "has lattice direction"@en ;
+    rdfs:comment "hasLatticeDirection represents the relationship between a lattice or a lattice plane with lattice directions."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( cso:Lattice diso:LatticePlane ) ] ;
+    rdfs:range diso:LatticeDirection .
+
+diso:hasLatticePoint a owl:ObjectProperty ;
+    rdfs:label "has lattice point"@en ;
+    rdfs:comment "hasLatticePoint represents the relationship between a lattice or lattice plane or lattice direction with lattice point."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( cso:Lattice diso:LatticeDirection diso:LatticePlane ) ] ;
+    rdfs:range diso:LatticePoint .
+
 cdo:CrystallographicDefect a owl:Class ;
     rdfs:label "Crystallographic Defect"@en ;
-    rdfs:comment "Lattice irregularity having one or more of its dimensions on the order of an atomic diameter."@en .
+    rdfs:comment "Lattice irregularity having one or more of its dimensions on the order of an atomic diameter."@en,
+        "The crystallographic defect is a lattice irregularity that has one or more dimensions on the order of an atomic diameter."@en .
 
-diso:Dislocation a owl:Class ;
-    rdfs:subClassOf cdo:CrystallographicDefect .
+cso:LatticeParameterAngle a owl:Class ;
+    rdfs:label "Lattice Parameter Angle"@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onDataRange xsd:double ;
+                        owl:onProperty cso:latticeParameterAngleAlpha ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onDataRange xsd:double ;
+                        owl:onProperty cso:latticeParameterAngleBeta ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onDataRange xsd:double ;
+                        owl:onProperty cso:latticeParameterAngleGamma ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ] ;
+    owl:disjointWith cso:LatticeParameterLength ;
+    skos:defintion "The three angles of edges in lattice parameter lengths characterizing the unit cell."@en .
+
+diso:LatticePoint a owl:Class ;
+    rdfs:label "Lattice Point"@en ;
+    rdfs:comment "Lattice point is the point where atom(s) or molecule(s) is located."@en ;
+    rdfs:subClassOf cso:Point .
+
+cso:LatticeParameterLength a owl:Class ;
+    rdfs:label "Lattice Parameter Length"@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onDataRange xsd:double ;
+                        owl:onProperty cso:latticeParameterLengthA ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onDataRange xsd:double ;
+                        owl:onProperty cso:latticeParameterLengthB ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onDataRange xsd:double ;
+                        owl:onProperty cso:latticeParameterLengthC ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ] ;
+    skos:defintion "The three edges characterize the unit cell that parallelepiped."@en .
+
+diso:LatticePlane a owl:Class ;
+    rdfs:label "Lattice Plane"@en ;
+    rdfs:comment "The lattice plane forms an infinitely stretched plane (characterized through a plane normal) that cuts through lattice points such that, again, a regular arrangement of lattice points in the plane occurs."@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty diso:hasLatticePoint ;
+                        owl:someValuesFrom diso:LatticePoint ] [ a owl:Restriction ;
+                        owl:allValuesFrom diso:LatticePoint ;
+                        owl:onProperty diso:hasLatticePoint ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty diso:hasLatticeDirection ;
+                        owl:someValuesFrom diso:LatticeDirection ] [ a owl:Restriction ;
+                        owl:allValuesFrom diso:LatticeDirection ;
+                        owl:onProperty diso:hasLatticeDirection ] ) ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty diso:planeMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom diso:VectorOrigin ;
+            owl:onProperty diso:hasVectorOrigin ],
+        diso:FamilyOfCrystalPlane .
+
+mdo:PointGroup a owl:Class ;
+    rdfs:label "Point Group"@en ;
+    rdfs:comment "A group of linear mappings of vector space, which is corresonpond to the group of motions in point space determining the symmetry of the macroscopic crystal, is called the point group of the crystal, furthermore of the crystal structure, and is also called the point group of its space group."@en,
+        "In the symmetry point of view, a set of point groups (32 point groups) is classified into the crystal system. Note that the point group describes the symmetry of macroscopic or finite object, thus the Bravais lattice (translation symmetry) is negligible."@en ;
+    rdfs:seeAlso "International Tables for Crystallography, Volume A, Fourth, revised edition, Section 8.1.5."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cso:isPointGroupOf ;
+            owl:someValuesFrom cso:CrystalSystem ],
+        [ a owl:Restriction ;
+            owl:onProperty cso:isPointGroupOf ;
+            owl:someValuesFrom mdo:SpaceGroup ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty mdo:PointGroupHMName ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+
+cso:Lattice a owl:Class ;
+    rdfs:label "Lattice"@en ;
+    rdfs:comment "The mathematical concept to represent the periodicity of a crystal. A lattice defines a periodic arrangement of one or more atoms."@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty diso:hasLatticeDirection ;
+                        owl:someValuesFrom diso:LatticeDirection ] [ a owl:Restriction ;
+                        owl:allValuesFrom diso:LatticeDirection ;
+                        owl:onProperty diso:hasLatticeDirection ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cso:hasCrystalSystem ;
+                        owl:someValuesFrom cso:CrystalSystem ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:CrystalSystem ;
+                        owl:onProperty cso:hasCrystalSystem ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cso:hasUnitCell ;
+                        owl:someValuesFrom cso:UnitCell ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:UnitCell ;
+                        owl:onProperty cso:hasUnitCell ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cso:hasBasis ;
+                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Basis ;
+                        owl:onProperty cso:hasBasis ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty diso:hasLatticePoint ;
+                        owl:someValuesFrom diso:LatticePoint ] [ a owl:Restriction ;
+                        owl:allValuesFrom diso:LatticePoint ;
+                        owl:onProperty diso:hasLatticePoint ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty diso:hasLatticePlane ;
+                        owl:someValuesFrom diso:LatticePlane ] [ a owl:Restriction ;
+                        owl:allValuesFrom diso:LatticeDirection ;
+                        owl:onProperty diso:hasLatticeDirection ] ) ] ;
+    skos:defintion "A lattice defines a periodic arrangement of one or more atoms."@en .
+
+diso:LatticeDirection a owl:Class ;
+    rdfs:label "Lattice Direction"@en ;
+    rdfs:comment "The vector direction inside the lattice that is connecting two lattice points."@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty diso:hasLatticePoint ;
+                        owl:someValuesFrom diso:LatticePoint ] [ a owl:Restriction ;
+                        owl:allValuesFrom diso:LatticePoint ;
+                        owl:onProperty diso:hasLatticePoint ] ) ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty diso:directionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        cso:Vector,
+        diso:FamilyOfCrystalDirection .
+
+mdo:SpaceGroup a owl:Class ;
+    rdfs:label "Space Group"@en ;
+    rdfs:comment "A space group is the symmetry group of a three-dimensional crystal pattern is called its space group."@en,
+        "Combination of Bravais lattice, point groups, two symmetry operations (screw rotation and glide reflection) results in space groups"@en,
+        """The nomenclature consists of a maximum of four symbols for each space group, e.g., Fm-3m(Cubic)
+First symbol defines the Bravais lattice centering, here is the cubic centering, C. The next three symbols defines symmetry elements with respect to viewing directions, which are different from crystal system to crystal system."""@en ;
+    rdfs:seeAlso "International Tables for Crystallography, Volume !, Fourth, revised edition, Section 8.1.5."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cso:isSpaceGroupOf ;
+            owl:someValuesFrom cso:CrystalStructure ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasPointGroup ;
+                        owl:someValuesFrom mdo:PointGroup ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:PointGroup ;
+                        owl:onProperty mdo:hasPointGroup ] ) ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty mdo:SpaceGroupSymbol ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:integer ;
+            owl:onProperty mdo:SpaceGroupID ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+
+diso:VectorOrigin a owl:Class ;
+    rdfs:label "Ursprung"@de,
+        "Vector Origin"@en ;
+    rdfs:comment "A fixed point that is needed by the vector to identify other points in the space relative to its origin."@en ;
+    rdfs:subClassOf cso:Point .
+
+mdo:Basis a owl:Class ;
+    rdfs:label "Basis"@en ;
+    rdfs:comment "A basis defines a spatial unit used to express fractional coordinates."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass mdo:CoordinateVector ;
+            owl:onProperty cso:hasSecondAxisVector ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass mdo:CoordinateVector ;
+            owl:onProperty cso:hasFirstAxisVector ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass mdo:CoordinateVector ;
+            owl:onProperty cso:hasSecondAxisVector ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass mdo:CoordinateVector ;
+            owl:onProperty cso:hasFirstAxisVector ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass mdo:CoordinateVector ;
+            owl:onProperty cso:hasThirdAxisVector ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass mdo:CoordinateVector ;
+            owl:onProperty cso:hasThirdAxisVector ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
+    skos:defintion "Set of vector(in 2-D two vectors and in 3-D three vectors) that linearly independent."@en .
+
+cso:CrystalStructure a owl:Class ;
+    rdfs:label "Crystal Structure"@en ;
+    rdfs:comment "A crystal structure is described by the lattice geometry and atomic arrangements within the unit cell."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom cso:Lattice ;
+            owl:onProperty cso:hasLattice ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:SpaceGroup ;
+                        owl:onProperty mdo:hasSpaceGroup ] [ a owl:Restriction ;
+                        owl:onClass mdo:SpaceGroup ;
+                        owl:onProperty mdo:hasSpaceGroup ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty diso:hasSlipPlane ;
+                        owl:someValuesFrom diso:SlipPlane ] [ a owl:Restriction ;
+                        owl:allValuesFrom diso:SlipPlane ;
+                        owl:onProperty diso:hasSlipPlane ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasOccupancy ;
+                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Occupancy ;
+                        owl:onProperty mdo:hasOccupancy ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty diso:hasSlipSystem ;
+                        owl:someValuesFrom diso:SlipSystem ] [ a owl:Restriction ;
+                        owl:allValuesFrom diso:SlipSystem ;
+                        owl:onProperty diso:hasSlipSystem ] ) ] ;
+    skos:defintion "A crystal structure is described by both of the lattice geometry and atomic arrangements within the unit cell."@en .
+
+diso:BurgersVector a owl:Class ;
+    rdfs:label "Burgers Vector"@en ;
+    rdfs:comment "An elementary unit (length order of lattice parameter) of lattice translation. The basic notion of the Burgers vector comes from the closure failure of an initially perfect lattice due to the existence of dislocation. The magnitude and direction of closure failure are characterized by the Burgers vector."@en ;
+    rdfs:subClassOf cso:Vector .
+
+cso:CrystalSystem a owl:Class ;
+    rdfs:label "Crystal System"@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:PointGroup ;
+                        owl:onProperty mdo:hasPointGroup ] [ a owl:Restriction ;
+                        owl:onClass mdo:PointGroup ;
+                        owl:onProperty mdo:hasPointGroup ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ] ;
+    skos:defintion "A classification scheme for crystal structures on the basis of unit cell geometry."@en .
+
+diso:SlipSystem a owl:Class ;
+    rdfs:label "Slip System"@en ;
+    rdfs:comment "A slip system is defined as the set of slip planes with the same unit normal vector and the same slip direction."@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty diso:hasSlipPlaneNormal ;
+                        owl:someValuesFrom diso:SlipPlaneNormal ] [ a owl:Restriction ;
+                        owl:allValuesFrom diso:SlipPlaneNormal ;
+                        owl:onProperty diso:hasSlipPlaneNormal ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty diso:hasSlipDirection ;
+                        owl:someValuesFrom diso:SlipDirection ] [ a owl:Restriction ;
+                        owl:allValuesFrom diso:SlipDirection ;
+                        owl:onProperty diso:hasSlipDirection ] ) ] .
+
+diso:Line a owl:Class ;
+    rdfs:label "Line"@en ;
+    rdfs:comment "Mathematical representation of dislocation as 'Line'. An instance of mathematical representation of a dislocation line is an oriented curve parameterized by its arc length."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty diso:hasNumericalRepresentation ;
+            owl:someValuesFrom diso:DiscretizedLine ] ;
+    owl:disjointWith diso:Node .
+
+diso:SlipDirection a owl:Class ;
+    rdfs:label "Slip Direction"@en ;
+    rdfs:comment "The direction in the slip plane along which plastic deformation takes place. The slip direction corresponds to one of the shortest lattice translation vectors."@en ;
+    rdfs:subClassOf diso:LatticeDirection .
+
+diso:SlipPlaneNormal a owl:Class ;
+    rdfs:label "Slip Plane Normal"@en ;
+    rdfs:comment "The unit normal vector of slip planes."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty diso:directionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        cso:Vector .
+
+diso:SlipPlane a owl:Class ;
+    rdfs:label "Slip Plane"@en ;
+    rdfs:comment "The crystallographic/lattice plane along which the dislocation line traverses/moves. The slip plane is usually the plane with the highest density of atoms, i.e. most widely spaced."@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty diso:hasSlipDirection ;
+                        owl:someValuesFrom diso:SlipDirection ] [ a owl:Restriction ;
+                        owl:allValuesFrom diso:SlipDirection ;
+                        owl:onProperty diso:hasSlipDirection ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty diso:hasSlipPlaneNormal ;
+                        owl:someValuesFrom diso:SlipPlaneNormal ] [ a owl:Restriction ;
+                        owl:allValuesFrom diso:SlipPlaneNormal ;
+                        owl:onProperty diso:hasSlipPlaneNormal ] ) ],
+        diso:LatticePlane .
 
 ex:dislocation_6_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 2.517926e+05 .
+
+diso:DiscretizedLine a owl:Class ;
+    rdfs:label "Discretized Line"@en ;
+    rdfs:comment "The numerical representation of the dislocation line that is discretized into the number of segments."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom diso:ShapeFunction ;
+            owl:onProperty diso:hasShapeFunction ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty diso:slipArea ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom diso:Segment ;
+            owl:onProperty diso:hasSegment ] ;
+    owl:disjointWith diso:Line .
+
+diso:Dislocation a owl:Class ;
+    rdfs:label "Versetzung"@de,
+        "Dislocation"@en ;
+    rdfs:comment "Linear or one-dimensional defect around which some of the atoms are misaligned. In the mesoscale, a dislocation is a line object that is a boundary separating the regions on the slip plane which have undergone slip from those that have not."@en,
+        "The presence of dislocation introduces local disturbance of the atomic-level geometry."@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty diso:hasLineSense ;
+                        owl:someValuesFrom diso:LineSense ] [ a owl:Restriction ;
+                        owl:allValuesFrom diso:LineSense ;
+                        owl:onProperty diso:hasLineSense ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty diso:observedBy ;
+            owl:someValuesFrom diso:FieldIonMicroscopy ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty diso:hasBurgersVector ;
+                        owl:someValuesFrom diso:BurgersVector ] [ a owl:Restriction ;
+                        owl:allValuesFrom diso:BurgersVector ;
+                        owl:onProperty diso:hasBurgersVector ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty diso:hasMathematicalRepresentation ;
+            owl:someValuesFrom diso:Line ],
+        [ a owl:Restriction ;
+            owl:onProperty diso:resultsIn ;
+            owl:someValuesFrom diso:LatticeDisplacement ],
+        [ a owl:Restriction ;
+            owl:onProperty diso:movesOn ;
+            owl:someValuesFrom diso:SlipPlane ],
+        [ a owl:Restriction ;
+            owl:onProperty diso:observedBy ;
+            owl:someValuesFrom diso:TransmissionElectronMicroscopy ],
+        cdo:CrystallographicDefect,
+        diso:LineDefect .
 
 ex:dislocation_9_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 1.817344e+06 .
@@ -3794,6 +4854,34 @@ ex:quantity_value_unitless a qudt:QuantityValue ;
 
 ex:dislocation_1_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 8.653104e+05 .
+
+mdo:CoordinateVector a owl:Class ;
+    rdfs:label "Coordinate Vector"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Z_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:X_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:X_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Z_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Y_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Y_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
+    skos:defintion "A coordinate vector according to standard basis, i.e., e_x (1, 0, 0), e_y(0, 1, 0), and e_z (0, 0, 1)."@en .
 
 ex:dislocation_0_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 4.569865e+05 .
@@ -3810,13 +4898,78 @@ ex:dislocation_4_discretized_line a diso:DiscretizedLine ;
 ex:dislocation_7_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 2.53093e+06 .
 
+cso:PositionVector a owl:Class ;
+    rdfs:label "Position Vector",
+        "Position Vector"@en ;
+    rdfs:comment "Euclidean vector that represents the position of a point P in space in relation to an arbitrary reference origin O."@en ;
+    rdfs:subClassOf cso:Vector ;
+    skos:defintion "Position vector is a Euclidean vector that represents the position of a point P in space in relation to an arbitrary reference origin O."@en .
+
+diso:Node a owl:Class ;
+    rdfs:label "Node"@en ;
+    rdfs:comment "A point of a segment."@en ;
+    rdfs:subClassOf cso:Point ;
+    owl:disjointWith diso:Segment .
+
 ex:quantity_value_M a qudt:QuantityValue ;
     qudt:unit unit:M .
+
+diso:Segment a owl:Class ;
+    rdfs:label "Segment"@en ;
+    rdfs:comment "The segment is a part of a line bounded by two distinct end points and may contain points on the line between its endpoints."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom diso:Node ;
+            owl:onProperty diso:hasEndNode ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom diso:Node ;
+            owl:onProperty diso:hasStartNode ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom diso:DiscretizedLine ;
+            owl:onProperty diso:isSegmentOf ] .
 
 ex:coordinate_basis a mdo:Basis ;
     cso:hasFirstAxisVector ex:crystal_coordinate_first_axis ;
     cso:hasSecondAxisVector ex:crystal_coordinate_second_axis ;
     cso:hasThirdAxisVector ex:crystal_coordinate_third_axis .
+
+cso:VectorComponentOfBasis a owl:Class ;
+    rdfs:label "Vector Component of Basis"@en ;
+    rdfs:comment "Vector components/vector coordinates of particular basis. It has relation to a specific basis."@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onDataRange xsd:double ;
+                        owl:onProperty cso:firstAxisComponent ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onDataRange xsd:double ;
+                        owl:onProperty cso:secondAxisComponent ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onDataRange xsd:double ;
+                        owl:onProperty cso:thirdAxisComponent ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cso:hasBasis ;
+                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Basis ;
+                        owl:onProperty cso:hasBasis ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cso:hasBasis ;
+                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Basis ;
+                        owl:onProperty cso:hasBasis ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onDataRange xsd:double ;
+                        owl:onProperty cso:firstAxisComponent ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onDataRange xsd:double ;
+                        owl:onProperty cso:secondAxisComponent ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onDataRange xsd:double ;
+                        owl:onProperty cso:thirdAxisComponent ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        qudt:Quantity .
 
 [] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
 

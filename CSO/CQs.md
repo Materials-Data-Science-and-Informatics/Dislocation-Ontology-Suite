@@ -12,7 +12,7 @@
 
 CQ1.1: Which crystal structure share the same cubic crystal system?
 ```
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
 
 SELECT ?crystalstructure ?crystal_system WHERE{
 	?crystalstructure a cso:CrystalStructure ; cso:hasLattice ?lattice .
@@ -23,7 +23,7 @@ SELECT ?crystalstructure ?crystal_system WHERE{
 
 CQ1.2: Which crystal structure share the same hexagonal crystal system?
 ```
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
 
 SELECT ?crystalstructure ?crystal_system WHERE{
 	?crystalstructure a cso:CrystalStructure ; cso:hasLattice ?lattice .
@@ -33,7 +33,7 @@ SELECT ?crystalstructure ?crystal_system WHERE{
 ```
 CQs. 2: What are the lattice parameters of length given a crystal structure? 
 ```
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
 
 SELECT ?crystalstructure ?length_a ?length_b ?length_c WHERE{
 	?crystalstructure a cso:CrystalStructure ; cso:hasLattice ?lattice .
@@ -47,7 +47,7 @@ SELECT ?crystalstructure ?length_a ?length_b ?length_c WHERE{
 
 CQs. 3: What are the lattice parameters of angle given a crystal structure?
 ```
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#>  
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#>  
 
 SELECT ?crystalstructure ?angle_alpha ?angle_beta ?angle_gamma WHERE{
 	?crystalstructure a cso:CrystalStructure ; cso:hasLattice ?lattice .
@@ -61,7 +61,7 @@ SELECT ?crystalstructure ?angle_alpha ?angle_beta ?angle_gamma WHERE{
 
 CQs 4: Given the space group of a crystal structure, what is the bravais lattice centering?
 ```
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
 
 SELECT  ?crystal_structure ?centering WHERE{
 	?crystal_structure a cso:CrystalStructure;
@@ -72,7 +72,7 @@ SELECT  ?crystal_structure ?centering WHERE{
 
 CQs 5: Given the crystal structure, what are the corresponding space group and point group?
 ```
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#>  
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#>  
 PREFIX mdo: <https://w3id.org/mdo/structure/> 
 
 
@@ -87,7 +87,7 @@ SELECT  ?crystal_structure ?space_group ?point_group WHERE{
 
 CQs 6a : Given the point group of a crystal structure, what is the corresponding crystal system, e.g. Cubic?
 ```
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#>  
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#>  
 PREFIX mdo: <https://w3id.org/mdo/structure/> 
 
 
@@ -101,7 +101,7 @@ SELECT  ?point_group ?crystal_system WHERE{
 
 CQs 6b : Given the point group of a crystal structure, what is the corresponding crystal system, e.g. Hexagonal?
 ```
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
 PREFIX mdo: <https://w3id.org/mdo/structure/> 
 
 

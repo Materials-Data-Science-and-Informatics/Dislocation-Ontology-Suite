@@ -26,9 +26,9 @@
 
 CQ1: Which crystal structure share the same cubic crystal system?
 ```
-PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
+PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
+PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>  
 PREFIX chebi: <http://purl.obolibrary.org/obo/> 
 
 SELECT ?crystalstructure ?crystal_system WHERE{
@@ -40,9 +40,9 @@ SELECT ?crystalstructure ?crystal_system WHERE{
 
 CQ2: Which crystal structure share the same hexagonal crystal system?
 ```
-PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
+PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
+PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>  
 
 SELECT ?crystalstructure ?crystal_system WHERE{
 	?crystalstructure a cso:CrystalStructure ; cso:hasLattice ?lattice .
@@ -52,9 +52,9 @@ SELECT ?crystalstructure ?crystal_system WHERE{
 ```
 CQ3: What are the lattice parameters of length given a crystal structure? 
 ```
-PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
+PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
+PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>  
 
 SELECT ?crystalstructure ?length_a ?length_b ?length_c WHERE{
 	?crystalstructure a cso:CrystalStructure ; cso:hasLattice ?lattice .
@@ -68,9 +68,9 @@ SELECT ?crystalstructure ?length_a ?length_b ?length_c WHERE{
 
 CQs4: What are the lattice parameters of angle given a crystal structure?
 ```
-PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
+PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
+PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>  
 
 
 SELECT ?crystalstructure ?angle_alpha ?angle_beta ?angle_gamma WHERE{
@@ -85,9 +85,9 @@ SELECT ?crystalstructure ?angle_alpha ?angle_beta ?angle_gamma WHERE{
 
 CQ5: What are the slip systems of a given crystal structure?
 ```
-PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
+PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
+PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>  
 
 SELECT ?crystalstructure ?slip_system ?slip_plane_normal_val ?slip_direction_val WHERE{
 	?crystalstructure a cso:CrystalStructure ; 
@@ -101,9 +101,9 @@ SELECT ?crystalstructure ?slip_system ?slip_plane_normal_val ?slip_direction_val
 
 CQ6: What are the slip planes of a given crystal structure?
 ```
-PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
+PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
+PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>  
 
 SELECT  ?crystal_structure ?slip_plane ?slip_plane_miller_indice 
 WHERE{
@@ -115,9 +115,9 @@ WHERE{
 
 CQ7: What is the family of slip plane given a slip plane in the crystal?
 ```
-PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
+PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
+PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>  
 
 SELECT  ?slip_plane ?slip_plane_miller_indice ?family_of_slip_plane_miller_indice
 WHERE{
@@ -130,9 +130,9 @@ WHERE{
 
 CQ8: What is the  family of slip direction given a slip direction in the crystal?
 ```
-PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
+PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
+PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>  
 
 SELECT  ?slip_direction ?slip_direction_miller_indice ?family_of_slip_direction_miller_indice
 WHERE{
@@ -144,9 +144,9 @@ WHERE{
 ```
 CQ9: Given the space group of a crystal structure, what is the bravais lattice centering?
 ```
-PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>   
+PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
+PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>   
 
 SELECT  ?crystal_structure ?centering WHERE{
 	?crystal_structure a cso:CrystalStructure;
@@ -157,9 +157,9 @@ SELECT  ?crystal_structure ?centering WHERE{
 
 CQ10: Given the crystal structure, what are the corresponding space group and point group?
 ```
-PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>   
+PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
+PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>   
 PREFIX mdo: <https://w3id.org/mdo/structure/> 
 
 SELECT  ?crystal_structure ?space_group ?point_group WHERE{
@@ -173,9 +173,9 @@ SELECT  ?crystal_structure ?space_group ?point_group WHERE{
 
 CQ11: Given the point group of a crystal structure, what is the corresponding crystal system?
 ```
-PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>   
+PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
+PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>   
 PREFIX mdo: <https://w3id.org/mdo/structure/> 
 
 SELECT  ?point_group ?crystal_system WHERE{
@@ -188,9 +188,9 @@ SELECT  ?point_group ?crystal_system WHERE{
 
 CQ12: In which slip planes is a dislocation moves on?
 ```
-PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
+PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
+PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>  
 
 SELECT  ?dislocation ?slip_plane ?slip_plane_miller_indice
 WHERE{
@@ -201,9 +201,9 @@ WHERE{
 ```
 CQ13: What is the Burgers vector of the dislocation?
 ```
-PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
+PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
+PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>  
 
 
 SELECT ?dislocation ?firstAxisComponent ?secondAxisComponent ?thirdAxisComponent  WHERE{
@@ -217,9 +217,9 @@ SELECT ?dislocation ?firstAxisComponent ?secondAxisComponent ?thirdAxisComponent
 ```
 CQ14: What is the Burgers vector magnitude of the dislocation?
 ```
-PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
+PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
+PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>  
 
 SELECT ?dislocation ?Burgers_vector_magnitude  WHERE{
 	?dislocation a diso:Dislocation . 
@@ -229,9 +229,9 @@ SELECT ?dislocation ?Burgers_vector_magnitude  WHERE{
 ```
 CQ15: Given a slip plane of the crystal structure, what is the slip direction?
 ```
-PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
+PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
+PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>  
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT  ?slip_plane ?slip_direction_val WHERE{
@@ -244,9 +244,9 @@ SELECT  ?slip_plane ?slip_direction_val WHERE{
 CQ16: Given a 3-D vector instance (Burgers vector, vector position, etc), what are the vector components?
 
 ```
-PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>   
+PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
+PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>   
 
 SELECT ?Burgers_vector ?firstAxisComponent ?secondAxisComponent ?thirdAxisComponent WHERE{
 	?Burgers_vector a diso:BurgersVector;
@@ -260,9 +260,9 @@ SELECT ?Burgers_vector ?firstAxisComponent ?secondAxisComponent ?thirdAxisCompon
 CQ17: Given a 3-D vector instance ( Burgers vector, vector position, etc), what is the vector magnitude?
 
 ```
-PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>   
+PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
+PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>   
 
 SELECT ?Burgers_vector ?vectorMagnitude WHERE{
 	?Burgers_vector a diso:BurgersVector;
@@ -272,9 +272,9 @@ SELECT ?Burgers_vector ?vectorMagnitude WHERE{
 
 CQ18: Given a Basis of a vector in 3-D space, what are the first axis basis vector?
 ```
-PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>
+PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
+PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>
 PREFIX mdo: <https://w3id.org/mdo/structure/>    
 
 
@@ -291,9 +291,9 @@ SELECT ?Burgers_vector ?first_axis_basis_e_x ?first_axis_basis_e_y ?first_axis_b
 
 CQs 19:  Given a Basis of a vector in 3-D space, what are the second axis basis vector?
 ```
-PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>
+PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
+PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>
 PREFIX mdo: <https://w3id.org/mdo/structure/>    
 
 SELECT ?Burgers_vector ?second_axis_basis_e_x ?second_axis_basis_e_y ?second_axis_basis_e_z WHERE{
@@ -309,9 +309,9 @@ SELECT ?Burgers_vector ?second_axis_basis_e_x ?second_axis_basis_e_y ?second_axi
 
 CQs 20: Given a 3-D vector instance Burgers vector, what is the unit?
 ```
-PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>   
+PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
+PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
+PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>   
 PREFIX qudt: <http://qudt.org/schema/qudt/>
 
 SELECT ?Burgers_vector ?unit ?quantity_kind WHERE{

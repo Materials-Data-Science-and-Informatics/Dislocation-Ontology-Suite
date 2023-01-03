@@ -4,11 +4,11 @@ import numpy as np
 
 
 #crystal structure ontology
-CSO = Namespace("https://purls.helmholtz-metadaten.de/cso#")
+CSO = Namespace("https://purls.helmholtz-metadaten.de/disos/cso#")
 #dislocation ontology
-DISO = Namespace("https://purls.helmholtz-metadaten.de/diso#")
+DISO = Namespace("https://purls.helmholtz-metadaten.de/disos/diso#")
 #crystalline-defect-ontology
-CDO = Namespace("https://purls.helmholtz-metadaten.de/cdo#")
+CDO = Namespace("https://purls.helmholtz-metadaten.de/disos/cdo#")
 MDO = Namespace("https://w3id.org/mdo/structure/")
 QUDT = Namespace("http://qudt.org/schema/qudt/")
 QUDT_UNIT = Namespace("http://qudt.org/vocab/unit/")
@@ -20,9 +20,10 @@ QUDT_QK = Namespace("http://qudt.org/vocab/quantitykind/")
 def rdf_serializer(cif_data, space_group_data, node_data, linker_data, loop_data, iri):
     example = Namespace(iri)
     g = Graph()
-    # g.parse("../../crystal-structure-ontology.owl", format="xml")
-    # g.parse("../../dislocation-ontology.owl", format="xml")
-    g.parse("../../crystallographic-defect-ontology/crystallographic-defect-ontology.owl", format="xml")
+    g.parse("../../CSO/crystal-structure-ontology.owl", format="xml")
+    g.parse("../../DISO/dislocation-ontology.owl", format="xml")
+    g.parse("../../CDO/crystallographic-defect-ontology.owl", format="xml")
+    # g.parse("../../crystallographic-defect-ontology/crystallographic-defect-ontology.owl", format="xml")
 
     g.bind("ex", example)
     g.bind("cdo", CDO)

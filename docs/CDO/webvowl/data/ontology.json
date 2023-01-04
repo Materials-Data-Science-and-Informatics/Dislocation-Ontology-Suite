@@ -1,0 +1,231 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://purls.helmholtz-metadaten.de/disos/cso", "http://emmo.info/emmo/middle/physicalistic", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://purls.helmholtz-metadaten.de/disos/diso", "https://purls.helmholtz-metadaten.de/disos/cdo" ],
+    "title" : {
+      "en" : "Crystallographic Defect Ontology"
+    },
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/cdo",
+    "author" : [ "Ahmad Zainul Ihsan" ],
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/by/3.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Ahmad Zainul Ihsan",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Said Fathalla",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Stefan Sandfeld",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "en",
+        "value" : "21.03.2022",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "CDO",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Crystallographic Defect Ontology",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94",
+    "baseIri" : "http://emmo.info/emmo/middle/physicalistic",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Material",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EMMO_4207e895_8b83_4318_996a_72cfb32acd94"
+    },
+    "subClasses" : [ "1" ],
+    "comment" : {
+      "en" : "A instance of a material (e.g. nitrogen) can represent different states of matter. The fact that the individual also belongs to other classes (e.g. Gas) would reveal the actual form in which the material is found."
+    },
+    "attributes" : [ "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/cdo#PointDefect",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cdo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PointDefect"
+    },
+    "id" : "6",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cdo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CrystallographicDefect",
+      "en" : "Crystallographic Defect"
+    },
+    "subClasses" : [ "6", "7", "8" ],
+    "comment" : {
+      "en" : "Lattice irregularity having one or more of its dimensions on the order of an atomic diameter."
+    },
+    "id" : "3"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/cdo#GrainBoundary",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cdo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GrainBoundary"
+    },
+    "id" : "7",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cdo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CrystallineMaterial",
+      "en" : "Crystalline Material"
+    },
+    "comment" : {
+      "en" : "Crystalline material is material characterized by a periodic arrangement of the constituent atoms. The arrangement could be described its crystal structure."
+    },
+    "id" : "1",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#Dislocation",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dislocation"
+    },
+    "attributes" : [ "external" ],
+    "id" : "8",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CrystalStructure"
+    },
+    "attributes" : [ "external" ],
+    "id" : "5"
+  } ],
+  "property" : [ {
+    "id" : "2",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "4",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cdo",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "hasCrystallographicDefect",
+      "en" : "has crystallographic defect"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "2"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystalStructure",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cdo",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "hasCrystalStructure",
+      "en" : "has crystal structure"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "4"
+  }, {
+    "range" : "3",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "9"
+  }, {
+    "range" : "3",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "10"
+  }, {
+    "range" : "0",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "11"
+  }, {
+    "range" : "3",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "12"
+  } ]
+}

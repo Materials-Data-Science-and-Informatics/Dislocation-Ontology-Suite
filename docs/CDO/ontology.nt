@@ -1,0 +1,139 @@
+<https://purls.helmholtz-metadaten.de/disos/cdo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://purls.helmholtz-metadaten.de/disos/cdo> <http://purl.org/dc/terms/contributor> "Said Fathalla" .
+<https://purls.helmholtz-metadaten.de/disos/cdo> <http://purl.org/dc/terms/contributor> "Stefan Sandfeld" .
+<https://purls.helmholtz-metadaten.de/disos/cdo> <http://purl.org/dc/terms/created> "21.03.2022"@en .
+<https://purls.helmholtz-metadaten.de/disos/cdo> <http://purl.org/dc/terms/creator> "Ahmad Zainul Ihsan"@en .
+<https://purls.helmholtz-metadaten.de/disos/cdo> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/3.0/> .
+<https://purls.helmholtz-metadaten.de/disos/cdo> <http://purl.org/dc/terms/title> "Crystallographic Defect Ontology"@en .
+<https://purls.helmholtz-metadaten.de/disos/cdo> <http://purl.org/vocab/vann/preferredNamespacePrefix> "CDO" .
+<https://purls.helmholtz-metadaten.de/disos/cdo> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#qualifiedCardinality
+<http://www.w3.org/2002/07/owl#qualifiedCardinality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystalStructure
+<https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystalStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystalStructure> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial> .
+<https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystalStructure> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure> .
+<https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystalStructure> <http://www.w3.org/2000/01/rdf-schema#label> "has crystal structure"@en .
+# 
+# https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect
+<https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial> .
+<https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect> .
+<https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect> <http://www.w3.org/2000/01/rdf-schema#label> "has crystallographic defect"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94
+<http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94> <http://www.w3.org/2000/01/rdf-schema#comment> "A instance of a material (e.g. nitrogen) can represent different states of matter. The fact that the individual also belongs to other classes (e.g. Gas) would reveal the actual form in which the material is found."@en .
+<http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94> <http://www.w3.org/2000/01/rdf-schema#comment> "Material usually means some definite kind, quality, or quantity of matter, especially as intended for use."@en .
+<http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94> <http://www.w3.org/2004/02/skos/core#prefLabel> "Material"@en .
+# 
+# https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial
+<https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94> .
+<https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystalStructure> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystalStructure> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid6 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Crystalline material is material characterized by a periodic arrangement of the constituent atoms. The arrangement could be described its crystal structure."@en .
+<https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Crystalline Material"@en .
+# 
+# https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect
+<https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect> <http://www.w3.org/2000/01/rdf-schema#comment> "Lattice irregularity having one or more of its dimensions on the order of an atomic diameter."@en .
+<https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect> <http://www.w3.org/2000/01/rdf-schema#label> "Crystallographic Defect"@en .
+# 
+# https://purls.helmholtz-metadaten.de/disos/cdo#GrainBoundary
+<https://purls.helmholtz-metadaten.de/disos/cdo#GrainBoundary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/disos/cdo#GrainBoundary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect> .
+# 
+# https://purls.helmholtz-metadaten.de/disos/cdo#PointDefect
+<https://purls.helmholtz-metadaten.de/disos/cdo#PointDefect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/disos/cdo#PointDefect> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect> .
+# 
+# https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure
+<https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://purls.helmholtz-metadaten.de/disos/diso#Dislocation
+<https://purls.helmholtz-metadaten.de/disos/diso#Dislocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/disos/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect> .
+# 
+_:genid11 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

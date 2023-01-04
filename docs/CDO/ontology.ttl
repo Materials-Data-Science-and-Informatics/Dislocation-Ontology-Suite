@@ -1,0 +1,148 @@
+@prefix : <https://purls.helmholtz-metadaten.de/disos/cdo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://purls.helmholtz-metadaten.de/disos/cdo#> .
+
+<https://purls.helmholtz-metadaten.de/disos/cdo> rdf:type owl:Ontology ;
+                                                  <http://purl.org/dc/terms/contributor> "Said Fathalla" ,
+                                                                                         "Stefan Sandfeld" ;
+                                                  <http://purl.org/dc/terms/created> "21.03.2022"@en ;
+                                                  <http://purl.org/dc/terms/creator> "Ahmad Zainul Ihsan"@en ;
+                                                  <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/3.0/> ;
+                                                  <http://purl.org/dc/terms/title> "Crystallographic Defect Ontology"@en ;
+                                                  <http://purl.org/vocab/vann/preferredNamespacePrefix> "CDO" ;
+                                                  rdfs:seeAlso "https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#qualifiedCardinality
+owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty ;
+                                                rdfs:subPropertyOf rdfs:label .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystalStructure
+:hasCrystalStructure rdf:type owl:ObjectProperty ;
+                     rdfs:domain :CrystallineMaterial ;
+                     rdfs:range <https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure> ;
+                     rdfs:label "has crystal structure"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect
+:hasCrystallographicDefect rdf:type owl:ObjectProperty ;
+                           rdfs:domain :CrystallineMaterial ;
+                           rdfs:range :CrystallographicDefect ;
+                           rdfs:label "has crystallographic defect"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94
+<http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94> rdf:type owl:Class ;
+                                                                                       rdfs:comment "A instance of a material (e.g. nitrogen) can represent different states of matter. The fact that the individual also belongs to other classes (e.g. Gas) would reveal the actual form in which the material is found."@en ,
+                                                                                                    "Material usually means some definite kind, quality, or quantity of matter, especially as intended for use."@en ;
+                                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Material"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial
+:CrystallineMaterial rdf:type owl:Class ;
+                     rdfs:subClassOf <http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94> ,
+                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :hasCrystalStructure ;
+                                                              owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure>
+                                                            ]
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :hasCrystalStructure ;
+                                                              owl:allValuesFrom <https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure>
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ,
+                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :hasCrystallographicDefect ;
+                                                              owl:someValuesFrom :CrystallographicDefect
+                                                            ]
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :hasCrystallographicDefect ;
+                                                              owl:allValuesFrom :CrystallographicDefect
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                     rdfs:comment "Crystalline material is material characterized by a periodic arrangement of the constituent atoms. The arrangement could be described its crystal structure."@en ;
+                     rdfs:label "Crystalline Material"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect
+:CrystallographicDefect rdf:type owl:Class ;
+                        rdfs:comment "Lattice irregularity having one or more of its dimensions on the order of an atomic diameter."@en ;
+                        rdfs:label "Crystallographic Defect"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/disos/cdo#GrainBoundary
+:GrainBoundary rdf:type owl:Class ;
+               rdfs:subClassOf :CrystallographicDefect .
+
+
+###  https://purls.helmholtz-metadaten.de/disos/cdo#PointDefect
+:PointDefect rdf:type owl:Class ;
+             rdfs:subClassOf :CrystallographicDefect .
+
+
+###  https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure
+<https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure> rdf:type owl:Class .
+
+
+###  https://purls.helmholtz-metadaten.de/disos/diso#Dislocation
+<https://purls.helmholtz-metadaten.de/disos/diso#Dislocation> rdf:type owl:Class ;
+                                                              rdfs:subClassOf :CrystallographicDefect .
+
+
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+] .
+
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

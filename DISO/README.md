@@ -1,7 +1,7 @@
 # Dislocation Ontology (DISO)
 
 [![PID](https://img.shields.io/badge/PID-https%3A%2F%2Fpurls.helmholtz--metadaten.de%2Fdisos%2Fdiso-brightgreen)](https://purls.helmholtz-metadaten.de/disos/diso) 
-[![doc](https://img.shields.io/badge/doc-https%3A%2F%2Fmaterials--data--science--and--informatics.github.io%2Fdislocation--ontology%2F-blue)](https://materials-data-science-and-informatics.github.io/dislocation-ontology/) 
+[![doc](https://img.shields.io/badge/doc-https%3A%2F%2Fmaterials--data--science--and--informatics.github.io%2Fdislocation--ontology%2F-blue)](https://materials-data-science-and-informatics.github.io/Dislocation-Ontology-Suite/DISO/index.html) 
 
 ![GitHub contributors](https://img.shields.io/github/contributors/Materials-Data-Science-and-Informatics/dislocation-ontology) 
 

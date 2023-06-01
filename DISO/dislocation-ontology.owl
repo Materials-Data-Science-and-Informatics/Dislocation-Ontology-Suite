@@ -774,6 +774,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="de">Das mathematische Konzept zur Darstellung der Periodizität eines Kristalls. Ein Gitter definiert eine periodische Anordnung von einem oder mehreren Atomen.</rdfs:comment>
         <rdfs:comment xml:lang="en">The mathematical concept to represent the periodicity of a crystal. A lattice defines a periodic arrangement of one or more atoms.</rdfs:comment>
         <rdfs:label xml:lang="en">Lattice</rdfs:label>
     </owl:Class>
@@ -886,7 +887,9 @@
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#BurgersVector">
         <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#Vector"/>
         <rdfs:comment xml:lang="en">An elementary unit (length order of lattice parameter) of lattice translation. The basic notion of the Burgers vector comes from the closure failure of an initially perfect lattice due to the existence of dislocation. The magnitude and direction of closure failure are characterized by the Burgers vector.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine elementare Einheit (Längenordnung der Gitterparameter) der Gittertranslation. Der grundlegende Begriff des Burgers-Vektors leitet sich aus dem Versagen der Schließung eines ursprünglich perfekten Gitters aufgrund der Existenz von Versetzungen ab. Das Ausmaß und die Richtung des Schließfehlers werden durch den Burgers-Vektor charakterisiert.</rdfs:comment>
         <rdfs:label xml:lang="en">Burgers Vector</rdfs:label>
+        <rdfs:label xml:lang="de">der Burgersvektor</rdfs:label>
     </owl:Class>
     
 
@@ -914,8 +917,10 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Line"/>
+        <rdfs:comment xml:lang="de">Die numerische Darstellung der Versetzungslinie, die in die Anzahl der Segmente diskretisiert ist.</rdfs:comment>
         <rdfs:comment xml:lang="en">The numerical representation of the dislocation line that is discretized into the number of segments.</rdfs:comment>
         <rdfs:label xml:lang="en">Discretized Line</rdfs:label>
+        <rdfs:label xml:lang="de">die Diskretisierte Linie</rdfs:label>
     </owl:Class>
     
 
@@ -982,10 +987,11 @@
                 <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#LatticeDisplacement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="de">Ein linearer oder eindimensionaler Defekt, um den herum einige der Atome falsch ausgerichtet sind. Im Mesoscale ist eine Versetzung ein linienförmiges Objekt, das eine Grenze darstellt, die die Regionen auf der Gleitebene, in denen ein Gleiten stattgefunden hat, von denen trennt, in denen dies nicht der Fall war.</rdfs:comment>
         <rdfs:comment xml:lang="en">Linear or one-dimensional defect around which some of the atoms are misaligned. In the mesoscale, a dislocation is a line object that is a boundary separating the regions on the slip plane which have undergone slip from those that have not.</rdfs:comment>
         <rdfs:comment xml:lang="en">The presence of dislocation introduces local disturbance of the atomic-level geometry.</rdfs:comment>
         <rdfs:label xml:lang="en">Dislocation</rdfs:label>
-        <rdfs:label xml:lang="de">Versetzung</rdfs:label>
+        <rdfs:label xml:lang="de">die Versetzung</rdfs:label>
     </owl:Class>
     
 
@@ -996,7 +1002,9 @@
         <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Dislocation"/>
         <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#ScrewDislocation"/>
         <rdfs:comment xml:lang="en">A dislocation that has a line sense perpendicular to its Burgers vector.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Versetzung, die Burgersvektor und Versetzungslinie stehen senkrecht zueinander</rdfs:comment>
         <rdfs:label xml:lang="en">Edge Dislocation</rdfs:label>
+        <rdfs:label xml:lang="de">die Stufenversetzung</rdfs:label>
     </owl:Class>
     
 
@@ -1013,7 +1021,9 @@
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#FamilyOfCrystalPlane"/>
         <rdfs:comment xml:lang="en">A set of symmetrically equivalent directions in the lattice.</rdfs:comment>
+        <rdfs:comment xml:lang="de">die Menge aller symmetrisch äquivalenten Richtungen.</rdfs:comment>
         <rdfs:label xml:lang="en">Family of Crystal Direction</rdfs:label>
+        <rdfs:label xml:lang="de">die Familie der Gitterrichtung</rdfs:label>
     </owl:Class>
     
 
@@ -1029,7 +1039,9 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A set of symmetrically equivalent planes in the lattice.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Steht für Kristallformen, d. h. die Menge aller symmetrisch äquivalenten Flächen.</rdfs:comment>
         <rdfs:label xml:lang="en">Family of Crystal Plane</rdfs:label>
+        <rdfs:label xml:lang="de">die Familie der Gitterebene</rdfs:label>
     </owl:Class>
     
 
@@ -1038,7 +1050,9 @@
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#FieldIonMicroscopy">
         <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#TransmissionElectronMicroscopy"/>
+        <rdfs:comment xml:lang="de">Die Feldionenmikroskopie (FIM) ist eine Mikroskopietechnik, mit der sich die Anordnung von Atomen abbilden lässt.</rdfs:comment>
         <rdfs:comment xml:lang="en">Field Ion Microscopy (FIM) is a microscopy technique that can be used to image the arrangement of atoms.</rdfs:comment>
+        <rdfs:label xml:lang="de">Das Feldionenmikroskop</rdfs:label>
         <rdfs:label xml:lang="en">Field Ion Microscopy</rdfs:label>
     </owl:Class>
     
@@ -1070,7 +1084,9 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="de">Die Vektorrichtung innerhalb des Gitters, die zwei Gitterpunkte verbindet.</rdfs:comment>
         <rdfs:comment xml:lang="en">The vector direction inside the lattice that is connecting two lattice points.</rdfs:comment>
+        <rdfs:label xml:lang="de">Die Gitterrichtung</rdfs:label>
         <rdfs:label xml:lang="en">Lattice Direction</rdfs:label>
     </owl:Class>
     
@@ -1079,8 +1095,10 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#LatticeDisplacement -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#LatticeDisplacement">
+        <rdfs:comment xml:lang="de">Die Verschiebung von Atomen von ihren perfekten Gitterpunkt aufgrund des Fehlens von Defekten, z. B. Punktuelle Defekte, Linearedefekte und Korngrenzen.</rdfs:comment>
         <rdfs:comment xml:lang="en">The displacement of atoms from their perfect lattice sites due to the existence of defects, e.g., point defect, line defect, and grain boundary.</rdfs:comment>
         <rdfs:label xml:lang="en">Lattice Displacement</rdfs:label>
+        <rdfs:label xml:lang="de">die Verschiebung</rdfs:label>
     </owl:Class>
     
 
@@ -1130,8 +1148,10 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="de">Die Gitterebene bildet eine unendlich gestreckte Ebene (gekennzeichnet durch eine Ebenennormale), die die Gitterpunkte so schneidet, dass wiederum eine regelmäßige Anordnung der Gitterpunkte in der Ebene entsteht.</rdfs:comment>
         <rdfs:comment xml:lang="en">The lattice plane forms an infinitely stretched plane (characterized through a plane normal) that cuts through lattice points such that, again, a regular arrangement of lattice points in the plane occurs.</rdfs:comment>
         <rdfs:label xml:lang="en">Lattice Plane</rdfs:label>
+        <rdfs:label xml:lang="de">die Gitterebene</rdfs:label>
     </owl:Class>
     
 
@@ -1140,8 +1160,10 @@
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#LatticePoint">
         <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#Point"/>
+        <rdfs:comment xml:lang="de">Der Gitterpunkt ist der Punkt, an dem sich ein Atom oder ein Molekül befindet.</rdfs:comment>
         <rdfs:comment xml:lang="en">Lattice point is the point where atom(s) or molecule(s) is located.</rdfs:comment>
         <rdfs:label xml:lang="en">Lattice Point</rdfs:label>
+        <rdfs:label xml:lang="de">der Gitterpunkt</rdfs:label>
     </owl:Class>
     
 
@@ -1157,7 +1179,9 @@
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Node"/>
         <rdfs:comment xml:lang="en">Mathematical representation of dislocation as &apos;Line&apos;. An instance of mathematical representation of a dislocation line is an oriented curve parameterized by its arc length.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Mathematische Darstellung der Versetzung als &quot;Linie&quot;. Ein Beispiel für die mathematische Darstellung einer Versetzungslinie ist eine orientierte Kurve, die durch ihre Bogenlänge parametrisiert ist.</rdfs:comment>
         <rdfs:label xml:lang="en">Line</rdfs:label>
+        <rdfs:label xml:lang="de">die Linie</rdfs:label>
     </owl:Class>
     
 
@@ -1167,7 +1191,9 @@
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#LineDefect">
         <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect"/>
         <rdfs:comment xml:lang="en">Linear or one-dimensional defect around which some of the atoms are misaligned.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Linearer oder eindimensionaler Defekt, um den herum einige Atome falsch ausgerichtet sind.</rdfs:comment>
         <rdfs:label xml:lang="en">Line Defect</rdfs:label>
+        <rdfs:label xml:lang="de">der linienhafter Defekt</rdfs:label>
     </owl:Class>
     
 
@@ -1176,7 +1202,9 @@
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#LineSense">
         <rdfs:comment xml:lang="en">A sense that characterizes a directed line, i.e., it has a start and an end.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein Element, das eine gerichtete Linie charakterisiert, d. h. sie hat einen Anfang und ein Ende.</rdfs:comment>
         <rdfs:label xml:lang="en">Line Sense</rdfs:label>
+        <rdfs:label xml:lang="de">die Versetzunglinie</rdfs:label>
     </owl:Class>
     
 
@@ -1187,7 +1215,9 @@
         <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#Point"/>
         <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Segment"/>
         <rdfs:comment xml:lang="en">A point of a segment.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein Punkt eines Segments.</rdfs:comment>
         <rdfs:label xml:lang="en">Node</rdfs:label>
+        <rdfs:label xml:lang="de">der Knoten</rdfs:label>
     </owl:Class>
     
 
@@ -1197,7 +1227,9 @@
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#ScrewDislocation">
         <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Dislocation"/>
         <rdfs:comment xml:lang="en">A dislocation that has a line sense parallel to its Burgers vector.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Versetzung, die Burgersvektor und Versetzungslinie liegen parallel.</rdfs:comment>
         <rdfs:label xml:lang="en">Screw Dislocation</rdfs:label>
+        <rdfs:label xml:lang="de">die Schraubenversetzung</rdfs:label>
     </owl:Class>
     
 
@@ -1223,8 +1255,10 @@
                 <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="de">Das Segment ist ein Teil einer Linie, der von zwei bestimmten Endpunkten begrenzt wird und Punkte auf der Linie zwischen den Endpunkten enthalten kann.</rdfs:comment>
         <rdfs:comment xml:lang="en">The segment is a part of a line bounded by two distinct end points and may contain points on the line between its endpoints.</rdfs:comment>
         <rdfs:label xml:lang="en">Segment</rdfs:label>
+        <rdfs:label xml:lang="de">die Strecke</rdfs:label>
     </owl:Class>
     
 
@@ -1232,8 +1266,10 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#ShapeFunction -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#ShapeFunction">
+        <rdfs:comment xml:lang="de">Die Formfunktion ist die Funktion, die die Lösung zwischen den an den Netzknoten erhaltenen diskreten Werten interpoliert. Bei der diskretisierten Versetzung bestimmt die Formfunktion die Form eines Segments und letztlich die Form der Linie. Beispiele für Formfunktionen, die zur Diskretisierung der Versetzung verwendet werden, sind kreisförmig, elliptisch, spiralförmig, linear, kubisch und quintisch.</rdfs:comment>
         <rdfs:comment xml:lang="en">The shape function is the function that interpolates the solution between the discrete values obtained at the mesh nodes. In discretized dislocation, the shape function determines the shape of a segment and ultimately determines the shape of the line. Examples of shape function that is used to discretize the dislocation are circular, elliptic, spiral, linear, cubic, and quintic.</rdfs:comment>
         <rdfs:label xml:lang="en">Shape Function</rdfs:label>
+        <rdfs:label xml:lang="de">die Formfunktion</rdfs:label>
     </owl:Class>
     
 
@@ -1242,8 +1278,10 @@
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#SlipDirection">
         <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection"/>
+        <rdfs:comment xml:lang="de">Die Richtung in der Gleitebene, in der die plastische Verformung stattfindet. Die Gleitrichtung entspricht einem der kürzesten Translationsvektoren des Gitters.</rdfs:comment>
         <rdfs:comment xml:lang="en">The direction in the slip plane along which plastic deformation takes place. The slip direction corresponds to one of the shortest lattice translation vectors.</rdfs:comment>
         <rdfs:label xml:lang="en">Slip Direction</rdfs:label>
+        <rdfs:label xml:lang="de">die Gleitrichtung</rdfs:label>
     </owl:Class>
     
 
@@ -1280,8 +1318,10 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="de">Die kristallografische/Gitterebene, entlang derer die Versetzungslinie verläuft/bewegt wird. Die Gleitebene ist in der Regel die Ebene mit der höchsten Dichte an Atomen, d. h. mit dem größten Abstand.</rdfs:comment>
         <rdfs:comment xml:lang="en">The crystallographic/lattice plane along which the dislocation line traverses/moves. The slip plane is usually the plane with the highest density of atoms, i.e. most widely spaced.</rdfs:comment>
         <rdfs:label xml:lang="en">Slip Plane</rdfs:label>
+        <rdfs:label xml:lang="de">die Gleitebene</rdfs:label>
     </owl:Class>
     
 
@@ -1297,8 +1337,10 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="de">Der Einheitsnormalvektor der Gleitebenen.</rdfs:comment>
         <rdfs:comment xml:lang="en">The unit normal vector of slip planes.</rdfs:comment>
         <rdfs:label xml:lang="en">Slip Plane Normal</rdfs:label>
+        <rdfs:label xml:lang="de">der Gleitebene Normalvektor</rdfs:label>
     </owl:Class>
     
 
@@ -1335,7 +1377,9 @@
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A slip system is defined as the set of slip planes with the same unit normal vector and the same slip direction.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein Gleitsystem ist definiert als die Menge der Gleitebenen mit dem gleichen Einheitsnormalvektor und der gleichen Gleitrichtung.</rdfs:comment>
         <rdfs:label xml:lang="en">Slip System</rdfs:label>
+        <rdfs:label xml:lang="de">das Gleitsystem</rdfs:label>
     </owl:Class>
     
 
@@ -1343,7 +1387,9 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#TransmissionElectronMicroscopy -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#TransmissionElectronMicroscopy">
+        <rdfs:comment xml:lang="de">Die Transmissionselektronenmikroskopie (TEM) ist eine Mikroskopietechnik, bei der ein Elektronenstrahl durch eine Probe geschickt wird, um ein Bild zu erzeugen. Bei der Probe handelt es sich häufig um einen ultradünnen Schnitt von weniger als 100 nm Dicke.</rdfs:comment>
         <rdfs:comment xml:lang="en">Transmission electron microscopy (TEM) is a microscopy technique in which a beam of electrons is transmitted through a specimen to form an image. The specimen is often an ultrathin section less than 100 nm thick.</rdfs:comment>
+        <rdfs:label xml:lang="de">Die Transmissionselektronenmikroskopie</rdfs:label>
         <rdfs:label xml:lang="en">Transmission Electron Microscopy</rdfs:label>
     </owl:Class>
     
@@ -1354,8 +1400,9 @@
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#VectorOrigin">
         <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#Point"/>
         <rdfs:comment xml:lang="en">A fixed point that is needed by the vector to identify other points in the space relative to its origin.</rdfs:comment>
-        <rdfs:label xml:lang="de">Ursprung</rdfs:label>
+        <rdfs:comment xml:lang="de">Ein Fixpunkt, der vom Vektor benötigt wird, um andere Punkte im Raum relativ zu seinem Ursprung zu identifizieren.</rdfs:comment>
         <rdfs:label xml:lang="en">Vector Origin</rdfs:label>
+        <rdfs:label xml:lang="de">der Ursprung</rdfs:label>
     </owl:Class>
     
 

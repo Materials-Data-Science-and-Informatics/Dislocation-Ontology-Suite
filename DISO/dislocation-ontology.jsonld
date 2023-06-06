@@ -1,10 +1,292 @@
 [
   {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#familyPlaneMillerIndice",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "familyPlaneMillerIndice represents a set of Miller indice of lattice plane in string."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#FamilyOfCrystalPlane"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "family plane miller indice"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePoint",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "de",
+        "@value": "Der Gitterpunkt ist der Punkt, an dem sich ein Atom oder ein Molekül befindet."
+      },
+      {
+        "@language": "en",
+        "@value": "Lattice point is the point where atom(s) or molecule(s) is located."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Lattice Point"
+      },
+      {
+        "@language": "de",
+        "@value": "der Gitterpunkt"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Point"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#ScrewDislocation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A dislocation that has a line sense parallel to its Burgers vector."
+      },
+      {
+        "@language": "de",
+        "@value": "Eine Versetzung, die Burgersvektor und Versetzungslinie liegen parallel."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Screw Dislocation"
+      },
+      {
+        "@language": "de",
+        "@value": "die Schraubenversetzung"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Dislocation"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/creator",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasBasis",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasNode",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "hasNode represents the relationship between segment and node."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Segment"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has node"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Node"
+      }
+    ]
+  },
+  {
+    "@id": "http://qudt.org/schema/qudt/Unit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://qudt.org/schema/qudt/description": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML",
+        "@value": "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\(Q = nU\\)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://qudt.org/2.0/schema/qudt"
+      },
+      {
+        "@id": "http://qudt.org/schema/qudt"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Unit"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mdo/structure/CoordinateVector",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Coordinate Vector"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N4740549463254bf19a21678a90f3ee98"
+      },
+      {
+        "@id": "_:Nf691d0eb07f840a69f872560868e21bb"
+      },
+      {
+        "@id": "_:N30c92f62739947e8a41cb92e9e674ebe"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#defintion": [
+      {
+        "@language": "en",
+        "@value": "A coordinate vector according to standard basis, i.e., e_x (1, 0, 0), e_y(0, 1, 0), and e_z (0, 0, 1)."
+      }
+    ]
+  },
+  {
+    "@id": "_:N4740549463254bf19a21678a90f3ee98",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onDataRange": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#double"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/mdo/structure/X_axisCoordinate"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf691d0eb07f840a69f872560868e21bb",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onDataRange": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#double"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/mdo/structure/Y_axisCoordinate"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ]
+  },
+  {
+    "@id": "_:N30c92f62739947e8a41cb92e9e674ebe",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onDataRange": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#double"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/mdo/structure/Z_axisCoordinate"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasPositionVector",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "hasPositionVector represents the relationship between entity and position vector."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Point"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has position vector"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#PositionVector"
+      }
+    ]
+  },
+  {
     "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Segment",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "de",
+        "@value": "Das Segment ist ein Teil einer Linie, der von zwei bestimmten Endpunkten begrenzt wird und Punkte auf der Linie zwischen den Endpunkten enthalten kann."
+      },
       {
         "@language": "en",
         "@value": "The segment is a part of a line bounded by two distinct end points and may contain points on the line between its endpoints."
@@ -14,22 +296,26 @@
       {
         "@language": "en",
         "@value": "Segment"
+      },
+      {
+        "@language": "de",
+        "@value": "die Strecke"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:N91cfed63eac94f2e81c2d077c5e1d7bf"
+        "@id": "_:N26035516785b48dcbfb5f44642a04d7f"
       },
       {
-        "@id": "_:N7b4f7dbd2d2c4f25846efb4845aaf7ff"
+        "@id": "_:Nb607cd60f6be46268f33f8fdbc318b1e"
       },
       {
-        "@id": "_:N557f07a0608442cdb9ecd98d8ac00d95"
+        "@id": "_:Nbec831869f0843a5b1f68c9c6dcb145e"
       }
     ]
   },
   {
-    "@id": "_:N91cfed63eac94f2e81c2d077c5e1d7bf",
+    "@id": "_:N26035516785b48dcbfb5f44642a04d7f",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -45,7 +331,7 @@
     ]
   },
   {
-    "@id": "_:N7b4f7dbd2d2c4f25846efb4845aaf7ff",
+    "@id": "_:Nb607cd60f6be46268f33f8fdbc318b1e",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -61,7 +347,7 @@
     ]
   },
   {
-    "@id": "_:N557f07a0608442cdb9ecd98d8ac00d95",
+    "@id": "_:Nbec831869f0843a5b1f68c9c6dcb145e",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -77,35 +363,132 @@
     ]
   },
   {
-    "@id": "http://qudt.org/schema/qudt/description",
+    "@id": "http://purl.org/dc/terms/title",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#VectorOrigin",
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasFamilyCrystalPlane",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "hasFamilyCrystalPlane represents the relationship between the lattice plane and the family of crystal planes."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePlane"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has family crystal plane"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#FamilyOfCrystalPlane"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
+        "@language": "de",
+        "@value": "Die numerische Darstellung der Versetzungslinie, die in die Anzahl der Segmente diskretisiert ist."
+      },
+      {
         "@language": "en",
-        "@value": "A fixed point that is needed by the vector to identify other points in the space relative to its origin."
+        "@value": "The numerical representation of the dislocation line that is discretized into the number of segments."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@language": "de",
-        "@value": "Ursprung"
+        "@language": "en",
+        "@value": "Discretized Line"
       },
       {
-        "@language": "en",
-        "@value": "Vector Origin"
+        "@language": "de",
+        "@value": "die Diskretisierte Linie"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Point"
+        "@id": "_:N19873cefc9544b90b4f34d3fefd9dff3"
+      },
+      {
+        "@id": "_:N1f69bec066ab485f82fba109a588b433"
+      },
+      {
+        "@id": "_:N18d278094cb8403d89834c2b467e778e"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Line"
+      }
+    ]
+  },
+  {
+    "@id": "_:N19873cefc9544b90b4f34d3fefd9dff3",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Segment"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSegment"
+      }
+    ]
+  },
+  {
+    "@id": "_:N1f69bec066ab485f82fba109a588b433",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#ShapeFunction"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasShapeFunction"
+      }
+    ]
+  },
+  {
+    "@id": "_:N18d278094cb8403d89834c2b467e778e",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onDataRange": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#double"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#slipArea"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
       }
     ]
   },
@@ -133,12 +516,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:Nbb7a09c4abb6498f8fb870010d2cba00"
+        "@id": "_:Ncd904505f37b40ccaeeec27320fe029e"
       }
     ]
   },
   {
-    "@id": "_:Nbb7a09c4abb6498f8fb870010d2cba00",
+    "@id": "_:Ncd904505f37b40ccaeeec27320fe029e",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -156,401 +539,20 @@
     ]
   },
   {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LineSense",
+    "@id": "https://w3id.org/mdo/structure/X_axisCoordinate",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A sense that characterizes a directed line, i.e., it has a start and an end."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Line Sense"
-      }
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/title",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#VectorComponentOfBasis",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Vector components/vector coordinates of particular basis. It has relation to a specific basis."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Vector Component of Basis"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://qudt.org/schema/qudt/Quantity"
-      },
-      {
-        "@id": "_:N6f88757425a44d51b8a715a3121e2880"
-      },
-      {
-        "@id": "_:Nc86d0d331c0740329f47f7274b79fbd3"
-      }
-    ]
-  },
-  {
-    "@id": "_:N6f88757425a44d51b8a715a3121e2880",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "_:Na983ec5cb7394273a6eac529645feedd"
-          },
-          {
-            "@id": "_:N8c4ab711ca8840618bf8b6e98ca032d6"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Na983ec5cb7394273a6eac529645feedd",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasBasis"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://w3id.org/mdo/structure/Basis"
-      }
-    ]
-  },
-  {
-    "@id": "_:N8c4ab711ca8840618bf8b6e98ca032d6",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://w3id.org/mdo/structure/Basis"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasBasis"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nc86d0d331c0740329f47f7274b79fbd3",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "_:Nf5de547810a641f180660c662792bfc4"
-          },
-          {
-            "@id": "_:N9976d7039dce4f38933f94dd509ba170"
-          },
-          {
-            "@id": "_:Nb8f737636b0f42d7a1ba0dbedc700a99"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Nf5de547810a641f180660c662792bfc4",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onDataRange": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#double"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#firstAxisComponent"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "_:N9976d7039dce4f38933f94dd509ba170",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onDataRange": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#double"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#secondAxisComponent"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nb8f737636b0f42d7a1ba0dbedc700a99",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onDataRange": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#double"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#thirdAxisComponent"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The crystallographic defect is a lattice irregularity that has one or more dimensions on the order of an atomic diameter."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Crystallographic Defect"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasBasis",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePlane",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The lattice plane forms an infinitely stretched plane (characterized through a plane normal) that cuts through lattice points such that, again, a regular arrangement of lattice points in the plane occurs."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Lattice Plane"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#FamilyOfCrystalPlane"
-      },
-      {
-        "@id": "_:Nc60fccdc41884608924ded5102295d1a"
-      },
-      {
-        "@id": "_:N2e1e5c0b965d421a9cf8a7b88c139932"
-      },
-      {
-        "@id": "_:N8f0e0f529d14435686aebbcb9b1bf538"
-      },
-      {
-        "@id": "_:N1e3797178e6041a986e1b27fb6acf9e4"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nc60fccdc41884608924ded5102295d1a",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "_:N35f079addcd640deb8c35928eeefbb57"
-          },
-          {
-            "@id": "_:N50aad53684ce4467b9c0bc10d7bd170d"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N35f079addcd640deb8c35928eeefbb57",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticeDirection"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection"
-      }
-    ]
-  },
-  {
-    "@id": "_:N50aad53684ce4467b9c0bc10d7bd170d",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticeDirection"
-      }
-    ]
-  },
-  {
-    "@id": "_:N2e1e5c0b965d421a9cf8a7b88c139932",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "_:N5dfce0c22910490fbb59917bd7a6208e"
-          },
-          {
-            "@id": "_:N6b47031010794a65b1dc3ad2814e599b"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N5dfce0c22910490fbb59917bd7a6208e",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePoint"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePoint"
-      }
-    ]
-  },
-  {
-    "@id": "_:N6b47031010794a65b1dc3ad2814e599b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePoint"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePoint"
-      }
-    ]
-  },
-  {
-    "@id": "_:N8f0e0f529d14435686aebbcb9b1bf538",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#VectorOrigin"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasVectorOrigin"
-      }
-    ]
-  },
-  {
-    "@id": "_:N1e3797178e6041a986e1b27fb6acf9e4",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onDataRange": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#planeMillerIndice"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "http://qudt.org/schema/qudt/Quantity",
+    "@id": "http://qudt.org/schema/qudt/QuantityKind",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://qudt.org/schema/qudt/description": [
       {
         "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML",
-        "@value": "<p class=\"lm-para\">A quantity is the measurement of an observable property of a particular object, event, or physical system. A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the underlying quantity kind is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as the speed of light in a vacuum, Planck's constant, the electric permittivity of free space, and the fine structure constant. </p>\n\n<p class=\"lm-para\">In other words, quantities are quantifiable aspects of the world, such as time, distance, velocity, mass, momentum, energy, and weight, and units are used to describe their measure. Many of which are related to each other by various physical laws, and as a result the units of some of the quantities can be expressed as products (or ratios) of powers of other units (e.g., momentum is mass times velocity and velocity is measured in distance divided by time). These relationships are discussed in dimensional analysis. Those that cannot be so expressed can be regarded as &quot;fundamental&quot; in this sense.</p>\n<p class=\"lm-para\">A quantity is distinguished from a &quot;quantity kind&quot; in that the former carries a value and the latter is a type specifier.</p>"
+        "@value": "A <b>Quantity Kind</b> is any observable property that can be  measured and quantified numerically. Familiar examples include physical properties such as length, mass, time, force, energy, power, electric charge, etc. Less familiar examples include currency, interest rate, price to earning ratio, and information capacity."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -563,70 +565,105 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Quantity"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N731da5f63d884bbc8054a7a7882c7a21"
-      },
-      {
-        "@id": "_:N7bda779e7dda4c1eb04293f66347b776"
+        "@value": "Quantity Kind"
       }
     ]
   },
   {
-    "@id": "_:N731da5f63d884bbc8054a7a7882c7a21",
+    "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://qudt.org/schema/qudt/QuantityKind"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://qudt.org/schema/qudt/hasQuantityKind"
-      }
+      "http://www.w3.org/2000/01/rdf-schema#Datatype"
     ]
   },
   {
-    "@id": "_:N7bda779e7dda4c1eb04293f66347b776",
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePlane",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://qudt.org/schema/qudt/QuantityValue"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://qudt.org/schema/qudt/quantityValue"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#FieldIonMicroscopy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Field Ion Microscopy (FIM) is a microscopy technique that can be used to image the arrangement of atoms."
+        "@value": "hasLatticePlane represents the relationship between a lattice and lattice planes."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nc91642c067fb44eea2085a7c0f41c44d"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Field Ion Microscopy"
+        "@value": "has lattice plane"
       }
     ],
-    "http://www.w3.org/2002/07/owl#disjointWith": [
+    "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#TransmissionElectronMicroscopy"
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePlane"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc91642c067fb44eea2085a7c0f41c44d",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure"
+          },
+          {
+            "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Lattice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#directionMillerIndice",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "directionMillerIndice represents Miller indice of lattice direction in string."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N2baa31d99ddf41f78eb0fc370e9e6c48"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "direction miller indice"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "_:N2baa31d99ddf41f78eb0fc370e9e6c48",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection"
+          },
+          {
+            "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlaneNormal"
+          }
+        ]
       }
     ]
   },
@@ -637,168 +674,266 @@
     ]
   },
   {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasEndNode",
+    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasThirdAxisVector",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/license",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2004/02/skos/core#defintion",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/vocab/vann/preferredNamespacePrefix",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/contributor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasBurgersVector",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Sub-property of hasNode that relates the segment with the end node."
+        "@value": "hasBurgersVector represents the relationship between dislocation to Burgers vector."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Segment"
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Dislocation"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "has end node"
+        "@value": "has Burgers vector"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Node"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasNode"
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#BurgersVector"
       }
     ]
   },
   {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#BurgersVector",
+    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Vector",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "An elementary unit (length order of lattice parameter) of lattice translation. The basic notion of the Burgers vector comes from the closure failure of an initially perfect lattice due to the existence of dislocation. The magnitude and direction of closure failure are characterized by the Burgers vector."
+        "@value": "(Euclidean) vector is used to represent quantities that both magnitude and direction."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Burgers Vector"
+        "@value": "Vector"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Vector"
+        "@id": "_:Nd00ee062c9f9405eb4333efa3724ca4a"
+      },
+      {
+        "@id": "_:N50943b98402e430080502e11fddcc5a2"
       }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasSecondAxisVector",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipDirection",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
+    "http://www.w3.org/2004/02/skos/core#defintion": [
       {
         "@language": "en",
-        "@value": "hasSlipDirection represents the relationship between the slip plane or slip system with the slip direction."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N351157f6253341e5aa463be57d4f2d8c"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has slip direction"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipDirection"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticeDirection"
+        "@value": "(Euclidean) vector used to represent quantities that both magnitude and direction."
       }
     ]
   },
   {
-    "@id": "_:N351157f6253341e5aa463be57d4f2d8c",
+    "@id": "_:Nd00ee062c9f9405eb4333efa3724ca4a",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
       {
         "@list": [
           {
-            "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlane"
+            "@id": "_:Ndd09798f6ce34e6187c08034764b9665"
           },
           {
-            "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipSystem"
+            "@id": "_:N34721e0be5954e24b1947df490b3e246"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasShapeFunction",
+    "@id": "_:Ndd09798f6ce34e6187c08034764b9665",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#Restriction"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
+    "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@language": "en",
-        "@value": "hasShapeFunction represents the relationship between discretized line and shape function."
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasVectorComponent"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
       {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has shape function"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#ShapeFunction"
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#VectorComponentOfBasis"
       }
     ]
   },
   {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#TransmissionElectronMicroscopy",
+    "@id": "_:N34721e0be5954e24b1947df490b3e246",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#VectorComponentOfBasis"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasVectorComponent"
+      }
+    ]
+  },
+  {
+    "@id": "_:N50943b98402e430080502e11fddcc5a2",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onDataRange": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#double"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#vectorMagnitude"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mdo/structure/Basis",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Transmission electron microscopy (TEM) is a microscopy technique in which a beam of electrons is transmitted through a specimen to form an image. The specimen is often an ultrathin section less than 100 nm thick."
+        "@value": "A basis defines a spatial unit used to express fractional coordinates."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Transmission Electron Microscopy"
+        "@value": "Basis"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N3405dde62c6b42f185de934626f6d457"
+      },
+      {
+        "@id": "_:Ne31959bc25d943038d1613fc01740ee8"
+      },
+      {
+        "@id": "_:Nb1bbbdd328854c1d95f32026b6806b4c"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#defintion": [
+      {
+        "@language": "en",
+        "@value": "Set of vector(in 2-D two vectors and in 3-D three vectors) that linearly independent."
       }
     ]
   },
   {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#secondAxisComponent",
+    "@id": "_:N3405dde62c6b42f185de934626f6d457",
     "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onClass": [
+      {
+        "@id": "https://w3id.org/mdo/structure/CoordinateVector"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasFirstAxisVector"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne31959bc25d943038d1613fc01740ee8",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onClass": [
+      {
+        "@id": "https://w3id.org/mdo/structure/CoordinateVector"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasSecondAxisVector"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb1bbbdd328854c1d95f32026b6806b4c",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onClass": [
+      {
+        "@id": "https://w3id.org/mdo/structure/CoordinateVector"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasThirdAxisVector"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
     ]
   },
   {
@@ -835,1089 +970,6 @@
     ]
   },
   {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#vectorMagnitude",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Line",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Mathematical representation of dislocation as 'Line'. An instance of mathematical representation of a dislocation line is an oriented curve parameterized by its arc length."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Line"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N7c3fbd35e0da49a2affaa6f90712d243"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#disjointWith": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Node"
-      }
-    ]
-  },
-  {
-    "@id": "_:N7c3fbd35e0da49a2affaa6f90712d243",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasNumericalRepresentation"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The vector direction inside the lattice that is connecting two lattice points."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Lattice Direction"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Vector"
-      },
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#FamilyOfCrystalDirection"
-      },
-      {
-        "@id": "_:N878c65810eb64b1199a105dd3d07fa88"
-      },
-      {
-        "@id": "_:N2f71eba7ef6d41cf8e31f4c1339ea52c"
-      }
-    ]
-  },
-  {
-    "@id": "_:N878c65810eb64b1199a105dd3d07fa88",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "_:Nc06c7b19a5094bb198563538cda26320"
-          },
-          {
-            "@id": "_:Ne4414066db114ad49f50040d71a0932f"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Nc06c7b19a5094bb198563538cda26320",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePoint"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePoint"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ne4414066db114ad49f50040d71a0932f",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePoint"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePoint"
-      }
-    ]
-  },
-  {
-    "@id": "_:N2f71eba7ef6d41cf8e31f4c1339ea52c",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onDataRange": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#directionMillerIndice"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipPlaneNormal",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "hasSlipPlaneNormal represents the relationship between a slip plane or slip system with slip plane normal."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Nace8e33bde9549d3a3bf9b8b72eea34e"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has slip plane normal"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlaneNormal"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nace8e33bde9549d3a3bf9b8b72eea34e",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlane"
-          },
-          {
-            "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipSystem"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2004/02/skos/core#defintion",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipDirection",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The direction in the slip plane along which plastic deformation takes place. The slip direction corresponds to one of the shortest lattice translation vectors."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Slip Direction"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipSystem",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A slip system is defined as the set of slip planes with the same unit normal vector and the same slip direction."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Slip System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:Nd0eee09534bd433a9f001e1b730ebbc9"
-      },
-      {
-        "@id": "_:N340ff334391a4f31981e3e64c6eb199f"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nd0eee09534bd433a9f001e1b730ebbc9",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "_:Ne9eae63d0b5a4397ab324d5dc4aac238"
-          },
-          {
-            "@id": "_:N3206dbf446d44d28987f79be151d3220"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Ne9eae63d0b5a4397ab324d5dc4aac238",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipDirection"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipDirection"
-      }
-    ]
-  },
-  {
-    "@id": "_:N3206dbf446d44d28987f79be151d3220",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipDirection"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipDirection"
-      }
-    ]
-  },
-  {
-    "@id": "_:N340ff334391a4f31981e3e64c6eb199f",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "_:N3e76cd3b4a1342cb8d12b4b48822cc08"
-          },
-          {
-            "@id": "_:N6f04a78adea944e0ba81ffaa8e033396"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N3e76cd3b4a1342cb8d12b4b48822cc08",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipPlaneNormal"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlaneNormal"
-      }
-    ]
-  },
-  {
-    "@id": "_:N6f04a78adea944e0ba81ffaa8e033396",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlaneNormal"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipPlaneNormal"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasNumericalRepresentation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "hasNumericalRepresentation relates the entity with its numerical representation."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Line"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has numerical representation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasRepresentation"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#movesOn",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "movesOn represents the relationship between dislocation and slip plane."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Dislocation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "moves on"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlane"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#EdgeDislocation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A dislocation that has a line sense perpendicular to its Burgers vector."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Edge Dislocation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Dislocation"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#disjointWith": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#ScrewDislocation"
-      }
-    ]
-  },
-  {
-    "@id": "http://qudt.org/schema/qudt/QuantityValue",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://qudt.org/schema/qudt/description": [
-      {
-        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML",
-        "@value": "A <i>Quantity Value</i> expresses the magnitude and kind of a quantity and is given by the product of a numerical value <code>n</code> and a unit of measure <code>U</code>. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to <a href=\"http://physics.nist.gov/Pubs/SP811/sec07.html\">NIST SP 811 section 7</a> for more on quantity values."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://qudt.org/2.0/schema/qudt"
-      },
-      {
-        "@id": "http://qudt.org/schema/qudt"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Quantity value"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N57ab473b761f4fdb95ea184c0c4a240c"
-      }
-    ]
-  },
-  {
-    "@id": "_:N57ab473b761f4fdb95ea184c0c4a240c",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://qudt.org/schema/qudt/Unit"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://qudt.org/schema/qudt/unit"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#FamilyOfCrystalPlane",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A set of symmetrically equivalent planes in the lattice."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Family of Crystal Plane"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N6283bdc0d36f4a8697b159cbafbaeece"
-      }
-    ]
-  },
-  {
-    "@id": "_:N6283bdc0d36f4a8697b159cbafbaeece",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onDataRange": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#familyPlaneMillerIndice"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#slipArea",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "slipArea represents the slip area of discretized line in double."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "slipArea"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#double"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/mdo/structure/X_axisCoordinate",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Lattice",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The mathematical concept to represent the periodicity of a crystal. A lattice defines a periodic arrangement of one or more atoms."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Lattice"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:Ne9a486e6046942369e0492e7e20bc4bb"
-      },
-      {
-        "@id": "_:N3982197fe15343f79b7f2befdda9def5"
-      },
-      {
-        "@id": "_:Nf90e8c2015f74eccb0edcd4a13473ee0"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ne9a486e6046942369e0492e7e20bc4bb",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "_:Nd4ba6059ea9445a48318ac4f3943128b"
-          },
-          {
-            "@id": "_:N7af96299e85a4c7c87c51a1820a0faee"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Nd4ba6059ea9445a48318ac4f3943128b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticeDirection"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection"
-      }
-    ]
-  },
-  {
-    "@id": "_:N7af96299e85a4c7c87c51a1820a0faee",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticeDirection"
-      }
-    ]
-  },
-  {
-    "@id": "_:N3982197fe15343f79b7f2befdda9def5",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "_:Nfc7dce1da9e344d7b267da8e615c0a71"
-          },
-          {
-            "@id": "_:N3c1db54a03dd4ccd9334e2b347c0857d"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Nfc7dce1da9e344d7b267da8e615c0a71",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePlane"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePlane"
-      }
-    ]
-  },
-  {
-    "@id": "_:N3c1db54a03dd4ccd9334e2b347c0857d",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticeDirection"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nf90e8c2015f74eccb0edcd4a13473ee0",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "_:N3de973d3e7054ebea55364fdda687cb1"
-          },
-          {
-            "@id": "_:N6acd57a2201c4df6b292540ede75b971"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N3de973d3e7054ebea55364fdda687cb1",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePoint"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePoint"
-      }
-    ]
-  },
-  {
-    "@id": "_:N6acd57a2201c4df6b292540ede75b971",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePoint"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePoint"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A crystal structure is described by the lattice geometry and atomic arrangements within the unit cell."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Crystal Structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N060f563785994bc984b13af1477770cb"
-      },
-      {
-        "@id": "_:Nf9c3d2e595a841c1a84518a0fc92188a"
-      }
-    ]
-  },
-  {
-    "@id": "_:N060f563785994bc984b13af1477770cb",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "_:N04a78b77bf224962a173308cf318295f"
-          },
-          {
-            "@id": "_:Nab8438c2b1044872bc393ebe66b273f3"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N04a78b77bf224962a173308cf318295f",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipPlane"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlane"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nab8438c2b1044872bc393ebe66b273f3",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlane"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipPlane"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nf9c3d2e595a841c1a84518a0fc92188a",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "_:N64e6f34c17f445239b65cd3eaeff7773"
-          },
-          {
-            "@id": "_:N6a8f6c39d6c24c7fa05a94396c5ff382"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N64e6f34c17f445239b65cd3eaeff7773",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipSystem"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipSystem"
-      }
-    ]
-  },
-  {
-    "@id": "_:N6a8f6c39d6c24c7fa05a94396c5ff382",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipSystem"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipSystem"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#familyDirectionMillerIndice",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "familyDirectionMillerIndice represents a set of miller indices of lattice direction in string."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#FamilyOfCrystalDirection"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "family direction miller indice"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/contributor",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasFirstAxisVector",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasPositionVector",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "hasPositionVector represents the relationship between entity and position vector."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Point"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has position vector"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#PositionVector"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/mdo/structure/CoordinateVector",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Coordinate Vector"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N6c28766f53a1436c92f801d442418f8c"
-      },
-      {
-        "@id": "_:N91e84572d29c4f97becb3df0dce22c69"
-      },
-      {
-        "@id": "_:N3052a2ab892c4d739f0c4b6dc6091424"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#defintion": [
-      {
-        "@language": "en",
-        "@value": "A coordinate vector according to standard basis, i.e., e_x (1, 0, 0), e_y(0, 1, 0), and e_z (0, 0, 1)."
-      }
-    ]
-  },
-  {
-    "@id": "_:N6c28766f53a1436c92f801d442418f8c",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onDataRange": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#double"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://w3id.org/mdo/structure/X_axisCoordinate"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "_:N91e84572d29c4f97becb3df0dce22c69",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onDataRange": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#double"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://w3id.org/mdo/structure/Y_axisCoordinate"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "_:N3052a2ab892c4d739f0c4b6dc6091424",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onDataRange": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#double"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://w3id.org/mdo/structure/Z_axisCoordinate"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePlane",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "hasLatticePlane represents the relationship between a lattice and lattice planes."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N7f265266d4b242b89c4a774f0d1ba817"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has lattice plane"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePlane"
-      }
-    ]
-  },
-  {
-    "@id": "_:N7f265266d4b242b89c4a774f0d1ba817",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure"
-          },
-          {
-            "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Lattice"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "@id": "https://purls.helmholtz-metadaten.de/disos/diso#FamilyOfCrystalDirection",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
@@ -1926,17 +978,25 @@
       {
         "@language": "en",
         "@value": "A set of symmetrically equivalent directions in the lattice."
+      },
+      {
+        "@language": "de",
+        "@value": "die Menge aller symmetrisch äquivalenten Richtungen."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
         "@value": "Family of Crystal Direction"
+      },
+      {
+        "@language": "de",
+        "@value": "die Familie der Gitterrichtung"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:Nd85c3c4fbaf44b0381d5ec23d7c5e635"
+        "@id": "_:N452a730c41114da196d0d219a2ea52fd"
       }
     ],
     "http://www.w3.org/2002/07/owl#disjointWith": [
@@ -1946,7 +1006,7 @@
     ]
   },
   {
-    "@id": "_:Nd85c3c4fbaf44b0381d5ec23d7c5e635",
+    "@id": "_:N452a730c41114da196d0d219a2ea52fd",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -1968,208 +1028,28 @@
     ]
   },
   {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipSystem",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "hasSlipSystem represents the relationship between a crystal structure and slip system."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has slip system"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipSystem"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlaneNormal",
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#ShapeFunction",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@language": "en",
-        "@value": "The unit normal vector of slip planes."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Slip Plane Normal"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Vector"
+        "@language": "de",
+        "@value": "Die Formfunktion ist die Funktion, die die Lösung zwischen den an den Netzknoten erhaltenen diskreten Werten interpoliert. Bei der diskretisierten Versetzung bestimmt die Formfunktion die Form eines Segments und letztlich die Form der Linie. Beispiele für Formfunktionen, die zur Diskretisierung der Versetzung verwendet werden, sind kreisförmig, elliptisch, spiralförmig, linear, kubisch und quintisch."
       },
       {
-        "@id": "_:N0c2bba45bd024fb5b828c9934ef1088b"
-      }
-    ]
-  },
-  {
-    "@id": "_:N0c2bba45bd024fb5b828c9934ef1088b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onDataRange": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#directionMillerIndice"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePoint",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
         "@language": "en",
-        "@value": "Lattice point is the point where atom(s) or molecule(s) is located."
+        "@value": "The shape function is the function that interpolates the solution between the discrete values obtained at the mesh nodes. In discretized dislocation, the shape function determines the shape of a segment and ultimately determines the shape of the line. Examples of shape function that is used to discretize the dislocation are circular, elliptic, spiral, linear, cubic, and quintic."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Lattice Point"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+        "@value": "Shape Function"
+      },
       {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Point"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasFamilyCrystalPlane",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "hasFamilyCrystalPlane represents the relationship between the lattice plane and the family of crystal planes."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePlane"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has family crystal plane"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#FamilyOfCrystalPlane"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasRepresentation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "hasRepresentation relates the entity to another representation of entity."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.w3.org/2002/07/owl#Thing"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has representation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:Na524ee5485bf4b3e94850c29acd2dc22"
-      }
-    ]
-  },
-  {
-    "@id": "_:Na524ee5485bf4b3e94850c29acd2dc22",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine"
-          },
-          {
-            "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Line"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSegment",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "hasSegment represents the relationship between discretized line and segment."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has segment"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Segment"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#isSegmentOf"
+        "@language": "de",
+        "@value": "die Formfunktion"
       }
     ]
   },
@@ -2177,202 +1057,6 @@
     "@id": "https://w3id.org/mdo/structure/Z_axisCoordinate",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Point",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "In classical Euclidean geometry, a point is a primitive notion that models an exact location in the space, and has no length, width, or thickness."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Point"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:Na63f532a30424a95a4300dbd44562b46"
-      }
-    ]
-  },
-  {
-    "@id": "_:Na63f532a30424a95a4300dbd44562b46",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#PositionVector"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasPositionVector"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#thirdAxisComponent",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLineSense",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "hasLineSense represents the relationship between dislocation and line sense."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Dislocation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has line sense"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LineSense"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#familyPlaneMillerIndice",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "familyPlaneMillerIndice represents a set of Miller indice of lattice plane in string."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#FamilyOfCrystalPlane"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "family plane miller indice"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasStartNode",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Sub-property of hasNode that relates the segment with the start node."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Segment"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has start node"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Node"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasNode"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#resultsIn",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "resultsIn represents the relationship between dislocation and lattice displacement."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Dislocation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "results in"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDisplacement"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasVectorComponent",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#isSegmentOf",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Inverse of hasSegment"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Segment"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "is segment of"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine"
-      }
     ]
   },
   {
@@ -2435,905 +1119,9 @@
     ]
   },
   {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#planeMillerIndice",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "planeMillerIndice represents Miller indice of lattice plane in string."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePlane"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "plane miller indice"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LineDefect",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Linear or one-dimensional defect around which some of the atoms are misaligned."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Line Defect"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#PositionVector",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Euclidean vector that represents the position of a point P in space in relation to an arbitrary reference origin O."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Position Vector"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Vector"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/mdo/structure/Basis",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A basis defines a spatial unit used to express fractional coordinates."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Basis"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N9143f42660c0440398b5e83177210076"
-      },
-      {
-        "@id": "_:Nd977d5b0ae26418f94dd6bda3d6701c9"
-      },
-      {
-        "@id": "_:Na47a97765c804d91805e70596708f90c"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#defintion": [
-      {
-        "@language": "en",
-        "@value": "Set of vector(in 2-D two vectors and in 3-D three vectors) that linearly independent."
-      }
-    ]
-  },
-  {
-    "@id": "_:N9143f42660c0440398b5e83177210076",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onClass": [
-      {
-        "@id": "https://w3id.org/mdo/structure/CoordinateVector"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasFirstAxisVector"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nd977d5b0ae26418f94dd6bda3d6701c9",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onClass": [
-      {
-        "@id": "https://w3id.org/mdo/structure/CoordinateVector"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasSecondAxisVector"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "_:Na47a97765c804d91805e70596708f90c",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onClass": [
-      {
-        "@id": "https://w3id.org/mdo/structure/CoordinateVector"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasThirdAxisVector"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/mdo/structure/Y_axisCoordinate",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePoint",
+    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasVectorComponent",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "hasLatticePoint represents the relationship between a lattice or lattice plane or lattice direction with lattice point."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N73eddba0374d4fe3aafd211026cd2aea"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has lattice point"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePoint"
-      }
-    ]
-  },
-  {
-    "@id": "_:N73eddba0374d4fe3aafd211026cd2aea",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Lattice"
-          },
-          {
-            "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection"
-          },
-          {
-            "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePlane"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasFamilyCrystalDirection",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "hasFamilyCrystalDirection represents the relationship between lattice direction and family of crystal direction."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has family crystal direction"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#FamilyOfCrystalDirection"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The numerical representation of the dislocation line that is discretized into the number of segments."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Discretized Line"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:Na2dc68215428422db9df562c1c46b619"
-      },
-      {
-        "@id": "_:Nabb9730925ac4e3f9b465b75304607e2"
-      },
-      {
-        "@id": "_:Nb4ead77f129f47c9b8d59c3e7681a17b"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#disjointWith": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Line"
-      }
-    ]
-  },
-  {
-    "@id": "_:Na2dc68215428422db9df562c1c46b619",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Segment"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSegment"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nabb9730925ac4e3f9b465b75304607e2",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#ShapeFunction"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasShapeFunction"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nb4ead77f129f47c9b8d59c3e7681a17b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onDataRange": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#double"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#slipArea"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/created",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#firstAxisComponent",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasNode",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "hasNode represents the relationship between segment and node."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Segment"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has node"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Node"
-      }
-    ]
-  },
-  {
-    "@id": "http://qudt.org/schema/qudt/QuantityKind",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://qudt.org/schema/qudt/description": [
-      {
-        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML",
-        "@value": "A <b>Quantity Kind</b> is any observable property that can be  measured and quantified numerically. Familiar examples include physical properties such as length, mass, time, force, energy, power, electric charge, etc. Less familiar examples include currency, interest rate, price to earning ratio, and information capacity."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://qudt.org/2.0/schema/qudt"
-      },
-      {
-        "@id": "http://qudt.org/schema/qudt"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Quantity Kind"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#ScrewDislocation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A dislocation that has a line sense parallel to its Burgers vector."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Screw Dislocation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Dislocation"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticeDirection",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "hasLatticeDirection represents the relationship between a lattice or a lattice plane with lattice directions."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N232acc7cd4084867b71cff243fb8b5b2"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has lattice direction"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection"
-      }
-    ]
-  },
-  {
-    "@id": "_:N232acc7cd4084867b71cff243fb8b5b2",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Lattice"
-          },
-          {
-            "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePlane"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "http://qudt.org/schema/qudt/Unit",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://qudt.org/schema/qudt/description": [
-      {
-        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML",
-        "@value": "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\(Q = nU\\)."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://qudt.org/2.0/schema/qudt"
-      },
-      {
-        "@id": "http://qudt.org/schema/qudt"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Unit"
-      }
-    ]
-  },
-  {
-    "@id": "http://qudt.org/schema/qudt/unit",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/creator",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasThirdAxisVector",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlane",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The crystallographic/lattice plane along which the dislocation line traverses/moves. The slip plane is usually the plane with the highest density of atoms, i.e. most widely spaced."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Slip Plane"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePlane"
-      },
-      {
-        "@id": "_:N5c956b250783410c9aabf09b45660e55"
-      },
-      {
-        "@id": "_:Nc0f19a456b57400880369f2a4a0d5465"
-      }
-    ]
-  },
-  {
-    "@id": "_:N5c956b250783410c9aabf09b45660e55",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "_:Nf455845696c548cc809fcf0867ed22f8"
-          },
-          {
-            "@id": "_:N763950e6ec3b42758d20343e2c5656b5"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Nf455845696c548cc809fcf0867ed22f8",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipDirection"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipDirection"
-      }
-    ]
-  },
-  {
-    "@id": "_:N763950e6ec3b42758d20343e2c5656b5",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipDirection"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipDirection"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nc0f19a456b57400880369f2a4a0d5465",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "_:Nd94baa99db6c4c279a5767a276eefdf4"
-          },
-          {
-            "@id": "_:N3706cc0565324baab523c8909d89452a"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Nd94baa99db6c4c279a5767a276eefdf4",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipPlaneNormal"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlaneNormal"
-      }
-    ]
-  },
-  {
-    "@id": "_:N3706cc0565324baab523c8909d89452a",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlaneNormal"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipPlaneNormal"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#ShapeFunction",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The shape function is the function that interpolates the solution between the discrete values obtained at the mesh nodes. In discretized dislocation, the shape function determines the shape of a segment and ultimately determines the shape of the line. Examples of shape function that is used to discretize the dislocation are circular, elliptic, spiral, linear, cubic, and quintic."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Shape Function"
-      }
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Dislocation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Linear or one-dimensional defect around which some of the atoms are misaligned. In the mesoscale, a dislocation is a line object that is a boundary separating the regions on the slip plane which have undergone slip from those that have not."
-      },
-      {
-        "@language": "en",
-        "@value": "The presence of dislocation introduces local disturbance of the atomic-level geometry."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Dislocation"
-      },
-      {
-        "@language": "de",
-        "@value": "Versetzung"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LineDefect"
-      },
-      {
-        "@id": "_:N1942bbaa283549c7810714ca28ed7e04"
-      },
-      {
-        "@id": "_:Ne0f839bc866b4f24ab0950bcc01dab65"
-      },
-      {
-        "@id": "_:Ncba57060168040689a5fb56eba4df0e4"
-      },
-      {
-        "@id": "_:N6b52eb6d63c84ab693934a9dce2ab0cb"
-      },
-      {
-        "@id": "_:N7a3966b5529c4337b2089a0563d6454f"
-      },
-      {
-        "@id": "_:N0081eb8441a44e758d7b1f3992c440aa"
-      },
-      {
-        "@id": "_:Nb17c8c9bad9a49d49997237c44ce08c2"
-      }
-    ]
-  },
-  {
-    "@id": "_:N1942bbaa283549c7810714ca28ed7e04",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "_:N19f6b7aaa8a54dc98ba2ed783c1607ff"
-          },
-          {
-            "@id": "_:N9fae0b291d7741cda6246a0c13a70729"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N19f6b7aaa8a54dc98ba2ed783c1607ff",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasBurgersVector"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#BurgersVector"
-      }
-    ]
-  },
-  {
-    "@id": "_:N9fae0b291d7741cda6246a0c13a70729",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#BurgersVector"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasBurgersVector"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ne0f839bc866b4f24ab0950bcc01dab65",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
-      {
-        "@list": [
-          {
-            "@id": "_:N4569f70478c34d6693e1a5c9ade42dd5"
-          },
-          {
-            "@id": "_:Nd5d1cf5360844a41a7d38d2c3ed234e2"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N4569f70478c34d6693e1a5c9ade42dd5",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLineSense"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LineSense"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nd5d1cf5360844a41a7d38d2c3ed234e2",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LineSense"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLineSense"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ncba57060168040689a5fb56eba4df0e4",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasMathematicalRepresentation"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Line"
-      }
-    ]
-  },
-  {
-    "@id": "_:N6b52eb6d63c84ab693934a9dce2ab0cb",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#movesOn"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlane"
-      }
-    ]
-  },
-  {
-    "@id": "_:N7a3966b5529c4337b2089a0563d6454f",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#observedBy"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#FieldIonMicroscopy"
-      }
-    ]
-  },
-  {
-    "@id": "_:N0081eb8441a44e758d7b1f3992c440aa",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#observedBy"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#TransmissionElectronMicroscopy"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nb17c8c9bad9a49d49997237c44ce08c2",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#resultsIn"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDisplacement"
-      }
     ]
   },
   {
@@ -3370,9 +1158,395 @@
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/license",
+    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasFirstAxisVector",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://qudt.org/schema/qudt/Quantity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://qudt.org/schema/qudt/description": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML",
+        "@value": "<p class=\"lm-para\">A quantity is the measurement of an observable property of a particular object, event, or physical system. A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the underlying quantity kind is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as the speed of light in a vacuum, Planck's constant, the electric permittivity of free space, and the fine structure constant. </p>\n\n<p class=\"lm-para\">In other words, quantities are quantifiable aspects of the world, such as time, distance, velocity, mass, momentum, energy, and weight, and units are used to describe their measure. Many of which are related to each other by various physical laws, and as a result the units of some of the quantities can be expressed as products (or ratios) of powers of other units (e.g., momentum is mass times velocity and velocity is measured in distance divided by time). These relationships are discussed in dimensional analysis. Those that cannot be so expressed can be regarded as &quot;fundamental&quot; in this sense.</p>\n<p class=\"lm-para\">A quantity is distinguished from a &quot;quantity kind&quot; in that the former carries a value and the latter is a type specifier.</p>"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://qudt.org/2.0/schema/qudt"
+      },
+      {
+        "@id": "http://qudt.org/schema/qudt"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Quantity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N403706b59b4643498db3475afa84c4ab"
+      },
+      {
+        "@id": "_:Nbcea203d899c4aa287bd928b0c2bf705"
+      }
+    ]
+  },
+  {
+    "@id": "_:N403706b59b4643498db3475afa84c4ab",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://qudt.org/schema/qudt/QuantityKind"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://qudt.org/schema/qudt/hasQuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nbcea203d899c4aa287bd928b0c2bf705",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://qudt.org/schema/qudt/QuantityValue"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://qudt.org/schema/qudt/quantityValue"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Dislocation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "de",
+        "@value": "Ein linearer oder eindimensionaler Defekt, um den herum einige der Atome falsch ausgerichtet sind. Im Mesoscale ist eine Versetzung ein linienförmiges Objekt, das eine Grenze darstellt, die die Regionen auf der Gleitebene, in denen ein Gleiten stattgefunden hat, von denen trennt, in denen dies nicht der Fall war."
+      },
+      {
+        "@language": "en",
+        "@value": "Linear or one-dimensional defect around which some of the atoms are misaligned. In the mesoscale, a dislocation is a line object that is a boundary separating the regions on the slip plane which have undergone slip from those that have not."
+      },
+      {
+        "@language": "en",
+        "@value": "The presence of dislocation introduces local disturbance of the atomic-level geometry."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Dislocation"
+      },
+      {
+        "@language": "de",
+        "@value": "die Versetzung"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LineDefect"
+      },
+      {
+        "@id": "_:Nd439e57eb6c040aabc30364f34b2e268"
+      },
+      {
+        "@id": "_:N6d6dc8dae7da4700936f1378e252d04c"
+      },
+      {
+        "@id": "_:Na89b613778624b7aaa67c7a3e5f201a2"
+      },
+      {
+        "@id": "_:Nb87dc81d738f4b139cd9e840b1fb9b26"
+      },
+      {
+        "@id": "_:Ndd560ed043c54f4d940c3a87fc405dff"
+      },
+      {
+        "@id": "_:Ne70b72e2833b4f8cbbf5b4484dc48aca"
+      },
+      {
+        "@id": "_:Nab4c4e3a52b14be597385c49471b9187"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd439e57eb6c040aabc30364f34b2e268",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:Nfe29857919dd41b39e9f3ba6e8d1839f"
+          },
+          {
+            "@id": "_:N021bbc033483460faf5f5d935b1f65db"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Nfe29857919dd41b39e9f3ba6e8d1839f",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasBurgersVector"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#BurgersVector"
+      }
+    ]
+  },
+  {
+    "@id": "_:N021bbc033483460faf5f5d935b1f65db",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#BurgersVector"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasBurgersVector"
+      }
+    ]
+  },
+  {
+    "@id": "_:N6d6dc8dae7da4700936f1378e252d04c",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:N95b0dc96d2e441ab8af2d53e34b42e55"
+          },
+          {
+            "@id": "_:N3692740c2eea4703b7eabd6bf7a5c991"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N95b0dc96d2e441ab8af2d53e34b42e55",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLineSense"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LineSense"
+      }
+    ]
+  },
+  {
+    "@id": "_:N3692740c2eea4703b7eabd6bf7a5c991",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LineSense"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLineSense"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na89b613778624b7aaa67c7a3e5f201a2",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasMathematicalRepresentation"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Line"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb87dc81d738f4b139cd9e840b1fb9b26",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#movesOn"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlane"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndd560ed043c54f4d940c3a87fc405dff",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#observedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#FieldIonMicroscopy"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne70b72e2833b4f8cbbf5b4484dc48aca",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#observedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#TransmissionElectronMicroscopy"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nab4c4e3a52b14be597385c49471b9187",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#resultsIn"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDisplacement"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#TransmissionElectronMicroscopy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "de",
+        "@value": "Die Transmissionselektronenmikroskopie (TEM) ist eine Mikroskopietechnik, bei der ein Elektronenstrahl durch eine Probe geschickt wird, um ein Bild zu erzeugen. Bei der Probe handelt es sich häufig um einen ultradünnen Schnitt von weniger als 100 nm Dicke."
+      },
+      {
+        "@language": "en",
+        "@value": "Transmission electron microscopy (TEM) is a microscopy technique in which a beam of electrons is transmitted through a specimen to form an image. The specimen is often an ultrathin section less than 100 nm thick."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "de",
+        "@value": "Die Transmissionselektronenmikroskopie"
+      },
+      {
+        "@language": "en",
+        "@value": "Transmission Electron Microscopy"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasFamilyCrystalDirection",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "hasFamilyCrystalDirection represents the relationship between lattice direction and family of crystal direction."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has family crystal direction"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#FamilyOfCrystalDirection"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#VectorOrigin",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A fixed point that is needed by the vector to identify other points in the space relative to its origin."
+      },
+      {
+        "@language": "de",
+        "@value": "Ein Fixpunkt, der vom Vektor benötigt wird, um andere Punkte im Raum relativ zu seinem Ursprung zu identifizieren."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Vector Origin"
+      },
+      {
+        "@language": "de",
+        "@value": "der Ursprung"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Point"
+      }
     ]
   },
   {
@@ -3382,6 +1556,10 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
+        "@language": "de",
+        "@value": "Die Verschiebung von Atomen von ihren perfekten Gitterpunkt aufgrund des Fehlens von Defekten, z. B. Punktuelle Defekte, Linearedefekte und Korngrenzen."
+      },
+      {
         "@language": "en",
         "@value": "The displacement of atoms from their perfect lattice sites due to the existence of defects, e.g., point defect, line defect, and grain boundary."
       }
@@ -3390,43 +1568,260 @@
       {
         "@language": "en",
         "@value": "Lattice Displacement"
+      },
+      {
+        "@language": "de",
+        "@value": "die Verschiebung"
       }
     ]
   },
   {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Vector",
+    "@id": "http://qudt.org/schema/qudt/unit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasSecondAxisVector",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#PositionVector",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "(Euclidean) vector is used to represent quantities that both magnitude and direction."
+        "@value": "Euclidean vector that represents the position of a point P in space in relation to an arbitrary reference origin O."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Vector"
+        "@value": "Position Vector"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:Nb8d11b5b20f54355a5215e14e168235f"
-      },
-      {
-        "@id": "_:N8067eee58ab0410b8a8fb7f8696c8f81"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#defintion": [
-      {
-        "@language": "en",
-        "@value": "(Euclidean) vector used to represent quantities that both magnitude and direction."
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Vector"
       }
     ]
   },
   {
-    "@id": "_:Nb8d11b5b20f54355a5215e14e168235f",
+    "@id": "http://purl.org/dc/terms/created",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipSystem",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "hasSlipSystem represents the relationship between a crystal structure and slip system."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has slip system"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipSystem"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#planeMillerIndice",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "planeMillerIndice represents Miller indice of lattice plane in string."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePlane"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "plane miller indice"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePoint",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "hasLatticePoint represents the relationship between a lattice or lattice plane or lattice direction with lattice point."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nb4d255120bc94efc9cd3a33ad197bf5e"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has lattice point"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePoint"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb4d255120bc94efc9cd3a33ad197bf5e",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Lattice"
+          },
+          {
+            "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection"
+          },
+          {
+            "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePlane"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipDirection",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "de",
+        "@value": "Die Richtung in der Gleitebene, in der die plastische Verformung stattfindet. Die Gleitrichtung entspricht einem der kürzesten Translationsvektoren des Gitters."
+      },
+      {
+        "@language": "en",
+        "@value": "The direction in the slip plane along which plastic deformation takes place. The slip direction corresponds to one of the shortest lattice translation vectors."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Slip Direction"
+      },
+      {
+        "@language": "de",
+        "@value": "die Gleitrichtung"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#BurgersVector",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An elementary unit (length order of lattice parameter) of lattice translation. The basic notion of the Burgers vector comes from the closure failure of an initially perfect lattice due to the existence of dislocation. The magnitude and direction of closure failure are characterized by the Burgers vector."
+      },
+      {
+        "@language": "de",
+        "@value": "Eine elementare Einheit (Längenordnung der Gitterparameter) der Gittertranslation. Der grundlegende Begriff des Burgers-Vektors leitet sich aus dem Versagen der Schließung eines ursprünglich perfekten Gitters aufgrund der Existenz von Versetzungen ab. Das Ausmaß und die Richtung des Schließfehlers werden durch den Burgers-Vektor charakterisiert."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Burgers Vector"
+      },
+      {
+        "@language": "de",
+        "@value": "der Burgersvektor"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Vector"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlane",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "de",
+        "@value": "Die kristallografische/Gitterebene, entlang derer die Versetzungslinie verläuft/bewegt wird. Die Gleitebene ist in der Regel die Ebene mit der höchsten Dichte an Atomen, d. h. mit dem größten Abstand."
+      },
+      {
+        "@language": "en",
+        "@value": "The crystallographic/lattice plane along which the dislocation line traverses/moves. The slip plane is usually the plane with the highest density of atoms, i.e. most widely spaced."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Slip Plane"
+      },
+      {
+        "@language": "de",
+        "@value": "die Gleitebene"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePlane"
+      },
+      {
+        "@id": "_:N9a1332a504594f0095e44d1e1036cfc2"
+      },
+      {
+        "@id": "_:N43f2d0f5dfb54739b42f85a70955c5d3"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9a1332a504594f0095e44d1e1036cfc2",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -3434,60 +1829,466 @@
       {
         "@list": [
           {
-            "@id": "_:N9a239d836037481dbb59edb882921619"
+            "@id": "_:Na74d7fc7044848ccb7dce41902fae685"
           },
           {
-            "@id": "_:Nd2d20a6e05644c6db1fcbeca7a960d38"
+            "@id": "_:N72a6ac6f3e0443cf8b033a5d5c7b644c"
           }
         ]
       }
     ]
   },
   {
-    "@id": "_:N9a239d836037481dbb59edb882921619",
+    "@id": "_:Na74d7fc7044848ccb7dce41902fae685",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasVectorComponent"
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipDirection"
       }
     ],
     "http://www.w3.org/2002/07/owl#someValuesFrom": [
       {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#VectorComponentOfBasis"
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipDirection"
       }
     ]
   },
   {
-    "@id": "_:Nd2d20a6e05644c6db1fcbeca7a960d38",
+    "@id": "_:N72a6ac6f3e0443cf8b033a5d5c7b644c",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#VectorComponentOfBasis"
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipDirection"
       }
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasVectorComponent"
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipDirection"
       }
     ]
   },
   {
-    "@id": "_:N8067eee58ab0410b8a8fb7f8696c8f81",
+    "@id": "_:N43f2d0f5dfb54739b42f85a70955c5d3",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:Ne20e29c008964663931b2ef4808fdd48"
+          },
+          {
+            "@id": "_:N47dbdc4d1104478c8cea2c152622b97a"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne20e29c008964663931b2ef4808fdd48",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipPlaneNormal"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlaneNormal"
+      }
+    ]
+  },
+  {
+    "@id": "_:N47dbdc4d1104478c8cea2c152622b97a",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlaneNormal"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipPlaneNormal"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A crystal structure is described by the lattice geometry and atomic arrangements within the unit cell."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Crystal Structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N28b5e6af37594f44821debe3ac83b0a1"
+      },
+      {
+        "@id": "_:N215e1587c5ba4693b12e5d94864d9128"
+      }
+    ]
+  },
+  {
+    "@id": "_:N28b5e6af37594f44821debe3ac83b0a1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:N60afc15035f74d61a824400d77ea64c1"
+          },
+          {
+            "@id": "_:N1da0d9923bba4fc89198bd9c77070ca5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N60afc15035f74d61a824400d77ea64c1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipPlane"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlane"
+      }
+    ]
+  },
+  {
+    "@id": "_:N1da0d9923bba4fc89198bd9c77070ca5",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlane"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipPlane"
+      }
+    ]
+  },
+  {
+    "@id": "_:N215e1587c5ba4693b12e5d94864d9128",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:N10a7fae033b04f1aa6da008baf0f8104"
+          },
+          {
+            "@id": "_:N9d39715c4ff944159c093c2652152107"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N10a7fae033b04f1aa6da008baf0f8104",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipSystem"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipSystem"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9d39715c4ff944159c093c2652152107",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipSystem"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipSystem"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Line",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Mathematical representation of dislocation as 'Line'. An instance of mathematical representation of a dislocation line is an oriented curve parameterized by its arc length."
+      },
+      {
+        "@language": "de",
+        "@value": "Mathematische Darstellung der Versetzung als \"Linie\". Ein Beispiel für die mathematische Darstellung einer Versetzungslinie ist eine orientierte Kurve, die durch ihre Bogenlänge parametrisiert ist."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Line"
+      },
+      {
+        "@language": "de",
+        "@value": "die Linie"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N305bb5b827974e1192ff9e78299cbba2"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Node"
+      }
+    ]
+  },
+  {
+    "@id": "_:N305bb5b827974e1192ff9e78299cbba2",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasNumericalRepresentation"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mdo/structure/Y_axisCoordinate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ]
+  },
+  {
+    "@id": "http://qudt.org/schema/qudt/QuantityValue",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://qudt.org/schema/qudt/description": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML",
+        "@value": "A <i>Quantity Value</i> expresses the magnitude and kind of a quantity and is given by the product of a numerical value <code>n</code> and a unit of measure <code>U</code>. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to <a href=\"http://physics.nist.gov/Pubs/SP811/sec07.html\">NIST SP 811 section 7</a> for more on quantity values."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://qudt.org/2.0/schema/qudt"
+      },
+      {
+        "@id": "http://qudt.org/schema/qudt"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Quantity value"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N66c768296dba4dab9c7b4b7c4173e0ce"
+      }
+    ]
+  },
+  {
+    "@id": "_:N66c768296dba4dab9c7b4b7c4173e0ce",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://qudt.org/schema/qudt/Unit"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://qudt.org/schema/qudt/unit"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#EdgeDislocation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A dislocation that has a line sense perpendicular to its Burgers vector."
+      },
+      {
+        "@language": "de",
+        "@value": "Eine Versetzung, die Burgersvektor und Versetzungslinie stehen senkrecht zueinander"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Edge Dislocation"
+      },
+      {
+        "@language": "de",
+        "@value": "die Stufenversetzung"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Dislocation"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#ScrewDislocation"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "de",
+        "@value": "Die Vektorrichtung innerhalb des Gitters, die zwei Gitterpunkte verbindet."
+      },
+      {
+        "@language": "en",
+        "@value": "The vector direction inside the lattice that is connecting two lattice points."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "de",
+        "@value": "Die Gitterrichtung"
+      },
+      {
+        "@language": "en",
+        "@value": "Lattice Direction"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Vector"
+      },
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#FamilyOfCrystalDirection"
+      },
+      {
+        "@id": "_:N39fc8d5a45274c65abc42d76a779bb71"
+      },
+      {
+        "@id": "_:N5d0d8e6786f34c83a35dc6532251a623"
+      }
+    ]
+  },
+  {
+    "@id": "_:N39fc8d5a45274c65abc42d76a779bb71",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:Nae98d026713c45aa80fba67bcd8cdcd4"
+          },
+          {
+            "@id": "_:N2e0524ca4b1e4928b3255cd34a47e75f"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Nae98d026713c45aa80fba67bcd8cdcd4",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePoint"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePoint"
+      }
+    ]
+  },
+  {
+    "@id": "_:N2e0524ca4b1e4928b3255cd34a47e75f",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePoint"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePoint"
+      }
+    ]
+  },
+  {
+    "@id": "_:N5d0d8e6786f34c83a35dc6532251a623",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#onDataRange": [
       {
-        "@id": "http://www.w3.org/2001/XMLSchema#double"
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
       }
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#vectorMagnitude"
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#directionMillerIndice"
       }
     ],
     "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
@@ -3498,70 +2299,286 @@
     ]
   },
   {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasBurgersVector",
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#isSegmentOf",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "hasBurgersVector represents the relationship between dislocation to Burgers vector."
+        "@value": "Inverse of hasSegment"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Dislocation"
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Segment"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "has Burgers vector"
+        "@value": "is segment of"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#BurgersVector"
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine"
       }
     ]
   },
   {
-    "@id": "http://purl.org/vocab/vann/preferredNamespacePrefix",
+    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#thirdAxisComponent",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ]
   },
   {
-    "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML",
-    "@type": [
-      "http://www.w3.org/2000/01/rdf-schema#Datatype"
-    ]
-  },
-  {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Node",
+    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Point",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "A point of a segment."
+        "@value": "In classical Euclidean geometry, a point is a primitive notion that models an exact location in the space, and has no length, width, or thickness."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "Node"
+        "@value": "Point"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Point"
+        "@id": "_:N959b13206cb942b4b9cfb4bf619cfb8b"
+      }
+    ]
+  },
+  {
+    "@id": "_:N959b13206cb942b4b9cfb4bf619cfb8b",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#PositionVector"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasPositionVector"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasRepresentation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "hasRepresentation relates the entity to another representation of entity."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/2002/07/owl#Thing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has representation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N968a51fe5d434a08a7b4196e71f1b413"
+      }
+    ]
+  },
+  {
+    "@id": "_:N968a51fe5d434a08a7b4196e71f1b413",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine"
+          },
+          {
+            "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Line"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipSystem",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A slip system is defined as the set of slip planes with the same unit normal vector and the same slip direction."
+      },
+      {
+        "@language": "de",
+        "@value": "Ein Gleitsystem ist definiert als die Menge der Gleitebenen mit dem gleichen Einheitsnormalvektor und der gleichen Gleitrichtung."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Slip System"
+      },
+      {
+        "@language": "de",
+        "@value": "das Gleitsystem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:Nc306b156d450407499215e703e317d6d"
+      },
+      {
+        "@id": "_:N1162741a59ef4698a38be258ed8c9146"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc306b156d450407499215e703e317d6d",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:Nd67bd9fe400e4672be8abef04968b306"
+          },
+          {
+            "@id": "_:Nb2fab887928946e7b60e647f26da4327"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd67bd9fe400e4672be8abef04968b306",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipDirection"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipDirection"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb2fab887928946e7b60e647f26da4327",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipDirection"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipDirection"
+      }
+    ]
+  },
+  {
+    "@id": "_:N1162741a59ef4698a38be258ed8c9146",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:Na2e8bfa53c214708bb6870f1d7ca4055"
+          },
+          {
+            "@id": "_:N00fd6cd0010544aca01c04344aa74533"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Na2e8bfa53c214708bb6870f1d7ca4055",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipPlaneNormal"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlaneNormal"
+      }
+    ]
+  },
+  {
+    "@id": "_:N00fd6cd0010544aca01c04344aa74533",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlaneNormal"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipPlaneNormal"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#FieldIonMicroscopy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "de",
+        "@value": "Die Feldionenmikroskopie (FIM) ist eine Mikroskopietechnik, mit der sich die Anordnung von Atomen abbilden lässt."
+      },
+      {
+        "@language": "en",
+        "@value": "Field Ion Microscopy (FIM) is a microscopy technique that can be used to image the arrangement of atoms."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "de",
+        "@value": "Das Feldionenmikroskop"
+      },
+      {
+        "@language": "en",
+        "@value": "Field Ion Microscopy"
       }
     ],
     "http://www.w3.org/2002/07/owl#disjointWith": [
       {
-        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Segment"
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#TransmissionElectronMicroscopy"
       }
     ]
   },
@@ -3594,31 +2611,302 @@
     ]
   },
   {
-    "@id": "http://qudt.org/schema/qudt/quantityValue",
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePlane",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "de",
+        "@value": "Die Gitterebene bildet eine unendlich gestreckte Ebene (gekennzeichnet durch eine Ebenennormale), die die Gitterpunkte so schneidet, dass wiederum eine regelmäßige Anordnung der Gitterpunkte in der Ebene entsteht."
+      },
+      {
+        "@language": "en",
+        "@value": "The lattice plane forms an infinitely stretched plane (characterized through a plane normal) that cuts through lattice points such that, again, a regular arrangement of lattice points in the plane occurs."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Lattice Plane"
+      },
+      {
+        "@language": "de",
+        "@value": "die Gitterebene"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#FamilyOfCrystalPlane"
+      },
+      {
+        "@id": "_:N32e6587a1f6a41b89fac7a7c01eddc66"
+      },
+      {
+        "@id": "_:Nb4582c00bc004d5cb6cdf4843a8c18b5"
+      },
+      {
+        "@id": "_:N1b29ab893b924e289d3f3786e4877ee0"
+      },
+      {
+        "@id": "_:N0ac108f7be2d46eeb12b7ce26075cd4c"
+      }
     ]
   },
   {
-    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#directionMillerIndice",
+    "@id": "_:N32e6587a1f6a41b89fac7a7c01eddc66",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:Nc4b6c133576a4d2899b019a7055d3cb4"
+          },
+          {
+            "@id": "_:Ne75bea63dabd4ecd9207afa1fbef32dc"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc4b6c133576a4d2899b019a7055d3cb4",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticeDirection"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne75bea63dabd4ecd9207afa1fbef32dc",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticeDirection"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb4582c00bc004d5cb6cdf4843a8c18b5",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:N3107b8f51b06414a9ebc3fec1be07e0c"
+          },
+          {
+            "@id": "_:N845bac469ba74dd8bd6f66b8fca94471"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N3107b8f51b06414a9ebc3fec1be07e0c",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePoint"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePoint"
+      }
+    ]
+  },
+  {
+    "@id": "_:N845bac469ba74dd8bd6f66b8fca94471",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePoint"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePoint"
+      }
+    ]
+  },
+  {
+    "@id": "_:N1b29ab893b924e289d3f3786e4877ee0",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#VectorOrigin"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasVectorOrigin"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0ac108f7be2d46eeb12b7ce26075cd4c",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onDataRange": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#planeMillerIndice"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticeDirection",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "hasLatticeDirection represents the relationship between a lattice or a lattice plane with lattice directions."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N80ba81d4d2b8499b862c88253ed9c000"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has lattice direction"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection"
+      }
+    ]
+  },
+  {
+    "@id": "_:N80ba81d4d2b8499b862c88253ed9c000",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Lattice"
+          },
+          {
+            "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePlane"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The crystallographic defect is a lattice irregularity that has one or more dimensions on the order of an atomic diameter."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Crystallographic Defect"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#secondAxisComponent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LineSense",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A sense that characterizes a directed line, i.e., it has a start and an end."
+      },
+      {
+        "@language": "de",
+        "@value": "Ein Element, das eine gerichtete Linie charakterisiert, d. h. sie hat einen Anfang und ein Ende."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Line Sense"
+      },
+      {
+        "@language": "de",
+        "@value": "die Versetzunglinie"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#familyDirectionMillerIndice",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "directionMillerIndice represents Miller indice of lattice direction in string."
+        "@value": "familyDirectionMillerIndice represents a set of miller indices of lattice direction in string."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Ne1ab3e63c91040d398f38d8d0bbc7742"
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#FamilyOfCrystalDirection"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "direction miller indice"
+        "@value": "family direction miller indice"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
@@ -3628,7 +2916,668 @@
     ]
   },
   {
-    "@id": "_:Ne1ab3e63c91040d398f38d8d0bbc7742",
+    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Lattice",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "de",
+        "@value": "Das mathematische Konzept zur Darstellung der Periodizität eines Kristalls. Ein Gitter definiert eine periodische Anordnung von einem oder mehreren Atomen."
+      },
+      {
+        "@language": "en",
+        "@value": "The mathematical concept to represent the periodicity of a crystal. A lattice defines a periodic arrangement of one or more atoms."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Lattice"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N7231bfabf8d743268f50b07e5cc94aa8"
+      },
+      {
+        "@id": "_:N83011a51f2804c03a81e52046ebeb628"
+      },
+      {
+        "@id": "_:N3de65d4c362740c68f7136c466a053f7"
+      }
+    ]
+  },
+  {
+    "@id": "_:N7231bfabf8d743268f50b07e5cc94aa8",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:N38a9220cf42b4b9faf5ba09c20ef998e"
+          },
+          {
+            "@id": "_:N4f4f6b2a73a04e2eb4c4b462455477e2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N38a9220cf42b4b9faf5ba09c20ef998e",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticeDirection"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4f4f6b2a73a04e2eb4c4b462455477e2",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticeDirection"
+      }
+    ]
+  },
+  {
+    "@id": "_:N83011a51f2804c03a81e52046ebeb628",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:Nfdc64c52fae2486ebbe11e6f8ce2d2c9"
+          },
+          {
+            "@id": "_:Nc97887ba451e4537895c9962c29d860d"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Nfdc64c52fae2486ebbe11e6f8ce2d2c9",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePlane"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePlane"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc97887ba451e4537895c9962c29d860d",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticeDirection"
+      }
+    ]
+  },
+  {
+    "@id": "_:N3de65d4c362740c68f7136c466a053f7",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:N81e9f63cd942486b83d7f2d8d40c32fa"
+          },
+          {
+            "@id": "_:N5201186950c84c0f8df6c4e59de096f0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N81e9f63cd942486b83d7f2d8d40c32fa",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePoint"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePoint"
+      }
+    ]
+  },
+  {
+    "@id": "_:N5201186950c84c0f8df6c4e59de096f0",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticePoint"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePoint"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasEndNode",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Sub-property of hasNode that relates the segment with the end node."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Segment"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has end node"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Node"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasNode"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasNumericalRepresentation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "hasNumericalRepresentation relates the entity with its numerical representation."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Line"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has numerical representation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasRepresentation"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#VectorComponentOfBasis",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Vector components/vector coordinates of particular basis. It has relation to a specific basis."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Vector Component of Basis"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://qudt.org/schema/qudt/Quantity"
+      },
+      {
+        "@id": "_:Nbf5c7f6f643f4117823f8956bc729c33"
+      },
+      {
+        "@id": "_:N1e250b3e777345f3aaff82c071777be8"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nbf5c7f6f643f4117823f8956bc729c33",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:N31df1db37abf42f69eb213ea424bf17a"
+          },
+          {
+            "@id": "_:Ndbe5f861ee0542849f142d509ca2bc37"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N31df1db37abf42f69eb213ea424bf17a",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasBasis"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/mdo/structure/Basis"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndbe5f861ee0542849f142d509ca2bc37",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/mdo/structure/Basis"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#hasBasis"
+      }
+    ]
+  },
+  {
+    "@id": "_:N1e250b3e777345f3aaff82c071777be8",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:N610b52cf560e48288f8f757dd1d3e67b"
+          },
+          {
+            "@id": "_:Ne9ab082670514909a2dd2d5354582497"
+          },
+          {
+            "@id": "_:N0c6a3157bf564bbdb3c0372ccc5a1c8b"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N610b52cf560e48288f8f757dd1d3e67b",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onDataRange": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#double"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#firstAxisComponent"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne9ab082670514909a2dd2d5354582497",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onDataRange": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#double"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#secondAxisComponent"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0c6a3157bf564bbdb3c0372ccc5a1c8b",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onDataRange": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#double"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#thirdAxisComponent"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#FamilyOfCrystalPlane",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A set of symmetrically equivalent planes in the lattice."
+      },
+      {
+        "@language": "de",
+        "@value": "Steht für Kristallformen, d. h. die Menge aller symmetrisch äquivalenten Flächen."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Family of Crystal Plane"
+      },
+      {
+        "@language": "de",
+        "@value": "die Familie der Gitterebene"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:Ncd75fc327a34401d81b0424dd70020e2"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ncd75fc327a34401d81b0424dd70020e2",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onDataRange": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#familyPlaneMillerIndice"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlaneNormal",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "de",
+        "@value": "Der Einheitsnormalvektor der Gleitebenen."
+      },
+      {
+        "@language": "en",
+        "@value": "The unit normal vector of slip planes."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Slip Plane Normal"
+      },
+      {
+        "@language": "de",
+        "@value": "der Gleitebene Normalvektor"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Vector"
+      },
+      {
+        "@id": "_:N0bf41ee92227473abbc4c43135c89e6f"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0bf41ee92227473abbc4c43135c89e6f",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onDataRange": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#directionMillerIndice"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ]
+  },
+  {
+    "@id": "http://qudt.org/schema/qudt/description",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://qudt.org/schema/qudt/quantityValue",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#resultsIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "resultsIn represents the relationship between dislocation and lattice displacement."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Dislocation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "results in"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDisplacement"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSegment",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "hasSegment represents the relationship between discretized line and segment."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has segment"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Segment"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#isSegmentOf"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LineDefect",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linear or one-dimensional defect around which some of the atoms are misaligned."
+      },
+      {
+        "@language": "de",
+        "@value": "Linearer oder eindimensionaler Defekt, um den herum einige Atome falsch ausgerichtet sind."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Line Defect"
+      },
+      {
+        "@language": "de",
+        "@value": "der linienhafter Defekt"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipDirection",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "hasSlipDirection represents the relationship between the slip plane or slip system with the slip direction."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N3a572196b47e459ca51738a32f61bea1"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has slip direction"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipDirection"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticeDirection"
+      }
+    ]
+  },
+  {
+    "@id": "_:N3a572196b47e459ca51738a32f61bea1",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -3636,12 +3585,251 @@
       {
         "@list": [
           {
-            "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection"
+            "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlane"
           },
           {
-            "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlaneNormal"
+            "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipSystem"
           }
         ]
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#movesOn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "movesOn represents the relationship between dislocation and slip plane."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Dislocation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "moves on"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlane"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasShapeFunction",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "hasShapeFunction represents the relationship between discretized line and shape function."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has shape function"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#ShapeFunction"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#firstAxisComponent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasLineSense",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "hasLineSense represents the relationship between dislocation and line sense."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Dislocation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has line sense"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#LineSense"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipPlaneNormal",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "hasSlipPlaneNormal represents the relationship between a slip plane or slip system with slip plane normal."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Naf0c7c57aa354cf39240a01ef97df8a9"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has slip plane normal"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlaneNormal"
+      }
+    ]
+  },
+  {
+    "@id": "_:Naf0c7c57aa354cf39240a01ef97df8a9",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlane"
+          },
+          {
+            "@id": "https://purls.helmholtz-metadaten.de/disos/diso#SlipSystem"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/cso#vectorMagnitude",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Node",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A point of a segment."
+      },
+      {
+        "@language": "de",
+        "@value": "Ein Punkt eines Segments."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Node"
+      },
+      {
+        "@language": "de",
+        "@value": "der Knoten"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/cso#Point"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Segment"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#slipArea",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "slipArea represents the slip area of discretized line in double."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "slipArea"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#double"
+      }
+    ]
+  },
+  {
+    "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasStartNode",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Sub-property of hasNode that relates the segment with the start node."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Segment"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has start node"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#Node"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://purls.helmholtz-metadaten.de/disos/diso#hasNode"
       }
     ]
   }

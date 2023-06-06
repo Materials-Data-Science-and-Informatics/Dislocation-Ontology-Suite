@@ -84,6 +84,12 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -112,6 +118,14 @@
     
 
 
+    <!-- http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204 -->
+
+    <owl:ObjectProperty rdf:about="http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204">
+        <skos:prefLabel xml:lang="en">hasProperty</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://qudt.org/schema/qudt/hasQuantityKind -->
 
     <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/hasQuantityKind"/>
@@ -127,6 +141,22 @@
     <!-- http://qudt.org/schema/qudt/unit -->
 
     <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/unit"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystalStructure -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystalStructure">
+        <rdfs:label>has crystal structure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect">
+        <rdfs:label>has crystallographic defect</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -618,6 +648,88 @@
     
 
 
+    <!-- http://emmo.info/domain-crystallography/crystallography#EMMO_69dab453_6596_464d_a21d_d64643f4ed9b -->
+
+    <owl:Class rdf:about="http://emmo.info/domain-crystallography/crystallography#EMMO_69dab453_6596_464d_a21d_d64643f4ed9b">
+        <owl:equivalentClass rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial"/>
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo#EMMO_a2b006f2_bbfd_4dba_bcaa_3fca20cd6be1"/>
+        <skos:prefLabel xml:lang="en">Crystal</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/domain-crystallography/crystallography#EMMO_6a340d67_c6cb_4348_8537_d9aa0e768721 -->
+
+    <owl:Class rdf:about="http://emmo.info/domain-crystallography/crystallography#EMMO_6a340d67_c6cb_4348_8537_d9aa0e768721">
+        <owl:equivalentClass rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure"/>
+        <rdfs:subClassOf rdf:resource="http://emmo.info/domain-crystallography/crystallography#EMMO_78a3d6f9_0bbd_4b44_a9a9_baf3df276a06"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://emmo.info/domain-crystallography/crystallography#EMMO_69dab453_6596_464d_a21d_d64643f4ed9b"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel xml:lang="en">CrystalStructure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/domain-crystallography/crystallography#EMMO_78a3d6f9_0bbd_4b44_a9a9_baf3df276a06 -->
+
+    <owl:Class rdf:about="http://emmo.info/domain-crystallography/crystallography#EMMO_78a3d6f9_0bbd_4b44_a9a9_baf3df276a06">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo#EMMO_d8d2144e_5c8d_455d_a643_5caf4d8d9df8"/>
+        <skos:prefLabel xml:lang="en">Crystallographical</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo#EMMO_4ce76d7f_03f8_45b6_9003_90052a79bfaa -->
+
+    <owl:Class rdf:about="http://emmo.info/emmo#EMMO_4ce76d7f_03f8_45b6_9003_90052a79bfaa">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo#EMMO_54ee6b5e_5261_44a8_86eb_5717e7fdb9d0"/>
+        <skos:prefLabel xml:lang="en">Numerical</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo#EMMO_54ee6b5e_5261_44a8_86eb_5717e7fdb9d0 -->
+
+    <owl:Class rdf:about="http://emmo.info/emmo#EMMO_54ee6b5e_5261_44a8_86eb_5717e7fdb9d0">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo#EMMO_d8d2144e_5c8d_455d_a643_5caf4d8d9df8"/>
+        <skos:prefLabel xml:lang="en">Mathematical</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo#EMMO_a2b006f2_bbfd_4dba_bcaa_3fca20cd6be1 -->
+
+    <owl:Class rdf:about="http://emmo.info/emmo#EMMO_a2b006f2_bbfd_4dba_bcaa_3fca20cd6be1">
+        <skos:prefLabel xml:lang="en">Solid</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo#EMMO_d8d2144e_5c8d_455d_a643_5caf4d8d9df8 -->
+
+    <owl:Class rdf:about="http://emmo.info/emmo#EMMO_d8d2144e_5c8d_455d_a643_5caf4d8d9df8">
+        <skos:prefLabel xml:lang="en">Language</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo#EMMO_f7ed665b_c2e1_42bc_889b_6b42ed3a36f0 -->
+
+    <owl:Class rdf:about="http://emmo.info/emmo#EMMO_f7ed665b_c2e1_42bc_889b_6b42ed3a36f0">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo#EMMO_54ee6b5e_5261_44a8_86eb_5717e7fdb9d0"/>
+        <skos:prefLabel xml:lang="en">MathematicalModel</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- http://qudt.org/schema/qudt/Quantity -->
 
     <owl:Class rdf:about="http://qudt.org/schema/qudt/Quantity">
@@ -683,9 +795,56 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial -->
+
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystalStructure"/>
+                        <owl:someValuesFrom rdf:resource="http://emmo.info/domain-crystallography/crystallography#EMMO_6a340d67_c6cb_4348_8537_d9aa0e768721"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystalStructure"/>
+                        <owl:allValuesFrom rdf:resource="http://emmo.info/domain-crystallography/crystallography#EMMO_6a340d67_c6cb_4348_8537_d9aa0e768721"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect"/>
+                        <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect"/>
+                        <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">CrystallineMaterial</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/domain-crystallography/crystallography#EMMO_78a3d6f9_0bbd_4b44_a9a9_baf3df276a06"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://emmo.info/domain-crystallography/crystallography#EMMO_69dab453_6596_464d_a21d_d64643f4ed9b"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The crystallographic defect is a lattice irregularity that has one or more dimensions on the order of an atomic diameter.</rdfs:comment>
         <rdfs:label xml:lang="en">Crystallographic Defect</rdfs:label>
     </owl:Class>
@@ -897,6 +1056,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo#EMMO_4ce76d7f_03f8_45b6_9003_90052a79bfaa"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#hasSegment"/>
@@ -1171,6 +1331,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#Line -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#Line">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo#EMMO_f7ed665b_c2e1_42bc_889b_6b42ed3a36f0"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#hasNumericalRepresentation"/>

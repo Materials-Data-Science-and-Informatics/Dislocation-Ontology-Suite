@@ -78,9 +78,7 @@
 
     <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
     
 
 
@@ -92,6 +90,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204 -->
+
+    <owl:ObjectProperty rdf:about="http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204">
+        <skos:prefLabel xml:lang="en">hasProperty</skos:prefLabel>
+    </owl:ObjectProperty>
     
 
 
@@ -126,12 +132,20 @@
     
 
 
-    <!-- http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94 -->
+    <!-- http://emmo.info/domain-crystallography/crystallography#EMMO_69dab453_6596_464d_a21d_d64643f4ed9b -->
 
-    <owl:Class rdf:about="http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94">
-        <rdfs:comment xml:lang="en">A instance of a material (e.g. nitrogen) can represent different states of matter. The fact that the individual also belongs to other classes (e.g. Gas) would reveal the actual form in which the material is found.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Material usually means some definite kind, quality, or quantity of matter, especially as intended for use.</rdfs:comment>
-        <skos:prefLabel xml:lang="en">Material</skos:prefLabel>
+    <owl:Class rdf:about="http://emmo.info/domain-crystallography/crystallography#EMMO_69dab453_6596_464d_a21d_d64643f4ed9b">
+        <owl:equivalentClass rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial"/>
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo#EMMO_a2b006f2_bbfd_4dba_bcaa_3fca20cd6be1"/>
+        <skos:prefLabel xml:lang="en">Crystal</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo#EMMO_a2b006f2_bbfd_4dba_bcaa_3fca20cd6be1 -->
+
+    <owl:Class rdf:about="http://emmo.info/emmo#EMMO_a2b006f2_bbfd_4dba_bcaa_3fca20cd6be1">
+        <skos:prefLabel xml:lang="en">Solid</skos:prefLabel>
     </owl:Class>
     
 
@@ -139,7 +153,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial">
-        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94"/>
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo#EMMO_a2b006f2_bbfd_4dba_bcaa_3fca20cd6be1"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -177,6 +191,16 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://emmo.info/domain-crystallography/crystallography#EMMO_69dab453_6596_464d_a21d_d64643f4ed9b"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Lattice irregularity having one or more of its dimensions on the order of an atomic diameter.</rdfs:comment>
         <rdfs:label xml:lang="en">Crystallographic Defect</rdfs:label>
     </owl:Class>
@@ -208,6 +232,14 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#Dislocation -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#Dislocation">
+        <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#LineDefect"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#LineDefect -->
+
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#LineDefect">
         <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect"/>
     </owl:Class>
     <rdf:Description>

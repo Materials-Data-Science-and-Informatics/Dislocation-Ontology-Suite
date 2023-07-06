@@ -1341,6 +1341,16 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#DislocationDensity -->
+
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#DislocationDensity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mdo/core/CalculatedProperty"/>
+        <rdfs:comment xml:lang="en">A quantifiable of the total length of dislocation line per unit volume of a crystalline material.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dislocation Density</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#DislocationStructure -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#DislocationStructure">

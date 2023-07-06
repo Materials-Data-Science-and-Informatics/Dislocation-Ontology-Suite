@@ -21,7 +21,7 @@
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DISO</vann:preferredNamespacePrefix>
         <rdfs:label xml:lang="en">Dislocation Ontology</rdfs:label>
         <rdfs:seeAlso>https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology</rdfs:seeAlso>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -579,6 +579,12 @@
     
 
 
+    <!-- http://purls.helmholtz-metadaten.de/mwo/hasORCID -->
+
+    <owl:DatatypeProperty rdf:about="http://purls.helmholtz-metadaten.de/mwo/hasORCID"/>
+    
+
+
     <!-- http://www.w3.org/ns/prov#endedAtTime -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#endedAtTime"/>
@@ -588,6 +594,18 @@
     <!-- http://www.w3.org/ns/prov#startedAtTime -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#startedAtTime"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/family_name -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/family_name"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/firstName -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/firstName"/>
     
 
 
@@ -894,6 +912,32 @@
     
 
 
+    <!-- http://www.w3.org/ns/prov#Person -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Person">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purls.helmholtz-metadaten.de/mwo/hasORCID"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/family_name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/firstName"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3.org/ns/prov#SoftwareAgent -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/prov#SoftwareAgent">
@@ -1194,6 +1238,12 @@
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/prov#Person"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     

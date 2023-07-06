@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.1"?>
 <rdf:RDF xmlns="https://purls.helmholtz-metadaten.de/disos/cso"
      xml:base="https://purls.helmholtz-metadaten.de/disos/cso"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -19,6 +19,7 @@
         <terms:title xml:lang="en">Crystal Structure Ontology</terms:title>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CSO</vann:preferredNamespacePrefix>
         <rdfs:seeAlso>https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</owl:versionInfo>
     </owl:Ontology>
     
 

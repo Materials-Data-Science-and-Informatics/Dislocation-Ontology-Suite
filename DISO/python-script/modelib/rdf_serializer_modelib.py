@@ -17,14 +17,12 @@ QUDT_QK = Namespace("http://qudt.org/vocab/quantitykind/")
 
 # function to serializing the cif into resource description framework(RDF) using the crystallography ontology
 # returning graph object of rdflib
-def rdf_serializer(cif_data, space_group_data, mat_info, node_data, linker_data, loop_data, iri):
-    example = Namespace(iri)
-    g = Graph()
+def crystal_rdf_serializer(g, cif_data, space_group_data, mat_info, ns):
     g.parse("../../CSO/crystal-structure-ontology.owl", format="xml")
     g.parse("../../dislocation-ontology.owl", format="xml")
     # g.parse("../../crystallographic-defect-ontology/crystallographic-defect-ontology.owl", format="xml")
 
-    g.bind("ex", example)
+    g.bind("disoKG", ns)
     g.bind("cdo", CDO)
     g.bind("diso", DISO)
     g.bind("cso", CSO)
@@ -35,23 +33,23 @@ def rdf_serializer(cif_data, space_group_data, mat_info, node_data, linker_data,
 
     # unit_of_length = 2.489e-10 # Burgers vector
     unit_of_length =  mat_info.attrs['b_SI']# Burgers vector
-   
+
     space_group_data = space_group_data['spacegroup'] # space group data
     
     # crystal structure data
-    crystal = example['crystal']
-    Bravais_lattice = example['Bravais_lattice']
-    crystal_structure = example['crystal_structure']
-    crystal_system = example['crystal_system']
-    unit_cell = example['unit_cell']
-    lattice_param_length = example['lattice_parameter_length']
-    lattice_param_angle = example['lattice_parameter_angle']
-    basis = example['coordinate_basis']
-    crystal_coordinate_first_axis = example['crystal_coordinate_first_axis']
-    crystal_coordinate_second_axis = example['crystal_coordinate_second_axis']
-    crystal_coordinate_third_axis = example['crystal_coordinate_third_axis']
-    space_group = example['space_group']
-    point_group = example['point_group']
+    crystal = ns['crystal']
+    Bravais_lattice = ns['Bravais_lattice']
+    crystal_structure = ns['crystal_structure']
+    crystal_system = ns['crystal_system']
+    unit_cell = ns['unit_cell']
+    lattice_param_length = ns['lattice_parameter_length']
+    lattice_param_angle = ns['lattice_parameter_angle']
+    basis = ns['coordinate_basis']
+    crystal_coordinate_first_axis = ns['crystal_coordinate_first_axis']
+    crystal_coordinate_second_axis = ns['crystal_coordinate_second_axis']
+    crystal_coordinate_third_axis = ns['crystal_coordinate_third_axis']
+    space_group = ns['space_group']
+    point_group = ns['point_group']
     
     ## length data value
     length_a = Literal(cif_data['_cell_length_a']*1e-10, datatype=XSD.double) 
@@ -63,7 +61,7 @@ def rdf_serializer(cif_data, space_group_data, mat_info, node_data, linker_data,
     angle_beta =  Literal(cif_data['_cell_angle_beta'], datatype=XSD.double)
     angle_gamma = Literal(cif_data['_cell_angle_gamma'], datatype=XSD.double)
 
-    # Crystal structure initial graph
+    # Crystal structure initial g
     g.add((crystal, RDF.type, CDO.CrystallineMaterial))
     g.add((crystal, CDO.hasCrystalStructure, crystal_structure))
     g.add((crystal_structure, RDF.type, CSO.CrystalStructure))
@@ -111,13 +109,32 @@ def rdf_serializer(cif_data, space_group_data, mat_info, node_data, linker_data,
     g.add((crystal_coordinate_third_axis, MDO.Y_axisCoordinate, Literal(0.707, datatype=XSD.double)))
     g.add((crystal_coordinate_third_axis, MDO.Z_axisCoordinate, Literal(0.0, datatype=XSD.double)))
     
+    
+    return None
+
+def dislocation_structure_serializer(g, mat_info, node_data, linker_data, loop_data, ns, key):
+    basis = ns['coordinate_basis']
+    crystal_structure = ns['crystal_structure']
+    crystal = ns['crystal']
+    ddd_sim = ns['ddd_sim']
+    dislocation_structure = ns['dislocation_structure_{}'.format(key)]
+
+    unit_of_length =  mat_info.attrs['b_SI']# Burgers vector
+
+    # dislocation microstructure 
+    g.add((dislocation_structure, RDF.type, DISO.DislocationStructure))
+    if key=='input': 
+        g.add((ddd_sim, DISO.hasInputDislocationStructure, dislocation_structure))
+    elif key=='output': 
+        g.add((ddd_sim, DISO.hasOutputDislocationStructure, dislocation_structure))
+
     # dimensionless unit
-    qv_unitless = example['quantity_value_unitless']
+    qv_unitless = ns['quantity_value_unitless']
     g.add((qv_unitless, RDF.type, QUDT.QuantityValue))
     g.add((qv_unitless, QUDT.unit, QUDT_UNIT['UNITLESS']))
 
     # unit of length
-    qv_m = example['quantity_value_M']
+    qv_m = ns['quantity_value_M']
     g.add((qv_m, RDF.type, QUDT.QuantityValue))
     g.add((qv_m, QUDT.unit, QUDT_UNIT['M']))
 
@@ -126,11 +143,11 @@ def rdf_serializer(cif_data, space_group_data, mat_info, node_data, linker_data,
         id = node['master_id']
         coordinate = node['coordinates']
         # n_v = node['velocity']
-        node_individual = example['node_{}'.format(id)]
-        node_position_vector = example['node_{}_position_vector'.format(id)]
-        node_coordinate = example['node_{}_coordinate'.format(id)]
-        # node_velocity = example['node_{}_velocity'.format(id)]
-        # node_vector_velocity_components = example['node_{}_vector_velocity_components'.format(id)]
+        node_individual = ns['node_{}_{}'.format(id, key)]
+        node_position_vector = ns['node_{}_position_vector_{}'.format(id, key)]
+        node_coordinate = ns['node_{}_coordinate_{}'.format(id, key)]
+        # node_velocity = ns['node_{}_velocity'.format(id)]
+        # node_vector_velocity_components = ns['node_{}_vector_velocity_components'.format(id)]
 
         g.add((node_individual, RDF.type, DISO.Node))
         g.add((node_individual, CSO.hasPositionVector, node_position_vector))
@@ -167,50 +184,50 @@ def rdf_serializer(cif_data, space_group_data, mat_info, node_data, linker_data,
         plane_origin = loop['plane_origin']
         slip_area = loop['slip_area']
 
-        dislocation_loop = example['dislocation_{}'.format(id)]
-        Burgers_vector = example['dislocation_{}_Burgers_vector'.format(id)]
-        vector_components_Burgers_vector = example['dislocation_{}_vector_components_Burgers_vector'.format(id)]
-        slip_plane = example['dislocation_{}_slip_plane'.format(id)]
-        slip_direction = example['dislocation_{}_slip_direction'.format(id)]
-        vector_components_slip_direction = example['dislocation_{}_vector_components_slip_direction'.format(id)]
-        slip_plane_normal = example['dislocation_{}_slip_plane_normal'.format(id)]
-        vector_components_of_slip_plane_normal = example['dislocation_{}_vector_components_of_slip_plane_normal'.format(id)]
-        slip_plane_origin = example['dislocation_{}_slip_plane_origin'.format(id)]
-        vector_components_slip_plane_origin = example['dislocation_{}_vector_components_origin'.format(id)]
-        line = example['line_{}'.format(id)]
-        discretized_line = example['dislocation_{}_discretized_line'.format(id)]
-        pn, denum_pn  = plane_normal, min([abs(i) for i in plane_normal if i != 0])
-        sd, denum_sd = slip_direction_loop, min([abs(i) for i in slip_direction_loop if i != 0])
+        dislocation_loop = ns['dislocation_{}_{}'.format(id, key)]
+        Burgers_vector = ns['dislocation_{}_Burgers_vector_{}'.format(id, key)]
+        vector_components_Burgers_vector = ns['dislocation_{}_vector_components_Burgers_vector_{}'.format(id, key)]
+        slip_plane = ns['dislocation_{}_slip_plane_{}'.format(id, key)]
+        slip_direction = ns['dislocation_{}_slip_direction_{}'.format(id, key)]
+        vector_components_slip_direction = ns['dislocation_{}_vector_components_slip_direction_{}'.format(id, key)]
+        slip_plane_normal = ns['dislocation_{}_slip_plane_normal_{}'.format(id, key)]
+        vector_components_of_slip_plane_normal = ns['dislocation_{}_vector_components_of_slip_plane_normal_{}'.format(id, key)]
+        slip_plane_origin = ns['dislocation_{}_slip_plane_origin_{}'.format(id,key)]
+        vector_components_slip_plane_origin = ns['dislocation_{}_vector_components_origin_{}'.format(id, key)]
+        line = ns['line_{}'.format(id)]
+        discretized_line = ns['dislocation_{}_discretized_line_{}'.format(id, key)]
+        pn = plane_normal
 
-        g.add((crystal, CDO.hasCrystallographicDefect, dislocation_loop))
+        g.add((dislocation_structure, CDO.hasCrystallographicDefect, dislocation_loop))
+        g.add((dislocation_structure, DISO.relatesToCrystallineMaterial, crystal))
         g.add((dislocation_loop, RDF.type, DISO.Dislocation))
         g.add((dislocation_loop, DISO.hasBurgersVector, Burgers_vector))
         g.add((dislocation_loop, DISO.movesOn, slip_plane))
         g.add((crystal_structure, DISO.hasSlipPlane, slip_plane))
         g.add((slip_plane, RDF.type, DISO.SlipPlane))
         g.add((slip_plane, DISO.hasSlipPlaneNormal, slip_plane_normal))
-        plane_miller_indice = '({}{}{})'.format(int(pn[0]/denum_pn), int(pn[1]/denum_pn), int(pn[2]/denum_pn))
-        family_plane_miller_indice = '{111}' # for cubic crystal system
+        plane_miller_indice = '({}{}{})'.format(plane_normal[0], plane_normal[1], plane_normal[2])
+        # family_plane_miller_indice = '{111}' # for cubic crystal system
         g.add((slip_plane, DISO.planeMillerIndice, Literal(plane_miller_indice, datatype=XSD.string)))
-        g.add((slip_plane, DISO.familyPlaneMillerIndice, Literal(family_plane_miller_indice, datatype=XSD.string)))
+        # g.add((slip_plane, DISO.familyPlaneMillerIndice, Literal(family_plane_miller_indice, datatype=XSD.string)))
         g.add((slip_plane, DISO.hasSlipDirection, slip_direction))
         g.add((slip_direction, RDF.type, DISO.SlipDirection))
         g.add((slip_direction, CSO.hasVectorComponent, vector_components_slip_direction))
-        direction_miller_indice = '[{}{}{}]'.format(int(sd[0]/denum_sd), int(sd[1]/denum_sd), int(sd[2]/denum_sd))
-        family_slip_direction_miller_indice = '<110>' # for cubic crystal system
+        direction_miller_indice = '[{}{}{}]'.format(slip_direction_loop[0], slip_direction_loop[1], slip_direction_loop[2])
+        # family_slip_direction_miller_indice = '<110>' # for cubic crystal system
         g.add((slip_direction, DISO.directionMillerIndice, Literal(direction_miller_indice, datatype=XSD.string)))
-        g.add((slip_direction, DISO.familyDirectionMillerIndice, Literal(family_slip_direction_miller_indice, datatype=XSD.string)))
+        # g.add((slip_direction, DISO.familyDirectionMillerIndice, Literal(family_slip_direction_miller_indice, datatype=XSD.string)))
         g.add((vector_components_slip_direction, QUDT.quantityValue, qv_unitless))
         g.add((vector_components_slip_direction, QUDT.hasQuantityKind, QUDT_QK.Dimensionless))
-        slip_direction_magnitude = np.linalg.norm(np.asanyarray(sd))
+        slip_direction_magnitude = np.linalg.norm(np.asanyarray(slip_direction_loop))
         g.add((slip_direction, CSO.vectorMagnitude, Literal(slip_direction_magnitude, datatype=XSD.double)))
         g.add((vector_components_slip_direction, RDF.type, CSO.VectorComponentOfBasis))
-        g.add((vector_components_slip_direction, CSO.firstAxisComponent, Literal(sd[0], datatype=XSD.double)))
-        g.add((vector_components_slip_direction, CSO.secondAxisComponent, Literal(sd[1], datatype=XSD.double)))
-        g.add((vector_components_slip_direction, CSO.thirdAxisComponent, Literal(sd[2], datatype=XSD.double)))
+        g.add((vector_components_slip_direction, CSO.firstAxisComponent, Literal(slip_direction_loop[0], datatype=XSD.double)))
+        g.add((vector_components_slip_direction, CSO.secondAxisComponent, Literal(slip_direction_loop[1], datatype=XSD.double)))
+        g.add((vector_components_slip_direction, CSO.thirdAxisComponent, Literal(slip_direction_loop[2], datatype=XSD.double)))
         g.add((vector_components_slip_direction, CSO.hasBasis, basis))
         g.add((slip_plane_normal, RDF.type, DISO.SlipPlaneNormal))
-        slip_plane_direction_miller_indice = '[{}{}{}]'.format(int(pn[0]/denum_pn), int(pn[1]/denum_pn), int(pn[2]/denum_pn))
+        slip_plane_direction_miller_indice = '[{}{}{}]'.format(slip_plane[0], slip_plane[1], slip_plane[2])
         g.add((slip_plane_normal, DISO.directionMillerIndice, Literal(slip_plane_direction_miller_indice, datatype=XSD.string)))
         g.add((slip_plane_normal, CSO.hasVectorComponent, vector_components_of_slip_plane_normal))
         g.add((vector_components_of_slip_plane_normal, QUDT.quantityValue, qv_unitless))
@@ -248,7 +265,7 @@ def rdf_serializer(cif_data, space_group_data, mat_info, node_data, linker_data,
         # slip system data 
         _slip_system = '{}_{}'.format(slip_plane_direction_miller_indice, direction_miller_indice)
         if _slip_system not in slip_system_list:
-            active_slip_system = example['active_slip_system_{}'.format(counter_slip_system)]
+            active_slip_system = ns['active_slip_system_{}_{}'.format(counter_slip_system, key)]
             g.add((crystal_structure, DISO.hasSlipSystem, active_slip_system))
             g.add((active_slip_system, RDF.type, DISO.SlipSystem))
             g.add((active_slip_system, DISO.hasSlipPlaneNormal, slip_plane_normal))
@@ -258,14 +275,14 @@ def rdf_serializer(cif_data, space_group_data, mat_info, node_data, linker_data,
 
     # segment/linker data
     for i, linker in enumerate(linker_data):
-        segment = example['segment_{}'.format(i)]
+        segment = ns['segment_{}_{}'.format(i, key)]
         start_node_id = linker['start_node_id']
         end_node_id = linker['end_node_id']
         dislocation_id = linker['loop_id']
         g.add((segment, RDF.type, DISO.Segment))
-        g.add((segment, DISO.hasStartNode, example['node_{}'.format(start_node_id)]))
-        g.add((segment, DISO.hasEndNode, example['node_{}'.format(end_node_id)]))
-        # g.add((segment, DISO.isSegmentOf, example['dislocation_{}_discretized_line'.format(dislocation_id)]))
-        g.add((example['dislocation_{}_discretized_line'.format(dislocation_id)], DISO.hasSegment, segment))
+        g.add((segment, DISO.hasStartNode, ns['node_{}_{}'.format(start_node_id, key)]))
+        g.add((segment, DISO.hasEndNode, ns['node_{}_{}'.format(end_node_id, key)]))
+        # g.add((segment, DISO.isSegmentOf, ns['dislocation_{}_discretized_line'.format(dislocation_id)]))
+        g.add((ns['dislocation_{}_discretized_line_{}'.format(dislocation_id, key)], DISO.hasSegment, segment))
         
-    return g
+    return None

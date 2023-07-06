@@ -22,7 +22,7 @@ Ahmad Zainul Ihsan, Said Fathalla, and Stefan Sandfeld. 2023. DISO: A Domain
 Ontology for Modeling Dislocations in Crystalline Materials. In The 38th
 ACM/SIGAPP Symposium on Applied Computing (SAC ’23), March 27-March
 31, 2023, Tallinn, Estonia. ACM, New York, NY, USA, Article 4, 8 pages.
-https://doi.org/10.1145/3555776.35787
+https://doi.org/10.1145/3555776.3578739
 `
 
 `

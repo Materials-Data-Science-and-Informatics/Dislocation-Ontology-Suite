@@ -1269,6 +1269,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Discrete dislocation dynamics (DDD) simulation is a simulation that is used to determine individual dislocation properties and study the distribution, arrangement, and density of dislocations in crystalline materials. The simulation observes the collective motion of many dislocations that links the relationship between the microstructure, loading conditions, and the mechanical properties of a crystalline material.</rdfs:comment>
+        <rdfs:label xml:lang="en">DDD Simulation</rdfs:label>
     </owl:Class>
     
 
@@ -1441,6 +1443,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Dislocation Structure</rdfs:label>
+        <rdfs:label xml:lang="en">Structure that describes a dislocation (micro)structure, which is a virtual specimen used by a DDD simulation to study the mechanical properties of a crystalline materials.</rdfs:label>
     </owl:Class>
     
 

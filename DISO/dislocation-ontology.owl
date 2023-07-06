@@ -328,6 +328,17 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasLength -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasLength">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#3DShape"/>
+        <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Length"/>
+        <rdfs:comment xml:lang="en">hasLength represents the relationship between 1-D, 2-D, and 3-D shape to length.</rdfs:comment>
+        <rdfs:label>has length</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasLineSense -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasLineSense">
@@ -411,6 +422,17 @@
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Segment"/>
         <rdfs:comment xml:lang="en">hasSegment represents the relationship between discretized line and segment.</rdfs:comment>
         <rdfs:label xml:lang="en">has segment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasShape -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasShape">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DislocationStructure"/>
+        <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Shape"/>
+        <rdfs:label xml:lang="en">has shape</rdfs:label>
+        <rdfs:label xml:lang="en">hasShape represents the relationship between dislocation structure to geometrical shape.</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1172,6 +1194,23 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#Cube -->
+
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#Cube">
+        <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#3DShape"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#hasLength"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Length"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A three-dimensional solid object bounded by six square faces, facets or sides, with three meeting at each vertex.</rdfs:comment>
+        <rdfs:label xml:lang="en">Cube</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulation -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulation">
@@ -1316,6 +1355,20 @@
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect"/>
                         <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Dislocation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#hasShape"/>
+                        <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Shape"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#hasShape"/>
+                        <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Shape"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1510,6 +1563,16 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#Length -->
+
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#Length">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+        <rdfs:comment xml:lang="en">A magnitude of line that has a unit.</rdfs:comment>
+        <rdfs:label xml:lang="en">Length</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#Line -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#Line">
@@ -1602,6 +1665,15 @@
         <rdfs:comment xml:lang="en">The segment is a part of a line bounded by two distinct end points and may contain points on the line between its endpoints.</rdfs:comment>
         <rdfs:label xml:lang="en">Segment</rdfs:label>
         <rdfs:label xml:lang="de">die Strecke</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#Shape -->
+
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#Shape">
+        <rdfs:comment xml:lang="en">A graphical representation of an object or its external boundary, outline, or external surface, as opposed to other properties such as color, texture, or material type</rdfs:comment>
+        <rdfs:label xml:lang="en">Shape</rdfs:label>
     </owl:Class>
     
 
@@ -1746,6 +1818,15 @@
         <rdfs:comment xml:lang="de">Ein Fixpunkt, der vom Vektor benötigt wird, um andere Punkte im Raum relativ zu seinem Ursprung zu identifizieren.</rdfs:comment>
         <rdfs:label xml:lang="en">Vector Origin</rdfs:label>
         <rdfs:label xml:lang="de">der Ursprung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#3DShape -->
+
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#3DShape">
+        <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Shape"/>
+        <rdfs:label xml:lang="en">3DShape</rdfs:label>
     </owl:Class>
     
 

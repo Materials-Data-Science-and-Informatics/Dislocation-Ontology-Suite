@@ -448,6 +448,17 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasSimulationParameter -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasSimulationParameter">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulation"/>
+        <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulationParameter"/>
+        <rdfs:comment xml:lang="en">hasSimulationParameter represents the relationship between DDD simulation and simulation parameter.</rdfs:comment>
+        <rdfs:label xml:lang="en">has simulation parameter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasSlipDirection -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasSlipDirection">
@@ -907,6 +918,12 @@
                 <owl:allValuesFrom rdf:resource="http://qudt.org/schema/qudt/Unit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/numericalValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <qudt:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A &lt;i&gt;Quantity Value&lt;/i&gt; expresses the magnitude and kind of a quantity and is given by the product of a numerical value &lt;code&gt;n&lt;/code&gt; and a unit of measure &lt;code&gt;U&lt;/code&gt;. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to &lt;a href=&quot;http://physics.nist.gov/Pubs/SP811/sec07.html&quot;&gt;NIST SP 811 section 7&lt;/a&gt; for more on quantity values.</qudt:description>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.0/schema/qudt"/>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt"/>
@@ -1313,6 +1330,26 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#hasSimulationParameter"/>
+                        <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulationParameter"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#hasSimulationParameter"/>
+                        <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulationParameter"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/prov#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Discrete dislocation dynamics (DDD) simulation is a simulation that is used to determine individual dislocation properties and study the distribution, arrangement, and density of dislocations in crystalline materials. The simulation observes the collective motion of many dislocations that links the relationship between the microstructure, loading conditions, and the mechanical properties of a crystalline material.</rdfs:comment>
         <rdfs:label xml:lang="en">DDD Simulation</rdfs:label>
     </owl:Class>
@@ -1324,12 +1361,6 @@
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulationParameter">
         <rdfs:comment xml:lang="en">A Parameter that is used to run a DDD simulation.</rdfs:comment>
         <rdfs:label xml:lang="en">DDD Simulation Parameter</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/prov#Person"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 

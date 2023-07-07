@@ -13,6 +13,7 @@ MDO = Namespace("https://w3id.org/mdo/structure/")
 QUDT = Namespace("http://qudt.org/schema/qudt/")
 QUDT_UNIT = Namespace("http://qudt.org/vocab/unit/")
 QUDT_QK = Namespace("http://qudt.org/vocab/quantitykind/")
+MDO_CORE = Namespace("https://w3id.org/mdo/core/")
 
 
 # function to serializing the cif into resource description framework(RDF) using the crystallography ontology
@@ -26,7 +27,8 @@ def crystal_rdf_serializer(g, cif_data, space_group_data, mat_info, ns):
     g.bind("cdo", CDO)
     g.bind("diso", DISO)
     g.bind("cso", CSO)
-    g.bind("mdo", MDO)
+    g.bind("mdo_structure", MDO)
+    g.bind("mdo_core", MDO_CORE)
     g.bind("qudt", QUDT)
     g.bind("unit", QUDT_UNIT)
     g.bind("quantityKind", QUDT_QK)
@@ -112,12 +114,34 @@ def crystal_rdf_serializer(g, cif_data, space_group_data, mat_info, ns):
     
     return None
 
-def dislocation_structure_serializer(g, mat_info, node_data, linker_data, loop_data, ns, key):
+def dislocation_structure_serializer(g, mat_info, init_micro, node_data, linker_data, loop_data, ns, key, edge):
     basis = ns['coordinate_basis']
     crystal_structure = ns['crystal_structure']
     crystal = ns['crystal']
     ddd_sim = ns['ddd_sim']
     dislocation_structure = ns['dislocation_structure_{}'.format(key)]
+    cube_shape = ns['cube_shape']
+    cube_edge_length = ns['cube_edge_length']
+    cube_edge_length_qv = ns['cube_edge_length_qv']
+    g.add((cube_shape, RDF.type, DISO.Cube))
+    g.add((cube_edge_length, RDF.type, DISO.Length))
+    g.add((cube_edge_length_qv, RDF.type, QUDT.QuantityValue))
+    g.add((cube_shape, DISO.hasLength, cube_edge_length))
+    g.add((cube_edge_length, QUDT.quantityValue, cube_edge_length_qv))
+    g.add((cube_edge_length, QUDT.hasQuantityKind, QUDT_QK.Length))
+    g.add((cube_edge_length_qv, QUDT.unit, QUDT_UNIT['NanoM']))
+    g.add((cube_edge_length_qv, QUDT.numericalValue, Literal(edge, datatype=XSD.double)))
+
+    if key=='input':
+        init_density = init_micro.attrs['targetPrismaticLoopDensity']
+        init_dislocation_density = ns['initial_dislocation_density']
+        init_dislocation_density_qv = ns['initial_dislocation_density_qv']
+        g.add((init_dislocation_density, RDF.type, DISO.DislocationDensity))
+        g.add((init_dislocation_density_qv, RDF.type, QUDT.QuantityValue))
+        g.add((init_dislocation_density, QUDT.quantityValue, init_dislocation_density_qv))
+        g.add((init_dislocation_density_qv, QUDT.numericalValue, Literal(init_density, datatype=XSD.double)))
+        g.add((init_dislocation_density_qv, QUDT.unit, QUDT_UNIT['PER-M2']))
+        g.add((init_dislocation_density, MDO_CORE.relatesToStructure, dislocation_structure))
 
     unit_of_length =  mat_info.attrs['b_SI']# Burgers vector
 

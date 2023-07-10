@@ -20,7 +20,8 @@ def main():
     path_cifs = Path('../../../CSO/data/MaterialProject/mp_Copper/')
     
   
-    for path_micro in tqdm(Path(path_microstructure/'h5'/'density_5e16').iterdir()):
+    for path_micro in tqdm(Path(path_microstructure/'h5'/'modelib-data-from-ws').iterdir()):
+        print(path_micro)
         name = path_micro.stem
         path_cif_json = path_cifs/'json'/'Cu_cif.json'
         path_sg = path_cifs/'json'/'Cu_mp-30_spacegroup.json'

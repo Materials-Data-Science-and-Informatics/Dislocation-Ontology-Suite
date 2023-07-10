@@ -18,6 +18,21 @@ MDO_CORE = Namespace("https://w3id.org/mdo/core/")
 
 # function to serializing the cif into resource description framework(RDF) using the crystallography ontology
 # returning graph object of rdflib
+
+def _normalized_vector(vector):
+    highest = max(map(abs, vector))
+
+    # Divide each component by the highest absolute value if it's not zero
+    new_vector = []
+    for i in range(len(vector)):
+        if highest != 0:
+            temp = int(vector[i] / highest)
+            new_vector.append(temp)
+        else:
+            temp = int(vector[i])
+            new_vector.append(temp)
+    return new_vector
+
 def crystal_rdf_serializer(g, cif_data, space_group_data, mat_info, ns):
     g.parse("../../CSO/crystal-structure-ontology.owl", format="xml")
     g.parse("../../dislocation-ontology.owl", format="xml")
@@ -111,7 +126,6 @@ def crystal_rdf_serializer(g, cif_data, space_group_data, mat_info, ns):
     g.add((crystal_coordinate_third_axis, MDO.Y_axisCoordinate, Literal(0.707, datatype=XSD.double)))
     g.add((crystal_coordinate_third_axis, MDO.Z_axisCoordinate, Literal(0.0, datatype=XSD.double)))
     
-    
     return None
 
 def dislocation_structure_serializer(g, mat_info, init_micro, node_data, linker_data, loop_data, ns, key, edge):
@@ -150,9 +164,11 @@ def dislocation_structure_serializer(g, mat_info, init_micro, node_data, linker_
     if key=='input': 
         g.add((ddd_sim, DISO.hasInputDislocationStructure, dislocation_structure))
         g.add((dislocation_structure, DISO.isRelaxed, Literal(False,  datatype=XSD.boolean)))
+        g.add((dislocation_structure, DISO.hasShape, cube_shape))
     elif key=='output': 
         g.add((ddd_sim, DISO.hasOutputDislocationStructure, dislocation_structure))
         g.add((dislocation_structure, DISO.isRelaxed, Literal(False,  datatype=XSD.boolean)))
+        g.add((dislocation_structure, DISO.hasShape, cube_shape))
 
     # dimensionless unit
     qv_unitless = ns['quantity_value_unitless']
@@ -222,7 +238,8 @@ def dislocation_structure_serializer(g, mat_info, init_micro, node_data, linker_
         vector_components_slip_plane_origin = ns['dislocation_{}_vector_components_origin_{}'.format(id, key)]
         line = ns['line_{}'.format(id)]
         discretized_line = ns['dislocation_{}_discretized_line_{}'.format(id, key)]
-        pn = plane_normal
+        slip_direction_loop_normalized = _normalized_vector(slip_direction_loop)
+        plane_normal_normalized = _normalized_vector(plane_normal)
 
         g.add((dislocation_structure, CDO.hasCrystallographicDefect, dislocation_loop))
         g.add((dislocation_structure, DISO.relatesToCrystallineMaterial, crystal))
@@ -232,14 +249,14 @@ def dislocation_structure_serializer(g, mat_info, init_micro, node_data, linker_
         g.add((crystal_structure, DISO.hasSlipPlane, slip_plane))
         g.add((slip_plane, RDF.type, DISO.SlipPlane))
         g.add((slip_plane, DISO.hasSlipPlaneNormal, slip_plane_normal))
-        plane_miller_indice = '({}{}{})'.format(plane_normal[0], plane_normal[1], plane_normal[2])
+        plane_miller_indice = '({} {} {})'.format(plane_normal_normalized[0], plane_normal_normalized[1], plane_normal_normalized[2])
         # family_plane_miller_indice = '{111}' # for cubic crystal system
         g.add((slip_plane, DISO.planeMillerIndice, Literal(plane_miller_indice, datatype=XSD.string)))
         # g.add((slip_plane, DISO.familyPlaneMillerIndice, Literal(family_plane_miller_indice, datatype=XSD.string)))
         g.add((slip_plane, DISO.hasSlipDirection, slip_direction))
         g.add((slip_direction, RDF.type, DISO.SlipDirection))
         g.add((slip_direction, CSO.hasVectorComponent, vector_components_slip_direction))
-        direction_miller_indice = '[{}{}{}]'.format(slip_direction_loop[0], slip_direction_loop[1], slip_direction_loop[2])
+        direction_miller_indice = '[{} {} {}]'.format(slip_direction_loop_normalized[0], slip_direction_loop_normalized[1], slip_direction_loop_normalized[2])
         # family_slip_direction_miller_indice = '<110>' # for cubic crystal system
         g.add((slip_direction, DISO.directionMillerIndice, Literal(direction_miller_indice, datatype=XSD.string)))
         # g.add((slip_direction, DISO.familyDirectionMillerIndice, Literal(family_slip_direction_miller_indice, datatype=XSD.string)))
@@ -253,7 +270,7 @@ def dislocation_structure_serializer(g, mat_info, init_micro, node_data, linker_
         g.add((vector_components_slip_direction, CSO.thirdAxisComponent, Literal(slip_direction_loop[2], datatype=XSD.double)))
         g.add((vector_components_slip_direction, CSO.hasBasis, basis))
         g.add((slip_plane_normal, RDF.type, DISO.SlipPlaneNormal))
-        slip_plane_direction_miller_indice = '[{}{}{}]'.format(slip_plane[0], slip_plane[1], slip_plane[2])
+        slip_plane_direction_miller_indice = '[{} {} {}]'.format(plane_normal_normalized[0], plane_normal_normalized[1], plane_normal_normalized[2])
         g.add((slip_plane_normal, DISO.directionMillerIndice, Literal(slip_plane_direction_miller_indice, datatype=XSD.string)))
         g.add((slip_plane_normal, CSO.hasVectorComponent, vector_components_of_slip_plane_normal))
         g.add((vector_components_of_slip_plane_normal, QUDT.quantityValue, qv_unitless))

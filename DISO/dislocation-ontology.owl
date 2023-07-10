@@ -734,6 +734,17 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#simulationDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#simulationDescription">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">simulation description of DDD simulation</rdfs:comment>
+        <rdfs:label xml:lang="en">simulation description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#slipArea -->
 
     <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#slipArea">
@@ -1348,6 +1359,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/prov#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#simulationDescription"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Discrete dislocation dynamics (DDD) simulation is a simulation that is used to determine individual dislocation properties and study the distribution, arrangement, and density of dislocations in crystalline materials. The simulation observes the collective motion of many dislocations that links the relationship between the microstructure, loading conditions, and the mechanical properties of a crystalline material.</rdfs:comment>

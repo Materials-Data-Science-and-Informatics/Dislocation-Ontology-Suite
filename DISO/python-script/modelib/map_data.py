@@ -59,14 +59,15 @@ def main():
         G.add((junction_param, RDF.type, DISO.JunctionFormation))
         G.add((external_load_param, RDF.type, DISO.ExternalLoadParameter))
         G.add((ddd_sim, PROV.wasAssociatedWith, soft_model))
+        G.add((ddd_sim, DISO.simulationDescription, Literal("relaxation calculation", datatype=XSD.string)))
         G.add((ddd_sim, DISO.hasSimulationParameter, cross_slip_param))
         G.add((cross_slip_param, DISO.parameterActivation, Literal(bool(cross_slip_param_val), datatype=XSD.boolean)))
         G.add((ddd_sim, DISO.hasSimulationParameter, junction_param))
         G.add((junction_param, DISO.parameterActivation, Literal(bool(junction_param_val), datatype=XSD.boolean)))
         G.add((ddd_sim, DISO.hasSimulationParameter, external_load_param))
         G.add((external_load_param, DISO.parameterActivation, Literal(bool(external_load_param_val), datatype=XSD.boolean)))
-        G.add((soft_model, MDO_prov.SoftwareName, Literal('MoDELib', datatype=XSD.string)))
-        # G.add((soft_model, DISO.softwareVersion, Literal('1.1.beta1', datatype=XSD.string)))
+        G.add((soft_model, MDO_prov.SoftwareName, Literal('MODELIB', datatype=XSD.string)))
+        G.add((soft_model, DISO.softwareVersion, Literal('1.1.beta1', datatype=XSD.string)))
 
         with open(path_cif_json) as data1, open(path_sg) as data2: 
             json_cif_data = json.load(data1)

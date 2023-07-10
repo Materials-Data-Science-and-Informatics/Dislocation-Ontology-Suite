@@ -3,3 +3,4 @@
 .vscode*
 *.ipynb
 *.pyc
+DISO/data/modelib-microstructure/Copper/raw

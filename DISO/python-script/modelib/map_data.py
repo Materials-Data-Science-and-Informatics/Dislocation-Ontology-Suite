@@ -93,7 +93,7 @@ def main():
 
             # adding dislocation microstructures of a simulation. 
             # so far only the input and the output of dislocation microstructure
-            dislocation_structure_serializer(G, mat_info, init_micro, node_data, linker_data, loop_data, ns, key, 50.0)
+            dislocation_structure_serializer(G, mat_info, init_micro, node_data, linker_data, loop_data, ns, key, 100.0)
 
         G.serialize(destination=save_turtle, format='turtle')
         

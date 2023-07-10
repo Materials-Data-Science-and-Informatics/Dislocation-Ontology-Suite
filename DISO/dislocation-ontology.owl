@@ -706,6 +706,17 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isRelaxed -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isRelaxed">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DislocationStructure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">isRelaxed represents a boolean value whether a dislocation structure in the relaxed condition or no.</rdfs:comment>
+        <rdfs:label xml:lang="en">is relaxed</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#parameterActivation -->
 
     <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#parameterActivation">

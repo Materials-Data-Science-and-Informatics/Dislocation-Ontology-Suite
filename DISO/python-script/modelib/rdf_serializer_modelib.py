@@ -149,8 +149,10 @@ def dislocation_structure_serializer(g, mat_info, init_micro, node_data, linker_
     g.add((dislocation_structure, RDF.type, DISO.DislocationStructure))
     if key=='input': 
         g.add((ddd_sim, DISO.hasInputDislocationStructure, dislocation_structure))
+        g.add((dislocation_structure, DISO.isRelaxed, Literal(False,  datatype=XSD.boolean)))
     elif key=='output': 
         g.add((ddd_sim, DISO.hasOutputDislocationStructure, dislocation_structure))
+        g.add((dislocation_structure, DISO.isRelaxed, Literal(False,  datatype=XSD.boolean)))
 
     # dimensionless unit
     qv_unitless = ns['quantity_value_unitless']

@@ -1552,8 +1552,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Structure that describes a dislocation (micro)structure, which is a virtual specimen used by a DDD simulation to study the mechanical properties of a crystalline materials.</rdfs:comment>
         <rdfs:label xml:lang="en">Dislocation Structure</rdfs:label>
-        <rdfs:label xml:lang="en">Structure that describes a dislocation (micro)structure, which is a virtual specimen used by a DDD simulation to study the mechanical properties of a crystalline materials.</rdfs:label>
     </owl:Class>
     
 

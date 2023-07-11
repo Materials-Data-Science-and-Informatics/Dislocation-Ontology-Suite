@@ -12,16 +12,15 @@ A4. [What are the slip systems of a given crystal structure?](#a4)
 A5. [What are the slip planes of a given crystal structure?](#a5)
 A6. [Given the space group of a crystal structure, what is the bravais lattice centering?](#a6)
 A7. [Given the crystal structure, what are the corresponding space and point groups?](#a7)
-A8. [Given the point group of a crystal structure, what is the corresponding crystal system?](#a8)
-A9. [In which slip plane is a dislocation move on?](#a9)
-A10. [What is the Burgers vector of the dislocation?](#a10)
-A11. [What is the Burgers vector magnitude of the dislocation?](#a11)
-A12. [What is the slip direction given a slip plane (111) of the crystal structure?](#a12)
-A13. [Given a 3-D vector instance (Burgers vector, vector position, etc.), what are the vector components?](#a13)
-A14. [What is the vector magnitude given a 3-D vector instance ( Burgers vector, vector position, etc.)?]((#a14))
-A15. [Given a Basis of a vector in 3-D space, what are the first axis basis vector?](#a15)
-A16. [Given a Basis of a vector in 3-D space, what are the second axis basis vector?](#a16)
-A17. [Given a 3-D vector instance Burgers vector, what is the unit?](#a17)
+A8. [In which slip plane is a dislocation move on?](#a9)
+A9. [What is the Burgers vector of the dislocation?](#a10)
+A10. [What is the Burgers vector magnitude of the dislocation?](#a11)
+A11. [What is the slip direction given a slip plane (111) of the crystal structure?](#a12)
+A12. [Given a 3-D vector instance (Burgers vector, vector position, etc.), what are the vector components?](#a13)
+A13. [What is the vector magnitude given a 3-D vector instance ( Burgers vector, vector position, etc.)?]((#a14))
+A14. [Given a Basis of a vector in 3-D space, what are the first axis basis vector?](#a15)
+A15. [Given a Basis of a vector in 3-D space, what are the second axis basis vector?](#a16)
+A16. [Given a 3-D vector instance Burgers vector, what is the unit?](#a17)
 
 ## B. Discrete Dislocation Dynamics (DDD) Simulation CQs
 
@@ -72,7 +71,7 @@ SELECT ?dislocationstructure ?crystalstructure ?length_a ?length_b ?length_c WHE
 ```
 [back](#a-crystal-structure-and-dislocation-structure-cqs)
 ### A3
-What are the lattice parameters of angle given a crystal structure?
+What are the lattice parameters of angle given a dislocation structure?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
@@ -93,18 +92,17 @@ SELECT ?dislocationstructure ?crystalstructure ?angle_alpha ?angle_beta ?angle_g
 ```
 [back](#a-crystal-structure-and-dislocation-structure-cqs)
 ### A4
-What are the slip systems of a given crystal structure?
+What are the slip systems of a given dislocation structure?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>   
 
-SELECT ?dislocationstructure ?slip_system ?slip_plane_normal_val ?slip_direction_val WHERE{
+SELECT ?dislocationstructure ?crystalstructure ?slip_system ?slip_plane_normal_val ?slip_direction_val WHERE{
 	?dislocationsimulation diso:hasInputDislocationStructure ?dislocationstructure.
 	?dislocationstructure diso:relatesToCrystallineMaterial ?crystallinematerial .  
 	?crystallinematerial cdo:hasCrystalStructure ?crystalstructure.
-	?crystalstructure a cso:CrystalStructure ; 
-	 	 diso:hasSlipSystem ?slip_system . 
+	?crystalstructure diso:hasSlipSystem ?slip_system FILTER CONTAINS(STR(?slip_system), 'input'). 
 	?slip_system diso:hasSlipPlaneNormal ?slip_plane_normal ; 
 		diso:hasSlipDirection ?slip_direction.
 	?slip_plane_normal diso:directionMillerIndice ?slip_plane_normal_val. 
@@ -113,7 +111,7 @@ SELECT ?dislocationstructure ?slip_system ?slip_plane_normal_val ?slip_direction
 ```
 [back](#a-crystal-structure-and-dislocation-structure-cqs)
 ### A5
-What are the slip planes of a given crystal structure?
+What are the slip planes of a given dislocation structure?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
@@ -123,8 +121,7 @@ SELECT ?dislocationstructure ?slip_plane ?slip_plane_miller_indice WHERE{
 	?dislocationsimulation diso:hasInputDislocationStructure ?dislocationstructure.
 	?dislocationstructure diso:relatesToCrystallineMaterial ?crystallinematerial .  
 	?crystallinematerial cdo:hasCrystalStructure ?crystalstructure.
-	?crystal_structure a cso:CrystalStructure.
-	?crystal_structure diso:hasSlipPlane ?slip_plane.
+	?crystal_structure diso:hasSlipPlane ?slip_plane FILTER CONTAINS(STR(?slip_plane), 'input'). 
 	?slip_plane diso:planeMillerIndice ?slip_plane_miller_indice .
 }
 ```
@@ -140,14 +137,13 @@ SELECT ?dislocationstructure ?crystal_structure ?centering WHERE{
 	?dislocationsimulation diso:hasInputDislocationStructure ?dislocationstructure.
 	?dislocationstructure diso:relatesToCrystallineMaterial ?crystallinematerial .  
 	?crystallinematerial cdo:hasCrystalStructure ?crystalstructure.
-	?crystal_structure a cso:CrystalStructure ; 
-		cso:hasLattice ?bravais_lattice . 
+    ?crystalstructure cso:hasLattice ?bravais_lattice.
 	?bravais_lattice cso:centering ?centering . 
 }
 ```
 [back](#a-crystal-structure-and-dislocation-structure-cqs)
 ### A7
-Given the crystal structure, what are the corresponding space and point groups?
+Given the dislocation structure, what are the corresponding space and point groups?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
@@ -157,32 +153,16 @@ PREFIX mdo: <https://w3id.org/mdo/structure/>
 SELECT  ?dislocationstructure ?crystal_structure ?space_group ?point_group WHERE{
 	?dislocationsimulation diso:hasInputDislocationStructure ?dislocationstructure.
 	?dislocationstructure diso:relatesToCrystallineMaterial ?crystallinematerial .  
-	?crystallinematerial cdo:hasCrystalStructure ?crystalstructure.
-	?crystal_structure a cso:CrystalStructure ;
-		mdo:hasSpaceGroup ?sg.
+	?crystallinematerial cdo:hasCrystalStructure ?crystal_structure.
+	?crystal_structure mdo:hasSpaceGroup ?sg.
 	?sg mdo:hasPointGroup ?pg ;
 	 	mdo:SpaceGroupSymbol ?space_group . 
 	?pg mdo:PointGroupHMName ?point_group .
 }
 ```
+
 [back](#a-crystal-structure-and-dislocation-structure-cqs)
 ### A8
-Given the point group of a crystal structure, what is the corresponding crystal system?
-```
-PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
-PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>   
-PREFIX mdo: <https://w3id.org/mdo/structure/> 
-
-SELECT ?point_group ?crystal_system WHERE{
-    ?point_group a mdo:PointGroup;
-		cso:isPointGroupOf ?cs.
-	?cs rdf:type cso:CrystalSystem.
-	?cs rdf:type ?crystal_system
-}
-```
-[back](#a-crystal-structure-and-dislocation-structure-cqs)
-### A9
 In which slip plane is a dislocation move on?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
@@ -198,7 +178,7 @@ WHERE{
 }
 ```
 [back](#a-crystal-structure-and-dislocation-structure-cqs)
-### A10
+### A9
 What is the Burgers vector of the dislocation?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
@@ -217,7 +197,7 @@ SELECT ?dislocationstructure ?dislocation ?firstAxisComponent ?secondAxisCompone
 }
 ```
 [back](#a-crystal-structure-and-dislocation-structure-cqs)
-### A11
+### A10
 What is the Burgers vector magnitude of the dislocation?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
@@ -232,7 +212,7 @@ SELECT ?dislocation ?Burgers_vector_magnitude  WHERE{
 }
 ```
 [back](#a-crystal-structure-and-dislocation-structure-cqs)
-### A12 
+### A11
 What is the slip direction given a slip plane (111) of the crystal structure?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
@@ -245,14 +225,14 @@ SELECT  ?dislocationstructure ?slip_plane ?slip_direction_val WHERE{
 	?dislocationstructure diso:relatesToCrystallineMaterial ?crystallinematerial .  
 	?crystallinematerial cdo:hasCrystalStructure ?crystalstructure.
 		?crystalstructure a cso:CrystalStructure ;
-     		diso:hasSlipPlane ?slip_plane.
+     		diso:hasSlipPlane ?slip_plane FILTER CONTAINS(STR(?slip_plane), 'input').
         	?slip_plane diso:planeMillerIndice "(1 1 1)"^^xsd:string;
      		diso:hasSlipDirection ?slip_direction. 
 	?slip_direction diso:directionMillerIndice ?slip_direction_val.
 }
 ```
 [back](#a-crystal-structure-and-dislocation-structure-cqs)
-### A13
+### A12
 Given a 3-D vector instance (Burgers vector, vector position, etc.), what are the vector components?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
@@ -268,7 +248,7 @@ SELECT ?Burgers_vector ?firstAxisComponent ?secondAxisComponent ?thirdAxisCompon
 }
 ```
 [back](#a-crystal-structure-and-dislocation-structure-cqs)
-### A14
+### A13
 What is the vector magnitude given a 3-D vector instance (Burgers vector, vector position, etc.)?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
@@ -281,7 +261,7 @@ SELECT ?Burgers_vector ?vectorMagnitude WHERE{
 }
 ```
 [back](#a-crystal-structure-and-dislocation-structure-cqs)
-### A15
+### A14
 Given a Basis of a vector in 3-D space, what are the first axis basis vector?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
@@ -300,7 +280,7 @@ SELECT ?Burgers_vector ?first_axis_basis_e_x ?first_axis_basis_e_y ?first_axis_b
 }
 ```
 [back](#a-crystal-structure-and-dislocation-structure-cqs)
-### A16
+### A15
 Given a Basis of a vector in 3-D space, what are the second axis basis vector?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
@@ -319,7 +299,7 @@ SELECT ?Burgers_vector ?second_axis_basis_e_x ?second_axis_basis_e_y ?second_axi
 }
 ```
 [back](#a-crystal-structure-and-dislocation-structure-cqs)
-### A17
+### A16
 Given a 3-D vector instance Burgers vector, what is the unit?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
@@ -344,7 +324,6 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX mdo_prov: <https://w3id.org/mdo/provenance/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX mwo: <http://purls.helmholtz-metadaten.de/mwo/>
-PREFIX:
 
 SELECT ?dislocationstructure ?software_name ?soft_version ?data_creator_first_name ?data_creator_last_name ?data_creator_orcid WHERE{
     ?dislocationsimulation diso:hasOutputDislocationStructure ?dislocationstructure.
@@ -410,7 +389,7 @@ SELECT ?ddd_simulation ?initial_density ?unit WHERE{
         qudt:quantityValue ?density_qv.
     ?density_qv qudt:numericalValue ?initial_density;
         qudt:unit ?unit.
-    FILTER(?initial_density < "1e157"^^xsd:double)
+    FILTER(?initial_density < "1e17"^^xsd:double)
 }
 ```
 [back](#b-discrete-dislocation-dynamics-ddd-simulation-cqs)

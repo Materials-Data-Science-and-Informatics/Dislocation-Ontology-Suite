@@ -20,7 +20,7 @@ def main():
     path_cifs = Path('../../../CSO/data/MaterialProject/mp_Copper/')
     
   
-    for path_micro in tqdm(Path(path_microstructure/'h5'/'modelib-data-from-ws').iterdir()):
+    for path_micro in tqdm(Path(path_microstructure/'h5'/'modelib-data-from-turing').iterdir()):
         print(path_micro)
         name = path_micro.stem
         path_cif_json = path_cifs/'json'/'Cu_cif.json'
@@ -86,15 +86,17 @@ def main():
         for i, dismic in enumerate(padded_list):
             if i == 0:
                 key = 'input'
+                is_relaxed = False
             else: 
                 key = 'output'
+                is_relaxed = data[dismic]['is_relaxed'][()]
             node_data = data[dismic]['node data']
             linker_data = data[dismic]['linker data']
             loop_data = data[dismic]['loop data']
 
             # adding dislocation microstructures of a simulation. 
             # so far only the input and the output of dislocation microstructure
-            dislocation_structure_serializer(G, mat_info, init_micro, node_data, linker_data, loop_data, ns, key, 100.0)
+            dislocation_structure_serializer(G, mat_info, init_micro, node_data, linker_data, loop_data, ns, key, 50, is_relaxed)
 
         G.serialize(destination=save_turtle, format='turtle')
         

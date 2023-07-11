@@ -128,7 +128,7 @@ def crystal_rdf_serializer(g, cif_data, space_group_data, mat_info, ns):
     
     return None
 
-def dislocation_structure_serializer(g, mat_info, init_micro, node_data, linker_data, loop_data, ns, key, edge):
+def dislocation_structure_serializer(g, mat_info, init_micro, node_data, linker_data, loop_data, ns, key, edge, is_relaxed):
     basis = ns['coordinate_basis']
     crystal_structure = ns['crystal_structure']
     crystal = ns['crystal']
@@ -163,11 +163,11 @@ def dislocation_structure_serializer(g, mat_info, init_micro, node_data, linker_
     g.add((dislocation_structure, RDF.type, DISO.DislocationStructure))
     if key=='input': 
         g.add((ddd_sim, DISO.hasInputDislocationStructure, dislocation_structure))
-        g.add((dislocation_structure, DISO.isRelaxed, Literal(False,  datatype=XSD.boolean)))
+        g.add((dislocation_structure, DISO.isRelaxed, Literal(is_relaxed,  datatype=XSD.boolean)))
         g.add((dislocation_structure, DISO.hasShape, cube_shape))
     elif key=='output': 
         g.add((ddd_sim, DISO.hasOutputDislocationStructure, dislocation_structure))
-        g.add((dislocation_structure, DISO.isRelaxed, Literal(False,  datatype=XSD.boolean)))
+        g.add((dislocation_structure, DISO.isRelaxed, Literal(is_relaxed,  datatype=XSD.boolean)))
         g.add((dislocation_structure, DISO.hasShape, cube_shape))
 
     # dimensionless unit

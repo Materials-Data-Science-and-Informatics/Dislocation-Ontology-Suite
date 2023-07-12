@@ -1,7 +1,7 @@
 import h5py
 from rdflib import Graph, Literal
 import json
-from rdf_serializer_modelib import crystal_rdf_serializer, dislocation_structure_serializer
+from rdf_serializer_modelib import crystal_rdf_serializer, dislocation_structure_serializer, cube_edge_length
 import uuid
 from rdflib import Graph
 from rdflib.namespace import  Namespace, RDF, PROV, XSD, FOAF
@@ -18,9 +18,9 @@ def main():
     
     path_microstructure = Path('../../data/modelib-microstructure/Copper/')
     path_cifs = Path('../../../CSO/data/MaterialProject/mp_Copper/')
-    
+    path_mesh = Path('../../data/modelib-microstructure/Copper/raw/mesh_folder/')
   
-    for path_micro in tqdm(Path(path_microstructure/'h5'/'modelib-data-from-turing').iterdir()):
+    for path_micro in tqdm(Path(path_microstructure/'h5'/'density_1e16').iterdir()):
         print(path_micro)
         name = path_micro.stem
         path_cif_json = path_cifs/'json'/'Cu_cif.json'
@@ -32,6 +32,8 @@ def main():
         sim_info = data['dd_config']
         load_ex_info = data['uniformExternalLoadController']
         init_micro = data['init_micro']
+        poly_info = data['polycrystal']
+
 
         # Graph/Ontology population
         G = Graph()
@@ -46,6 +48,9 @@ def main():
         cross_slip_param_val = sim_info.attrs['crossSlipModel']
         junction_param_val = sim_info.attrs['maxJunctionIterations']
         external_load_param_val = load_ex_info.attrs['enable']
+        mesh_file = path_mesh/poly_info.attrs['meshFile'].split('/')[-1]
+        print(mesh_file)
+        edge_length = cube_edge_length(mesh_file, mat_info.attrs['b_SI'])*1e9 # in nm
         G.bind("diso", DISO)
         G.bind("mdoPROV", MDO_prov)
         G.bind("mwo", MWO)
@@ -74,7 +79,8 @@ def main():
             json_cif_data = json.load(data1)
             json_sg = json.load(data2)
 
-        crystal_rdf_serializer(G, json_cif_data, json_sg, mat_info, ns)
+        g_crys=crystal_rdf_serializer(json_cif_data, json_sg, mat_info, ns)
+        G += g_crys
 
         # A loop that iterate through dislocation microstructure virtual specimen
         # and connect with the crystal structure information
@@ -87,17 +93,26 @@ def main():
             if i == 0:
                 key = 'input'
                 is_relaxed = False
+                node_data = data[dismic]['node data']
+                linker_data = data[dismic]['linker data']
+                loop_data = data[dismic]['loop data']
+
+                # adding dislocation microstructures of a simulation. 
+                # so far only the input and the output of dislocation microstructure
+                g_dis_struc = dislocation_structure_serializer(mat_info, init_micro, node_data, linker_data, loop_data, ns, key, edge_length, is_relaxed)
+                G+=g_dis_struc
             else: 
                 key = 'output'
                 is_relaxed = data[dismic]['is_relaxed'][()]
-            node_data = data[dismic]['node data']
-            linker_data = data[dismic]['linker data']
-            loop_data = data[dismic]['loop data']
+                node_data = data[dismic]['node data']
+                linker_data = data[dismic]['linker data']
+                loop_data = data[dismic]['loop data']
 
-            # adding dislocation microstructures of a simulation. 
-            # so far only the input and the output of dislocation microstructure
-            dislocation_structure_serializer(G, mat_info, init_micro, node_data, linker_data, loop_data, ns, key, 50, is_relaxed)
-
+                # adding dislocation microstructures of a simulation. 
+                # so far only the input and the output of dislocation microstructure
+                g_dis_struc = dislocation_structure_serializer(mat_info, init_micro, node_data, linker_data, loop_data, ns, key, edge_length, is_relaxed)
+                G+=g_dis_struc
+            
         G.serialize(destination=save_turtle, format='turtle')
         
 if __name__ == "__main__":

@@ -19,6 +19,33 @@ MDO_CORE = Namespace("https://w3id.org/mdo/core/")
 # function to serializing the cif into resource description framework(RDF) using the crystallography ontology
 # returning graph object of rdflib
 
+def cube_edge_length(gmsh_file, burgers_vector):
+    with open(gmsh_file, 'r') as file:
+    # Read all lines from the file
+        lines = file.readlines()
+
+    # Extract the desired information from rows 15 to 22
+    start_row = 15
+    end_row = 22
+    data_list = []
+
+    for line in lines[start_row-1:end_row]:
+        # Split the line by spaces
+        line_data = line.split()
+        # Extract the required values
+        values = [float(value) for value in line_data[1:]]
+        data_list.append(values)
+    
+    min_x, min_y, min_z = np.min(data_list, axis=0)
+    max_x, max_y, max_z = np.max(data_list, axis=0)
+
+    box = np.array([(min_x, min_y, min_z), (max_x, min_y, min_z), (max_x, max_y, min_z), (min_x, max_y, min_z),
+                     (min_x, min_y, max_z), (max_x, min_y, max_z), (max_x, max_y, max_z), (min_x, max_y, max_z)]).tolist()
+    
+    return  np.linalg.norm(np.array(box[0])-np.array(box[4])) * burgers_vector
+
+    
+
 def _normalized_vector(vector):
     highest = max(map(abs, vector))
 
@@ -33,7 +60,8 @@ def _normalized_vector(vector):
             new_vector.append(temp)
     return new_vector
 
-def crystal_rdf_serializer(g, cif_data, space_group_data, mat_info, ns):
+def crystal_rdf_serializer(cif_data, space_group_data, mat_info, ns):
+    g = Graph()
     g.parse("../../CSO/crystal-structure-ontology.owl", format="xml")
     g.parse("../../dislocation-ontology.owl", format="xml")
     # g.parse("../../crystallographic-defect-ontology/crystallographic-defect-ontology.owl", format="xml")
@@ -126,9 +154,10 @@ def crystal_rdf_serializer(g, cif_data, space_group_data, mat_info, ns):
     g.add((crystal_coordinate_third_axis, MDO.Y_axisCoordinate, Literal(0.707, datatype=XSD.double)))
     g.add((crystal_coordinate_third_axis, MDO.Z_axisCoordinate, Literal(0.0, datatype=XSD.double)))
     
-    return None
+    return g
 
-def dislocation_structure_serializer(g, mat_info, init_micro, node_data, linker_data, loop_data, ns, key, edge, is_relaxed):
+def dislocation_structure_serializer(mat_info, init_micro, node_data, linker_data, loop_data, ns, key, edge, is_relaxed):
+    g = Graph()
     basis = ns['coordinate_basis']
     crystal_structure = ns['crystal_structure']
     crystal = ns['crystal']
@@ -214,9 +243,9 @@ def dislocation_structure_serializer(g, mat_info, init_micro, node_data, linker_
         # g.add((node_vector_velocity_components, CSO.thirdAxisComponent, Literal(n_v[2], datatype=XSD.double)))
         # g.add((node_vector_velocity_components, CSO.hasBasis, basis))
         
-
     slip_system_list = []
     counter_slip_system = 0 
+    
     
     # dislocation loop data
     for loop in loop_data:
@@ -236,7 +265,7 @@ def dislocation_structure_serializer(g, mat_info, init_micro, node_data, linker_
         vector_components_of_slip_plane_normal = ns['dislocation_{}_vector_components_of_slip_plane_normal_{}'.format(id, key)]
         slip_plane_origin = ns['dislocation_{}_slip_plane_origin_{}'.format(id,key)]
         vector_components_slip_plane_origin = ns['dislocation_{}_vector_components_origin_{}'.format(id, key)]
-        line = ns['line_{}'.format(id)]
+        line = ns['line_{}_{}'.format(id, key)]
         discretized_line = ns['dislocation_{}_discretized_line_{}'.format(id, key)]
         slip_direction_loop_normalized = _normalized_vector(slip_direction_loop)
         plane_normal_normalized = _normalized_vector(plane_normal)
@@ -327,5 +356,6 @@ def dislocation_structure_serializer(g, mat_info, init_micro, node_data, linker_
         g.add((segment, DISO.hasEndNode, ns['node_{}_{}'.format(end_node_id, key)]))
         # g.add((segment, DISO.isSegmentOf, ns['dislocation_{}_discretized_line'.format(dislocation_id)]))
         g.add((ns['dislocation_{}_discretized_line_{}'.format(dislocation_id, key)], DISO.hasSegment, segment))
-        
-    return None
+    
+    
+    return g

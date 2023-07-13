@@ -98,8 +98,7 @@ def main():
                 loop_data = data[dismic]['loop data']
 
                 # adding dislocation microstructures of a simulation. 
-                # so far only the input and the output of dislocation microstructure
-                g_dis_struc = dislocation_structure_serializer(mat_info, init_micro, node_data, linker_data, loop_data, ns, key, edge_length, is_relaxed)
+                g_dis_struc = dislocation_structure_serializer(mat_info, json_cif_data, init_micro, node_data, linker_data, loop_data, ns, key, edge_length, is_relaxed)
                 G+=g_dis_struc
             else: 
                 key = 'output'
@@ -109,8 +108,7 @@ def main():
                 loop_data = data[dismic]['loop data']
 
                 # adding dislocation microstructures of a simulation. 
-                # so far only the input and the output of dislocation microstructure
-                g_dis_struc = dislocation_structure_serializer(mat_info, init_micro, node_data, linker_data, loop_data, ns, key, edge_length, is_relaxed)
+                g_dis_struc = dislocation_structure_serializer(mat_info, json_cif_data, init_micro, node_data, linker_data, loop_data, ns, key, edge_length, is_relaxed)
                 G+=g_dis_struc
             
         G.serialize(destination=save_turtle, format='turtle')

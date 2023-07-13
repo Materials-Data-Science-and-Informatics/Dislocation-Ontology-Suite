@@ -96,6 +96,7 @@ def crystal_rdf_serializer(cif_data, space_group_data, mat_info, ns):
     space_group = ns['space_group']
     point_group = ns['point_group']
     
+    
     ## length data value
     length_a = Literal(cif_data['_cell_length_a']*1e-10, datatype=XSD.double) 
     length_b = Literal(cif_data['_cell_length_b']*1e-10, datatype=XSD.double)
@@ -105,6 +106,7 @@ def crystal_rdf_serializer(cif_data, space_group_data, mat_info, ns):
     angle_alpha = Literal(cif_data['_cell_angle_alpha'], datatype=XSD.double)  
     angle_beta =  Literal(cif_data['_cell_angle_beta'], datatype=XSD.double)
     angle_gamma = Literal(cif_data['_cell_angle_gamma'], datatype=XSD.double)
+
 
     # Crystal structure initial g
     g.add((crystal, RDF.type, CDO.CrystallineMaterial))
@@ -156,7 +158,7 @@ def crystal_rdf_serializer(cif_data, space_group_data, mat_info, ns):
     
     return g
 
-def dislocation_structure_serializer(mat_info, init_micro, node_data, linker_data, loop_data, ns, key, edge, is_relaxed):
+def dislocation_structure_serializer(mat_info, cif_data, init_micro, node_data, linker_data, loop_data, ns, key, edge, is_relaxed):
     g = Graph()
     basis = ns['coordinate_basis']
     crystal_structure = ns['crystal_structure']
@@ -166,6 +168,8 @@ def dislocation_structure_serializer(mat_info, init_micro, node_data, linker_dat
     cube_shape = ns['cube_shape']
     cube_edge_length = ns['cube_edge_length']
     cube_edge_length_qv = ns['cube_edge_length_qv']
+    composition = ns['composition']
+    g.add((composition, RDF.type, MDO.Composition))
     g.add((cube_shape, RDF.type, DISO.Cube))
     g.add((cube_edge_length, RDF.type, DISO.Length))
     g.add((cube_edge_length_qv, RDF.type, QUDT.QuantityValue))
@@ -194,6 +198,8 @@ def dislocation_structure_serializer(mat_info, init_micro, node_data, linker_dat
         g.add((ddd_sim, DISO.hasInputDislocationStructure, dislocation_structure))
         g.add((dislocation_structure, DISO.isRelaxed, Literal(is_relaxed,  datatype=XSD.boolean)))
         g.add((dislocation_structure, DISO.hasShape, cube_shape))
+        g.add((dislocation_structure, MDO.hasComposition, composition))
+        g.add((composition, MDO.DescriptiveFormula, Literal(cif_data['_chemical_formula_structural'], datatype=XSD.string)))
     elif key=='output': 
         g.add((ddd_sim, DISO.hasOutputDislocationStructure, dislocation_structure))
         g.add((dislocation_structure, DISO.isRelaxed, Literal(is_relaxed,  datatype=XSD.boolean)))

@@ -601,6 +601,12 @@
     
 
 
+    <!-- https://w3id.org/mdo/structure/hasComposition -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mdo/structure/hasComposition"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -780,6 +786,12 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/mdo/provenance/SoftwareName">
         <rdfs:label xml:lang="en">software name</rdfs:label>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mdo/structure/DescriptiveFormula -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mdo/structure/DescriptiveFormula"/>
     
 
 
@@ -2073,6 +2085,12 @@
         <rdfs:label xml:lang="en">Basis</rdfs:label>
         <skos:defintion xml:lang="en">Set of vector(in 2-D two vectors and in 3-D three vectors) that linearly independent.</skos:defintion>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mdo/structure/Composition -->
+
+    <owl:Class rdf:about="https://w3id.org/mdo/structure/Composition"/>
     
 
 

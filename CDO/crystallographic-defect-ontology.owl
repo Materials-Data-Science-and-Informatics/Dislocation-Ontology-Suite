@@ -1,4 +1,4 @@
-<?xml version="1.1"?>
+<?xml version="1.0"?>
 <rdf:RDF xmlns="https://purls.helmholtz-metadaten.de/disos/cdo"
      xml:base="https://purls.helmholtz-metadaten.de/disos/cdo"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -151,6 +151,14 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/disos/cdo#BulkDefect -->
+
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/cdo#BulkDefect">
+        <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect"/>
+    </owl:Class>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial">
@@ -208,9 +216,9 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/disos/cdo#GrainBoundary -->
+    <!-- https://purls.helmholtz-metadaten.de/disos/cdo#PlaneDefect -->
 
-    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/cdo#GrainBoundary">
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/cdo#PlaneDefect">
         <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect"/>
     </owl:Class>
     

@@ -178,7 +178,9 @@
 
     <!-- https://purls.helmholtz-metadaten.de/disos/cso#hasBasis -->
 
-    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#hasBasis"/>
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#hasBasis">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isBasisOf"/>
+    </owl:ObjectProperty>
     
 
 
@@ -579,6 +581,14 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isBasisOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isBasisOf">
+        <rdfs:label xml:lang="en">is basis of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#isBurgersVectorOf -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isBurgersVectorOf">
@@ -710,6 +720,16 @@
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isOutputDislocationStructureOf">
         <rdfs:comment xml:lang="en">Inverse property of hasOutputDislocationStructure</rdfs:comment>
         <rdfs:label xml:lang="en">is output dislocation structure of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isRelatedByStructure -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isRelatedByStructure">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#relatesToCrystallineMaterial"/>
+        <rdfs:comment xml:lang="en">Inverse property of relatesToCrystallineMaterial</rdfs:comment>
+        <rdfs:label xml:lang="en">is related by structure</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -945,6 +965,45 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#FEMParameterActivation -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#FEMParameterActivation">
+        <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#parameterActivation"/>
+        <rdfs:label xml:lang="en">FEM parameter activation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#Lmax -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#Lmax">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#RemeshParameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Remesh parameter of maximum segment length so that the segment will be remeshed.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#Lmin -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#Lmin">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#RemeshParameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Remesh parameter of minimum segment length  so that the node in the dislocation network will be removed.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#activeSlipPlane -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#activeSlipPlane">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#SlipPlane"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">active slip plane</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#crossSlipParameterActivation -->
 
     <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#crossSlipParameterActivation">
@@ -1039,6 +1098,27 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#lineSenseDirection -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#lineSenseDirection">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#LineSense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">line sense direction in direction miller indice notation</rdfs:comment>
+        <rdfs:label xml:lang="en">line sense direction</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#meshFormat -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#meshFormat">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">mesh format</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#nodeID -->
 
     <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#nodeID">
@@ -1074,6 +1154,27 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">planeMillerIndice represents Miller indice of lattice plane in string.</rdfs:comment>
         <rdfs:label xml:lang="en">plane miller indice</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#remeshFrequency -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#remeshFrequency">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#RemeshParameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">remesh frequency</rdfs:label>
+        <rdfs:label xml:lang="en">the number of step to do dislocation network remeshing</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#remeshParameterActivation -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#remeshParameterActivation">
+        <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#parameterActivation"/>
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#RemeshParameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -1129,6 +1230,16 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#simulationStepNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#simulationStepNumber">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">simulation step number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#simulationTemperature -->
 
     <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#simulationTemperature">
@@ -1145,7 +1256,7 @@
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:comment xml:lang="en">slipArea represents the slip area of discretized line in double.</rdfs:comment>
-        <rdfs:label xml:lang="en">slipArea</rdfs:label>
+        <rdfs:label xml:lang="en">slip area</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1154,6 +1265,16 @@
 
     <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#softwareVersion">
         <rdfs:label xml:lang="en">software version</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#vectorOriginID -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#vectorOriginID">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#VectorOrigin"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">vector origin ID</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1761,30 +1882,6 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/prov#Person"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#simulationBoundaryType"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#simulationDescription"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#simulationLoadingCondition"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#simulationTemperature"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Discrete dislocation dynamics (DDD) simulation is a simulation that is used to determine individual dislocation properties and study the distribution, arrangement, and density of dislocations in crystalline materials. The simulation observes the collective motion of many dislocations that links the relationship between the microstructure, loading conditions, and the mechanical properties of a crystalline material.</rdfs:comment>
         <rdfs:label xml:lang="en">DDD Simulation</rdfs:label>
     </owl:Class>
@@ -2236,6 +2333,14 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#RemeshParameter -->
+
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#RemeshParameter">
+        <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulationParameter"/>
+    </owl:Class>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#ScrewDislocation -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#ScrewDislocation">
@@ -2347,6 +2452,12 @@
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#activeSlipPlane"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="de">Die kristallografische/Gitterebene, entlang derer die Versetzungslinie verläuft/bewegt wird. Die Gleitebene ist in der Regel die Ebene mit der höchsten Dichte an Atomen, d. h. mit dem größten Abstand.</rdfs:comment>
         <rdfs:comment xml:lang="en">The crystallographic/lattice plane along which the dislocation line traverses/moves. The slip plane is usually the plane with the highest density of atoms, i.e. most widely spaced.</rdfs:comment>

@@ -220,6 +220,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasBurgersVector -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasBurgersVector">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isBurgersVectorOf"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Dislocation"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#BurgersVector"/>
         <rdfs:comment xml:lang="en">hasBurgersVector represents the relationship between dislocation to Burgers vector.</rdfs:comment>
@@ -228,10 +229,24 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasCube -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasCube">
+        <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#hasShape"/>
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isCubeOf"/>
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DislocationStructure"/>
+        <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Cube"/>
+        <rdfs:comment xml:lang="en">hasCube represents the relationship between dislocation strcture and cube shape specimen.</rdfs:comment>
+        <rdfs:label xml:lang="en">has cube</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasEndNode -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasEndNode">
         <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#hasNode"/>
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isEndNodeOf"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Segment"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Node"/>
         <rdfs:comment xml:lang="en">Sub-property of hasNode that relates the segment with the end node.</rdfs:comment>
@@ -243,6 +258,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasFamilyCrystalDirection -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasFamilyCrystalDirection">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isFamilyCrystalDirectionOf"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#FamilyOfCrystalDirection"/>
         <rdfs:comment xml:lang="en">hasFamilyCrystalDirection represents the relationship between lattice direction and family of crystal direction.</rdfs:comment>
@@ -266,6 +282,7 @@
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasInputDislocationStructure">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/mdo/core/hasInputStructure"/>
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isInputDislocationStructureOf"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulation"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DislocationStructure"/>
         <rdfs:label xml:lang="en">has input dislocation structure</rdfs:label>
@@ -276,6 +293,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasLatticeDirection -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasLatticeDirection">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isLatticeDirectionOf"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -294,6 +312,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePlane -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePlane">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isLatticePlaneOf"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -312,6 +331,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePoint -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePoint">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isLatticePointOf"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -331,6 +351,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasLength -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasLength">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isLengthOf"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#3DShape"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Length"/>
         <rdfs:comment xml:lang="en">hasLength represents the relationship between 1-D, 2-D, and 3-D shape to length.</rdfs:comment>
@@ -342,6 +363,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasLineSense -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasLineSense">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isLineSenseOf"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Dislocation"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#LineSense"/>
         <rdfs:comment xml:lang="en">hasLineSense represents the relationship between dislocation and line sense.</rdfs:comment>
@@ -354,6 +376,8 @@
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasMathematicalRepresentation">
         <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#hasRepresentation"/>
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isMathematicalRepresentationOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Dislocation"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Line"/>
         <rdfs:comment xml:lang="en">hasMathematicalRepresentation relates the entity with its mathematical representation.</rdfs:comment>
@@ -365,6 +389,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasNode -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasNode">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isNodeOf"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Segment"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Node"/>
         <rdfs:comment xml:lang="en">hasNode represents the relationship between segment and node.</rdfs:comment>
@@ -377,6 +402,8 @@
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasNumericalRepresentation">
         <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#hasRepresentation"/>
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isNumericalRepresentationOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Line"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine"/>
         <rdfs:comment xml:lang="en">hasNumericalRepresentation relates the entity with its numerical representation.</rdfs:comment>
@@ -389,6 +416,7 @@
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasOutputDislocationStructure">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/mdo/core/hasOutputStructure"/>
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isOutputDislocationStructureOf"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulation"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DislocationStructure"/>
         <rdfs:label xml:lang="en">has output dislocation structure</rdfs:label>
@@ -399,6 +427,8 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasRepresentation -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasRepresentation">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isRepresentationOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range>
             <owl:Class>
@@ -429,6 +459,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasShape -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasShape">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isShapeOf"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DislocationStructure"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Shape"/>
         <rdfs:label xml:lang="en">has shape</rdfs:label>
@@ -440,6 +471,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasShapeFunction -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasShapeFunction">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isShapeFunctionOf"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#ShapeFunction"/>
         <rdfs:comment xml:lang="en">hasShapeFunction represents the relationship between discretized line and shape function.</rdfs:comment>
@@ -451,6 +483,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasSimulationParameter -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasSimulationParameter">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isSimulationParameterOf"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulation"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulationParameter"/>
         <rdfs:comment xml:lang="en">hasSimulationParameter represents the relationship between DDD simulation and simulation parameter.</rdfs:comment>
@@ -493,6 +526,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasSlipPlaneNormal -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasSlipPlaneNormal">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isSlipPlaneNormalOf"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -511,6 +545,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasSlipSystem -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasSlipSystem">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isSlipSystemOf"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#SlipSystem"/>
         <rdfs:comment xml:lang="en">hasSlipSystem represents the relationship between a crystal structure and slip system.</rdfs:comment>
@@ -523,6 +558,7 @@
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasStartNode">
         <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#hasNode"/>
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isStartNodeOf"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Segment"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Node"/>
         <rdfs:comment xml:lang="en">Sub-property of hasNode that relates the segment with the start node.</rdfs:comment>
@@ -534,10 +570,165 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasVectorOrigin -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasVectorOrigin">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isVectorOriginOf"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#LatticePlane"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#VectorOrigin"/>
         <rdfs:comment xml:lang="en">hasVectorOrigin represents the relationship between lattice plane and origin.</rdfs:comment>
         <rdfs:label xml:lang="en">has vector origin</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isBurgersVectorOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isBurgersVectorOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasBurgersVector</rdfs:comment>
+        <rdfs:label xml:lang="en">is burgers vector of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isCubeOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isCubeOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasCube</rdfs:comment>
+        <rdfs:label xml:lang="en">is cube of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isEndNodeOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isEndNodeOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasEndNode</rdfs:comment>
+        <rdfs:label xml:lang="en">is end node of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isFamilyCrystalDirectionOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isFamilyCrystalDirectionOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasFamilyCrystalDirection</rdfs:comment>
+        <rdfs:label xml:lang="en">is family crystal direction of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isFamilyCrystalPlaneOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isFamilyCrystalPlaneOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasFamilyCrystalPlane</rdfs:comment>
+        <rdfs:label xml:lang="en">is family crystal plane of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isInputDislocationStructureOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isInputDislocationStructureOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasInputDislocationStructure</rdfs:comment>
+        <rdfs:label xml:lang="en">is input dislocation structure of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isLatticeDirectionOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isLatticeDirectionOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasLatticeDirection</rdfs:comment>
+        <rdfs:label xml:lang="en">is lattice direction of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isLatticePlaneOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isLatticePlaneOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasLatticePlane</rdfs:comment>
+        <rdfs:label xml:lang="en">is lattice plane of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isLatticePointOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isLatticePointOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasLatticePoint</rdfs:comment>
+        <rdfs:label xml:lang="en">is lattice point of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isLengthOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isLengthOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasLength</rdfs:comment>
+        <rdfs:label xml:lang="en">is length of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isLineSenseOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isLineSenseOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasLineSense</rdfs:comment>
+        <rdfs:label xml:lang="en">is line sense of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isMathematicalRepresentationOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isMathematicalRepresentationOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasMathematicalRepresentation</rdfs:comment>
+        <rdfs:label xml:lang="en">is mathematical representation of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isNodeOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isNodeOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasNode</rdfs:comment>
+        <rdfs:label xml:lang="en">is node of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isNumericalRepresentationOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isNumericalRepresentationOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasNumericalRepresentation</rdfs:comment>
+        <rdfs:label xml:lang="en">is numerical representation of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isOutputDislocationStructureOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isOutputDislocationStructureOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasOutputDislocationStructure</rdfs:comment>
+        <rdfs:label xml:lang="en">is output dislocation structure of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isRepresentationOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isRepresentationOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasRepresentation</rdfs:comment>
+        <rdfs:label xml:lang="en">is representation of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isResultedBy -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isResultedBy">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#resultsIn"/>
+        <rdfs:comment xml:lang="en">Inverse property of resultsIn</rdfs:comment>
+        <rdfs:label xml:lang="en">is resulted by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -549,6 +740,69 @@
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine"/>
         <rdfs:comment xml:lang="en">Inverse of hasSegment</rdfs:comment>
         <rdfs:label xml:lang="en">is segment of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isShapeFunctionOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isShapeFunctionOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasShapeFunction</rdfs:comment>
+        <rdfs:label xml:lang="en">is shape function of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isShapeOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isShapeOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasShape</rdfs:comment>
+        <rdfs:label xml:lang="en">is shape of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isSimulationParameterOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isSimulationParameterOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasSimulationParameter</rdfs:comment>
+        <rdfs:label xml:lang="en">is simulation parameter of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isSlipPlaneNormalOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isSlipPlaneNormalOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasSlipPlaneNormal</rdfs:comment>
+        <rdfs:label xml:lang="en">is slip plane normal of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isSlipSystemOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isSlipSystemOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasSlipSystem</rdfs:comment>
+        <rdfs:label xml:lang="en">is slip system of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isStartNodeOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isStartNodeOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasStartNode</rdfs:comment>
+        <rdfs:label xml:lang="en">is start node of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isVectorOriginOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isVectorOriginOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasVectorOrigin</rdfs:comment>
+        <rdfs:label xml:lang="en">is vector origin of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -567,6 +821,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#observedBy -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#observedBy">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#observes"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Dislocation"/>
         <rdfs:range>
             <owl:Class>
@@ -582,9 +837,27 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#observes -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#observes">
+        <rdfs:comment xml:lang="en">Inverse property of observedBy</rdfs:comment>
+        <rdfs:label xml:lang="en">observes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#relatesToCrystallineMaterial -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#relatesToCrystallineMaterial">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure"/>
+                    <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#DislocationStructure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial"/>
         <rdfs:label xml:lang="en">relates to crystalline material</rdfs:label>
     </owl:ObjectProperty>
     

@@ -945,6 +945,17 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#crossSlipParameterActivation -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#crossSlipParameterActivation">
+        <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#parameterActivation"/>
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#CrossSlip"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">cross slip parameter activation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#directionMillerIndice -->
 
     <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#directionMillerIndice">
@@ -959,6 +970,27 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">directionMillerIndice represents Miller indice of lattice direction in string.</rdfs:comment>
         <rdfs:label xml:lang="en">direction miller indice</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#discretizedLineID -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#discretizedLineID">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">discretized line ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#externalLoadParameterActivation -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#externalLoadParameterActivation">
+        <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#parameterActivation"/>
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#ExternalLoadParameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">external load parameter activation</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -996,6 +1028,27 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#junctionFormationParameterActivation -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#junctionFormationParameterActivation">
+        <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#parameterActivation"/>
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#JunctionFormation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">junction formation parameter activation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#nodeID -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#nodeID">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Node"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">node ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#parameterActivation -->
 
     <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#parameterActivation">
@@ -1009,6 +1062,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">parameter activation</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1024,6 +1078,36 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#segmentID -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#segmentID">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Segment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">segment ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#shapeFunctionType -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#shapeFunctionType">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#ShapeFunction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">shape function type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#simulationBoundaryType -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#simulationBoundaryType">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">simulation boundary type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#simulationDescription -->
 
     <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#simulationDescription">
@@ -1031,6 +1115,26 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">simulation description of DDD simulation</rdfs:comment>
         <rdfs:label xml:lang="en">simulation description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#simulationLoadingCondition -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#simulationLoadingCondition">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">simulation loading condition</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#simulationTemperature -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#simulationTemperature">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label xml:lang="en">simulation temperature</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1659,8 +1763,26 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#simulationBoundaryType"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#simulationDescription"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#simulationLoadingCondition"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#simulationTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Discrete dislocation dynamics (DDD) simulation is a simulation that is used to determine individual dislocation properties and study the distribution, arrangement, and density of dislocations in crystalline materials. The simulation observes the collective motion of many dislocations that links the relationship between the microstructure, loading conditions, and the mechanical properties of a crystalline material.</rdfs:comment>
@@ -2167,6 +2289,13 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#ShapeFunction -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#ShapeFunction">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#shapeFunctionType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="de">Die Formfunktion ist die Funktion, die die Lösung zwischen den an den Netzknoten erhaltenen diskreten Werten interpoliert. Bei der diskretisierten Versetzung bestimmt die Formfunktion die Form eines Segments und letztlich die Form der Linie. Beispiele für Formfunktionen, die zur Diskretisierung der Versetzung verwendet werden, sind kreisförmig, elliptisch, spiralförmig, linear, kubisch und quintisch.</rdfs:comment>
         <rdfs:comment xml:lang="en">The shape function is the function that interpolates the solution between the discrete values obtained at the mesh nodes. In discretized dislocation, the shape function determines the shape of a segment and ultimately determines the shape of the line. Examples of shape function that is used to discretize the dislocation are circular, elliptic, spiral, linear, cubic, and quintic.</rdfs:comment>
         <rdfs:label xml:lang="en">Shape Function</rdfs:label>

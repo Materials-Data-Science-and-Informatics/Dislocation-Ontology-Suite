@@ -1,4 +1,4 @@
-<?xml version="1.1"?>
+<?xml version="1.0"?>
 <rdf:RDF xmlns="https://purls.helmholtz-metadaten.de/disos/cso"
      xml:base="https://purls.helmholtz-metadaten.de/disos/cso"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -13,7 +13,7 @@
     <owl:Ontology rdf:about="https://purls.helmholtz-metadaten.de/disos/cso">
         <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Said Fathalla</terms:contributor>
         <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stefan Sandfeld</terms:contributor>
-        <terms:created xml:lang="en">21.03.2022</terms:created>
+        <terms:created xml:lang="en">17.08.2023</terms:created>
         <terms:creator xml:lang="en">Ahmad Zainul Ihsan</terms:creator>
         <terms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
         <terms:title xml:lang="en">Crystal Structure Ontology</terms:title>
@@ -154,6 +154,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/cso#hasBasis -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#hasBasis">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#isBasisOf"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -273,6 +274,15 @@
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#VectorComponentOfBasis"/>
         <rdfs:comment xml:lang="en">hasVectorComponent relates the Vector with &apos;Vector Components of Basis&apos;</rdfs:comment>
         <rdfs:label xml:lang="en">has vector component</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/cso#isBasisOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#isBasisOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasBasis</rdfs:comment>
+        <rdfs:label xml:lang="en">is basis of</rdfs:label>
     </owl:ObjectProperty>
     
 

@@ -2440,7 +2440,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">A simulation parameter related to remeshing the dislocation network.</rdfs:label>
+        <rdfs:comment xml:lang="en">A simulation parameter related to remeshing the dislocation network.</rdfs:comment>
         <rdfs:label xml:lang="en">Remesh Parameter</rdfs:label>
     </owl:Class>
     

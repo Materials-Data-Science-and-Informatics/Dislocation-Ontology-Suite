@@ -56,8 +56,6 @@ $(function(){
 <div style="float:right">language <a href="index-de.html"><b>de</b></a> <a href="index-en.html"><b>en</b></a> </div>
 <h1>Dislocation Ontology</h1>
 <h2>Release 17.08.2023</h2>
-
-
 <dl>
 <dt>Latest version:</dt>
 <dd><a href="https://purls.helmholtz-metadaten.de/disos/diso">https://purls.helmholtz-metadaten.de/disos/diso</a></dd>
@@ -65,33 +63,33 @@ $(function(){
 <dd>1.1</dd>
 <dt>Authors:</dt>
 <dd>Ahmad Zainul Ihsan</dd>
-
+   
 <dt>Contributors:</dt>
 <dd>Said Fathalla</dd><dd>Stefan Sandfeld</dd>
-
-<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://creativecommons.org/licenses/by/3.0/" target="_blank"><img src="https://img.shields.io/badge/License-http://creativecommons.org/licenses/by/3.0/-blue.svg" alt="http://creativecommons.org/licenses/by/3.0/" /></a>
+   
+<dt>Download serialization:</dt><dd><span><a href="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/Dislocation-Ontology-Suite/main/DISO/dislocation-ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/Dislocation-Ontology-Suite/main/DISO/dislocation-ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/Dislocation-Ontology-Suite/main/DISO/dislocation-ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/Dislocation-Ontology-Suite/main/DISO/dislocation-ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://creativecommons.org/licenses/by/3.0/" target="_blank"><img src="https://img.shields.io/badge/License-http://creativecommons.org/licenses/by/3.0/-blue.svg" alt="http://creativecommons.org/licenses/by/3.0/" /></a>
 </dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
-<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> -->
-<dt>GitHub :</dt>
+   <!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> -->
+<dt>GitHub: </dt>
 <dd><a href="https://github.com/Materials-Data-Science-and-Informatics/Dislocation-Ontology-Suite/tree/main/DISO">Repository</a> </dd>
-
-</dl>
-
 <hr/>
 </div>
 <div class="status">
 <div>
 <span>Ontology Specification Draft</span>
 </div>
-</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
-This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</span>
-</div>
-<div id="toc"></div> 
+</div><div id="toc"></div> 
 
 <!--INTRODUCTION SECTION-->
     <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+   <p>
+   The dislocation ontology (DISO) is an ontology defining the concepts and relationships related to linear defects in crystalline materials. We developed DISO using a top-down approach in which we start defining the most general concepts in the dislocation domain and subsequent specialization of them. DISO is published through a persistent URL following W3C best practices for publishing Linked Data. 
+   </p>
+   <p>
+   For the version 1.1, we adapt and extend the DISO so that it can model various concepts and relationships in the discrete dislocation dynamics domain. The adaption includes adding missing concepts, improving classes definitions, exploring additional relationships between concepts, and finally aligning it with other domain-related ontologies, including the Elementary Multi-perspective Material Ontology (EMMO) and the Materials Design Ontology (MDO). This allows for representing the dislocation simulation data efficiently.
+   </p>
+</span>
 <div id="namespacedeclarations">
 <h3 id="ns" class="list">Namespace declarations</h3>
 <div id="ns" align="center">
@@ -99,7 +97,6 @@ This is a place holder text for the introduction. The introduction should briefl
 <caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
 <tbody>
 <tr><td><b>DISO</b></td><td>&lt;https://purls.helmholtz-metadaten.de/disos/diso&gt;</td></tr>
-<tr><td></td><td></td></tr>
 <tr><td><b>qudt</b></td><td>&lt;http://qudt.org/schema/qudt&gt;</td></tr>
 <tr><td><b>mwo</b></td><td>&lt;http://purls.helmholtz-metadaten.de/mwo&gt;</td></tr>
 <tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
@@ -161,9 +158,7 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#CrossSlip"
-         title="https://purls.helmholtz-metadaten.de/disos/diso#CrossSlip">
-         <span>cross slip</span>
-      </a>
+         title="https://purls.helmholtz-metadaten.de/disos/diso#CrossSlip">Cross Slip</a>
    </li>
    <li>
       <a href="#http://emmo.info/domain-crystallography/crystallography#EMMO_69dab453_6596_464d_a21d_d64643f4ed9b"
@@ -239,9 +234,7 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#JunctionFormation"
-         title="https://purls.helmholtz-metadaten.de/disos/diso#JunctionFormation">
-         <span>junction formation</span>
-      </a>
+         title="https://purls.helmholtz-metadaten.de/disos/diso#JunctionFormation">Junction Formation</a>
    </li>
    <li>
       <a href="#http://emmo.info/emmo#EMMO_d8d2144e_5c8d_455d_a643_5caf4d8d9df8"
@@ -337,9 +330,7 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#RemeshParameter"
-         title="https://purls.helmholtz-metadaten.de/disos/diso#RemeshParameter">
-         <span>remesh parameter</span>
-      </a>
+         title="https://purls.helmholtz-metadaten.de/disos/diso#RemeshParameter">Remesh Parameter</a>
    </li>
    <li>
       <a href="#ScrewDislocation"
@@ -527,8 +518,8 @@ This ontology has the following classes and properties.</span>
          title="http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204">hasProperty</a>
    </li>
    <li>
-      <a href="#isBasisOf"
-         title="https://purls.helmholtz-metadaten.de/disos/diso#isBasisOf">is basis of</a>
+      <a href="#https://purls.helmholtz-metadaten.de/disos/cso#isBasisOf"
+         title="https://purls.helmholtz-metadaten.de/disos/cso#isBasisOf">is basis of</a>
    </li>
    <li>
       <a href="#isBurgersVectorOf"
@@ -591,8 +582,8 @@ This ontology has the following classes and properties.</span>
          title="https://purls.helmholtz-metadaten.de/disos/diso#isOutputDislocationStructureOf">is output dislocation structure of</a>
    </li>
    <li>
-      <a href="#isRelatedByStructure"
-         title="https://purls.helmholtz-metadaten.de/disos/diso#isRelatedByStructure">is related by structure</a>
+      <a href="#isRelatedToStructure"
+         title="https://purls.helmholtz-metadaten.de/disos/diso#isRelatedToStructure">is related to structure</a>
    </li>
    <li>
       <a href="#isRepresentationOf"
@@ -739,9 +730,7 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#remeshParameterActivation"
-         title="https://purls.helmholtz-metadaten.de/disos/diso#remeshParameterActivation">
-         <span>remesh parameter activation</span>
-      </a>
+         title="https://purls.helmholtz-metadaten.de/disos/diso#remeshParameterActivation">remesh parameter activation</a>
    </li>
    <li>
       <a href="#segmentID"
@@ -844,11 +833,11 @@ This ontology has the following classes and properties.</span>
   
 
 <!--DESCRIPTION SECTION-->
-    <div id="description"><h2 id="desc" class="list">Dislocation Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+    <!-- <div id="description"><h2 id="desc" class="list">Dislocation Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
 
-</div>
+</div> -->
    
 
 <!--CROSSREF SECTION-->
@@ -886,9 +875,7 @@ This section provides details for each class and property defined by Dislocation
       </li>
       <li>
          <a href="#CrossSlip"
-            title="https://purls.helmholtz-metadaten.de/disos/diso#CrossSlip">
-            <span>cross slip</span>
-         </a>
+            title="https://purls.helmholtz-metadaten.de/disos/diso#CrossSlip">Cross Slip</a>
       </li>
       <li>
          <a href="#http://emmo.info/domain-crystallography/crystallography#EMMO_69dab453_6596_464d_a21d_d64643f4ed9b"
@@ -964,9 +951,7 @@ This section provides details for each class and property defined by Dislocation
       </li>
       <li>
          <a href="#JunctionFormation"
-            title="https://purls.helmholtz-metadaten.de/disos/diso#JunctionFormation">
-            <span>junction formation</span>
-         </a>
+            title="https://purls.helmholtz-metadaten.de/disos/diso#JunctionFormation">Junction Formation</a>
       </li>
       <li>
          <a href="#http://emmo.info/emmo#EMMO_d8d2144e_5c8d_455d_a643_5caf4d8d9df8"
@@ -1062,9 +1047,7 @@ This section provides details for each class and property defined by Dislocation
       </li>
       <li>
          <a href="#RemeshParameter"
-            title="https://purls.helmholtz-metadaten.de/disos/diso#RemeshParameter">
-            <span>remesh parameter</span>
-         </a>
+            title="https://purls.helmholtz-metadaten.de/disos/diso#RemeshParameter">Remesh Parameter</a>
       </li>
       <li>
          <a href="#ScrewDislocation"
@@ -1233,7 +1216,7 @@ This section provides details for each class and property defined by Dislocation
       </dl>
    </div>
    <div class="entity" id="CrossSlip">
-      <h3>cross slip<sup class="type-c" title="class">c</sup>
+      <h3>Cross Slip<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -1260,7 +1243,7 @@ This section provides details for each class and property defined by Dislocation
             <a href="#ExternalLoadParameter"
                title="https://purls.helmholtz-metadaten.de/disos/diso#ExternalLoadParameter">External Load Parameter</a>
             <sup class="type-c" title="class">c</sup>, <a href="#JunctionFormation"
-               title="https://purls.helmholtz-metadaten.de/disos/diso#JunctionFormation">junction formation</a>
+               title="https://purls.helmholtz-metadaten.de/disos/diso#JunctionFormation">Junction Formation</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1482,15 +1465,21 @@ This section provides details for each class and property defined by Dislocation
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#ExternalLoadParameter"
+            <a href="#CrossSlip"
+               title="https://purls.helmholtz-metadaten.de/disos/diso#CrossSlip">Cross Slip</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ExternalLoadParameter"
                title="https://purls.helmholtz-metadaten.de/disos/diso#ExternalLoadParameter">External Load Parameter</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#CrossSlip"
-               title="https://purls.helmholtz-metadaten.de/disos/diso#CrossSlip">cross slip</a>
             <sup class="type-c" title="class">c</sup>, <a href="#JunctionFormation"
-               title="https://purls.helmholtz-metadaten.de/disos/diso#JunctionFormation">junction formation</a>
+               title="https://purls.helmholtz-metadaten.de/disos/diso#JunctionFormation">Junction Formation</a>
             <sup class="type-c" title="class">c</sup>, <a href="#RemeshParameter"
-               title="https://purls.helmholtz-metadaten.de/disos/diso#RemeshParameter">remesh parameter</a>
+               title="https://purls.helmholtz-metadaten.de/disos/diso#RemeshParameter">Remesh Parameter</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#parameterActivation"
+               title="https://purls.helmholtz-metadaten.de/disos/diso#parameterActivation">parameter activation</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
@@ -1697,9 +1686,9 @@ This section provides details for each class and property defined by Dislocation
          <dt>is disjoint with</dt>
          <dd>
             <a href="#CrossSlip"
-               title="https://purls.helmholtz-metadaten.de/disos/diso#CrossSlip">cross slip</a>
+               title="https://purls.helmholtz-metadaten.de/disos/diso#CrossSlip">Cross Slip</a>
             <sup class="type-c" title="class">c</sup>, <a href="#JunctionFormation"
-               title="https://purls.helmholtz-metadaten.de/disos/diso#JunctionFormation">junction formation</a>
+               title="https://purls.helmholtz-metadaten.de/disos/diso#JunctionFormation">Junction Formation</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1802,7 +1791,7 @@ This section provides details for each class and property defined by Dislocation
       </dl>
    </div>
    <div class="entity" id="JunctionFormation">
-      <h3>junction formation<sup class="type-c" title="class">c</sup>
+      <h3>Junction Formation<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -1827,7 +1816,7 @@ This section provides details for each class and property defined by Dislocation
          <dt>is disjoint with</dt>
          <dd>
             <a href="#CrossSlip"
-               title="https://purls.helmholtz-metadaten.de/disos/diso#CrossSlip">cross slip</a>
+               title="https://purls.helmholtz-metadaten.de/disos/diso#CrossSlip">Cross Slip</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ExternalLoadParameter"
                title="https://purls.helmholtz-metadaten.de/disos/diso#ExternalLoadParameter">External Load Parameter</a>
             <sup class="type-c" title="class">c</sup>
@@ -2412,12 +2401,15 @@ This section provides details for each class and property defined by Dislocation
       </dl>
    </div>
    <div class="entity" id="RemeshParameter">
-      <h3>remesh parameter<sup class="type-c" title="class">c</sup>
+      <h3>Remesh Parameter<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/disos/diso#RemeshParameter</p>
+      <div class="comment">
+         <span class="markdown">A simulation parameter related to remeshing the dislocation network.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -2919,8 +2911,8 @@ This section provides details for each class and property defined by Dislocation
             title="http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204">hasProperty</a>
       </li>
       <li>
-         <a href="#isBasisOf"
-            title="https://purls.helmholtz-metadaten.de/disos/diso#isBasisOf">is basis of</a>
+         <a href="#https://purls.helmholtz-metadaten.de/disos/cso#isBasisOf"
+            title="https://purls.helmholtz-metadaten.de/disos/cso#isBasisOf">is basis of</a>
       </li>
       <li>
          <a href="#isBurgersVectorOf"
@@ -2983,8 +2975,8 @@ This section provides details for each class and property defined by Dislocation
             title="https://purls.helmholtz-metadaten.de/disos/diso#isOutputDislocationStructureOf">is output dislocation structure of</a>
       </li>
       <li>
-         <a href="#isRelatedByStructure"
-            title="https://purls.helmholtz-metadaten.de/disos/diso#isRelatedByStructure">is related by structure</a>
+         <a href="#isRelatedToStructure"
+            title="https://purls.helmholtz-metadaten.de/disos/diso#isRelatedToStructure">is related to structure</a>
       </li>
       <li>
          <a href="#isRepresentationOf"
@@ -3058,8 +3050,8 @@ This section provides details for each class and property defined by Dislocation
          <dl>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#isBasisOf"
-                  title="https://purls.helmholtz-metadaten.de/disos/diso#isBasisOf">is basis of</a>
+               <a href="#https://purls.helmholtz-metadaten.de/disos/cso#isBasisOf"
+                  title="https://purls.helmholtz-metadaten.de/disos/cso#isBasisOf">is basis of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -3279,6 +3271,9 @@ This section provides details for each class and property defined by Dislocation
       </h3>
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/disos/diso#hasInputDislocationStructure</p>
+      <div class="comment">
+         <span class="markdown">hasInputDislocationStructure represents the relationship between DDD simulation and its input of dislocation structure.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -3628,6 +3623,9 @@ This section provides details for each class and property defined by Dislocation
       </h3>
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/disos/diso#hasOutputDislocationStructure</p>
+      <div class="comment">
+         <span class="markdown">hasOutputDislocationStructure represents the relationship between DDD simulation and its output of dislocation structure.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -4083,13 +4081,13 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204</p>
    </div>
-   <div class="entity" id="isBasisOf">
+   <div class="entity" id="https://purls.helmholtz-metadaten.de/disos/cso#isBasisOf">
       <h3>is basis of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/disos/diso#isBasisOf</p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/disos/cso#isBasisOf</p>
       <div class="description">
          <dl>
             <dt>is inverse of</dt>
@@ -4406,13 +4404,13 @@ This section provides details for each class and property defined by Dislocation
          </dl>
       </div>
    </div>
-   <div class="entity" id="isRelatedByStructure">
-      <h3>is related by structure<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="isRelatedToStructure">
+      <h3>is related to structure<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/disos/diso#isRelatedByStructure</p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/disos/diso#isRelatedToStructure</p>
       <div class="comment">
          <span class="markdown">Inverse property of relatesToCrystallineMaterial</span>
       </div>
@@ -4761,8 +4759,8 @@ This section provides details for each class and property defined by Dislocation
             </dd>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#isRelatedByStructure"
-                  title="https://purls.helmholtz-metadaten.de/disos/diso#isRelatedByStructure">is related by structure</a>
+               <a href="#isRelatedToStructure"
+                  title="https://purls.helmholtz-metadaten.de/disos/diso#isRelatedToStructure">is related to structure</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -4888,9 +4886,7 @@ This section provides details for each class and property defined by Dislocation
       </li>
       <li>
          <a href="#remeshParameterActivation"
-            title="https://purls.helmholtz-metadaten.de/disos/diso#remeshParameterActivation">
-            <span>remesh parameter activation</span>
-         </a>
+            title="https://purls.helmholtz-metadaten.de/disos/diso#remeshParameterActivation">remesh parameter activation</a>
       </li>
       <li>
          <a href="#segmentID"
@@ -4947,6 +4943,9 @@ This section provides details for each class and property defined by Dislocation
       </h3>
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/disos/diso#activeSlipPlane</p>
+      <div class="comment">
+         <span class="markdown">activeSlipPlane represents the boolean value of whether the slip plane is active.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -4982,7 +4981,7 @@ This section provides details for each class and property defined by Dislocation
             <dt>has domain</dt>
             <dd>
                <a href="#CrossSlip"
-                  title="https://purls.helmholtz-metadaten.de/disos/diso#CrossSlip">cross slip</a>
+                  title="https://purls.helmholtz-metadaten.de/disos/diso#CrossSlip">Cross Slip</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -5001,6 +5000,9 @@ This section provides details for each class and property defined by Dislocation
       </h3>
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulationID</p>
+      <div class="comment">
+         <span class="markdown">DDDSimulationID represents the ID of a DDD simulation</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -5063,6 +5065,9 @@ This section provides details for each class and property defined by Dislocation
       </h3>
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/disos/diso#discretizedLineID</p>
+      <div class="comment">
+         <span class="markdown">DiscretizedLineID represents the ID of a discretized (mathematical) line.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -5094,6 +5099,9 @@ This section provides details for each class and property defined by Dislocation
       </h3>
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/disos/diso#externalLoadParameterActivation</p>
+      <div class="comment">
+         <span class="markdown">externalLoadParameterActivation represents the boolean value of whether the external load is active.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -5223,6 +5231,9 @@ This section provides details for each class and property defined by Dislocation
       </h3>
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/disos/diso#junctionFormationParameterActivation</p>
+      <div class="comment">
+         <span class="markdown">JunctinoFormationParameterActivation represents the boolean value of whether the junction formation is active.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -5234,7 +5245,7 @@ This section provides details for each class and property defined by Dislocation
             <dt>has domain</dt>
             <dd>
                <a href="#JunctionFormation"
-                  title="https://purls.helmholtz-metadaten.de/disos/diso#JunctionFormation">junction formation</a>
+                  title="https://purls.helmholtz-metadaten.de/disos/diso#JunctionFormation">Junction Formation</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -5288,7 +5299,7 @@ This section provides details for each class and property defined by Dislocation
             <dt>has domain</dt>
             <dd>
                <a href="#RemeshParameter"
-                  title="https://purls.helmholtz-metadaten.de/disos/diso#RemeshParameter">remesh parameter</a>
+                  title="https://purls.helmholtz-metadaten.de/disos/diso#RemeshParameter">Remesh Parameter</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -5315,7 +5326,7 @@ This section provides details for each class and property defined by Dislocation
             <dt>has domain</dt>
             <dd>
                <a href="#RemeshParameter"
-                  title="https://purls.helmholtz-metadaten.de/disos/diso#RemeshParameter">remesh parameter</a>
+                  title="https://purls.helmholtz-metadaten.de/disos/diso#RemeshParameter">Remesh Parameter</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -5334,6 +5345,9 @@ This section provides details for each class and property defined by Dislocation
       </h3>
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/disos/diso#meshFormat</p>
+      <div class="comment">
+         <span class="markdown">meshFormat represents the format of mesh file, e.g., gmsh, mesh, etc.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -5358,6 +5372,9 @@ This section provides details for each class and property defined by Dislocation
       </h3>
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/disos/diso#nodeID</p>
+      <div class="comment">
+         <span class="markdown">nodeID represents the ID of a segment node.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -5407,16 +5424,8 @@ This section provides details for each class and property defined by Dislocation
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#CrossSlip"
-                  title="https://purls.helmholtz-metadaten.de/disos/diso#CrossSlip">cross slip</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#ExternalLoadParameter"
-                  title="https://purls.helmholtz-metadaten.de/disos/diso#ExternalLoadParameter">External Load Parameter</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#JunctionFormation"
-                  title="https://purls.helmholtz-metadaten.de/disos/diso#JunctionFormation">junction formation</a>
+               <a href="#DDDSimulationParameter"
+                  title="https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulationParameter">DDD Simulation Parameter</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -5462,12 +5471,15 @@ This section provides details for each class and property defined by Dislocation
       </h3>
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/disos/diso#remeshFrequency</p>
+      <div class="comment">
+         <span class="markdown">remeshFrequency represents the number of steps has to pass before doing the dislocation network remeshing.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
                <a href="#RemeshParameter"
-                  title="https://purls.helmholtz-metadaten.de/disos/diso#RemeshParameter">remesh parameter</a>
+                  title="https://purls.helmholtz-metadaten.de/disos/diso#RemeshParameter">Remesh Parameter</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -5486,6 +5498,9 @@ This section provides details for each class and property defined by Dislocation
       </h3>
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/disos/diso#remeshParameterActivation</p>
+      <div class="comment">
+         <span class="markdown">remeshParameterActivation represents the boolean value of whether the network remeshing is active.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -5497,7 +5512,7 @@ This section provides details for each class and property defined by Dislocation
             <dt>has domain</dt>
             <dd>
                <a href="#RemeshParameter"
-                  title="https://purls.helmholtz-metadaten.de/disos/diso#RemeshParameter">remesh parameter</a>
+                  title="https://purls.helmholtz-metadaten.de/disos/diso#RemeshParameter">Remesh Parameter</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -5516,6 +5531,9 @@ This section provides details for each class and property defined by Dislocation
       </h3>
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/disos/diso#segmentID</p>
+      <div class="comment">
+         <span class="markdown">segmentID represents the ID of a discretized line segment.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -5646,6 +5664,9 @@ This section provides details for each class and property defined by Dislocation
       </h3>
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/disos/diso#simulationStepNumber</p>
+      <div class="comment">
+         <span class="markdown">simulationStepNumber represents the step number of a DDD simulation.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -5729,6 +5750,9 @@ This section provides details for each class and property defined by Dislocation
       </h3>
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/disos/diso#softwareRepository</p>
+      <div class="comment">
+         <span class="markdown">softwareRepository represents the URI/link to the software repository, e.g., GitHub, GitLab, etc.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>

@@ -1,0 +1,333 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://purls.helmholtz-metadaten.de/disos/cso", "http://emmo.info/domain-crystallography/crystallography", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://purls.helmholtz-metadaten.de/disos/diso", "https://purls.helmholtz-metadaten.de/disos/cdo", "http://emmo.info/emmo" ],
+    "title" : {
+      "en" : "Crystallographic Defect Ontology"
+    },
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/cdo",
+    "version" : "1.1",
+    "author" : [ "Ahmad Zainul Ihsan" ],
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/by/3.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Ahmad Zainul Ihsan",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Stefan Sandfeld",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Said Fathalla",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "en",
+        "value" : "21.03.2022",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "CDO",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.1",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Crystallographic Defect Ontology",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/cdo#PointDefect",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cdo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PointDefect",
+      "en" : "Point Defect"
+    },
+    "id" : "3",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://emmo.info/emmo#EMMO_a2b006f2_bbfd_4dba_bcaa_3fca20cd6be1",
+    "baseIri" : "http://emmo.info/emmo",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Solid",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EMMO_a2b006f2_bbfd_4dba_bcaa_3fca20cd6be1"
+    },
+    "subClasses" : [ "1", "6" ],
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cdo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CrystallographicDefect",
+      "en" : "Crystallographic Defect"
+    },
+    "subClasses" : [ "3", "7", "8", "9" ],
+    "comment" : {
+      "en" : "Lattice irregularity having one or more of its dimensions on the order of an atomic diameter."
+    },
+    "id" : "4"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/cdo#BulkDefect",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cdo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BulkDefect",
+      "en" : "Bulk Defect"
+    },
+    "id" : "8",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial",
+    "equivalent" : [ "6" ],
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cdo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CrystallineMaterial",
+      "en" : "Crystalline Material"
+    },
+    "comment" : {
+      "en" : "Crystalline material is material characterized by a periodic arrangement of the constituent atoms. The arrangement could be described its crystal structure."
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "1",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#Dislocation",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dislocation"
+    },
+    "attributes" : [ "external" ],
+    "id" : "14",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://emmo.info/domain-crystallography/crystallography#EMMO_69dab453_6596_464d_a21d_d64643f4ed9b",
+    "baseIri" : "http://emmo.info/domain-crystallography/crystallography",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Crystal",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EMMO_69dab453_6596_464d_a21d_d64643f4ed9b"
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "6",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/cdo#PlaneDefect",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cdo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PlaneDefect",
+      "en" : "Plane Defect"
+    },
+    "id" : "9",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CrystalStructure"
+    },
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#LineDefect",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LineDefect",
+      "en" : "Line Defect"
+    },
+    "subClasses" : [ "14" ],
+    "attributes" : [ "external" ],
+    "id" : "7",
+    "superClasses" : [ "4" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "17",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystalStructure",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cdo",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasCrystalStructure",
+      "en" : "has crystal structure"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "range" : "5",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "10"
+  }, {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "11"
+  }, {
+    "range" : "4",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "12"
+  }, {
+    "range" : "4",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "13"
+  }, {
+    "range" : "4",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "15"
+  }, {
+    "range" : "7",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204",
+    "baseIri" : "http://emmo.info/emmo",
+    "range" : "6",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "hasProperty",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EMMO_e1097637_70d2_4895_973f_2396f04fa204"
+    },
+    "domain" : "4",
+    "attributes" : [ "object", "external", "someValues" ],
+    "id" : "17"
+  }, {
+    "range" : "5",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cdo",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasCrystallographicDefect",
+      "en" : "has crystallographic defect"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "19"
+  } ]
+}

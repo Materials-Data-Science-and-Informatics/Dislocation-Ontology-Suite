@@ -69,6 +69,7 @@ $(function(){
 <dt>Beteiligte:</dt>
 <dd>Said Fathalla</dd><dd>Stefan Sandfeld</dd>
 
+
 <dt>Download Serialisierung:</dt><dd><span><a href="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/Dislocation-Ontology-Suite/main/DISO/dislocation-ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/Dislocation-Ontology-Suite/main/DISO/dislocation-ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/Dislocation-Ontology-Suite/main/DISO/dislocation-ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/Dislocation-Ontology-Suite/main/DISO/dislocation-ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>Lizenz:</dt><dd><a href="http://creativecommons.org/licenses/by/3.0/" target="_blank"><img src="https://img.shields.io/badge/License-http://creativecommons.org/licenses/by/3.0/-blue.svg" alt="http://creativecommons.org/licenses/by/3.0/" /></a>
 </dd><dt>Visualisierung:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
    <!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> -->
@@ -99,6 +100,7 @@ $(function(){
 <caption> <a href="#ns"> Tabelle 1</a>: Namensr&auml;ume im Dokument </caption>
 <tbody>
 <tr><td><b>DISO</b></td><td>&lt;https://purls.helmholtz-metadaten.de/disos/diso&gt;</td></tr>
+<tr><td></td><td></td></tr>
 <tr><td><b>qudt</b></td><td>&lt;http://qudt.org/schema/qudt&gt;</td></tr>
 <tr><td><b>mwo</b></td><td>&lt;http://purls.helmholtz-metadaten.de/mwo&gt;</td></tr>
 <tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
@@ -595,6 +597,10 @@ Diese Ontologie beinhaltet die folgenden Klassen und Eigenschaften.</span>
    <li>
       <a href="#isOutputDislocationStructureOf"
          title="https://purls.helmholtz-metadaten.de/disos/diso#isOutputDislocationStructureOf">is output dislocation structure of</a>
+   </li>
+   <li>
+      <a href="#isPixelRepresentationOf"
+         title="https://purls.helmholtz-metadaten.de/disos/diso#isPixelRepresentationOf">is pixel representation of</a>
    </li>
    <li>
       <a href="#isRelatedToStructure"
@@ -3045,6 +3051,10 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
             title="https://purls.helmholtz-metadaten.de/disos/diso#isOutputDislocationStructureOf">is output dislocation structure of</a>
       </li>
       <li>
+         <a href="#isPixelRepresentationOf"
+            title="https://purls.helmholtz-metadaten.de/disos/diso#isPixelRepresentationOf">is pixel representation of</a>
+      </li>
+      <li>
          <a href="#isRelatedToStructure"
             title="https://purls.helmholtz-metadaten.de/disos/diso#isRelatedToStructure">is related to structure</a>
       </li>
@@ -3758,8 +3768,7 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
             </dd>
             <dt>ist inverse zu</dt>
             <dd>
-               <a href="https://purls.helmholtz-metadaten.de/disos/diso#isPixelRepresentationOf"
-                  target="_blank"
+               <a href="#isPixelRepresentationOf"
                   title="https://purls.helmholtz-metadaten.de/disos/diso#isPixelRepresentationOf">is pixel representation of</a>
                <sup class="type-op" title="Objekt Eigenschaft">op</sup>
             </dd>
@@ -4511,6 +4520,27 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
             <dd>
                <a href="#hasOutputDislocationStructure"
                   title="https://purls.helmholtz-metadaten.de/disos/diso#hasOutputDislocationStructure">has output dislocation structure</a>
+               <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isPixelRepresentationOf">
+      <h3>is pixel representation of<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/disos/diso#isPixelRepresentationOf</p>
+      <div class="comment">
+         <span class="markdown">Inverse property of hasPixelRepresentation</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>ist inverse zu</dt>
+            <dd>
+               <a href="#hasPixelRepresentation"
+                  title="https://purls.helmholtz-metadaten.de/disos/diso#hasPixelRepresentation">has pixel representation</a>
                <sup class="type-op" title="Objekt Eigenschaft">op</sup>
             </dd>
          </dl>

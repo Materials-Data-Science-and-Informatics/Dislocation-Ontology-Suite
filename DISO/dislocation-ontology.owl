@@ -738,7 +738,10 @@
 
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#isPixelRepresentationOf -->
 
-    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isPixelRepresentationOf"/>
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isPixelRepresentationOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasPixelRepresentation</rdfs:comment>
+        <rdfs:label xml:lang="en">is pixel representation of</rdfs:label>
+    </owl:ObjectProperty>
     
 
 

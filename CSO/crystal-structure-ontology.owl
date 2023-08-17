@@ -173,6 +173,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/cso#hasCrystalSystem -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#hasCrystalSystem">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#isCrystalSystemOf"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#Lattice"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#CrystalSystem"/>
         <rdfs:comment xml:lang="en">hasCrystalSystem represents the relationship between unit cell and crystal system.</rdfs:comment>
@@ -184,6 +185,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/cso#hasFirstAxisVector -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#hasFirstAxisVector">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#isFirstAxisVectorOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/mdo/structure/Basis"/>
         <rdfs:range rdf:resource="https://w3id.org/mdo/structure/CoordinateVector"/>
         <rdfs:comment xml:lang="en">hasFirstAxisVector represents the relationship between a basis and a coordinate vector to define the coordianates of the axis vector the first basis</rdfs:comment>
@@ -195,6 +197,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/cso#hasLattice -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#hasLattice">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#isLatticeOf"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#Lattice"/>
         <rdfs:comment xml:lang="en">hasLattice represents the relationship between a crystal structure and lattice.</rdfs:comment>
@@ -206,6 +209,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/cso#hasLatticeParameterAngle -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#hasLatticeParameterAngle">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#isLatticeParameterAngleOf"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#UnitCell"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#LatticeParameterAngle"/>
         <rdfs:label xml:lang="en">has lattice parameter angle</rdfs:label>
@@ -216,6 +220,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/cso#hasLatticeParameterLength -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#hasLatticeParameterLength">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#isLatticeParameterLengthOf"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#UnitCell"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#LatticeParameterLength"/>
         <rdfs:label xml:lang="en">has lattice parameter length</rdfs:label>
@@ -226,6 +231,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/cso#hasPositionVector -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#hasPositionVector">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#isPositionVectorOf"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#Point"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#PositionVector"/>
         <rdfs:comment xml:lang="en">hasPositionVector represents the relationship between entity and position vector.</rdfs:comment>
@@ -237,6 +243,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/cso#hasSecondAxisVector -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#hasSecondAxisVector">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#isSecondAxisVectorOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/mdo/structure/Basis"/>
         <rdfs:range rdf:resource="https://w3id.org/mdo/structure/CoordinateVector"/>
         <rdfs:comment xml:lang="en">hasSexondAxisVector represents the relationship between a basis and a coordinate vector to define the coordianates of the axis vector the second basis</rdfs:comment>
@@ -248,6 +255,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/cso#hasThirdAxisVector -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#hasThirdAxisVector">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#isThirdAxisVectorOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/mdo/structure/Basis"/>
         <rdfs:range rdf:resource="https://w3id.org/mdo/structure/CoordinateVector"/>
         <rdfs:comment xml:lang="en">hasThirdAxisVector represents the relationship between a basis and a coordinate vector to define the coordianates of the axis vector the third basis</rdfs:comment>
@@ -259,6 +267,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/cso#hasUnitCell -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#hasUnitCell">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#isUnitCellOf"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#Lattice"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#UnitCell"/>
         <rdfs:comment xml:lang="en">hasUnitCell hasSpecies represents the relationship between a lattice and  unit cells.</rdfs:comment>
@@ -270,6 +279,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/cso#hasVectorComponent -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#hasVectorComponent">
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#isVectorComponentOf"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#Vector"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#VectorComponentOfBasis"/>
         <rdfs:comment xml:lang="en">hasVectorComponent relates the Vector with &apos;Vector Components of Basis&apos;</rdfs:comment>
@@ -283,6 +293,51 @@
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#isBasisOf">
         <rdfs:comment xml:lang="en">Inverse property of hasBasis</rdfs:comment>
         <rdfs:label xml:lang="en">is basis of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/cso#isCrystalSystemOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#isCrystalSystemOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasCrystalSystem</rdfs:comment>
+        <rdfs:label xml:lang="en">is crystal system of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/cso#isFirstAxisVectorOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#isFirstAxisVectorOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasFirstAxisVector.</rdfs:comment>
+        <rdfs:label xml:lang="en">is first axis vector of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/cso#isLatticeOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#isLatticeOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasLattice.</rdfs:comment>
+        <rdfs:label xml:lang="en">is lattice of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/cso#isLatticeParameterAngleOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#isLatticeParameterAngleOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasLatticeParameterAngle.</rdfs:comment>
+        <rdfs:label xml:lang="en">is lattice parameter angle of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/cso#isLatticeParameterLengthOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#isLatticeParameterLengthOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasLatticeParameterLength.</rdfs:comment>
+        <rdfs:label xml:lang="en">is lattice parameter length of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -306,6 +361,24 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/disos/cso#isPositionVectorOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#isPositionVectorOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasPositionVector.</rdfs:comment>
+        <rdfs:label xml:lang="en">is position vector of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/cso#isSecondAxisVectorOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#isSecondAxisVectorOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasSecondAxisVector.</rdfs:comment>
+        <rdfs:label xml:lang="en">is second axis vector of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/disos/cso#isSpaceGroupOf -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#isSpaceGroupOf">
@@ -314,6 +387,33 @@
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure"/>
         <rdfs:comment xml:lang="en">inverse property of hasSpaceGroup</rdfs:comment>
         <rdfs:label xml:lang="en">is space group of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/cso#isThirdAxisVectorOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#isThirdAxisVectorOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasThirdAxisVector.</rdfs:comment>
+        <rdfs:label xml:lang="en">is third axis vector of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/cso#isUnitCellOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#isUnitCellOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasUnitCell.</rdfs:comment>
+        <rdfs:label xml:lang="en">is unit cell of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/cso#isVectorComponentOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/cso#isVectorComponentOf">
+        <rdfs:comment xml:lang="en">Inverse property of hasVectorComponent.</rdfs:comment>
+        <rdfs:label xml:lang="en">is vector component of</rdfs:label>
     </owl:ObjectProperty>
     
 

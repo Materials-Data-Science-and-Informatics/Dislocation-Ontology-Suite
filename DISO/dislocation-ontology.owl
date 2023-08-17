@@ -16,9 +16,9 @@
         <terms:created xml:lang="en">17.08.2023</terms:created>
         <terms:creator xml:lang="en">Ahmad Zainul Ihsan</terms:creator>
         <terms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
-        <terms:title xml:lang="en">Dislocation Ontology</terms:title>
+        <terms:title xml:lang="en">Dislocation Module</terms:title>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DISO</vann:preferredNamespacePrefix>
-        <rdfs:label xml:lang="en">Dislocation Ontology</rdfs:label>
+        <rdfs:label xml:lang="en">Dislocation Module</rdfs:label>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.2</owl:versionInfo>
     </owl:Ontology>
     

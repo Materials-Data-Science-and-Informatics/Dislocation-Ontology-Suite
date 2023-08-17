@@ -1650,20 +1650,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect"/>
-                        <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect"/>
-                        <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Crystalline Material</rdfs:label>
     </owl:Class>
     
@@ -2117,6 +2103,20 @@
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect"/>
                         <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Dislocation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#hasCube"/>
+                        <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Cube"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#hasCube"/>
+                        <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Cube"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>

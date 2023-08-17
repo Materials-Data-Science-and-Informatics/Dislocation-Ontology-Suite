@@ -206,6 +206,9 @@ skos:prefLabel a owl:AnnotationProperty .
     rdfs:subClassOf <http://emmo.info/emmo#EMMO_54ee6b5e_5261_44a8_86eb_5717e7fdb9d0> ;
     skos:prefLabel "MathematicalModel"@en .
 
+<http://emmo.info/emmo/middle/perceptual#EMMO_1da53c06_9577_4008_8652_272fa3b62be7> a owl:Class ;
+    skos:prefLabel "Pictorial"@en .
+
 <http://purls.helmholtz-metadaten.de/mwo/hasORCID> a owl:DatatypeProperty .
 
 qudt:QuantityKind a owl:Class ;
@@ -253,10 +256,10 @@ prov:Person a owl:Class ;
             owl:onProperty foaf:firstName ;
             owl:someValuesFrom xsd:string ],
         [ a owl:Restriction ;
-            owl:onProperty foaf:family_name ;
+            owl:onProperty <http://purls.helmholtz-metadaten.de/mwo/hasORCID> ;
             owl:someValuesFrom xsd:string ],
         [ a owl:Restriction ;
-            owl:onProperty <http://purls.helmholtz-metadaten.de/mwo/hasORCID> ;
+            owl:onProperty foaf:family_name ;
             owl:someValuesFrom xsd:string ],
         prov:Agent .
 
@@ -388,6 +391,14 @@ foaf:firstName a owl:DatatypeProperty .
     rdfs:subPropertyOf <https://w3id.org/mdo/core/hasOutputStructure> ;
     owl:inverseOf <https://purls.helmholtz-metadaten.de/disos/diso#isOutputDislocationStructureOf> .
 
+<https://purls.helmholtz-metadaten.de/disos/diso#hasPixelRepresentation> a owl:ObjectProperty ;
+    rdfs:label "has pixel representation"@en ;
+    rdfs:comment "hasPixelRepresentation represents the relationship between mathematical line and Pixel."@en ;
+    rdfs:domain <https://purls.helmholtz-metadaten.de/disos/diso#Line> ;
+    rdfs:range <https://purls.helmholtz-metadaten.de/disos/diso#Pixel> ;
+    rdfs:subPropertyOf <https://purls.helmholtz-metadaten.de/disos/diso#hasRepresentation> ;
+    owl:inverseOf <https://purls.helmholtz-metadaten.de/disos/diso#isPixelRepresentationOf> .
+
 <https://purls.helmholtz-metadaten.de/disos/diso#hasSegment> a owl:ObjectProperty ;
     rdfs:label "has segment"@en ;
     rdfs:comment "hasSegment represents the relationship between discretized line and segment."@en ;
@@ -478,6 +489,8 @@ foaf:firstName a owl:DatatypeProperty .
 <https://purls.helmholtz-metadaten.de/disos/diso#isOutputDislocationStructureOf> a owl:ObjectProperty ;
     rdfs:label "is output dislocation structure of"@en ;
     rdfs:comment "Inverse property of hasOutputDislocationStructure"@en .
+
+<https://purls.helmholtz-metadaten.de/disos/diso#isPixelRepresentationOf> a owl:ObjectProperty .
 
 <https://purls.helmholtz-metadaten.de/disos/diso#isRepresentationOf> a owl:ObjectProperty ;
     rdfs:label "is representation of"@en ;
@@ -628,10 +641,10 @@ prov:Agent a owl:Class .
 
 prov:SoftwareAgent a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#softwareVersion> ;
+            owl:onProperty <https://w3id.org/mdo/provenance/SoftwareName> ;
             owl:someValuesFrom xsd:string ],
         [ a owl:Restriction ;
-            owl:onProperty <https://w3id.org/mdo/provenance/SoftwareName> ;
+            owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#softwareVersion> ;
             owl:someValuesFrom xsd:string ],
         [ a owl:Restriction ;
             owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#softwareRepository> ;
@@ -667,12 +680,6 @@ prov:wasAssociatedWith a owl:ObjectProperty .
     rdfs:comment "Vector components/vector coordinates of particular basis. It has relation to a specific basis."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty <https://purls.helmholtz-metadaten.de/disos/cso#hasBasis> ;
-                        owl:someValuesFrom <https://w3id.org/mdo/structure/Basis> ] [ a owl:Restriction ;
-                        owl:allValuesFrom <https://w3id.org/mdo/structure/Basis> ;
-                        owl:onProperty <https://purls.helmholtz-metadaten.de/disos/cso#hasBasis> ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onDataRange xsd:double ;
                         owl:onProperty <https://purls.helmholtz-metadaten.de/disos/cso#firstAxisComponent> ;
                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
@@ -682,6 +689,12 @@ prov:wasAssociatedWith a owl:ObjectProperty .
                         owl:onDataRange xsd:double ;
                         owl:onProperty <https://purls.helmholtz-metadaten.de/disos/cso#thirdAxisComponent> ;
                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty <https://purls.helmholtz-metadaten.de/disos/cso#hasBasis> ;
+                        owl:someValuesFrom <https://w3id.org/mdo/structure/Basis> ] [ a owl:Restriction ;
+                        owl:allValuesFrom <https://w3id.org/mdo/structure/Basis> ;
+                        owl:onProperty <https://purls.helmholtz-metadaten.de/disos/cso#hasBasis> ] ) ],
         qudt:Quantity .
 
 <https://purls.helmholtz-metadaten.de/disos/cso#hasBasis> a owl:ObjectProperty ;
@@ -716,6 +729,11 @@ prov:wasAssociatedWith a owl:ObjectProperty .
     rdfs:label "Length"@en ;
     rdfs:comment "A magnitude of line that has a unit."@en ;
     rdfs:subClassOf qudt:Quantity .
+
+<https://purls.helmholtz-metadaten.de/disos/diso#Pixel> a owl:Class ;
+    rdfs:label "Pixel"@en ;
+    rdfs:comment "Pictorial that isthe smallest addressable element in a raster image, or the smallest addressable element in a dot matrix display device"@en ;
+    rdfs:subClassOf <http://emmo.info/emmo/middle/perceptual#EMMO_1da53c06_9577_4008_8652_272fa3b62be7> .
 
 <https://purls.helmholtz-metadaten.de/disos/diso#directionMillerIndice> a owl:DatatypeProperty ;
     rdfs:label "direction miller indice"@en ;
@@ -769,15 +787,6 @@ prov:wasAssociatedWith a owl:ObjectProperty .
     rdfs:range <https://purls.helmholtz-metadaten.de/disos/diso#Node> ;
     owl:inverseOf <https://purls.helmholtz-metadaten.de/disos/diso#isNodeOf> .
 
-<https://purls.helmholtz-metadaten.de/disos/diso#hasRepresentation> a owl:ObjectProperty,
-        owl:TransitiveProperty ;
-    rdfs:label "has representation"@en ;
-    rdfs:comment "hasRepresentation relates the entity to another representation of entity."@en ;
-    rdfs:domain owl:Thing ;
-    rdfs:range [ a owl:Class ;
-            owl:unionOf ( <https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine> <https://purls.helmholtz-metadaten.de/disos/diso#Line> ) ] ;
-    owl:inverseOf <https://purls.helmholtz-metadaten.de/disos/diso#isRepresentationOf> .
-
 <https://purls.helmholtz-metadaten.de/disos/diso#hasSimulationParameter> a owl:ObjectProperty ;
     rdfs:label "has simulation parameter"@en ;
     rdfs:comment "hasSimulationParameter represents the relationship between DDD simulation and simulation parameter."@en ;
@@ -827,15 +836,15 @@ prov:wasAssociatedWith a owl:ObjectProperty .
     rdfs:comment "A basis defines a spatial unit used to express fractional coordinates."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onClass <https://w3id.org/mdo/structure/CoordinateVector> ;
-            owl:onProperty <https://purls.helmholtz-metadaten.de/disos/cso#hasThirdAxisVector> ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onClass <https://w3id.org/mdo/structure/CoordinateVector> ;
             owl:onProperty <https://purls.helmholtz-metadaten.de/disos/cso#hasSecondAxisVector> ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onClass <https://w3id.org/mdo/structure/CoordinateVector> ;
             owl:onProperty <https://purls.helmholtz-metadaten.de/disos/cso#hasFirstAxisVector> ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <https://w3id.org/mdo/structure/CoordinateVector> ;
+            owl:onProperty <https://purls.helmholtz-metadaten.de/disos/cso#hasThirdAxisVector> ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
     skos:defintion "Set of vector(in 2-D two vectors and in 3-D three vectors) that linearly independent."@en .
 
@@ -848,11 +857,11 @@ qudt:Quantity a owl:Class ;
     rdfs:isDefinedBy <http://qudt.org/2.0/schema/qudt>,
         <http://qudt.org/schema/qudt> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:hasQuantityKind ],
-        [ a owl:Restriction ;
             owl:allValuesFrom qudt:QuantityValue ;
-            owl:onProperty qudt:quantityValue ] .
+            owl:onProperty qudt:quantityValue ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKind ;
+            owl:onProperty qudt:hasQuantityKind ] .
 
 <https://purls.helmholtz-metadaten.de/disos/cso#Lattice> a owl:Class ;
     rdfs:label "Lattice"@en ;
@@ -935,6 +944,15 @@ qudt:Quantity a owl:Class ;
         "A fixed point that is needed by the vector to identify other points in the space relative to its origin."@en ;
     rdfs:subClassOf <https://purls.helmholtz-metadaten.de/disos/cso#Point> .
 
+<https://purls.helmholtz-metadaten.de/disos/diso#hasRepresentation> a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "has representation"@en ;
+    rdfs:comment "hasRepresentation relates the entity to another representation of entity."@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine> <https://purls.helmholtz-metadaten.de/disos/diso#Line> ) ] ;
+    owl:inverseOf <https://purls.helmholtz-metadaten.de/disos/diso#isRepresentationOf> .
+
 <https://purls.helmholtz-metadaten.de/disos/diso#relatesToCrystallineMaterial> a owl:ObjectProperty ;
     rdfs:label "relates to crystalline material"@en ;
     rdfs:domain [ a owl:Class ;
@@ -945,11 +963,11 @@ qudt:Quantity a owl:Class ;
     rdfs:label "Coordinate Vector"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onDataRange xsd:double ;
-            owl:onProperty <https://w3id.org/mdo/structure/Z_axisCoordinate> ;
+            owl:onProperty <https://w3id.org/mdo/structure/Y_axisCoordinate> ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:double ;
-            owl:onProperty <https://w3id.org/mdo/structure/Y_axisCoordinate> ;
+            owl:onProperty <https://w3id.org/mdo/structure/Z_axisCoordinate> ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:double ;
@@ -967,16 +985,16 @@ qudt:Quantity a owl:Class ;
 <https://purls.helmholtz-metadaten.de/disos/cso#Vector> a owl:Class ;
     rdfs:label "Vector"@en ;
     rdfs:comment "(Euclidean) vector is used to represent quantities that both magnitude and direction."@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onDataRange xsd:double ;
-            owl:onProperty <https://purls.helmholtz-metadaten.de/disos/cso#vectorMagnitude> ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Class ;
+    rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty <https://purls.helmholtz-metadaten.de/disos/cso#hasVectorComponent> ;
                         owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/cso#VectorComponentOfBasis> ] [ a owl:Restriction ;
                         owl:allValuesFrom <https://purls.helmholtz-metadaten.de/disos/cso#VectorComponentOfBasis> ;
-                        owl:onProperty <https://purls.helmholtz-metadaten.de/disos/cso#hasVectorComponent> ] ) ] ;
+                        owl:onProperty <https://purls.helmholtz-metadaten.de/disos/cso#hasVectorComponent> ] ) ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty <https://purls.helmholtz-metadaten.de/disos/cso#vectorMagnitude> ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
     skos:defintion "(Euclidean) vector used to represent quantities that both magnitude and direction."@en .
 
 <https://purls.helmholtz-metadaten.de/disos/diso#FamilyOfCrystalPlane> a owl:Class ;
@@ -1038,27 +1056,16 @@ qudt:Quantity a owl:Class ;
     rdfs:comment "A crystal structure is described by the lattice geometry and atomic arrangements within the unit cell."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasSlipPlane> ;
-                        owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#SlipPlane> ] [ a owl:Restriction ;
-                        owl:allValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#SlipPlane> ;
-                        owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasSlipPlane> ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasSlipSystem> ;
                         owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#SlipSystem> ] [ a owl:Restriction ;
                         owl:allValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#SlipSystem> ;
-                        owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasSlipSystem> ] ) ] .
-
-<https://purls.helmholtz-metadaten.de/disos/diso#Line> a owl:Class ;
-    rdfs:label "die Linie"@de,
-        "Line"@en ;
-    rdfs:comment "Mathematische Darstellung der Versetzung als \"Linie\". Ein Beispiel für die mathematische Darstellung einer Versetzungslinie ist eine orientierte Kurve, die durch ihre Bogenlänge parametrisiert ist."@de,
-        "Mathematical representation of dislocation as 'Line'. An instance of mathematical representation of a dislocation line is an oriented curve parameterized by its arc length."@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasNumericalRepresentation> ;
-            owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine> ],
-        <http://emmo.info/emmo#EMMO_f7ed665b_c2e1_42bc_889b_6b42ed3a36f0> ;
-    owl:disjointWith <https://purls.helmholtz-metadaten.de/disos/diso#Node> .
+                        owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasSlipSystem> ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasSlipPlane> ;
+                        owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#SlipPlane> ] [ a owl:Restriction ;
+                        owl:allValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#SlipPlane> ;
+                        owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasSlipPlane> ] ) ] .
 
 <https://purls.helmholtz-metadaten.de/disos/diso#SlipDirection> a owl:Class ;
     rdfs:label "die Gleitrichtung"@de,
@@ -1089,6 +1096,20 @@ qudt:Quantity a owl:Class ;
     rdfs:label "parameter activation"@en ;
     rdfs:domain <https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulationParameter> ;
     rdfs:range xsd:boolean .
+
+<https://purls.helmholtz-metadaten.de/disos/diso#Line> a owl:Class ;
+    rdfs:label "die Linie"@de,
+        "Line"@en ;
+    rdfs:comment "Mathematische Darstellung der Versetzung als \"Linie\". Ein Beispiel für die mathematische Darstellung einer Versetzungslinie ist eine orientierte Kurve, die durch ihre Bogenlänge parametrisiert ist."@de,
+        "Mathematical representation of dislocation as 'Line'. An instance of mathematical representation of a dislocation line is an oriented curve parameterized by its arc length."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasPixelRepresentation> ;
+            owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#Pixel> ],
+        [ a owl:Restriction ;
+            owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasNumericalRepresentation> ;
+            owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine> ],
+        <http://emmo.info/emmo#EMMO_f7ed665b_c2e1_42bc_889b_6b42ed3a36f0> ;
+    owl:disjointWith <https://purls.helmholtz-metadaten.de/disos/diso#Node> .
 
 <https://purls.helmholtz-metadaten.de/disos/diso#SlipPlaneNormal> a owl:Class ;
     rdfs:label "der Gleitebene Normalvektor"@de,
@@ -1147,6 +1168,12 @@ qudt:Quantity a owl:Class ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasLatticeDirection> ;
+                        owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection> ] [ a owl:Restriction ;
+                        owl:allValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection> ;
+                        owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasLatticeDirection> ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePoint> ;
                         owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#LatticePoint> ] [ a owl:Restriction ;
                         owl:allValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#LatticePoint> ;
@@ -1154,12 +1181,6 @@ qudt:Quantity a owl:Class ;
         [ a owl:Restriction ;
             owl:allValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#VectorOrigin> ;
             owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasVectorOrigin> ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasLatticeDirection> ;
-                        owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection> ] [ a owl:Restriction ;
-                        owl:allValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection> ;
-                        owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasLatticeDirection> ] ) ],
         <https://purls.helmholtz-metadaten.de/disos/diso#FamilyOfCrystalPlane> .
 
 <https://purls.helmholtz-metadaten.de/disos/diso#Segment> a owl:Class ;
@@ -1171,11 +1192,11 @@ qudt:Quantity a owl:Class ;
             owl:allValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#Node> ;
             owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasEndNode> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine> ;
-            owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#isSegmentOf> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#Node> ;
-            owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasStartNode> ] .
+            owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasStartNode> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine> ;
+            owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#isSegmentOf> ] .
 
 <https://purls.helmholtz-metadaten.de/disos/diso#SlipPlane> a owl:Class ;
     rdfs:label "die Gleitebene"@de,
@@ -1220,7 +1241,13 @@ qudt:Quantity a owl:Class ;
 <https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulation> a owl:Class ;
     rdfs:label "DDD Simulation"@en ;
     rdfs:comment "Discrete dislocation dynamics (DDD) simulation is a simulation that is used to determine individual dislocation properties and study the distribution, arrangement, and density of dislocations in crystalline materials. The simulation observes the collective motion of many dislocations that links the relationship between the microstructure, loading conditions, and the mechanical properties of a crystalline material."@en ;
-    rdfs:subClassOf [ a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty prov:wasAssociatedWith ;
+            owl:someValuesFrom prov:Person ],
+        [ a owl:Restriction ;
+            owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#simulationDescription> ;
+            owl:someValuesFrom xsd:string ],
+        [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasInputDislocationStructure> ;
                         owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#DislocationStructure> ] [ a owl:Restriction ;
@@ -1228,12 +1255,6 @@ qudt:Quantity a owl:Class ;
                         owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasInputDislocationStructure> ] [ a owl:Restriction ;
                         owl:allValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#DislocationStructure> ;
                         owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasOutputDislocationStructure> ] ) ],
-        [ a owl:Restriction ;
-            owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#simulationDescription> ;
-            owl:someValuesFrom xsd:string ],
-        [ a owl:Restriction ;
-            owl:onProperty prov:wasAssociatedWith ;
-            owl:someValuesFrom prov:Person ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasSimulationParameter> ;
@@ -1248,6 +1269,12 @@ qudt:Quantity a owl:Class ;
     rdfs:comment "Structure that describes a dislocation (micro)structure, which is a virtual specimen used by a DDD simulation to study the mechanical properties of a crystalline materials."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty <https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect> ;
+                        owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#Dislocation> ] [ a owl:Restriction ;
+                        owl:allValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#Dislocation> ;
+                        owl:onProperty <https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect> ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasCube> ;
                         owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#Cube> ] [ a owl:Restriction ;
                         owl:allValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#Cube> ;
@@ -1258,12 +1285,6 @@ qudt:Quantity a owl:Class ;
                         owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial> ] [ a owl:Restriction ;
                         owl:allValuesFrom <https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial> ;
                         owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#relatesToCrystallineMaterial> ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty <https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect> ;
-                        owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#Dislocation> ] [ a owl:Restriction ;
-                        owl:allValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#Dislocation> ;
-                        owl:onProperty <https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect> ] ) ],
         <https://w3id.org/mdo/core/Structure> .
 
 <https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection> a owl:Class ;
@@ -1271,16 +1292,16 @@ qudt:Quantity a owl:Class ;
         "Lattice Direction"@en ;
     rdfs:comment "Die Vektorrichtung innerhalb des Gitters, die zwei Gitterpunkte verbindet."@de,
         "The vector direction inside the lattice that is connecting two lattice points."@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#directionMillerIndice> ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Class ;
+    rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePoint> ;
                         owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#LatticePoint> ] [ a owl:Restriction ;
                         owl:allValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#LatticePoint> ;
                         owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePoint> ] ) ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#directionMillerIndice> ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         <https://purls.helmholtz-metadaten.de/disos/cso#Vector>,
         <https://purls.helmholtz-metadaten.de/disos/diso#FamilyOfCrystalDirection> .
 
@@ -1298,7 +1319,7 @@ qudt:Quantity a owl:Class ;
                         owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasBurgersVector> ] ) ],
         [ a owl:Restriction ;
             owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#observedBy> ;
-            owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#FieldIonMicroscopy> ],
+            owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#TransmissionElectronMicroscopy> ],
         [ a owl:Restriction ;
             owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#movesOn> ;
             owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#SlipPlane> ],
@@ -1309,11 +1330,11 @@ qudt:Quantity a owl:Class ;
                         owl:allValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#LineSense> ;
                         owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasLineSense> ] ) ],
         [ a owl:Restriction ;
+            owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#observedBy> ;
+            owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#FieldIonMicroscopy> ],
+        [ a owl:Restriction ;
             owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#hasMathematicalRepresentation> ;
             owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#Line> ],
-        [ a owl:Restriction ;
-            owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#observedBy> ;
-            owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#TransmissionElectronMicroscopy> ],
         [ a owl:Restriction ;
             owl:onProperty <https://purls.helmholtz-metadaten.de/disos/diso#resultsIn> ;
             owl:someValuesFrom <https://purls.helmholtz-metadaten.de/disos/diso#LatticeDisplacement> ],

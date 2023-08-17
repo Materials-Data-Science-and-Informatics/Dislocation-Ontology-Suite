@@ -434,6 +434,19 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasPixelRepresentation -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasPixelRepresentation">
+        <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#hasRepresentation"/>
+        <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#isPixelRepresentationOf"/>
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Line"/>
+        <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Pixel"/>
+        <rdfs:comment xml:lang="en">hasPixelRepresentation represents the relationship between mathematical line and Pixel.</rdfs:comment>
+        <rdfs:label xml:lang="en">has pixel representation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/disos/diso#hasRepresentation -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#hasRepresentation">
@@ -720,6 +733,12 @@
         <rdfs:comment xml:lang="en">Inverse property of hasOutputDislocationStructure</rdfs:comment>
         <rdfs:label xml:lang="en">is output dislocation structure of</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#isPixelRepresentationOf -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#isPixelRepresentationOf"/>
     
 
 
@@ -1481,6 +1500,14 @@
     <owl:Class rdf:about="http://emmo.info/emmo#EMMO_f7ed665b_c2e1_42bc_889b_6b42ed3a36f0">
         <rdfs:subClassOf rdf:resource="http://emmo.info/emmo#EMMO_54ee6b5e_5261_44a8_86eb_5717e7fdb9d0"/>
         <skos:prefLabel xml:lang="en">MathematicalModel</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/middle/perceptual#EMMO_1da53c06_9577_4008_8652_272fa3b62be7 -->
+
+    <owl:Class rdf:about="http://emmo.info/emmo/middle/perceptual#EMMO_1da53c06_9577_4008_8652_272fa3b62be7">
+        <skos:prefLabel xml:lang="en">Pictorial</skos:prefLabel>
     </owl:Class>
     
 
@@ -2368,6 +2395,12 @@
                 <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#hasPixelRepresentation"/>
+                <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Pixel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/disos/diso#Node"/>
         <rdfs:comment xml:lang="en">Mathematical representation of dislocation as &apos;Line&apos;. An instance of mathematical representation of a dislocation line is an oriented curve parameterized by its arc length.</rdfs:comment>
         <rdfs:comment xml:lang="de">Mathematische Darstellung der Versetzung als &quot;Linie&quot;. Ein Beispiel für die mathematische Darstellung einer Versetzungslinie ist eine orientierte Kurve, die durch ihre Bogenlänge parametrisiert ist.</rdfs:comment>
@@ -2420,6 +2453,16 @@
         <rdfs:comment xml:lang="de">Ein Punkt eines Segments.</rdfs:comment>
         <rdfs:label xml:lang="en">Node</rdfs:label>
         <rdfs:label xml:lang="de">der Knoten</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/disos/diso#Pixel -->
+
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/diso#Pixel">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/middle/perceptual#EMMO_1da53c06_9577_4008_8652_272fa3b62be7"/>
+        <rdfs:comment xml:lang="en">Pictorial that isthe smallest addressable element in a raster image, or the smallest addressable element in a dot matrix display device</rdfs:comment>
+        <rdfs:label xml:lang="en">Pixel</rdfs:label>
     </owl:Class>
     
 

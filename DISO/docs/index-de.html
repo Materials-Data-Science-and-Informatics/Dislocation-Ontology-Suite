@@ -99,7 +99,6 @@ $(function(){
 <caption> <a href="#ns"> Tabelle 1</a>: Namensr&auml;ume im Dokument </caption>
 <tbody>
 <tr><td><b>DISO</b></td><td>&lt;https://purls.helmholtz-metadaten.de/disos/diso&gt;</td></tr>
-<tr><td></td><td></td></tr>
 <tr><td><b>qudt</b></td><td>&lt;http://qudt.org/schema/qudt&gt;</td></tr>
 <tr><td><b>mwo</b></td><td>&lt;http://purls.helmholtz-metadaten.de/mwo&gt;</td></tr>
 <tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
@@ -115,6 +114,7 @@ $(function(){
 <tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
 <tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
 <tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>perceptual</b></td><td>&lt;http://emmo.info/emmo/middle/perceptual&gt;</td></tr>
 <tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann&gt;</td></tr>
 <tr><td><b>prov</b></td><td>&lt;http://www.w3.org/ns/prov&gt;</td></tr>
 <tr><td><b>cso</b></td><td>&lt;https://purls.helmholtz-metadaten.de/disos/cso&gt;</td></tr>
@@ -346,6 +346,14 @@ Diese Ontologie beinhaltet die folgenden Klassen und Eigenschaften.</span>
       </a>
    </li>
    <li>
+      <a href="#http://emmo.info/emmo/middle/perceptual#EMMO_1da53c06_9577_4008_8652_272fa3b62be7"
+         title="http://emmo.info/emmo/middle/perceptual#EMMO_1da53c06_9577_4008_8652_272fa3b62be7">Pictorial</a>
+   </li>
+   <li>
+      <a href="#Pixel"
+         title="https://purls.helmholtz-metadaten.de/disos/diso#Pixel">Pixel</a>
+   </li>
+   <li>
       <a href="#https://purls.helmholtz-metadaten.de/disos/cso#Point"
          title="https://purls.helmholtz-metadaten.de/disos/cso#Point">Point</a>
    </li>
@@ -467,6 +475,10 @@ Diese Ontologie beinhaltet die folgenden Klassen und Eigenschaften.</span>
    <li>
       <a href="#hasOutputDislocationStructure"
          title="https://purls.helmholtz-metadaten.de/disos/diso#hasOutputDislocationStructure">has output dislocation structure</a>
+   </li>
+   <li>
+      <a href="#hasPixelRepresentation"
+         title="https://purls.helmholtz-metadaten.de/disos/diso#hasPixelRepresentation">has pixel representation</a>
    </li>
    <li>
       <a href="#https://purls.helmholtz-metadaten.de/disos/cso#hasPositionVector"
@@ -1061,6 +1073,14 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
          <a href="#https://w3id.org/mdo/core/PhysicalProperty" title="https://w3id.org/mdo/core/PhysicalProperty">
             <span>physical property</span>
          </a>
+      </li>
+      <li>
+         <a href="#http://emmo.info/emmo/middle/perceptual#EMMO_1da53c06_9577_4008_8652_272fa3b62be7"
+            title="http://emmo.info/emmo/middle/perceptual#EMMO_1da53c06_9577_4008_8652_272fa3b62be7">Pictorial</a>
+      </li>
+      <li>
+         <a href="#Pixel"
+            title="https://purls.helmholtz-metadaten.de/disos/diso#Pixel">Pixel</a>
       </li>
       <li>
          <a href="#https://purls.helmholtz-metadaten.de/disos/cso#Point"
@@ -1990,6 +2010,8 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
          <dd>
             <a href="#hasNumericalRepresentation"
                title="https://purls.helmholtz-metadaten.de/disos/diso#hasNumericalRepresentation">has numerical representation</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#hasPixelRepresentation"
+               title="https://purls.helmholtz-metadaten.de/disos/diso#hasPixelRepresentation">has pixel representation</a>
             <sup class="type-op" title="Objekt Eigenschaft">op</sup>
          </dd>
          <dt>ist in Range von</dt>
@@ -2505,6 +2527,47 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
          </dd>
       </dl>
    </div>
+   <div class="entity" id="http://emmo.info/emmo/middle/perceptual#EMMO_1da53c06_9577_4008_8652_272fa3b62be7">
+      <h3>Pictorial<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/middle/perceptual#EMMO_1da53c06_9577_4008_8652_272fa3b62be7</p>
+      <dl class="description">
+         <dt>hat Sub-Klassen</dt>
+         <dd>
+            <a href="#Pixel"
+               title="https://purls.helmholtz-metadaten.de/disos/diso#Pixel">Pixel</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Pixel">
+      <h3>Pixel<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/disos/diso#Pixel</p>
+      <div class="comment">
+         <span class="markdown">Pictorial that isthe smallest addressable element in a raster image, or the smallest addressable element in a dot matrix display device</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#http://emmo.info/emmo/middle/perceptual#EMMO_1da53c06_9577_4008_8652_272fa3b62be7"
+               title="http://emmo.info/emmo/middle/perceptual#EMMO_1da53c06_9577_4008_8652_272fa3b62be7">Pictorial</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>ist in Range von</dt>
+         <dd>
+            <a href="#hasPixelRepresentation"
+               title="https://purls.helmholtz-metadaten.de/disos/diso#hasPixelRepresentation">has pixel representation</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="https://purls.helmholtz-metadaten.de/disos/cso#Point">
       <h3>Point<sup class="type-c" title="Klasse">c</sup>
          <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
@@ -2860,6 +2923,10 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
       <li>
          <a href="#hasOutputDislocationStructure"
             title="https://purls.helmholtz-metadaten.de/disos/diso#hasOutputDislocationStructure">has output dislocation structure</a>
+      </li>
+      <li>
+         <a href="#hasPixelRepresentation"
+            title="https://purls.helmholtz-metadaten.de/disos/diso#hasPixelRepresentation">has pixel representation</a>
       </li>
       <li>
          <a href="#https://purls.helmholtz-metadaten.de/disos/cso#hasPositionVector"
@@ -3659,6 +3726,46 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasPixelRepresentation">
+      <h3>has pixel representation<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/disos/diso#hasPixelRepresentation</p>
+      <div class="comment">
+         <span class="markdown">hasPixelRepresentation represents the relationship between mathematical line and Pixel.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Super-Eigenschaften</dt>
+            <dd>
+               <a href="#hasRepresentation"
+                  title="https://purls.helmholtz-metadaten.de/disos/diso#hasRepresentation">has representation</a>
+               <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+            </dd>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#Line"
+                  title="https://purls.helmholtz-metadaten.de/disos/diso#Line">die Linie</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#Pixel"
+                  title="https://purls.helmholtz-metadaten.de/disos/diso#Pixel">Pixel</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>ist inverse zu</dt>
+            <dd>
+               <a href="https://purls.helmholtz-metadaten.de/disos/diso#isPixelRepresentationOf"
+                  target="_blank"
+                  title="https://purls.helmholtz-metadaten.de/disos/diso#isPixelRepresentationOf">is pixel representation of</a>
+               <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="https://purls.helmholtz-metadaten.de/disos/cso#hasPositionVector">
       <h3>has position vector<sup class="type-op" title="Objekt Eigenschaft">op</sup>
          <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
@@ -3707,6 +3814,8 @@ Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte 
                   title="https://purls.helmholtz-metadaten.de/disos/diso#hasMathematicalRepresentation">has mathematical representation</a>
                <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#hasNumericalRepresentation"
                   title="https://purls.helmholtz-metadaten.de/disos/diso#hasNumericalRepresentation">has numerical representation</a>
+               <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#hasPixelRepresentation"
+                  title="https://purls.helmholtz-metadaten.de/disos/diso#hasPixelRepresentation">has pixel representation</a>
                <sup class="type-op" title="Objekt Eigenschaft">op</sup>
             </dd>
             <dt>hat Domäne</dt>

@@ -2,7 +2,7 @@
   "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
     "languages" : [ "de", "en", "undefined" ],
-    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://qudt.org/schema/qudt", "https://purls.helmholtz-metadaten.de/disos/cso", "http://purls.helmholtz-metadaten.de/mwo", "https://w3id.org/mdo/core", "http://www.w3.org/2001/XMLSchema", "https://purls.helmholtz-metadaten.de/disos/cdo", "http://emmo.info/emmo", "https://w3id.org/mdo/provenance", "http://emmo.info/domain-crystallography/crystallography", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "https://purls.helmholtz-metadaten.de/disos/diso", "https://w3id.org/mdo/structure", "http://xmlns.com/foaf/0.1" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://qudt.org/schema/qudt", "https://purls.helmholtz-metadaten.de/disos/cso", "http://purls.helmholtz-metadaten.de/mwo", "https://w3id.org/mdo/core", "http://www.w3.org/2001/XMLSchema", "https://purls.helmholtz-metadaten.de/disos/cdo", "http://emmo.info/emmo", "https://w3id.org/mdo/provenance", "http://emmo.info/emmo/middle/perceptual", "http://emmo.info/domain-crystallography/crystallography", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "https://purls.helmholtz-metadaten.de/disos/diso", "https://w3id.org/mdo/structure", "http://xmlns.com/foaf/0.1" ],
     "title" : {
       "en" : "Dislocation Ontology"
     },
@@ -91,7 +91,10 @@
     "id" : "60",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "49",
+    "id" : "61",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "3",
     "type" : "owl:Class"
   }, {
     "id" : "51",
@@ -100,143 +103,137 @@
     "id" : "78",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "79",
+    "id" : "30",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "84",
     "type" : "rdfs:Literal"
   }, {
     "id" : "85",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "86",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "66",
+    "id" : "67",
     "type" : "owl:Class"
   }, {
-    "id" : "15",
+    "id" : "18",
     "type" : "owl:Class"
   }, {
-    "id" : "100",
+    "id" : "99",
     "type" : "owl:Class"
   }, {
     "id" : "4",
     "type" : "owl:Class"
   }, {
+    "id" : "101",
+    "type" : "owl:Class"
+  }, {
     "id" : "102",
-    "type" : "owl:Class"
-  }, {
-    "id" : "104",
-    "type" : "owl:Class"
-  }, {
-    "id" : "10",
-    "type" : "owl:Class"
-  }, {
-    "id" : "16",
-    "type" : "owl:Class"
-  }, {
-    "id" : "9",
-    "type" : "owl:Class"
-  }, {
-    "id" : "111",
-    "type" : "owl:Class"
-  }, {
-    "id" : "21",
-    "type" : "owl:Class"
-  }, {
-    "id" : "57",
-    "type" : "owl:Class"
-  }, {
-    "id" : "113",
-    "type" : "owl:Class"
-  }, {
-    "id" : "114",
-    "type" : "owl:Class"
-  }, {
-    "id" : "117",
-    "type" : "owl:Class"
-  }, {
-    "id" : "7",
-    "type" : "owl:Class"
-  }, {
-    "id" : "134",
-    "type" : "owl:Class"
-  }, {
-    "id" : "70",
-    "type" : "owl:Class"
-  }, {
-    "id" : "137",
-    "type" : "owl:Class"
-  }, {
-    "id" : "138",
-    "type" : "owl:Class"
-  }, {
-    "id" : "140",
-    "type" : "owl:Class"
-  }, {
-    "id" : "89",
-    "type" : "owl:Class"
-  }, {
-    "id" : "146",
-    "type" : "owl:Class"
-  }, {
-    "id" : "19",
-    "type" : "owl:Class"
-  }, {
-    "id" : "171",
-    "type" : "owl:Class"
-  }, {
-    "id" : "3",
-    "type" : "owl:Class"
-  }, {
-    "id" : "23",
-    "type" : "owl:Class"
-  }, {
-    "id" : "81",
     "type" : "owl:Class"
   }, {
     "id" : "12",
     "type" : "owl:Class"
   }, {
-    "id" : "38",
+    "id" : "19",
     "type" : "owl:Class"
   }, {
-    "id" : "185",
+    "id" : "11",
     "type" : "owl:Class"
   }, {
-    "id" : "154",
+    "id" : "23",
     "type" : "owl:Class"
   }, {
-    "id" : "211",
+    "id" : "55",
     "type" : "owl:Class"
   }, {
-    "id" : "65",
-    "type" : "owl:equivalentClass"
-  }, {
-    "id" : "214",
+    "id" : "112",
     "type" : "owl:Class"
   }, {
-    "id" : "216",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "101",
+    "id" : "114",
     "type" : "owl:Class"
   }, {
-    "id" : "222",
-    "type" : "rdfs:Datatype"
+    "id" : "115",
+    "type" : "owl:Class"
   }, {
-    "id" : "142",
+    "id" : "118",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
     "type" : "owl:Class"
   }, {
     "id" : "139",
     "type" : "owl:Class"
   }, {
-    "id" : "124",
+    "id" : "47",
     "type" : "owl:Class"
   }, {
-    "id" : "229",
+    "id" : "142",
+    "type" : "owl:Class"
+  }, {
+    "id" : "143",
+    "type" : "owl:Class"
+  }, {
+    "id" : "145",
+    "type" : "owl:Class"
+  }, {
+    "id" : "88",
+    "type" : "owl:Class"
+  }, {
+    "id" : "151",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "175",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "111",
+    "type" : "owl:Class"
+  }, {
+    "id" : "80",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "191",
+    "type" : "owl:Class"
+  }, {
+    "id" : "158",
+    "type" : "owl:Class"
+  }, {
+    "id" : "216",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "219",
+    "type" : "owl:Class"
+  }, {
+    "id" : "221",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "228",
+    "id" : "100",
+    "type" : "owl:Class"
+  }, {
+    "id" : "227",
     "type" : "rdfs:Datatype"
+  }, {
+    "id" : "147",
+    "type" : "owl:Class"
+  }, {
+    "id" : "125",
+    "type" : "owl:Class"
+  }, {
+    "id" : "144",
+    "type" : "owl:Class"
   }, {
     "id" : "234",
     "type" : "rdfs:Datatype"
@@ -244,220 +241,229 @@
     "id" : "233",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "63",
-    "type" : "owl:Class"
+    "id" : "239",
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "238",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "243",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "77",
     "type" : "owl:Class"
   }, {
-    "id" : "54",
+    "id" : "57",
     "type" : "owl:Class"
   }, {
-    "id" : "98",
+    "id" : "97",
     "type" : "owl:Class"
   }, {
-    "id" : "259",
+    "id" : "262",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "258",
+    "id" : "265",
     "type" : "rdfs:Datatype"
+  }, {
+    "id" : "131",
+    "type" : "owl:Class"
   }, {
     "id" : "34",
     "type" : "owl:Class"
   }, {
-    "id" : "157",
+    "id" : "163",
     "type" : "owl:Class"
   }, {
-    "id" : "273",
+    "id" : "277",
     "type" : "owl:Class"
   }, {
-    "id" : "179",
+    "id" : "204",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "201",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "255",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "286",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "149",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "152",
-    "type" : "owl:Class"
-  }, {
-    "id" : "288",
-    "type" : "owl:Class"
-  }, {
-    "id" : "148",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "82",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "292",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "126",
-    "type" : "owl:equivalentClass"
-  }, {
-    "id" : "199",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "47",
-    "type" : "owl:Class"
-  }, {
-    "id" : "165",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "133",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "267",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "235",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "25",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "43",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "293",
-    "type" : "owl:Class"
-  }, {
-    "id" : "176",
-    "type" : "owl:equivalentClass"
-  }, {
-    "id" : "158",
-    "type" : "owl:Class"
-  }, {
-    "id" : "68",
-    "type" : "owl:Class"
-  }, {
-    "id" : "297",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "212",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "72",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "244",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "144",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "56",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "1",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "122",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "30",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "160",
-    "type" : "owl:Class"
-  }, {
-    "id" : "28",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "196",
+    "id" : "154",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "290",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "95",
+    "id" : "184",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "153",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "161",
+    "type" : "owl:Class"
+  }, {
+    "id" : "292",
+    "type" : "owl:Class"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "170",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "206",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "128",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "25",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "138",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "296",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "240",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "71",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "43",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "271",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "297",
+    "type" : "owl:Class"
+  }, {
+    "id" : "181",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "164",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "217",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "149",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "303",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "304",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "54",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "123",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "294",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "166",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "201",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "26",
     "type" : "owl:equivalentClass"
   }, {
-    "id" : "305",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "309",
-    "type" : "rdfs:Datatype"
-  }, {
     "id" : "311",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "280",
+    "id" : "315",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "317",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "141",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "236",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "327",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "284",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "319",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "180",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "136",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "40",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "321",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "318",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "313",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "231",
-    "type" : "rdfs:Datatype"
-  }, {
     "id" : "33",
     "type" : "owl:Class"
   }, {
-    "id" : "131",
+    "id" : "324",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "175",
+    "id" : "255",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "250",
+    "id" : "159",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "170",
+    "id" : "177",
     "type" : "owl:Class"
   }, {
-    "id" : "167",
+    "id" : "173",
     "type" : "owl:Class"
   }, {
-    "id" : "182",
+    "id" : "87",
     "type" : "owl:Class"
   }, {
-    "id" : "88",
+    "id" : "188",
     "type" : "owl:Class"
   }, {
-    "id" : "303",
+    "id" : "310",
     "type" : "owl:Class"
   }, {
-    "id" : "155",
+    "id" : "132",
+    "type" : "owl:Class"
+  }, {
+    "id" : "117",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "253",
+    "id" : "252",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "247",
+    "id" : "260",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "116",
+    "id" : "134",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "129",
+    "id" : "257",
     "type" : "rdfs:Datatype"
   } ],
   "classAttribute" : [ {
@@ -471,12 +477,12 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://qudt.org/schema/qudt",
+        "value" : "http://qudt.org/2.0/schema/qudt",
         "type" : "iri"
       }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://qudt.org/2.0/schema/qudt",
+        "value" : "http://qudt.org/schema/qudt",
         "type" : "iri"
       } ]
     },
@@ -539,6 +545,13 @@
       "undefined" : "Literal"
     }
   }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "61",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/cso#VectorComponentOfBasis",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cso",
     "instances" : 0,
@@ -550,7 +563,7 @@
       "en" : "Vector components/vector coordinates of particular basis. It has relation to a specific basis."
     },
     "attributes" : [ "external" ],
-    "id" : "49",
+    "id" : "3",
     "superClasses" : [ "4" ]
   }, {
     "iri" : "http://www.w3.org/ns/prov#Agent",
@@ -559,7 +572,7 @@
     "label" : {
       "IRI-based" : "Agent"
     },
-    "subClasses" : [ "50", "63" ],
+    "subClasses" : [ "50", "64" ],
     "attributes" : [ "external" ],
     "id" : "51"
   }, {
@@ -571,7 +584,14 @@
     }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "79",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "84",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -579,13 +599,6 @@
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "id" : "85",
-    "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "86",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -605,9 +618,9 @@
     "label" : {
       "IRI-based" : "EMMO_a2b006f2_bbfd_4dba_bcaa_3fca20cd6be1"
     },
-    "subClasses" : [ "65" ],
+    "subClasses" : [ "66" ],
     "attributes" : [ "external" ],
-    "id" : "66"
+    "id" : "67"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#Dislocation",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -617,13 +630,13 @@
       "IRI-based" : "Dislocation",
       "en" : "Dislocation"
     },
-    "subClasses" : [ "68", "70", "47" ],
+    "subClasses" : [ "69", "47", "49" ],
     "comment" : {
       "de" : "Ein linearer oder eindimensionaler Defekt, um den herum einige der Atome falsch ausgerichtet sind. Im Mesoscale ist eine Versetzung ein linienförmiges Objekt, das eine Grenze darstellt, die die Regionen auf der Gleitebene, in denen ein Gleiten stattgefunden hat, von denen trennt, in denen dies nicht der Fall war.",
       "en" : "Linear or one-dimensional defect around which some of the atoms are misaligned. In the mesoscale, a dislocation is a line object that is a boundary separating the regions on the slip plane which have undergone slip from those that have not."
     },
-    "id" : "15",
-    "superClasses" : [ "16" ]
+    "id" : "18",
+    "superClasses" : [ "19" ]
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#RemeshParameter",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -635,8 +648,8 @@
     "comment" : {
       "en" : "A simulation parameter related to remeshing the dislocation network."
     },
-    "id" : "100",
-    "superClasses" : [ "98" ]
+    "id" : "99",
+    "superClasses" : [ "97" ]
   }, {
     "iri" : "http://qudt.org/schema/qudt/Quantity",
     "baseIri" : "http://qudt.org/schema/qudt",
@@ -648,12 +661,12 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://qudt.org/2.0/schema/qudt",
+        "value" : "http://qudt.org/schema/qudt",
         "type" : "iri"
       }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://qudt.org/schema/qudt",
+        "value" : "http://qudt.org/2.0/schema/qudt",
         "type" : "iri"
       } ]
     },
@@ -661,7 +674,7 @@
       "IRI-based" : "Quantity",
       "undefined" : "Quantity"
     },
-    "subClasses" : [ "49", "3", "7" ],
+    "subClasses" : [ "3", "7", "9" ],
     "attributes" : [ "external" ],
     "id" : "4"
   }, {
@@ -672,8 +685,8 @@
       "IRI-based" : "PhysicalProperty"
     },
     "attributes" : [ "external" ],
-    "id" : "102",
-    "superClasses" : [ "3" ]
+    "id" : "101",
+    "superClasses" : [ "7" ]
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#BurgersVector",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -687,7 +700,7 @@
       "de" : "Eine elementare Einheit (Längenordnung der Gitterparameter) der Gittertranslation. Der grundlegende Begriff des Burgers-Vektors leitet sich aus dem Versagen der Schließung eines ursprünglich perfekten Gitters aufgrund der Existenz von Versetzungen ab. Das Ausmaß und die Richtung des Schließfehlers werden durch den Burgers-Vektor charakterisiert.",
       "en" : "An elementary unit (length order of lattice parameter) of lattice translation. The basic notion of the Burgers vector comes from the closure failure of an initially perfect lattice due to the existence of dislocation. The magnitude and direction of closure failure are characterized by the Burgers vector."
     },
-    "id" : "104",
+    "id" : "102",
     "superClasses" : [ "38" ]
   }, {
     "iri" : "http://emmo.info/emmo#EMMO_54ee6b5e_5261_44a8_86eb_5717e7fdb9d0",
@@ -704,10 +717,10 @@
     "label" : {
       "IRI-based" : "EMMO_54ee6b5e_5261_44a8_86eb_5717e7fdb9d0"
     },
-    "subClasses" : [ "9", "12" ],
+    "subClasses" : [ "11", "15" ],
     "attributes" : [ "external" ],
-    "id" : "10",
-    "superClasses" : [ "21" ]
+    "id" : "12",
+    "superClasses" : [ "23" ]
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#LineDefect",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -717,13 +730,13 @@
       "IRI-based" : "LineDefect",
       "en" : "Line Defect"
     },
-    "subClasses" : [ "15" ],
+    "subClasses" : [ "18" ],
     "comment" : {
       "de" : "Linearer oder eindimensionaler Defekt, um den herum einige Atome falsch ausgerichtet sind.",
       "en" : "Linear or one-dimensional defect around which some of the atoms are misaligned."
     },
-    "id" : "16",
-    "superClasses" : [ "57" ]
+    "id" : "19",
+    "superClasses" : [ "55" ]
   }, {
     "iri" : "http://emmo.info/emmo#EMMO_4ce76d7f_03f8_45b6_9003_90052a79bfaa",
     "baseIri" : "http://emmo.info/emmo",
@@ -739,10 +752,43 @@
     "label" : {
       "IRI-based" : "EMMO_4ce76d7f_03f8_45b6_9003_90052a79bfaa"
     },
-    "subClasses" : [ "19" ],
+    "subClasses" : [ "21" ],
     "attributes" : [ "external" ],
-    "id" : "9",
-    "superClasses" : [ "10" ]
+    "id" : "11",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://emmo.info/emmo#EMMO_d8d2144e_5c8d_455d_a643_5caf4d8d9df8",
+    "baseIri" : "http://emmo.info/emmo",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Language",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EMMO_d8d2144e_5c8d_455d_a643_5caf4d8d9df8"
+    },
+    "subClasses" : [ "12", "111" ],
+    "attributes" : [ "external" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cdo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CrystallographicDefect",
+      "en" : "Crystallographic Defect"
+    },
+    "subClasses" : [ "19" ],
+    "comment" : {
+      "en" : "The crystallographic defect is a lattice irregularity that has one or more dimensions on the order of an atomic diameter."
+    },
+    "attributes" : [ "external" ],
+    "id" : "55",
+    "superClasses" : [ "111" ]
   }, {
     "iri" : "https://w3id.org/mdo/structure/Basis",
     "baseIri" : "https://w3id.org/mdo/structure",
@@ -763,40 +809,7 @@
       "en" : "A basis defines a spatial unit used to express fractional coordinates."
     },
     "attributes" : [ "external" ],
-    "id" : "111"
-  }, {
-    "iri" : "http://emmo.info/emmo#EMMO_d8d2144e_5c8d_455d_a643_5caf4d8d9df8",
-    "baseIri" : "http://emmo.info/emmo",
-    "instances" : 0,
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "Language",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "EMMO_d8d2144e_5c8d_455d_a643_5caf4d8d9df8"
-    },
-    "subClasses" : [ "10", "23" ],
-    "attributes" : [ "external" ],
-    "id" : "21"
-  }, {
-    "iri" : "https://purls.helmholtz-metadaten.de/disos/cdo#CrystallographicDefect",
-    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cdo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "CrystallographicDefect",
-      "en" : "Crystallographic Defect"
-    },
-    "subClasses" : [ "16" ],
-    "comment" : {
-      "en" : "The crystallographic defect is a lattice irregularity that has one or more dimensions on the order of an atomic diameter."
-    },
-    "attributes" : [ "external" ],
-    "id" : "57",
-    "superClasses" : [ "23" ]
+    "id" : "112"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlane",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -810,8 +823,8 @@
       "de" : "Die kristallografische/Gitterebene, entlang derer die Versetzungslinie verläuft/bewegt wird. Die Gleitebene ist in der Regel die Ebene mit der höchsten Dichte an Atomen, d. h. mit dem größten Abstand.",
       "en" : "The crystallographic/lattice plane along which the dislocation line traverses/moves. The slip plane is usually the plane with the highest density of atoms, i.e. most widely spaced."
     },
-    "id" : "113",
-    "superClasses" : [ "88" ]
+    "id" : "114",
+    "superClasses" : [ "87" ]
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#JunctionFormation",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -823,8 +836,8 @@
     "comment" : {
       "en" : "A simulation parameter to enable the junction formation of a dislocation network/structure."
     },
-    "id" : "114",
-    "superClasses" : [ "98" ]
+    "id" : "115",
+    "superClasses" : [ "97" ]
   }, {
     "iri" : "https://w3id.org/mdo/core/Calculation",
     "baseIri" : "https://w3id.org/mdo/core",
@@ -834,7 +847,7 @@
     },
     "subClasses" : [ "33" ],
     "attributes" : [ "external" ],
-    "id" : "117"
+    "id" : "118"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#Length",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -846,7 +859,7 @@
     "comment" : {
       "en" : "A magnitude of line that has a unit."
     },
-    "id" : "7",
+    "id" : "9",
     "superClasses" : [ "4" ]
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDisplacement",
@@ -861,7 +874,7 @@
       "de" : "Die Verschiebung von Atomen von ihren perfekten Gitterpunkt aufgrund des Fehlens von Defekten, z. B. Punktuelle Defekte, Linearedefekte und Korngrenzen.",
       "en" : "The displacement of atoms from their perfect lattice sites due to the existence of defects, e.g., point defect, line defect, and grain boundary."
     },
-    "id" : "134"
+    "id" : "139"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#ScrewDislocation",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -875,8 +888,8 @@
       "de" : "Eine Versetzung, die Burgersvektor und Versetzungslinie liegen parallel.",
       "en" : "A dislocation that has a line sense parallel to its Burgers vector."
     },
-    "id" : "70",
-    "superClasses" : [ "15" ]
+    "id" : "47",
+    "superClasses" : [ "18" ]
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/cso#Lattice",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cso",
@@ -890,7 +903,7 @@
       "en" : "The mathematical concept to represent the periodicity of a crystal. A lattice defines a periodic arrangement of one or more atoms."
     },
     "attributes" : [ "external" ],
-    "id" : "137"
+    "id" : "142"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#FamilyOfCrystalDirection",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -900,12 +913,12 @@
       "IRI-based" : "FamilyOfCrystalDirection",
       "en" : "Family of Crystal Direction"
     },
-    "subClasses" : [ "139" ],
+    "subClasses" : [ "144" ],
     "comment" : {
       "de" : "die Menge aller symmetrisch äquivalenten Richtungen.",
       "en" : "A set of symmetrically equivalent directions in the lattice."
     },
-    "id" : "138"
+    "id" : "143"
   }, {
     "iri" : "https://w3id.org/mdo/structure/CoordinateVector",
     "baseIri" : "https://w3id.org/mdo/structure",
@@ -923,7 +936,7 @@
       "en" : "Coordinate Vector"
     },
     "attributes" : [ "external" ],
-    "id" : "140"
+    "id" : "145"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#VectorOrigin",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -937,8 +950,8 @@
       "de" : "Ein Fixpunkt, der vom Vektor benötigt wird, um andere Punkte im Raum relativ zu seinem Ursprung zu identifizieren.",
       "en" : "A fixed point that is needed by the vector to identify other points in the space relative to its origin."
     },
-    "id" : "89",
-    "superClasses" : [ "142" ]
+    "id" : "88",
+    "superClasses" : [ "147" ]
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#LatticePoint",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -952,8 +965,8 @@
       "de" : "Der Gitterpunkt ist der Punkt, an dem sich ein Atom oder ein Molekül befindet.",
       "en" : "Lattice point is the point where atom(s) or molecule(s) is located."
     },
-    "id" : "146",
-    "superClasses" : [ "142" ]
+    "id" : "151",
+    "superClasses" : [ "147" ]
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#DiscretizedLine",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -967,8 +980,8 @@
       "de" : "Die numerische Darstellung der Versetzungslinie, die in die Anzahl der Segmente diskretisiert ist.",
       "en" : "The numerical representation of the dislocation line that is discretized into the number of segments."
     },
-    "id" : "19",
-    "superClasses" : [ "9" ]
+    "id" : "21",
+    "superClasses" : [ "11" ]
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#Cube",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -980,7 +993,7 @@
     "comment" : {
       "en" : "A three-dimensional solid object bounded by six square faces, facets or sides, with three meeting at each vertex."
     },
-    "id" : "171"
+    "id" : "175"
   }, {
     "iri" : "https://w3id.org/mdo/core/Property",
     "baseIri" : "https://w3id.org/mdo/core",
@@ -988,9 +1001,9 @@
     "label" : {
       "IRI-based" : "Property"
     },
-    "subClasses" : [ "158", "102" ],
+    "subClasses" : [ "164", "101" ],
     "attributes" : [ "external" ],
-    "id" : "3",
+    "id" : "7",
     "superClasses" : [ "4" ]
   }, {
     "iri" : "http://emmo.info/domain-crystallography/crystallography#EMMO_78a3d6f9_0bbd_4b44_a9a9_baf3df276a06",
@@ -1007,10 +1020,10 @@
     "label" : {
       "IRI-based" : "EMMO_78a3d6f9_0bbd_4b44_a9a9_baf3df276a06"
     },
-    "subClasses" : [ "57", "176" ],
+    "subClasses" : [ "55", "181" ],
     "attributes" : [ "external" ],
-    "id" : "23",
-    "superClasses" : [ "21" ]
+    "id" : "111",
+    "superClasses" : [ "23" ]
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#CrossSlip",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -1022,8 +1035,8 @@
     "comment" : {
       "en" : "A simulation parameter to enable the cross slip process of dislocation network/structure."
     },
-    "id" : "81",
-    "superClasses" : [ "98" ]
+    "id" : "80",
+    "superClasses" : [ "97" ]
   }, {
     "iri" : "http://emmo.info/emmo#EMMO_f7ed665b_c2e1_42bc_889b_6b42ed3a36f0",
     "baseIri" : "http://emmo.info/emmo",
@@ -1039,10 +1052,10 @@
     "label" : {
       "IRI-based" : "EMMO_f7ed665b_c2e1_42bc_889b_6b42ed3a36f0"
     },
-    "subClasses" : [ "101" ],
+    "subClasses" : [ "100" ],
     "attributes" : [ "external" ],
-    "id" : "12",
-    "superClasses" : [ "10" ]
+    "id" : "15",
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/cso#Vector",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cso",
@@ -1059,7 +1072,7 @@
       "IRI-based" : "Vector",
       "en" : "Vector"
     },
-    "subClasses" : [ "37", "139", "182", "104" ],
+    "subClasses" : [ "37", "144", "188", "102" ],
     "comment" : {
       "en" : "(Euclidean) vector is used to represent quantities that both magnitude and direction."
     },
@@ -1074,7 +1087,7 @@
     },
     "subClasses" : [ "33" ],
     "attributes" : [ "external" ],
-    "id" : "185"
+    "id" : "191"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#Node",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -1088,8 +1101,8 @@
       "de" : "Ein Punkt eines Segments.",
       "en" : "A point of a segment."
     },
-    "id" : "154",
-    "superClasses" : [ "142" ]
+    "id" : "158",
+    "superClasses" : [ "147" ]
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#TransmissionElectronMicroscopy",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -1103,7 +1116,7 @@
       "de" : "Die Transmissionselektronenmikroskopie (TEM) ist eine Mikroskopietechnik, bei der ein Elektronenstrahl durch eine Probe geschickt wird, um ein Bild zu erzeugen. Bei der Probe handelt es sich häufig um einen ultradünnen Schnitt von weniger als 100 nm Dicke.",
       "en" : "Transmission electron microscopy (TEM) is a microscopy technique in which a beam of electrons is transmitted through a specimen to form an image. The specimen is often an ultrathin section less than 100 nm thick."
     },
-    "id" : "211"
+    "id" : "216"
   }, {
     "iri" : "http://emmo.info/domain-crystallography/crystallography#EMMO_69dab453_6596_464d_a21d_d64643f4ed9b",
     "equivalent" : [ "26" ],
@@ -1121,8 +1134,8 @@
       "IRI-based" : "EMMO_69dab453_6596_464d_a21d_d64643f4ed9b"
     },
     "attributes" : [ "equivalent", "external" ],
-    "id" : "65",
-    "superClasses" : [ "66" ]
+    "id" : "66",
+    "superClasses" : [ "67" ]
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#FieldIonMicroscopy",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -1136,11 +1149,11 @@
       "de" : "Die Feldionenmikroskopie (FIM) ist eine Mikroskopietechnik, mit der sich die Anordnung von Atomen abbilden lässt.",
       "en" : "Field Ion Microscopy (FIM) is a microscopy technique that can be used to image the arrangement of atoms."
     },
-    "id" : "214"
+    "id" : "219"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "216",
+    "id" : "221",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1157,14 +1170,14 @@
       "de" : "Mathematische Darstellung der Versetzung als \"Linie\". Ein Beispiel für die mathematische Darstellung einer Versetzungslinie ist eine orientierte Kurve, die durch ihre Bogenlänge parametrisiert ist.",
       "en" : "Mathematical representation of dislocation as 'Line'. An instance of mathematical representation of a dislocation line is an oriented curve parameterized by its arc length."
     },
-    "id" : "101",
-    "superClasses" : [ "12" ]
+    "id" : "100",
+    "superClasses" : [ "15" ]
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "222",
+    "id" : "227",
     "label" : {
-      "IRI-based" : "string"
+      "IRI-based" : "anyURI"
     }
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/cso#Point",
@@ -1174,28 +1187,12 @@
       "IRI-based" : "Point",
       "en" : "Point"
     },
-    "subClasses" : [ "89", "154", "146" ],
+    "subClasses" : [ "88", "158", "151" ],
     "comment" : {
       "en" : "In classical Euclidean geometry, a point is a primitive notion that models an exact location in the space, and has no length, width, or thickness."
     },
     "attributes" : [ "external" ],
-    "id" : "142"
-  }, {
-    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection",
-    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "instances" : 0,
-    "label" : {
-      "de" : "Die Gitterrichtung",
-      "IRI-based" : "LatticeDirection",
-      "en" : "Lattice Direction"
-    },
-    "subClasses" : [ "167" ],
-    "comment" : {
-      "de" : "Die Vektorrichtung innerhalb des Gitters, die zwei Gitterpunkte verbindet.",
-      "en" : "The vector direction inside the lattice that is connecting two lattice points."
-    },
-    "id" : "139",
-    "superClasses" : [ "138", "38" ]
+    "id" : "147"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#ShapeFunction",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -1209,21 +1206,23 @@
       "de" : "Die Formfunktion ist die Funktion, die die Lösung zwischen den an den Netzknoten erhaltenen diskreten Werten interpoliert. Bei der diskretisierten Versetzung bestimmt die Formfunktion die Form eines Segments und letztlich die Form der Linie. Beispiele für Formfunktionen, die zur Diskretisierung der Versetzung verwendet werden, sind kreisförmig, elliptisch, spiralförmig, linear, kubisch und quintisch.",
       "en" : "The shape function is the function that interpolates the solution between the discrete values obtained at the mesh nodes. In discretized dislocation, the shape function determines the shape of a segment and ultimately determines the shape of the line. Examples of shape function that is used to discretize the dislocation are circular, elliptic, spiral, linear, cubic, and quintic."
     },
-    "id" : "124"
+    "id" : "125"
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "229",
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#LatticeDirection",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
+    "instances" : 0,
     "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "228",
-    "label" : {
-      "IRI-based" : "anyURI"
-    }
+      "de" : "Die Gitterrichtung",
+      "IRI-based" : "LatticeDirection",
+      "en" : "Lattice Direction"
+    },
+    "subClasses" : [ "173" ],
+    "comment" : {
+      "de" : "Die Vektorrichtung innerhalb des Gitters, die zwei Gitterpunkte verbindet.",
+      "en" : "The vector direction inside the lattice that is connecting two lattice points."
+    },
+    "id" : "144",
+    "superClasses" : [ "143", "38" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -1239,6 +1238,20 @@
       "IRI-based" : "string"
     }
   }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "239",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "238",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
     "iri" : "http://www.w3.org/ns/prov#SoftwareAgent",
     "baseIri" : "http://www.w3.org/ns/prov",
     "instances" : 0,
@@ -1246,12 +1259,12 @@
       "IRI-based" : "SoftwareAgent"
     },
     "attributes" : [ "external" ],
-    "id" : "63",
+    "id" : "64",
     "superClasses" : [ "51" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "238",
+    "id" : "243",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1282,7 +1295,7 @@
       "de" : "Ein Element, das eine gerichtete Linie charakterisiert, d. h. sie hat einen Anfang und ein Ende.",
       "en" : "A sense that characterizes a directed line, i.e., it has a start and an end."
     },
-    "id" : "54"
+    "id" : "57"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulationParameter",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -1291,25 +1304,38 @@
       "IRI-based" : "DDDSimulationParameter",
       "en" : "DDD Simulation Parameter"
     },
-    "subClasses" : [ "100", "170", "81", "114" ],
+    "subClasses" : [ "99", "177", "80", "115" ],
     "comment" : {
       "en" : "A Parameter that is used to run a DDD simulation."
     },
-    "id" : "98"
+    "id" : "97"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "262",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#int",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "259",
+    "id" : "265",
     "label" : {
       "IRI-based" : "int"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "258",
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#Pixel",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
+    "instances" : 0,
     "label" : {
-      "IRI-based" : "boolean"
-    }
+      "IRI-based" : "Pixel",
+      "en" : "Pixel"
+    },
+    "comment" : {
+      "en" : "Pictorial that isthe smallest addressable element in a raster image, or the smallest addressable element in a dot matrix display device"
+    },
+    "id" : "131",
+    "superClasses" : [ "132" ]
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#DislocationStructure",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -1322,7 +1348,7 @@
       "en" : "Structure that describes a dislocation (micro)structure, which is a virtual specimen used by a DDD simulation to study the mechanical properties of a crystalline materials."
     },
     "id" : "34",
-    "superClasses" : [ "160" ]
+    "superClasses" : [ "166" ]
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#DislocationDensity",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -1334,8 +1360,8 @@
     "comment" : {
       "en" : "A quantifiable of the total length of dislocation line per unit volume of a crystalline material."
     },
-    "id" : "157",
-    "superClasses" : [ "158" ]
+    "id" : "163",
+    "superClasses" : [ "164" ]
   }, {
     "iri" : "http://qudt.org/schema/qudt/QuantityKind",
     "baseIri" : "http://qudt.org/schema/qudt",
@@ -1361,42 +1387,40 @@
       "undefined" : "Quantity Kind"
     },
     "attributes" : [ "external" ],
-    "id" : "273"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "179",
-    "label" : {
-      "IRI-based" : "boolean"
-    }
+    "id" : "277"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#int",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "201",
+    "id" : "204",
     "label" : {
       "IRI-based" : "int"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "255",
+    "id" : "154",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "286",
+    "id" : "290",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "149",
+    "id" : "184",
     "label" : {
-      "IRI-based" : "string"
+      "IRI-based" : "boolean"
     }
+  }, {
+    "instances" : 0,
+    "union" : [ "144", "188" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "153"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#FamilyOfCrystalPlane",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -1406,12 +1430,12 @@
       "IRI-based" : "FamilyOfCrystalPlane",
       "en" : "Family of Crystal Plane"
     },
-    "subClasses" : [ "88" ],
+    "subClasses" : [ "87" ],
     "comment" : {
       "de" : "Steht für Kristallformen, d. h. die Menge aller symmetrisch äquivalenten Flächen.",
       "en" : "A set of symmetrically equivalent planes in the lattice."
     },
-    "id" : "152"
+    "id" : "161"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#SlipSystem",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -1425,29 +1449,31 @@
       "de" : "Ein Gleitsystem ist definiert als die Menge der Gleitebenen mit dem gleichen Einheitsnormalvektor und der gleichen Gleitrichtung.",
       "en" : "A slip system is defined as the set of slip planes with the same unit normal vector and the same slip direction."
     },
-    "id" : "288"
-  }, {
-    "instances" : 0,
-    "union" : [ "139", "182" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "148"
+    "id" : "292"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "82",
+    "id" : "81",
     "label" : {
       "IRI-based" : "boolean"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "292",
+    "id" : "170",
     "label" : {
-      "IRI-based" : "double"
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "206",
+    "label" : {
+      "IRI-based" : "string"
     }
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/cso#CrystalStructure",
-    "equivalent" : [ "176" ],
+    "equivalent" : [ "181" ],
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cso",
     "instances" : 0,
     "label" : {
@@ -1458,14 +1484,12 @@
       "en" : "A crystal structure is described by the lattice geometry and atomic arrangements within the unit cell."
     },
     "attributes" : [ "equivalent", "external" ],
-    "id" : "126"
+    "id" : "128"
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "199",
-    "label" : {
-      "IRI-based" : "string"
-    }
+    "instances" : 0,
+    "union" : [ "34", "128" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "25"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#MixedDislocation",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -1478,42 +1502,42 @@
       "de" : "Eine Versetzung, die eine Versetzungslinie hat, die weder senkrecht noch parallel zu ihrem Burgers-Vektor verläuft.",
       "en" : "A dislocation that has a line sense neither perpendicular nor parallel to its Burgers vector."
     },
-    "id" : "47",
-    "superClasses" : [ "15" ]
+    "id" : "49",
+    "superClasses" : [ "18" ]
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "165",
+    "id" : "138",
     "label" : {
-      "IRI-based" : "boolean"
+      "IRI-based" : "double"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#double",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "133",
+    "id" : "296",
     "label" : {
       "IRI-based" : "double"
     }
   }, {
     "instances" : 0,
-    "union" : [ "288", "113" ],
+    "union" : [ "292", "114" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "267"
+    "id" : "240"
   }, {
     "instances" : 0,
-    "union" : [ "288", "113" ],
+    "union" : [ "21", "100" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "235"
+    "id" : "71"
   }, {
     "instances" : 0,
-    "union" : [ "34", "126" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "25"
-  }, {
-    "instances" : 0,
-    "union" : [ "214", "211" ],
+    "union" : [ "219", "216" ],
     "attributes" : [ "union", "anonymous" ],
     "id" : "43"
+  }, {
+    "instances" : 0,
+    "union" : [ "292", "114" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "271"
   }, {
     "iri" : "https://w3id.org/mdo/structure/Composition",
     "baseIri" : "https://w3id.org/mdo/structure",
@@ -1522,10 +1546,10 @@
       "IRI-based" : "Composition"
     },
     "attributes" : [ "external" ],
-    "id" : "293"
+    "id" : "297"
   }, {
     "iri" : "http://emmo.info/domain-crystallography/crystallography#EMMO_6a340d67_c6cb_4348_8537_d9aa0e768721",
-    "equivalent" : [ "126" ],
+    "equivalent" : [ "128" ],
     "baseIri" : "http://emmo.info/domain-crystallography/crystallography",
     "instances" : 0,
     "annotations" : {
@@ -1540,8 +1564,8 @@
       "IRI-based" : "EMMO_6a340d67_c6cb_4348_8537_d9aa0e768721"
     },
     "attributes" : [ "equivalent", "external" ],
-    "id" : "176",
-    "superClasses" : [ "23" ]
+    "id" : "181",
+    "superClasses" : [ "111" ]
   }, {
     "iri" : "https://w3id.org/mdo/core/CalculatedProperty",
     "baseIri" : "https://w3id.org/mdo/core",
@@ -1549,10 +1573,10 @@
     "label" : {
       "IRI-based" : "CalculatedProperty"
     },
-    "subClasses" : [ "157" ],
+    "subClasses" : [ "163" ],
     "attributes" : [ "external" ],
-    "id" : "158",
-    "superClasses" : [ "3" ]
+    "id" : "164",
+    "superClasses" : [ "7" ]
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#EdgeDislocation",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -1566,57 +1590,52 @@
       "de" : "Eine Versetzung, die Burgersvektor und Versetzungslinie stehen senkrecht zueinander",
       "en" : "A dislocation that has a line sense perpendicular to its Burgers vector."
     },
-    "id" : "68",
-    "superClasses" : [ "15" ]
+    "id" : "69",
+    "superClasses" : [ "18" ]
   }, {
     "instances" : 0,
-    "union" : [ "139", "88", "137" ],
+    "union" : [ "142", "128" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "297"
+    "id" : "217"
   }, {
     "instances" : 0,
-    "union" : [ "137", "126" ],
+    "union" : [ "87", "142" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "212"
+    "id" : "149"
   }, {
     "instances" : 0,
-    "union" : [ "19", "101" ],
+    "union" : [ "144", "87", "142" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "72"
+    "id" : "303"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "244",
+    "id" : "304",
     "label" : {
       "IRI-based" : "boolean"
     }
   }, {
     "instances" : 0,
-    "union" : [ "88", "137" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "144"
-  }, {
-    "instances" : 0,
     "union" : [ "34", "26" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "56"
-  }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "1",
-    "label" : {
-      "undefined" : "Thing"
-    }
+    "id" : "54"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#int",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "122",
+    "id" : "123",
     "label" : {
       "IRI-based" : "int"
     }
   }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "294",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "30",
+    "id" : "28",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -1630,38 +1649,38 @@
     },
     "subClasses" : [ "34" ],
     "attributes" : [ "external" ],
-    "id" : "160"
+    "id" : "166"
   }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "28",
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "1",
     "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "40",
+    "label" : {
+      "IRI-based" : "int"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#double",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "196",
+    "id" : "94",
     "label" : {
       "IRI-based" : "double"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "290",
-    "label" : {
-      "IRI-based" : "anyURI"
-    }
-  }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#double",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "95",
+    "id" : "201",
     "label" : {
       "IRI-based" : "double"
     }
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial",
-    "equivalent" : [ "65" ],
+    "equivalent" : [ "66" ],
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cdo",
     "instances" : 0,
     "label" : {
@@ -1673,72 +1692,72 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#double",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "305",
+    "id" : "311",
     "label" : {
       "IRI-based" : "double"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "309",
+    "id" : "315",
     "label" : {
       "IRI-based" : "dateTime"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "311",
+    "id" : "317",
     "label" : {
       "IRI-based" : "dateTime"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "280",
+    "id" : "141",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "236",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "327",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "284",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "319",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "180",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
     "id" : "136",
     "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#int",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "40",
-    "label" : {
       "IRI-based" : "int"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "321",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "318",
-    "label" : {
-      "IRI-based" : "boolean"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#int",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "313",
-    "label" : {
-      "IRI-based" : "int"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "231",
-    "label" : {
-      "IRI-based" : "string"
     }
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulation",
@@ -1752,27 +1771,27 @@
       "en" : "Discrete dislocation dynamics (DDD) simulation is a simulation that is used to determine individual dislocation properties and study the distribution, arrangement, and density of dislocations in crystalline materials. The simulation observes the collective motion of many dislocations that links the relationship between the microstructure, loading conditions, and the mechanical properties of a crystalline material."
     },
     "id" : "33",
-    "superClasses" : [ "117", "185" ]
+    "superClasses" : [ "118", "191" ]
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "131",
+    "id" : "324",
     "label" : {
-      "IRI-based" : "int"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "175",
-    "label" : {
-      "IRI-based" : "string"
+      "IRI-based" : "boolean"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "250",
+    "id" : "255",
     "label" : {
       "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "159",
+    "label" : {
+      "IRI-based" : "int"
     }
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#ExternalLoadParameter",
@@ -1785,8 +1804,8 @@
     "comment" : {
       "en" : "A simulation parameter to enable the external load imposed on dislocation network."
     },
-    "id" : "170",
-    "superClasses" : [ "98" ]
+    "id" : "177",
+    "superClasses" : [ "97" ]
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#SlipDirection",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -1800,8 +1819,24 @@
       "de" : "Die Richtung in der Gleitebene, in der die plastische Verformung stattfindet. Die Gleitrichtung entspricht einem der kürzesten Translationsvektoren des Gitters.",
       "en" : "The direction in the slip plane along which plastic deformation takes place. The slip direction corresponds to one of the shortest lattice translation vectors."
     },
-    "id" : "167",
-    "superClasses" : [ "139" ]
+    "id" : "173",
+    "superClasses" : [ "144" ]
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#LatticePlane",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
+    "instances" : 0,
+    "label" : {
+      "de" : "die Gitterebene",
+      "IRI-based" : "LatticePlane",
+      "en" : "Lattice Plane"
+    },
+    "subClasses" : [ "114" ],
+    "comment" : {
+      "de" : "Die Gitterebene bildet eine unendlich gestreckte Ebene (gekennzeichnet durch eine Ebenennormale), die die Gitterpunkte so schneidet, dass wiederum eine regelmäßige Anordnung der Gitterpunkte in der Ebene entsteht.",
+      "en" : "The lattice plane forms an infinitely stretched plane (characterized through a plane normal) that cuts through lattice points such that, again, a regular arrangement of lattice points in the plane occurs."
+    },
+    "id" : "87",
+    "superClasses" : [ "161" ]
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#SlipPlaneNormal",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -1815,24 +1850,8 @@
       "de" : "Der Einheitsnormalvektor der Gleitebenen.",
       "en" : "The unit normal vector of slip planes."
     },
-    "id" : "182",
+    "id" : "188",
     "superClasses" : [ "38" ]
-  }, {
-    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#LatticePlane",
-    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "instances" : 0,
-    "label" : {
-      "de" : "die Gitterebene",
-      "IRI-based" : "LatticePlane",
-      "en" : "Lattice Plane"
-    },
-    "subClasses" : [ "113" ],
-    "comment" : {
-      "de" : "Die Gitterebene bildet eine unendlich gestreckte Ebene (gekennzeichnet durch eine Ebenennormale), die die Gitterpunkte so schneidet, dass wiederum eine regelmäßige Anordnung der Gitterpunkte in der Ebene entsteht.",
-      "en" : "The lattice plane forms an infinitely stretched plane (characterized through a plane normal) that cuts through lattice points such that, again, a regular arrangement of lattice points in the plane occurs."
-    },
-    "id" : "88",
-    "superClasses" : [ "152" ]
   }, {
     "iri" : "http://qudt.org/schema/qudt/QuantityValue",
     "baseIri" : "http://qudt.org/schema/qudt",
@@ -1858,41 +1877,59 @@
       "undefined" : "Quantity value"
     },
     "attributes" : [ "external" ],
-    "id" : "303"
+    "id" : "310"
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#int",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "155",
+    "iri" : "http://emmo.info/emmo/middle/perceptual#EMMO_1da53c06_9577_4008_8652_272fa3b62be7",
+    "baseIri" : "http://emmo.info/emmo/middle/perceptual",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Pictorial",
+        "type" : "label"
+      } ]
+    },
     "label" : {
-      "IRI-based" : "int"
+      "IRI-based" : "EMMO_1da53c06_9577_4008_8652_272fa3b62be7"
+    },
+    "subClasses" : [ "131" ],
+    "attributes" : [ "external" ],
+    "id" : "132"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "117",
+    "label" : {
+      "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "253",
-    "label" : {
-      "IRI-based" : "boolean"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "247",
+    "id" : "252",
     "label" : {
       "IRI-based" : "boolean"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "116",
+    "id" : "260",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "129",
+    "id" : "134",
     "label" : {
       "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "257",
+    "label" : {
+      "IRI-based" : "boolean"
     }
   } ],
   "property" : [ {
@@ -1911,7 +1948,7 @@
     "id" : "8",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "11",
+    "id" : "10",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "13",
@@ -1920,10 +1957,10 @@
     "id" : "14",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "17",
+    "id" : "16",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "18",
+    "id" : "17",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "20",
@@ -1968,64 +2005,64 @@
     "id" : "53",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "55",
+    "id" : "56",
     "type" : "owl:objectProperty"
-  }, {
-    "id" : "61",
-    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "62",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "64",
+    "id" : "63",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "67",
+    "id" : "65",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "69",
+    "id" : "68",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "71",
+    "id" : "70",
     "type" : "owl:objectProperty"
   }, {
     "id" : "76",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "80",
+    "id" : "79",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "83",
+    "id" : "82",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "87",
+    "id" : "86",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "90",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "91",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "92",
     "type" : "owl:objectProperty"
   }, {
     "id" : "93",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
-    "id" : "94",
+    "id" : "95",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "96",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "97",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "99",
+    "id" : "98",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "75",
+    "id" : "74",
     "type" : "owl:objectProperty"
   }, {
     "id" : "103",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "104",
     "type" : "owl:objectProperty"
   }, {
     "id" : "105",
@@ -2037,136 +2074,130 @@
     "id" : "107",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "108",
+    "id" : "109",
     "type" : "owl:objectProperty"
   }, {
     "id" : "110",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "90",
+    "id" : "89",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "112",
+    "id" : "113",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "84",
+    "id" : "83",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "115",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "118",
+    "id" : "116",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "119",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "120",
     "type" : "owl:objectProperty"
   }, {
     "id" : "121",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "123",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "125",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "128",
+    "id" : "122",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "73",
+    "id" : "124",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "126",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "127",
     "type" : "owl:objectProperty"
   }, {
     "id" : "130",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "133",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "132",
-    "type" : "owl:datatypeProperty"
+    "id" : "72",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "135",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "141",
+    "id" : "137",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "143",
+    "id" : "140",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "146",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "148",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "147",
+    "id" : "152",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "150",
+    "id" : "155",
     "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "151",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "153",
-    "type" : "owl:datatypeProperty"
   }, {
     "id" : "156",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "159",
-    "type" : "rdfs:SubClassOf"
+    "id" : "157",
+    "type" : "owl:datatypeProperty"
   }, {
-    "id" : "161",
+    "id" : "160",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "162",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "163",
+    "id" : "165",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "164",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "166",
+    "id" : "167",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "168",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "169",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "171",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "172",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "173",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "174",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "177",
-    "type" : "owl:objectProperty"
+    "id" : "176",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "178",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "180",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "181",
-    "type" : "rdfs:SubClassOf"
+    "id" : "179",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "182",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "183",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
-    "id" : "184",
-    "type" : "rdfs:SubClassOf"
+    "id" : "185",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "186",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "187",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "188",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "189",
@@ -2175,11 +2206,8 @@
     "id" : "190",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "191",
-    "type" : "rdfs:SubClassOf"
-  }, {
     "id" : "192",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "193",
     "type" : "rdfs:SubClassOf"
@@ -2188,13 +2216,19 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "195",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "196",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "197",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "198",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "199",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "200",
     "type" : "owl:datatypeProperty"
@@ -2203,279 +2237,294 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "203",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
-    "id" : "204",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "206",
-    "type" : "rdfs:SubClassOf"
+    "id" : "205",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "207",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "208",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "209",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "210",
-    "type" : "owl:disjointWith"
+    "id" : "211",
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "127",
+    "id" : "212",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "213",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "214",
     "type" : "owl:objectProperty"
   }, {
     "id" : "215",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "217",
+    "id" : "129",
     "type" : "owl:objectProperty"
-  }, {
-    "id" : "218",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "219",
-    "type" : "owl:disjointWith"
   }, {
     "id" : "220",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:disjointWith"
   }, {
-    "id" : "221",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "223",
+    "id" : "222",
     "type" : "owl:objectProperty"
   }, {
+    "id" : "223",
+    "type" : "owl:disjointWith"
+  }, {
     "id" : "224",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "225",
-    "type" : "owl:allValuesFrom"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "226",
     "type" : "owl:someValuesFrom"
   }, {
-    "id" : "227",
+    "id" : "228",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "229",
     "type" : "owl:someValuesFrom"
   }, {
     "id" : "230",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "231",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "75",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "232",
     "type" : "owl:someValuesFrom"
   }, {
-    "id" : "145",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "236",
-    "type" : "owl:someValuesFrom"
+    "id" : "235",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "237",
     "type" : "owl:someValuesFrom"
   }, {
-    "id" : "239",
+    "id" : "150",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "241",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "242",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "244",
     "type" : "owl:someValuesFrom"
   }, {
     "id" : "44",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "240",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "241",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "243",
-    "type" : "owl:someValuesFrom"
-  }, {
     "id" : "245",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "246",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "248",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:allValuesFrom"
   }, {
-    "id" : "249",
-    "type" : "owl:datatypeProperty"
+    "id" : "250",
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "251",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "252",
+    "id" : "253",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "254",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "74",
+    "id" : "256",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "258",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "259",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "73",
     "type" : "owl:objectProperty"
-  }, {
-    "id" : "257",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "260",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "261",
-    "type" : "owl:allValuesFrom"
   }, {
     "id" : "263",
-    "type" : "owl:disjointWith"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "264",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "265",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "213",
     "type" : "owl:objectProperty"
   }, {
     "id" : "266",
-    "type" : "owl:objectProperty"
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "267",
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "268",
-    "type" : "owl:disjointWith"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "269",
-    "type" : "owl:allValuesFrom"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "270",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "271",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "274",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "275",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "276",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "277",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "278",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "279",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "281",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "282",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "283",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "284",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "285",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "287",
+    "id" : "218",
     "type" : "owl:objectProperty"
   }, {
     "id" : "272",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "273",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "274",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "275",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "289",
+    "id" : "278",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "279",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "280",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "281",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "282",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "283",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "109",
+    "id" : "285",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "286",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "287",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "288",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "289",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "276",
     "type" : "owl:objectProperty"
   }, {
     "id" : "291",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "242",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "294",
+    "id" : "293",
     "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "108",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "295",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
-    "id" : "296",
+    "id" : "247",
     "type" : "owl:objectProperty"
   }, {
     "id" : "298",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "299",
     "type" : "owl:objectProperty"
   }, {
     "id" : "300",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "301",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "305",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "306",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "307",
     "type" : "owl:objectProperty"
   }, {
     "id" : "35",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "302",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "304",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "306",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "307",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "308",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:allValuesFrom"
   }, {
-    "id" : "310",
+    "id" : "309",
     "type" : "owl:someValuesFrom"
   }, {
     "id" : "312",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "313",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "314",
     "type" : "owl:someValuesFrom"
   }, {
-    "id" : "299",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "315",
-    "type" : "owl:allValuesFrom"
-  }, {
     "id" : "316",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "318",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "256",
+    "id" : "320",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "302",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "317",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "319",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "205",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "262",
-    "type" : "owl:objectProperty"
+    "id" : "321",
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "322",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "320",
+    "id" : "261",
     "type" : "owl:objectProperty"
   }, {
     "id" : "323",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "210",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "326",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "249",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "328",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "325",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "329",
     "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
@@ -2495,7 +2544,7 @@
   }, {
     "range" : "4",
     "domain" : "3",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "2"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isOutputDislocationStructureOf",
@@ -2514,18 +2563,18 @@
   }, {
     "range" : "4",
     "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "6"
   }, {
-    "range" : "10",
+    "range" : "4",
     "domain" : "9",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "8"
   }, {
-    "range" : "10",
-    "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "11"
+    "range" : "12",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "10"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isLineSenseOf",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -2541,9 +2590,9 @@
     "attributes" : [ "object" ],
     "id" : "13"
   }, {
-    "range" : "16",
+    "range" : "12",
     "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "14"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isNumericalRepresentationOf",
@@ -2558,21 +2607,21 @@
       "en" : "Inverse property of hasNumericalRepresentation"
     },
     "attributes" : [ "object" ],
+    "id" : "16"
+  }, {
+    "range" : "19",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "17"
   }, {
-    "range" : "9",
-    "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "18"
-  }, {
-    "range" : "21",
-    "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "11",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "20"
   }, {
-    "range" : "21",
-    "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "23",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "22"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#relatesToCrystallineMaterial",
@@ -2593,7 +2642,7 @@
       "IRI-based" : "DescriptiveFormula"
     },
     "domain" : "1",
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "27"
   }, {
     "iri" : "https://w3id.org/mdo/structure/Y_axisCoordinate",
@@ -2604,7 +2653,7 @@
     },
     "cardinality" : "1",
     "domain" : "1",
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "29"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasOutputDislocationStructure",
@@ -2673,7 +2722,7 @@
       "IRI-based" : "observedBy",
       "en" : "observed by"
     },
-    "domain" : "15",
+    "domain" : "18",
     "comment" : {
       "en" : "observedBy represents the relationship between dislocation and microscopy techniques, e.g., TEM, FIM, etc."
     },
@@ -2694,86 +2743,81 @@
     "attributes" : [ "object" ],
     "id" : "45"
   }, {
-    "range" : "15",
+    "range" : "18",
     "domain" : "47",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "46"
   }, {
-    "range" : "4",
+    "range" : "18",
     "domain" : "49",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "48"
-  }, {
-    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasLineSense",
-    "inverse" : "13",
-    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "54",
-    "label" : {
-      "IRI-based" : "hasLineSense",
-      "en" : "has line sense"
-    },
-    "domain" : "15",
-    "comment" : {
-      "en" : "hasLineSense represents the relationship between dislocation and line sense."
-    },
-    "attributes" : [ "object" ],
-    "id" : "53"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystallographicDefect",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cdo",
-    "range" : "57",
+    "range" : "55",
     "label" : {
       "IRI-based" : "hasCrystallographicDefect",
       "undefined" : "has crystallographic defect"
     },
-    "domain" : "56",
-    "attributes" : [ "external", "object" ],
-    "id" : "55"
+    "domain" : "54",
+    "attributes" : [ "object", "external" ],
+    "id" : "53"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasLineSense",
+    "inverse" : "13",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
+    "range" : "57",
+    "label" : {
+      "IRI-based" : "hasLineSense",
+      "en" : "has line sense"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "hasLineSense represents the relationship between dislocation and line sense."
+    },
+    "attributes" : [ "object" ],
+    "id" : "56"
   }, {
     "range" : "51",
     "domain" : "50",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "61"
-  }, {
-    "range" : "51",
-    "domain" : "63",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "62"
   }, {
-    "range" : "66",
-    "domain" : "65",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "64"
+    "range" : "51",
+    "domain" : "64",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "63"
   }, {
-    "range" : "15",
-    "domain" : "68",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "67"
+    "range" : "67",
+    "domain" : "66",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "65"
   }, {
-    "range" : "15",
-    "domain" : "70",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "69"
+    "range" : "18",
+    "domain" : "69",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "68"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasRepresentation",
-    "inverse" : "73",
+    "inverse" : "72",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "72",
+    "range" : "71",
     "label" : {
       "IRI-based" : "hasRepresentation",
       "en" : "has representation"
     },
     "domain" : "1",
-    "subproperty" : [ "74", "75" ],
+    "subproperty" : [ "73", "74", "75" ],
     "comment" : {
       "en" : "hasRepresentation relates the entity to another representation of entity."
     },
-    "attributes" : [ "object", "transitive" ],
-    "id" : "71"
+    "attributes" : [ "transitive", "object" ],
+    "id" : "70"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isSegmentOf",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "19",
+    "range" : "21",
     "label" : {
       "IRI-based" : "isSegmentOf",
       "en" : "is segment of"
@@ -2787,20 +2831,20 @@
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#crossSlipParameterActivation",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "82",
+    "range" : "81",
     "label" : {
       "IRI-based" : "crossSlipParameterActivation",
-      "en" : "crossSlipParameterActivation represents the boolean value of whether the cross slip is active."
+      "en" : "cross slip parameter activation"
     },
     "cardinality" : "1",
-    "domain" : "81",
+    "domain" : "80",
     "attributes" : [ "datatype" ],
-    "id" : "80"
+    "id" : "79"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasLength",
-    "inverse" : "84",
+    "inverse" : "83",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "7",
+    "range" : "9",
     "label" : {
       "IRI-based" : "hasLength",
       "undefined" : "has length"
@@ -2810,33 +2854,33 @@
       "en" : "hasLength represents the relationship between 1-D, 2-D, and 3-D shape to length."
     },
     "attributes" : [ "object" ],
-    "id" : "83"
+    "id" : "82"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasVectorOrigin",
-    "inverse" : "90",
+    "inverse" : "89",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "89",
+    "range" : "88",
     "label" : {
       "IRI-based" : "hasVectorOrigin",
       "en" : "has vector origin"
     },
-    "domain" : "88",
+    "domain" : "87",
     "comment" : {
       "en" : "hasVectorOrigin represents the relationship between lattice plane and origin."
     },
     "attributes" : [ "object" ],
-    "id" : "87"
+    "id" : "86"
   }, {
     "iri" : "https://w3id.org/mdo/structure/Z_axisCoordinate",
     "baseIri" : "https://w3id.org/mdo/structure",
-    "range" : "79",
+    "range" : "78",
     "label" : {
       "IRI-based" : "Z_axisCoordinate"
     },
     "cardinality" : "1",
     "domain" : "1",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "91"
+    "attributes" : [ "datatype", "external" ],
+    "id" : "90"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isSimulationParameterOf",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -2850,7 +2894,7 @@
       "en" : "Inverse property of hasSimulationParameter"
     },
     "attributes" : [ "object" ],
-    "id" : "92"
+    "id" : "91"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isInputDislocationStructureOf",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -2864,38 +2908,38 @@
       "en" : "Inverse property of hasInputDislocationStructure"
     },
     "attributes" : [ "object" ],
-    "id" : "93"
+    "id" : "92"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#slipArea",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "95",
+    "range" : "94",
     "label" : {
       "IRI-based" : "slipArea",
       "en" : "slip area"
     },
     "cardinality" : "1",
-    "domain" : "19",
+    "domain" : "21",
     "comment" : {
       "en" : "slipArea represents the slip area of discretized line in double."
     },
     "attributes" : [ "datatype" ],
-    "id" : "94"
+    "id" : "93"
   }, {
     "iri" : "https://w3id.org/mdo/structure/X_axisCoordinate",
     "baseIri" : "https://w3id.org/mdo/structure",
-    "range" : "86",
+    "range" : "52",
     "label" : {
       "IRI-based" : "X_axisCoordinate"
     },
     "cardinality" : "1",
     "domain" : "1",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "96"
+    "attributes" : [ "datatype", "external" ],
+    "id" : "95"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasSimulationParameter",
-    "inverse" : "92",
+    "inverse" : "91",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "98",
+    "range" : "97",
     "label" : {
       "IRI-based" : "hasSimulationParameter",
       "en" : "has simulation parameter"
@@ -2905,7 +2949,7 @@
       "en" : "hasSimulationParameter represents the relationship between DDD simulation and simulation parameter."
     },
     "attributes" : [ "object" ],
-    "id" : "97"
+    "id" : "96"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/cso#hasVectorComponent",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cso",
@@ -2914,24 +2958,24 @@
       "IRI-based" : "hasVectorComponent"
     },
     "domain" : "1",
-    "attributes" : [ "external", "object" ],
-    "id" : "99"
+    "attributes" : [ "object", "external" ],
+    "id" : "98"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasNumericalRepresentation",
-    "inverse" : "17",
+    "inverse" : "16",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "19",
+    "range" : "21",
     "label" : {
       "IRI-based" : "hasNumericalRepresentation",
       "en" : "has numerical representation"
     },
-    "superproperty" : [ "71" ],
-    "domain" : "101",
+    "superproperty" : [ "70" ],
+    "domain" : "100",
     "comment" : {
       "en" : "hasNumericalRepresentation relates the entity with its numerical representation."
     },
-    "attributes" : [ "functional", "object" ],
-    "id" : "75"
+    "attributes" : [ "object", "functional" ],
+    "id" : "74"
   }, {
     "iri" : "https://w3id.org/mdo/core/hasOutputCalculatedProperty",
     "baseIri" : "https://w3id.org/mdo/core",
@@ -2940,7 +2984,7 @@
       "IRI-based" : "hasOutputCalculatedProperty"
     },
     "domain" : "1",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "103"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isShapeFunctionOf",
@@ -2955,7 +2999,7 @@
       "en" : "Inverse property of hasShapeFunction"
     },
     "attributes" : [ "object" ],
-    "id" : "105"
+    "id" : "104"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isStartNodeOf",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -2969,7 +3013,7 @@
       "en" : "Inverse property of hasStartNode"
     },
     "attributes" : [ "object" ],
-    "id" : "106"
+    "id" : "105"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isLatticeDirectionOf",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -2983,7 +3027,7 @@
       "en" : "Inverse property of hasLatticeDirection"
     },
     "attributes" : [ "object" ],
-    "id" : "107"
+    "id" : "106"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasShape",
     "inverse" : "36",
@@ -2994,9 +3038,19 @@
       "en" : "hasShape represents the relationship between dislocation structure to geometrical shape."
     },
     "domain" : "34",
-    "subproperty" : [ "109" ],
+    "subproperty" : [ "108" ],
     "attributes" : [ "object" ],
-    "id" : "108"
+    "id" : "107"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isPixelRepresentationOf",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "isPixelRepresentationOf"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "109"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/cso#hasFirstAxisVector",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cso",
@@ -3005,7 +3059,7 @@
       "IRI-based" : "hasFirstAxisVector"
     },
     "domain" : "1",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "110"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isVectorOriginOf",
@@ -3020,7 +3074,7 @@
       "en" : "Inverse property of hasVectorOrigin"
     },
     "attributes" : [ "object" ],
-    "id" : "90"
+    "id" : "89"
   }, {
     "iri" : "https://w3id.org/mdo/core/relatesToStructure",
     "baseIri" : "https://w3id.org/mdo/core",
@@ -3029,8 +3083,8 @@
       "IRI-based" : "relatesToStructure"
     },
     "domain" : "1",
-    "attributes" : [ "external", "object" ],
-    "id" : "112"
+    "attributes" : [ "object", "external" ],
+    "id" : "113"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isLengthOf",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -3044,11 +3098,11 @@
       "en" : "Inverse property of hasLength"
     },
     "attributes" : [ "object" ],
-    "id" : "84"
+    "id" : "83"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#meshFormat",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "116",
+    "range" : "117",
     "label" : {
       "IRI-based" : "meshFormat",
       "en" : "mesh format"
@@ -3058,18 +3112,18 @@
       "en" : "meshFormat represents the format of mesh file, e.g., gmsh, mesh, etc."
     },
     "attributes" : [ "datatype" ],
-    "id" : "115"
+    "id" : "116"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/cso#vectorMagnitude",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cso",
-    "range" : "52",
+    "range" : "58",
     "label" : {
       "IRI-based" : "vectorMagnitude"
     },
     "cardinality" : "1",
     "domain" : "1",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "118"
+    "attributes" : [ "datatype", "external" ],
+    "id" : "119"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isFamilyCrystalPlaneOf",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -3083,7 +3137,7 @@
       "en" : "Inverse property of hasFamilyCrystalPlane"
     },
     "attributes" : [ "object" ],
-    "id" : "119"
+    "id" : "120"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasSegment",
     "inverse" : "76",
@@ -3093,67 +3147,77 @@
       "IRI-based" : "hasSegment",
       "en" : "has segment"
     },
-    "domain" : "19",
+    "domain" : "21",
     "comment" : {
       "en" : "hasSegment represents the relationship between discretized line and segment."
     },
     "attributes" : [ "object" ],
-    "id" : "120"
+    "id" : "121"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#vectorOriginID",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "122",
+    "range" : "123",
     "label" : {
       "IRI-based" : "vectorOriginID",
       "en" : "vector origin ID"
     },
-    "domain" : "89",
+    "domain" : "88",
     "attributes" : [ "datatype" ],
-    "id" : "121"
+    "id" : "122"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasShapeFunction",
-    "inverse" : "105",
+    "inverse" : "104",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "124",
+    "range" : "125",
     "label" : {
       "IRI-based" : "hasShapeFunction",
       "en" : "has shape function"
     },
-    "domain" : "19",
+    "domain" : "21",
     "comment" : {
       "en" : "hasShapeFunction represents the relationship between discretized line and shape function."
     },
     "attributes" : [ "object" ],
-    "id" : "123"
+    "id" : "124"
+  }, {
+    "range" : "87",
+    "domain" : "114",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "126"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipPlane",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "113",
+    "range" : "114",
     "label" : {
       "IRI-based" : "hasSlipPlane",
       "en" : "has slip plane"
     },
-    "superproperty" : [ "127" ],
-    "domain" : "126",
+    "superproperty" : [ "129" ],
+    "domain" : "128",
     "comment" : {
       "en" : "hasSlipPlane represents the relationship between crystal structure and slip plane."
     },
     "attributes" : [ "object" ],
-    "id" : "125"
+    "id" : "127"
+  }, {
+    "range" : "132",
+    "domain" : "131",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "130"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#lineSenseDirection",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "129",
+    "range" : "134",
     "label" : {
       "IRI-based" : "lineSenseDirection",
       "en" : "line sense direction"
     },
-    "domain" : "54",
+    "domain" : "57",
     "comment" : {
       "en" : "line sense direction in direction miller indice notation"
     },
     "attributes" : [ "datatype" ],
-    "id" : "128"
+    "id" : "133"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isRepresentationOf",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -3167,11 +3231,11 @@
       "en" : "Inverse property of hasRepresentation"
     },
     "attributes" : [ "object" ],
-    "id" : "73"
+    "id" : "72"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#segmentID",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "131",
+    "range" : "136",
     "label" : {
       "IRI-based" : "segmentID",
       "en" : "segment ID"
@@ -3181,155 +3245,155 @@
       "en" : "segmentID represents the ID of a discretized line segment."
     },
     "attributes" : [ "datatype" ],
-    "id" : "130"
+    "id" : "135"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#Lmin",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "133",
+    "range" : "138",
     "label" : {
       "IRI-based" : "Lmin"
     },
-    "domain" : "100",
+    "domain" : "99",
     "comment" : {
       "en" : "Remesh parameter of minimum segment length  so that the node in the dislocation network will be removed."
     },
     "attributes" : [ "datatype" ],
-    "id" : "132"
+    "id" : "137"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#simulationBoundaryType",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "136",
+    "range" : "141",
     "label" : {
       "IRI-based" : "simulationBoundaryType",
       "en" : "simulation boundary type"
     },
     "domain" : "33",
     "attributes" : [ "datatype" ],
-    "id" : "135"
+    "id" : "140"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/cso#firstAxisComponent",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cso",
-    "range" : "59",
+    "range" : "60",
     "label" : {
       "IRI-based" : "firstAxisComponent"
     },
     "domain" : "1",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "141"
+    "attributes" : [ "datatype", "external" ],
+    "id" : "146"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticeDirection",
-    "inverse" : "107",
+    "inverse" : "106",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "139",
+    "range" : "144",
     "label" : {
       "IRI-based" : "hasLatticeDirection",
       "en" : "has lattice direction"
     },
-    "domain" : "144",
-    "subproperty" : [ "145" ],
+    "domain" : "149",
+    "subproperty" : [ "150" ],
     "comment" : {
       "en" : "hasLatticeDirection represents the relationship between a lattice or a lattice plane with lattice directions."
     },
     "attributes" : [ "object" ],
-    "id" : "143"
+    "id" : "148"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#directionMillerIndice",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "149",
+    "range" : "154",
     "label" : {
       "IRI-based" : "directionMillerIndice",
       "en" : "direction miller indice"
     },
     "cardinality" : "1",
-    "domain" : "148",
+    "domain" : "153",
     "comment" : {
       "en" : "directionMillerIndice represents Miller indice of lattice direction in string."
     },
     "attributes" : [ "datatype" ],
-    "id" : "147"
+    "id" : "152"
   }, {
-    "range" : "98",
-    "domain" : "114",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "150"
+    "range" : "97",
+    "domain" : "80",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "155"
   }, {
-    "range" : "152",
-    "domain" : "88",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "151"
+    "range" : "97",
+    "domain" : "115",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "156"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#nodeID",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "155",
+    "range" : "159",
     "label" : {
       "IRI-based" : "nodeID",
       "en" : "node ID"
     },
-    "domain" : "154",
+    "domain" : "158",
     "comment" : {
       "en" : "nodeID represents the ID of a segment node."
     },
     "attributes" : [ "datatype" ],
-    "id" : "153"
+    "id" : "157"
   }, {
-    "range" : "158",
-    "domain" : "157",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "156"
+    "range" : "161",
+    "domain" : "87",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "160"
   }, {
-    "range" : "160",
-    "domain" : "34",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "159"
-  }, {
-    "range" : "88",
-    "domain" : "113",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "161"
-  }, {
-    "range" : "142",
-    "domain" : "154",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "164",
+    "domain" : "163",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "162"
   }, {
-    "range" : "142",
-    "domain" : "146",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "163"
+    "range" : "166",
+    "domain" : "34",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "165"
+  }, {
+    "range" : "147",
+    "domain" : "88",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "167"
+  }, {
+    "range" : "147",
+    "domain" : "158",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "168"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#activeSlipPlane",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "165",
+    "range" : "170",
     "label" : {
       "IRI-based" : "activeSlipPlane",
       "en" : "active slip plane"
     },
-    "domain" : "113",
+    "domain" : "114",
     "comment" : {
       "en" : "activeSlipPlane represents the boolean value of whether the slip plane is active."
     },
     "attributes" : [ "datatype" ],
-    "id" : "164"
-  }, {
-    "range" : "139",
-    "domain" : "167",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "166"
-  }, {
-    "range" : "98",
-    "domain" : "100",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "168"
-  }, {
-    "range" : "98",
-    "domain" : "170",
-    "attributes" : [ "anonymous", "object" ],
     "id" : "169"
   }, {
-    "range" : "98",
-    "domain" : "81",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "147",
+    "domain" : "151",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "171"
+  }, {
+    "range" : "144",
+    "domain" : "173",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "172"
+  }, {
+    "range" : "97",
+    "domain" : "99",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "174"
+  }, {
+    "range" : "97",
+    "domain" : "177",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "176"
   }, {
     "iri" : "https://w3id.org/mdo/core/hasInputProperty",
     "baseIri" : "https://w3id.org/mdo/core",
@@ -3338,23 +3402,23 @@
       "IRI-based" : "hasInputProperty"
     },
     "domain" : "1",
-    "attributes" : [ "external", "object" ],
-    "id" : "173"
+    "attributes" : [ "object", "external" ],
+    "id" : "178"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#planeMillerIndice",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "175",
+    "range" : "180",
     "label" : {
       "IRI-based" : "planeMillerIndice",
       "en" : "plane miller indice"
     },
     "cardinality" : "1",
-    "domain" : "88",
+    "domain" : "87",
     "comment" : {
       "en" : "planeMillerIndice represents Miller indice of lattice plane in string."
     },
     "attributes" : [ "datatype" ],
-    "id" : "174"
+    "id" : "179"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/cso#isBasisOf",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cso",
@@ -3364,23 +3428,23 @@
       "en" : "is basis of"
     },
     "domain" : "1",
-    "attributes" : [ "external", "object" ],
-    "id" : "177"
+    "attributes" : [ "object", "external" ],
+    "id" : "182"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#externalLoadParameterActivation",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "179",
+    "range" : "184",
     "label" : {
       "IRI-based" : "externalLoadParameterActivation",
       "en" : "external load parameter activation"
     },
     "cardinality" : "1",
-    "domain" : "170",
+    "domain" : "177",
     "comment" : {
       "en" : "externalLoadParameterActivation represents the boolean value of whether the external load is active."
     },
     "attributes" : [ "datatype" ],
-    "id" : "178"
+    "id" : "183"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/cso#hasPositionVector",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cso",
@@ -3389,88 +3453,88 @@
       "IRI-based" : "hasPositionVector",
       "en" : "has position vector"
     },
-    "domain" : "142",
+    "domain" : "147",
     "comment" : {
       "en" : "hasPositionVector represents the relationship between entity and position vector."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "180"
+    "attributes" : [ "object", "external" ],
+    "id" : "185"
   }, {
     "range" : "38",
-    "domain" : "182",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "181"
-  }, {
-    "range" : "38",
-    "domain" : "104",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "183"
-  }, {
-    "range" : "185",
-    "domain" : "33",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "184"
-  }, {
-    "range" : "142",
-    "domain" : "89",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "144",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "186"
+  }, {
+    "range" : "38",
+    "domain" : "188",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "187"
+  }, {
+    "range" : "38",
+    "domain" : "102",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "189"
+  }, {
+    "range" : "191",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "190"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/cso#thirdAxisComponent",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cso",
-    "range" : "60",
+    "range" : "61",
     "label" : {
       "IRI-based" : "thirdAxisComponent"
     },
     "domain" : "1",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "187"
-  }, {
-    "range" : "3",
-    "domain" : "158",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "188"
-  }, {
-    "range" : "3",
-    "domain" : "102",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "189"
-  }, {
-    "range" : "23",
-    "domain" : "57",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "190"
-  }, {
-    "range" : "23",
-    "domain" : "176",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "191"
-  }, {
-    "range" : "12",
-    "domain" : "101",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "192"
+  }, {
+    "range" : "143",
+    "domain" : "144",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "193"
+  }, {
+    "range" : "7",
+    "domain" : "164",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "194"
+  }, {
+    "range" : "7",
+    "domain" : "101",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "195"
+  }, {
+    "range" : "111",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "196"
+  }, {
+    "range" : "111",
+    "domain" : "181",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "197"
+  }, {
+    "range" : "15",
+    "domain" : "100",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "198"
   }, {
     "range" : "38",
     "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "193"
-  }, {
-    "range" : "38",
-    "domain" : "139",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "194"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "199"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#simulationTemperature",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "196",
+    "range" : "201",
     "label" : {
       "IRI-based" : "simulationTemperature",
       "en" : "simulationTemperature represents the temperature of a DDD simulation."
     },
     "domain" : "33",
     "attributes" : [ "datatype" ],
-    "id" : "195"
+    "id" : "200"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isBurgersVectorOf",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -3484,11 +3548,25 @@
       "en" : "Inverse property of hasBurgersVector"
     },
     "attributes" : [ "object" ],
-    "id" : "197"
+    "id" : "202"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#discretizedLineID",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
+    "range" : "204",
+    "label" : {
+      "IRI-based" : "discretizedLineID",
+      "en" : "discretized line ID"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "DiscretizedLineID represents the ID of a discretized (mathematical) line."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "203"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#DDDSimulationID",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "199",
+    "range" : "206",
     "label" : {
       "IRI-based" : "DDDSimulationID",
       "en" : "DDD Simulation ID"
@@ -3498,66 +3576,52 @@
       "en" : "DDDSimulationID represents the ID of a DDD simulation"
     },
     "attributes" : [ "datatype" ],
-    "id" : "198"
-  }, {
-    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#discretizedLineID",
-    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "201",
-    "label" : {
-      "IRI-based" : "discretizedLineID",
-      "en" : "discretized line ID"
-    },
-    "domain" : "19",
-    "comment" : {
-      "en" : "DiscretizedLineID represents the ID of a discretized (mathematical) line."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "200"
+    "id" : "205"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#movesOn",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "113",
+    "range" : "114",
     "label" : {
       "IRI-based" : "movesOn",
       "en" : "moves on"
     },
-    "domain" : "15",
+    "domain" : "18",
     "comment" : {
       "en" : "movesOn represents the relationship between dislocation and slip plane."
     },
     "attributes" : [ "object" ],
-    "id" : "202"
+    "id" : "207"
   }, {
-    "range" : "57",
-    "domain" : "16",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "203"
+    "range" : "23",
+    "domain" : "111",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "208"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasStartNode",
-    "inverse" : "106",
+    "inverse" : "105",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "154",
+    "range" : "158",
     "label" : {
       "IRI-based" : "hasStartNode",
       "en" : "has start node"
     },
-    "superproperty" : [ "205" ],
+    "superproperty" : [ "210" ],
     "domain" : "77",
     "comment" : {
       "en" : "Sub-property of hasNode that relates the segment with the start node."
     },
     "attributes" : [ "object" ],
-    "id" : "204"
+    "id" : "209"
   }, {
-    "range" : "117",
+    "range" : "55",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "211"
+  }, {
+    "range" : "118",
     "domain" : "33",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "206"
-  }, {
-    "range" : "138",
-    "domain" : "139",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "207"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "212"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isRelatedToStructure",
     "inverse" : "24",
@@ -3572,7 +3636,7 @@
       "en" : "Inverse property of relatesToCrystallineMaterial"
     },
     "attributes" : [ "object" ],
-    "id" : "208"
+    "id" : "213"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/cdo#hasCrystalStructure",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cdo",
@@ -3582,44 +3646,44 @@
       "undefined" : "has crystal structure"
     },
     "domain" : "1",
-    "attributes" : [ "external", "object" ],
-    "id" : "209"
+    "attributes" : [ "object", "external" ],
+    "id" : "214"
   }, {
-    "range" : "101",
-    "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "210"
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasShapeFunction",
+    "inverse" : "104",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
+    "range" : "125",
+    "label" : {
+      "IRI-based" : "hasShapeFunction",
+      "en" : "has shape function"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "hasShapeFunction represents the relationship between discretized line and shape function."
+    },
+    "attributes" : [ "allValues", "object" ],
+    "id" : "215"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePlane",
-    "inverse" : "213",
+    "inverse" : "218",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "88",
+    "range" : "87",
     "label" : {
       "IRI-based" : "hasLatticePlane",
       "en" : "has lattice plane"
     },
-    "domain" : "212",
-    "subproperty" : [ "125" ],
+    "domain" : "217",
+    "subproperty" : [ "127" ],
     "comment" : {
       "en" : "hasLatticePlane represents the relationship between a lattice and lattice planes."
     },
     "attributes" : [ "object" ],
-    "id" : "127"
+    "id" : "129"
   }, {
-    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasSegment",
-    "inverse" : "76",
-    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "77",
-    "label" : {
-      "IRI-based" : "hasSegment",
-      "en" : "has segment"
-    },
-    "domain" : "19",
-    "comment" : {
-      "en" : "hasSegment represents the relationship between discretized line and segment."
-    },
-    "attributes" : [ "object", "allValues" ],
-    "id" : "215"
+    "range" : "100",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "220"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/cso#hasSecondAxisVector",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cso",
@@ -3628,22 +3692,22 @@
       "IRI-based" : "hasSecondAxisVector"
     },
     "domain" : "1",
-    "attributes" : [ "external", "object" ],
-    "id" : "217"
+    "attributes" : [ "object", "external" ],
+    "id" : "222"
   }, {
-    "range" : "170",
-    "domain" : "81",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "218"
+    "range" : "177",
+    "domain" : "80",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "223"
   }, {
-    "range" : "114",
-    "domain" : "81",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "219"
+    "range" : "115",
+    "domain" : "80",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "224"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#simulationDescription",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "216",
+    "range" : "221",
     "label" : {
       "IRI-based" : "simulationDescription",
       "en" : "simulation description"
@@ -3653,7 +3717,7 @@
       "en" : "simulation description of DDD simulation"
     },
     "attributes" : [ "datatype", "someValues" ],
-    "id" : "220"
+    "id" : "225"
   }, {
     "iri" : "http://www.w3.org/ns/prov#wasAssociatedWith",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -3662,8 +3726,8 @@
       "IRI-based" : "wasAssociatedWith"
     },
     "domain" : "33",
-    "attributes" : [ "external", "object", "someValues" ],
-    "id" : "221"
+    "attributes" : [ "object", "external", "someValues" ],
+    "id" : "226"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/cso#hasThirdAxisVector",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cso",
@@ -3672,19 +3736,22 @@
       "IRI-based" : "hasThirdAxisVector"
     },
     "domain" : "1",
-    "attributes" : [ "external", "object" ],
-    "id" : "223"
+    "attributes" : [ "object", "external" ],
+    "id" : "228"
   }, {
-    "iri" : "https://w3id.org/mdo/provenance/SoftwareName",
-    "baseIri" : "https://w3id.org/mdo/provenance",
-    "range" : "222",
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#softwareRepository",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
+    "range" : "227",
     "label" : {
-      "IRI-based" : "SoftwareName",
-      "en" : "software name"
+      "IRI-based" : "softwareRepository",
+      "en" : "software repository"
     },
-    "domain" : "63",
-    "attributes" : [ "external", "datatype", "someValues" ],
-    "id" : "224"
+    "domain" : "64",
+    "comment" : {
+      "en" : "softwareRepository represents the URI/link to the software repository, e.g., GitHub, GitLab, etc."
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "229"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/cso#hasPositionVector",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cso",
@@ -3693,16 +3760,16 @@
       "IRI-based" : "hasPositionVector",
       "en" : "has position vector"
     },
-    "domain" : "142",
+    "domain" : "147",
     "comment" : {
       "en" : "hasPositionVector represents the relationship between entity and position vector."
     },
-    "attributes" : [ "external", "object", "allValues" ],
-    "id" : "225"
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "230"
   }, {
     "iri" : "http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204",
     "baseIri" : "http://emmo.info/emmo",
-    "range" : "65",
+    "range" : "66",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -3714,71 +3781,48 @@
     "label" : {
       "IRI-based" : "EMMO_e1097637_70d2_4895_973f_2396f04fa204"
     },
-    "domain" : "57",
-    "attributes" : [ "external", "object", "someValues" ],
-    "id" : "226"
+    "domain" : "55",
+    "attributes" : [ "object", "external", "someValues" ],
+    "id" : "231"
   }, {
-    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#softwareRepository",
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasPixelRepresentation",
+    "inverse" : "109",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "228",
+    "range" : "131",
     "label" : {
-      "IRI-based" : "softwareRepository",
-      "en" : "software repository"
+      "IRI-based" : "hasPixelRepresentation",
+      "en" : "has pixel representation"
     },
-    "domain" : "63",
+    "superproperty" : [ "70" ],
+    "domain" : "100",
     "comment" : {
-      "en" : "softwareRepository represents the URI/link to the software repository, e.g., GitHub, GitLab, etc."
+      "en" : "hasPixelRepresentation represents the relationship between mathematical line and Pixel."
     },
-    "attributes" : [ "datatype", "someValues" ],
-    "id" : "227"
+    "attributes" : [ "object" ],
+    "id" : "75"
+  }, {
+    "iri" : "https://w3id.org/mdo/provenance/SoftwareName",
+    "baseIri" : "https://w3id.org/mdo/provenance",
+    "range" : "233",
+    "label" : {
+      "IRI-based" : "SoftwareName",
+      "en" : "software name"
+    },
+    "domain" : "64",
+    "attributes" : [ "datatype", "external", "someValues" ],
+    "id" : "232"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#shapeFunctionType",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "231",
+    "range" : "236",
     "label" : {
       "IRI-based" : "shapeFunctionType",
       "en" : "shapeFunctionType represents the string of shape function type, e.g., linear, quadratic, spline of n-order, etc."
     },
     "cardinality" : "1",
-    "domain" : "124",
+    "domain" : "125",
     "attributes" : [ "datatype" ],
-    "id" : "230"
-  }, {
-    "iri" : "http://xmlns.com/foaf/0.1/family_name",
-    "baseIri" : "http://xmlns.com/foaf/0.1",
-    "range" : "233",
-    "label" : {
-      "IRI-based" : "family_name"
-    },
-    "domain" : "50",
-    "attributes" : [ "external", "datatype", "someValues" ],
-    "id" : "232"
-  }, {
-    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipDirection",
-    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "167",
-    "label" : {
-      "IRI-based" : "hasSlipDirection",
-      "en" : "has slip direction"
-    },
-    "superproperty" : [ "143" ],
-    "domain" : "235",
-    "comment" : {
-      "en" : "hasSlipDirection represents the relationship between the slip plane or slip system with the slip direction."
-    },
-    "attributes" : [ "object" ],
-    "id" : "145"
-  }, {
-    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#softwareVersion",
-    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "229",
-    "label" : {
-      "IRI-based" : "softwareVersion",
-      "en" : "software version"
-    },
-    "domain" : "63",
-    "attributes" : [ "datatype", "someValues" ],
-    "id" : "236"
+    "id" : "235"
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/firstName",
     "baseIri" : "http://xmlns.com/foaf/0.1",
@@ -3787,18 +3831,54 @@
       "IRI-based" : "firstName"
     },
     "domain" : "50",
-    "attributes" : [ "external", "datatype", "someValues" ],
+    "attributes" : [ "datatype", "external", "someValues" ],
     "id" : "237"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipDirection",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
+    "range" : "173",
+    "label" : {
+      "IRI-based" : "hasSlipDirection",
+      "en" : "has slip direction"
+    },
+    "superproperty" : [ "148" ],
+    "domain" : "240",
+    "comment" : {
+      "en" : "hasSlipDirection represents the relationship between the slip plane or slip system with the slip direction."
+    },
+    "attributes" : [ "object" ],
+    "id" : "150"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#softwareVersion",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
+    "range" : "234",
+    "label" : {
+      "IRI-based" : "softwareVersion",
+      "en" : "software version"
+    },
+    "domain" : "64",
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "241"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/family_name",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "243",
+    "label" : {
+      "IRI-based" : "family_name"
+    },
+    "domain" : "50",
+    "attributes" : [ "datatype", "external", "someValues" ],
+    "id" : "242"
   }, {
     "iri" : "http://purls.helmholtz-metadaten.de/mwo/hasORCID",
     "baseIri" : "http://purls.helmholtz-metadaten.de/mwo",
-    "range" : "234",
+    "range" : "239",
     "label" : {
       "IRI-based" : "hasORCID"
     },
     "domain" : "50",
-    "attributes" : [ "external", "datatype", "someValues" ],
-    "id" : "239"
+    "attributes" : [ "datatype", "external", "someValues" ],
+    "id" : "244"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#observes",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -3816,7 +3896,7 @@
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isSegmentOf",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "19",
+    "range" : "21",
     "label" : {
       "IRI-based" : "isSegmentOf",
       "en" : "is segment of"
@@ -3825,57 +3905,59 @@
     "comment" : {
       "en" : "Inverse of hasSegment"
     },
-    "attributes" : [ "object", "allValues" ],
-    "id" : "240"
+    "attributes" : [ "allValues", "object" ],
+    "id" : "245"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasFamilyCrystalDirection",
-    "inverse" : "242",
+    "inverse" : "247",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "138",
+    "range" : "143",
     "label" : {
       "IRI-based" : "hasFamilyCrystalDirection",
       "en" : "has family crystal direction"
     },
-    "domain" : "139",
+    "domain" : "144",
     "comment" : {
       "en" : "hasFamilyCrystalDirection represents the relationship between lattice direction and family of crystal direction."
     },
     "attributes" : [ "object" ],
-    "id" : "241"
+    "id" : "246"
   }, {
-    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#activeSlipPlane",
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasEndNode",
+    "inverse" : "249",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "244",
+    "range" : "158",
     "label" : {
-      "IRI-based" : "activeSlipPlane",
-      "en" : "active slip plane"
+      "IRI-based" : "hasEndNode",
+      "en" : "has end node"
     },
-    "domain" : "113",
+    "superproperty" : [ "210" ],
+    "domain" : "77",
     "comment" : {
-      "en" : "activeSlipPlane represents the boolean value of whether the slip plane is active."
+      "en" : "Sub-property of hasNode that relates the segment with the end node."
     },
-    "attributes" : [ "datatype", "someValues" ],
-    "id" : "243"
+    "attributes" : [ "allValues", "object" ],
+    "id" : "248"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasStartNode",
-    "inverse" : "106",
+    "inverse" : "105",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "154",
+    "range" : "158",
     "label" : {
       "IRI-based" : "hasStartNode",
       "en" : "has start node"
     },
-    "superproperty" : [ "205" ],
+    "superproperty" : [ "210" ],
     "domain" : "77",
     "comment" : {
       "en" : "Sub-property of hasNode that relates the segment with the start node."
     },
-    "attributes" : [ "object", "allValues" ],
-    "id" : "245"
+    "attributes" : [ "allValues", "object" ],
+    "id" : "250"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isRelaxed",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "247",
+    "range" : "252",
     "label" : {
       "IRI-based" : "isRelaxed",
       "en" : "is relaxed"
@@ -3885,161 +3967,176 @@
       "en" : "isRelaxed represents a boolean value whether a dislocation structure in the relaxed condition or no."
     },
     "attributes" : [ "datatype" ],
-    "id" : "246"
+    "id" : "251"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/cso#secondAxisComponent",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cso",
-    "range" : "78",
+    "range" : "84",
     "label" : {
       "IRI-based" : "secondAxisComponent"
     },
     "domain" : "1",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "248"
+    "attributes" : [ "datatype", "external" ],
+    "id" : "253"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#parameterActivation",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "250",
+    "range" : "255",
     "label" : {
       "IRI-based" : "parameterActivation",
       "en" : "parameter activation"
     },
-    "domain" : "98",
+    "domain" : "97",
     "attributes" : [ "datatype" ],
-    "id" : "249"
+    "id" : "254"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#junctionFormationParameterActivation",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
+    "range" : "257",
+    "label" : {
+      "IRI-based" : "junctionFormationParameterActivation",
+      "en" : "junction formation parameter activation"
+    },
+    "cardinality" : "1",
+    "domain" : "115",
+    "comment" : {
+      "en" : "JunctinoFormationParameterActivation represents the boolean value of whether the junction formation is active."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "256"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#FEMParameterActivation",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
     "range" : "85",
     "label" : {
       "IRI-based" : "FEMParameterActivation",
-      "en" : "FEM parameter activation"
+      "en" : "FEMParameterActivation represents the boolean value of whether the FEM method is active."
     },
     "domain" : "1",
     "attributes" : [ "datatype" ],
-    "id" : "251"
-  }, {
-    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#junctionFormationParameterActivation",
-    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "253",
-    "label" : {
-      "IRI-based" : "junctionFormationParameterActivation",
-      "en" : "junction formation parameter activation"
-    },
-    "cardinality" : "1",
-    "domain" : "114",
-    "comment" : {
-      "en" : "JunctinoFormationParameterActivation represents the boolean value of whether the junction formation is active."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "252"
+    "id" : "258"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#familyPlaneMillerIndice",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "255",
+    "range" : "260",
     "label" : {
       "IRI-based" : "familyPlaneMillerIndice",
       "en" : "family plane miller indice"
     },
     "cardinality" : "1",
-    "domain" : "152",
+    "domain" : "161",
     "comment" : {
       "en" : "familyPlaneMillerIndice represents a set of Miller indice of lattice plane in string."
     },
     "attributes" : [ "datatype" ],
-    "id" : "254"
+    "id" : "259"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasMathematicalRepresentation",
-    "inverse" : "256",
+    "inverse" : "261",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "101",
+    "range" : "100",
     "label" : {
       "IRI-based" : "hasMathematicalRepresentation",
       "en" : "has mathematical representation"
     },
-    "superproperty" : [ "71" ],
-    "domain" : "15",
+    "superproperty" : [ "70" ],
+    "domain" : "18",
     "comment" : {
       "en" : "hasMathematicalRepresentation relates the entity with its mathematical representation."
     },
-    "attributes" : [ "functional", "object" ],
-    "id" : "74"
+    "attributes" : [ "object", "functional" ],
+    "id" : "73"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#remeshParameterActivation",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "258",
+    "range" : "262",
     "label" : {
       "IRI-based" : "remeshParameterActivation",
       "en" : "remesh parameter activation"
     },
-    "domain" : "100",
+    "domain" : "99",
     "comment" : {
       "en" : "remeshParameterActivation represents the boolean value of whether the network remeshing is active."
     },
     "attributes" : [ "datatype", "someValues" ],
-    "id" : "257"
+    "id" : "263"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/cso#hasBasis",
-    "inverse" : "177",
+    "inverse" : "182",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/cso",
     "range" : "1",
     "label" : {
       "IRI-based" : "hasBasis"
     },
     "domain" : "1",
-    "attributes" : [ "external", "object" ],
-    "id" : "260"
-  }, {
-    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasEndNode",
-    "inverse" : "262",
-    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "154",
-    "label" : {
-      "IRI-based" : "hasEndNode",
-      "en" : "has end node"
-    },
-    "superproperty" : [ "205" ],
-    "domain" : "77",
-    "comment" : {
-      "en" : "Sub-property of hasNode that relates the segment with the end node."
-    },
-    "attributes" : [ "object", "allValues" ],
-    "id" : "261"
-  }, {
-    "range" : "154",
-    "domain" : "101",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "263"
-  }, {
-    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasNumericalRepresentation",
-    "inverse" : "17",
-    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "19",
-    "label" : {
-      "IRI-based" : "hasNumericalRepresentation",
-      "en" : "has numerical representation"
-    },
-    "superproperty" : [ "71" ],
-    "domain" : "101",
-    "comment" : {
-      "en" : "hasNumericalRepresentation relates the entity with its numerical representation."
-    },
-    "attributes" : [ "functional", "object", "someValues" ],
+    "attributes" : [ "object", "external" ],
     "id" : "264"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#remeshFrequency",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "259",
+    "range" : "265",
     "label" : {
       "IRI-based" : "remeshFrequency",
       "en" : "remesh frequency"
     },
-    "domain" : "100",
+    "domain" : "99",
     "comment" : {
       "en" : "remeshFrequency represents the number of steps has to pass before doing the dislocation network remeshing."
     },
     "attributes" : [ "datatype", "someValues" ],
-    "id" : "265"
+    "id" : "266"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasPixelRepresentation",
+    "inverse" : "109",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
+    "range" : "131",
+    "label" : {
+      "IRI-based" : "hasPixelRepresentation",
+      "en" : "has pixel representation"
+    },
+    "superproperty" : [ "70" ],
+    "domain" : "100",
+    "comment" : {
+      "en" : "hasPixelRepresentation represents the relationship between mathematical line and Pixel."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "267"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasNumericalRepresentation",
+    "inverse" : "16",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "hasNumericalRepresentation",
+      "en" : "has numerical representation"
+    },
+    "superproperty" : [ "70" ],
+    "domain" : "100",
+    "comment" : {
+      "en" : "hasNumericalRepresentation relates the entity with its numerical representation."
+    },
+    "attributes" : [ "object", "functional", "someValues" ],
+    "id" : "268"
+  }, {
+    "range" : "77",
+    "domain" : "158",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "269"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipPlaneNormal",
+    "inverse" : "41",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
+    "range" : "188",
+    "label" : {
+      "IRI-based" : "hasSlipPlaneNormal",
+      "en" : "has slip plane normal"
+    },
+    "domain" : "271",
+    "comment" : {
+      "en" : "hasSlipPlaneNormal represents the relationship between a slip plane or slip system with slip plane normal."
+    },
+    "attributes" : [ "object" ],
+    "id" : "270"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isLatticePlaneOf",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -4053,124 +4150,107 @@
       "en" : "Inverse property of hasLatticePlane"
     },
     "attributes" : [ "object" ],
-    "id" : "213"
+    "id" : "218"
   }, {
-    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipPlaneNormal",
-    "inverse" : "41",
-    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "182",
-    "label" : {
-      "IRI-based" : "hasSlipPlaneNormal",
-      "en" : "has slip plane normal"
-    },
-    "domain" : "267",
-    "comment" : {
-      "en" : "hasSlipPlaneNormal represents the relationship between a slip plane or slip system with slip plane normal."
-    },
-    "attributes" : [ "object" ],
-    "id" : "266"
-  }, {
-    "range" : "77",
-    "domain" : "154",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "268"
+    "range" : "158",
+    "domain" : "100",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "272"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasVectorOrigin",
-    "inverse" : "90",
+    "inverse" : "89",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "89",
+    "range" : "88",
     "label" : {
       "IRI-based" : "hasVectorOrigin",
       "en" : "has vector origin"
     },
-    "domain" : "88",
+    "domain" : "87",
     "comment" : {
       "en" : "hasVectorOrigin represents the relationship between lattice plane and origin."
     },
-    "attributes" : [ "object", "allValues" ],
-    "id" : "269"
+    "attributes" : [ "allValues", "object" ],
+    "id" : "273"
   }, {
-    "range" : "211",
-    "domain" : "214",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "270"
+    "range" : "216",
+    "domain" : "219",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "274"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasInputDislocationStructure",
-    "inverse" : "93",
+    "inverse" : "92",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
     "range" : "34",
     "label" : {
       "IRI-based" : "hasInputDislocationStructure",
       "en" : "has input dislocation structure"
     },
-    "superproperty" : [ "272" ],
+    "superproperty" : [ "276" ],
     "domain" : "33",
     "comment" : {
       "en" : "hasInputDislocationStructure represents the relationship between DDD simulation and its input of dislocation structure."
     },
     "attributes" : [ "object" ],
-    "id" : "271"
+    "id" : "275"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasEndNode",
-    "inverse" : "262",
+    "inverse" : "249",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "154",
+    "range" : "158",
     "label" : {
       "IRI-based" : "hasEndNode",
       "en" : "has end node"
     },
-    "superproperty" : [ "205" ],
+    "superproperty" : [ "210" ],
     "domain" : "77",
     "comment" : {
       "en" : "Sub-property of hasNode that relates the segment with the end node."
     },
     "attributes" : [ "object" ],
-    "id" : "274"
+    "id" : "278"
   }, {
-    "range" : "152",
-    "domain" : "138",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "275"
+    "range" : "161",
+    "domain" : "143",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "279"
   }, {
-    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasMathematicalRepresentation",
-    "inverse" : "256",
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#resultsIn",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "101",
+    "range" : "139",
     "label" : {
-      "IRI-based" : "hasMathematicalRepresentation",
-      "en" : "has mathematical representation"
+      "IRI-based" : "resultsIn",
+      "en" : "results in"
     },
-    "superproperty" : [ "71" ],
-    "domain" : "15",
+    "domain" : "18",
     "comment" : {
-      "en" : "hasMathematicalRepresentation relates the entity with its mathematical representation."
+      "en" : "resultsIn represents the relationship between dislocation and lattice displacement."
     },
-    "attributes" : [ "functional", "object", "someValues" ],
-    "id" : "276"
+    "attributes" : [ "object", "someValues" ],
+    "id" : "280"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#observedBy",
     "inverse" : "44",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "214",
+    "range" : "219",
     "label" : {
       "IRI-based" : "observedBy",
       "en" : "observed by"
     },
-    "domain" : "15",
+    "domain" : "18",
     "comment" : {
       "en" : "observedBy represents the relationship between dislocation and microscopy techniques, e.g., TEM, FIM, etc."
     },
     "attributes" : [ "object", "someValues" ],
-    "id" : "277"
+    "id" : "281"
   }, {
-    "range" : "114",
-    "domain" : "170",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "278"
+    "range" : "115",
+    "domain" : "177",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "282"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#simulationDescription",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "280",
+    "range" : "284",
     "label" : {
       "IRI-based" : "simulationDescription",
       "en" : "simulation description"
@@ -4180,70 +4260,83 @@
       "en" : "simulation description of DDD simulation"
     },
     "attributes" : [ "datatype" ],
-    "id" : "279"
-  }, {
-    "range" : "70",
-    "domain" : "68",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "281"
-  }, {
-    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#observedBy",
-    "inverse" : "44",
-    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "211",
-    "label" : {
-      "IRI-based" : "observedBy",
-      "en" : "observed by"
-    },
-    "domain" : "15",
-    "comment" : {
-      "en" : "observedBy represents the relationship between dislocation and microscopy techniques, e.g., TEM, FIM, etc."
-    },
-    "attributes" : [ "object", "someValues" ],
-    "id" : "282"
-  }, {
-    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasShapeFunction",
-    "inverse" : "105",
-    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "124",
-    "label" : {
-      "IRI-based" : "hasShapeFunction",
-      "en" : "has shape function"
-    },
-    "domain" : "19",
-    "comment" : {
-      "en" : "hasShapeFunction represents the relationship between discretized line and shape function."
-    },
-    "attributes" : [ "object", "allValues" ],
     "id" : "283"
+  }, {
+    "range" : "47",
+    "domain" : "69",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "285"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#movesOn",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "113",
+    "range" : "114",
     "label" : {
       "IRI-based" : "movesOn",
       "en" : "moves on"
     },
-    "domain" : "15",
+    "domain" : "18",
     "comment" : {
       "en" : "movesOn represents the relationship between dislocation and slip plane."
     },
     "attributes" : [ "object", "someValues" ],
-    "id" : "284"
+    "id" : "286"
   }, {
-    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#resultsIn",
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasSegment",
+    "inverse" : "76",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "134",
+    "range" : "77",
     "label" : {
-      "IRI-based" : "resultsIn",
-      "en" : "results in"
+      "IRI-based" : "hasSegment",
+      "en" : "has segment"
     },
-    "domain" : "15",
+    "domain" : "21",
     "comment" : {
-      "en" : "resultsIn represents the relationship between dislocation and lattice displacement."
+      "en" : "hasSegment represents the relationship between discretized line and segment."
+    },
+    "attributes" : [ "allValues", "object" ],
+    "id" : "287"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#observedBy",
+    "inverse" : "44",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
+    "range" : "216",
+    "label" : {
+      "IRI-based" : "observedBy",
+      "en" : "observed by"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "observedBy represents the relationship between dislocation and microscopy techniques, e.g., TEM, FIM, etc."
     },
     "attributes" : [ "object", "someValues" ],
-    "id" : "285"
+    "id" : "288"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasMathematicalRepresentation",
+    "inverse" : "261",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
+    "range" : "100",
+    "label" : {
+      "IRI-based" : "hasMathematicalRepresentation",
+      "en" : "has mathematical representation"
+    },
+    "superproperty" : [ "70" ],
+    "domain" : "18",
+    "comment" : {
+      "en" : "hasMathematicalRepresentation relates the entity with its mathematical representation."
+    },
+    "attributes" : [ "object", "functional", "someValues" ],
+    "id" : "289"
+  }, {
+    "iri" : "https://w3id.org/mdo/core/hasInputStructure",
+    "baseIri" : "https://w3id.org/mdo/core",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasInputStructure"
+    },
+    "domain" : "1",
+    "subproperty" : [ "275" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "276"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isSlipSystemOf",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -4257,61 +4350,50 @@
       "en" : "Inverse property of hasSlipSystem"
     },
     "attributes" : [ "object" ],
-    "id" : "287"
-  }, {
-    "iri" : "https://w3id.org/mdo/core/hasInputStructure",
-    "baseIri" : "https://w3id.org/mdo/core",
-    "range" : "1",
-    "label" : {
-      "IRI-based" : "hasInputStructure"
-    },
-    "domain" : "1",
-    "subproperty" : [ "271" ],
-    "attributes" : [ "external", "object" ],
-    "id" : "272"
+    "id" : "291"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#softwareRepository",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "290",
+    "range" : "294",
     "label" : {
       "IRI-based" : "softwareRepository",
       "en" : "software repository"
     },
-    "domain" : "63",
+    "domain" : "64",
     "comment" : {
       "en" : "softwareRepository represents the URI/link to the software repository, e.g., GitHub, GitLab, etc."
     },
     "attributes" : [ "datatype" ],
-    "id" : "289"
+    "id" : "293"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasCube",
     "inverse" : "0",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "171",
+    "range" : "175",
     "label" : {
       "IRI-based" : "hasCube",
       "en" : "has cube"
     },
-    "superproperty" : [ "108" ],
+    "superproperty" : [ "107" ],
     "domain" : "34",
     "comment" : {
       "en" : "hasCube represents the relationship between dislocation strcture and cube shape specimen."
     },
     "attributes" : [ "object" ],
-    "id" : "109"
+    "id" : "108"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#Lmax",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "292",
+    "range" : "296",
     "label" : {
       "IRI-based" : "Lmax"
     },
-    "domain" : "100",
+    "domain" : "99",
     "comment" : {
       "en" : "Remesh parameter of maximum segment length so that the segment will be remeshed."
     },
     "attributes" : [ "datatype" ],
-    "id" : "291"
+    "id" : "295"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isFamilyCrystalDirectionOf",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -4325,17 +4407,17 @@
       "en" : "Inverse property of hasFamilyCrystalDirection"
     },
     "attributes" : [ "object" ],
-    "id" : "242"
+    "id" : "247"
   }, {
     "iri" : "https://w3id.org/mdo/core/ID",
     "baseIri" : "https://w3id.org/mdo/core",
-    "range" : "58",
+    "range" : "59",
     "label" : {
       "IRI-based" : "ID"
     },
     "domain" : "1",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "294"
+    "attributes" : [ "datatype", "external" ],
+    "id" : "298"
   }, {
     "iri" : "https://w3id.org/mdo/core/hasQuantityValue",
     "baseIri" : "https://w3id.org/mdo/core",
@@ -4344,63 +4426,77 @@
       "IRI-based" : "hasQuantityValue"
     },
     "domain" : "1",
-    "attributes" : [ "external", "object" ],
-    "id" : "295"
+    "attributes" : [ "object", "external" ],
+    "id" : "299"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasBurgersVector",
-    "inverse" : "197",
+    "inverse" : "202",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "104",
+    "range" : "102",
     "label" : {
       "IRI-based" : "hasBurgersVector",
       "en" : "has Burgers vector"
     },
-    "domain" : "15",
+    "domain" : "18",
     "comment" : {
       "en" : "hasBurgersVector represents the relationship between dislocation to Burgers vector."
     },
     "attributes" : [ "object" ],
-    "id" : "296"
+    "id" : "300"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isResultedBy",
-    "inverse" : "299",
+    "inverse" : "302",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "15",
+    "range" : "18",
     "label" : {
       "IRI-based" : "isResultedBy",
       "en" : "is resulted by"
     },
-    "domain" : "134",
+    "domain" : "139",
     "comment" : {
       "en" : "Inverse property of resultsIn"
     },
     "attributes" : [ "object" ],
-    "id" : "298"
+    "id" : "301"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#activeSlipPlane",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
+    "range" : "304",
+    "label" : {
+      "IRI-based" : "activeSlipPlane",
+      "en" : "active slip plane"
+    },
+    "domain" : "114",
+    "comment" : {
+      "en" : "activeSlipPlane represents the boolean value of whether the slip plane is active."
+    },
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "305"
   }, {
     "iri" : "http://www.w3.org/ns/prov#wasAssociatedWith",
     "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "63",
+    "range" : "64",
     "label" : {
       "IRI-based" : "wasAssociatedWith"
     },
-    "domain" : "117",
-    "attributes" : [ "external", "object", "someValues" ],
-    "id" : "300"
+    "domain" : "118",
+    "attributes" : [ "object", "external", "someValues" ],
+    "id" : "306"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasSlipSystem",
-    "inverse" : "287",
+    "inverse" : "291",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "288",
+    "range" : "292",
     "label" : {
       "IRI-based" : "hasSlipSystem",
       "en" : "has slip system"
     },
-    "domain" : "126",
+    "domain" : "128",
     "comment" : {
       "en" : "hasSlipSystem represents the relationship between a crystal structure and slip system."
     },
     "attributes" : [ "object" ],
-    "id" : "301"
+    "id" : "307"
   }, {
     "iri" : "https://w3id.org/mdo/core/hasOutputStructure",
     "baseIri" : "https://w3id.org/mdo/core",
@@ -4410,28 +4506,28 @@
     },
     "domain" : "1",
     "subproperty" : [ "32" ],
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "35"
   }, {
-    "iri" : "http://qudt.org/schema/qudt/quantityValue",
+    "iri" : "http://qudt.org/schema/qudt/hasQuantityKind",
     "baseIri" : "http://qudt.org/schema/qudt",
-    "range" : "303",
+    "range" : "277",
     "label" : {
-      "IRI-based" : "quantityValue"
+      "IRI-based" : "hasQuantityKind"
     },
     "domain" : "4",
-    "attributes" : [ "external", "object", "allValues" ],
-    "id" : "302"
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "308"
   }, {
     "iri" : "http://qudt.org/schema/qudt/numericalValue",
     "baseIri" : "http://qudt.org/schema/qudt",
-    "range" : "305",
+    "range" : "311",
     "label" : {
       "IRI-based" : "numericalValue"
     },
-    "domain" : "303",
-    "attributes" : [ "external", "datatype", "someValues" ],
-    "id" : "304"
+    "domain" : "310",
+    "attributes" : [ "datatype", "external", "someValues" ],
+    "id" : "309"
   }, {
     "iri" : "http://qudt.org/schema/qudt/unit",
     "baseIri" : "http://qudt.org/schema/qudt",
@@ -4439,61 +4535,61 @@
     "label" : {
       "IRI-based" : "unit"
     },
-    "domain" : "303",
-    "attributes" : [ "external", "object", "allValues" ],
-    "id" : "306"
+    "domain" : "310",
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "312"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasFamilyCrystalPlane",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "152",
+    "range" : "161",
     "label" : {
       "IRI-based" : "hasFamilyCrystalPlane",
       "en" : "has family crystal plane"
     },
-    "domain" : "88",
+    "domain" : "87",
     "comment" : {
       "en" : "hasFamilyCrystalPlane represents the relationship between the lattice plane and the family of crystal planes."
     },
     "attributes" : [ "object" ],
-    "id" : "307"
-  }, {
-    "iri" : "http://www.w3.org/ns/prov#endedAtTime",
-    "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "309",
-    "label" : {
-      "IRI-based" : "endedAtTime"
-    },
-    "domain" : "185",
-    "attributes" : [ "external", "datatype", "someValues" ],
-    "id" : "308"
+    "id" : "313"
   }, {
     "iri" : "http://www.w3.org/ns/prov#startedAtTime",
     "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "311",
+    "range" : "315",
     "label" : {
       "IRI-based" : "startedAtTime"
     },
-    "domain" : "185",
-    "attributes" : [ "external", "datatype", "someValues" ],
-    "id" : "310"
+    "domain" : "191",
+    "attributes" : [ "datatype", "external", "someValues" ],
+    "id" : "314"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#endedAtTime",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "317",
+    "label" : {
+      "IRI-based" : "endedAtTime"
+    },
+    "domain" : "191",
+    "attributes" : [ "datatype", "external", "someValues" ],
+    "id" : "316"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#remeshFrequency",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "313",
+    "range" : "319",
     "label" : {
       "IRI-based" : "remeshFrequency",
       "en" : "remesh frequency"
     },
-    "domain" : "100",
+    "domain" : "99",
     "comment" : {
       "en" : "remeshFrequency represents the number of steps has to pass before doing the dislocation network remeshing."
     },
     "attributes" : [ "datatype" ],
-    "id" : "312"
+    "id" : "318"
   }, {
     "iri" : "http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204",
     "baseIri" : "http://emmo.info/emmo",
-    "range" : "65",
+    "range" : "66",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -4505,48 +4601,48 @@
     "label" : {
       "IRI-based" : "EMMO_e1097637_70d2_4895_973f_2396f04fa204"
     },
-    "domain" : "176",
-    "attributes" : [ "external", "object", "someValues" ],
-    "id" : "314"
+    "domain" : "181",
+    "attributes" : [ "object", "external", "someValues" ],
+    "id" : "320"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#resultsIn",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "134",
+    "range" : "139",
     "label" : {
       "IRI-based" : "resultsIn",
       "en" : "results in"
     },
-    "domain" : "15",
+    "domain" : "18",
     "comment" : {
       "en" : "resultsIn represents the relationship between dislocation and lattice displacement."
     },
     "attributes" : [ "object" ],
-    "id" : "299"
+    "id" : "302"
   }, {
-    "iri" : "http://qudt.org/schema/qudt/hasQuantityKind",
+    "iri" : "http://qudt.org/schema/qudt/quantityValue",
     "baseIri" : "http://qudt.org/schema/qudt",
-    "range" : "273",
+    "range" : "310",
     "label" : {
-      "IRI-based" : "hasQuantityKind"
+      "IRI-based" : "quantityValue"
     },
     "domain" : "4",
-    "attributes" : [ "external", "object", "allValues" ],
-    "id" : "315"
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "321"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#familyDirectionMillerIndice",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "286",
+    "range" : "290",
     "label" : {
       "IRI-based" : "familyDirectionMillerIndice",
       "en" : "family direction miller indice"
     },
     "cardinality" : "1",
-    "domain" : "138",
+    "domain" : "143",
     "comment" : {
       "en" : "familyDirectionMillerIndice represents a set of miller indices of lattice direction in string."
     },
     "attributes" : [ "datatype" ],
-    "id" : "316"
+    "id" : "322"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isMathematicalRepresentationOf",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -4560,52 +4656,52 @@
       "en" : "Inverse property of hasMathematicalRepresentation"
     },
     "attributes" : [ "object" ],
-    "id" : "256"
+    "id" : "261"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#remeshParameterActivation",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "318",
+    "range" : "324",
     "label" : {
       "IRI-based" : "remeshParameterActivation",
       "en" : "remesh parameter activation"
     },
-    "domain" : "100",
+    "domain" : "99",
     "comment" : {
       "en" : "remeshParameterActivation represents the boolean value of whether the network remeshing is active."
     },
     "attributes" : [ "datatype" ],
-    "id" : "317"
-  }, {
-    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePoint",
-    "inverse" : "45",
-    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "146",
-    "label" : {
-      "IRI-based" : "hasLatticePoint",
-      "en" : "has lattice point"
-    },
-    "domain" : "297",
-    "comment" : {
-      "en" : "hasLatticePoint represents the relationship between a lattice or lattice plane or lattice direction with lattice point."
-    },
-    "attributes" : [ "object" ],
-    "id" : "319"
+    "id" : "323"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasNode",
-    "inverse" : "320",
+    "inverse" : "325",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "154",
+    "range" : "158",
     "label" : {
       "IRI-based" : "hasNode",
       "en" : "has node"
     },
     "domain" : "77",
-    "subproperty" : [ "274", "204" ],
+    "subproperty" : [ "278", "209" ],
     "comment" : {
       "en" : "hasNode represents the relationship between segment and node."
     },
     "attributes" : [ "object" ],
-    "id" : "205"
+    "id" : "210"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#hasLatticePoint",
+    "inverse" : "45",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
+    "range" : "151",
+    "label" : {
+      "IRI-based" : "hasLatticePoint",
+      "en" : "has lattice point"
+    },
+    "domain" : "303",
+    "comment" : {
+      "en" : "hasLatticePoint represents the relationship between a lattice or lattice plane or lattice direction with lattice point."
+    },
+    "attributes" : [ "object" ],
+    "id" : "326"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isEndNodeOf",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -4619,18 +4715,18 @@
       "en" : "Inverse property of hasEndNode"
     },
     "attributes" : [ "object" ],
-    "id" : "262"
+    "id" : "249"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#simulationLoadingCondition",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
-    "range" : "321",
+    "range" : "327",
     "label" : {
       "IRI-based" : "simulationLoadingCondition",
-      "en" : "simulation loading condition"
+      "en" : "simulationLoadingCondition represents the string of loading condition exposed to a DDD simulation, e.g., stress-controlled, strain-controlled, or both (stress- and strain-controlled)."
     },
     "domain" : "33",
     "attributes" : [ "datatype" ],
-    "id" : "322"
+    "id" : "328"
   }, {
     "iri" : "https://purls.helmholtz-metadaten.de/disos/diso#isNodeOf",
     "baseIri" : "https://purls.helmholtz-metadaten.de/disos/diso",
@@ -4644,7 +4740,7 @@
       "en" : "Inverse property of hasNode"
     },
     "attributes" : [ "object" ],
-    "id" : "320"
+    "id" : "325"
   }, {
     "iri" : "https://w3id.org/mdo/structure/hasComposition",
     "baseIri" : "https://w3id.org/mdo/structure",
@@ -4653,7 +4749,7 @@
       "IRI-based" : "hasComposition"
     },
     "domain" : "1",
-    "attributes" : [ "external", "object" ],
-    "id" : "323"
+    "attributes" : [ "object", "external" ],
+    "id" : "329"
   } ]
 }

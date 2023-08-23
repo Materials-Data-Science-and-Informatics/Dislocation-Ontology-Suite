@@ -18,8 +18,8 @@
 ## About DISO
 The dislocation ontology (DISO) is an ontology defining the concepts and relationships related to linear defects in crystalline materials. We developed DISO using a top-down approach in which we start defining the most general concepts in the dislocation domain and subsequent specialization of them. DISO is published through a persistent URL following W3C best practices for publishing Linked Data.
 
+![diso](https://github.com/Materials-Data-Science-and-Informatics/Dislocation-Ontology-Suite/assets/71790028/e45cc0b8-438d-40ef-9236-b7c7172fae85)
 
-![diso-extend](https://github.com/Materials-Data-Science-and-Informatics/Dislocation-Ontology-Suite/assets/71790028/0a7e14be-4ba6-4a93-a184-32c28a25df80)
 
 
 ## Repository Description

@@ -1,4 +1,4 @@
-### Crystal Structure Module
+# Crystal Structure Module
 
 Crystal Structure Ontology (CSO) is an ontology developed to represent crystallographic information needed to describe the dislocation. In CSO, several MDO classes are reused to describe the crystal coordinate system, motif/base in a crystal structure, point groups, and space groups. 
 The standard coordinate system is defined by `MDO:Basis` and `MDO:CoordinateVector` classes that CSO reuses. 
@@ -9,7 +9,7 @@ Subsequently, to define the point groups and space groups of a crystal structure
 
 
 
-### Project Structure
+## Project Structure
 * [data](/crystal-structure-ontology/data/)
     * [Nickel crystal structure](/crystal-structure-ontology/data/MaterialProject/Nickel/overall.ttl) 
     The Nickel data is collected from [Materials Project](https://materialsproject.org) 
@@ -18,12 +18,12 @@ Subsequently, to define the point groups and space groups of a crystal structure
     * For generating the RDF graph from the given [data](/crystal-structure-ontology/data/), we use the [RDFLib](https://github.com/RDFLib/rdflib) python library.
     * To generate the nickel crystal structure, the script is in [here](/crystal-structure-ontology/python-script/) and execute with `python map_data.py`
 
-### Acknowledgments
+## Acknowledgments
 * European Research Council through the ERC Grant Agreement No. 759419 MuDiLingo (”A Multiscale Dislocation Language for Data-Driven Materials Science”)
 * Helmholtz Metadata Collaboration (HMC) within the Hub Information at the Forschungszentrum Jülich.
 
 
-### Citation 
+## Citation 
 please cite the following paper if you used any part of this work. 
 
 `

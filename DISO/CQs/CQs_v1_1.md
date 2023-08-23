@@ -122,7 +122,7 @@ SELECT ?dislocationstructure ?slip_plane ?slip_plane_miller_indice WHERE{
 	?dislocationsimulation diso:hasInputDislocationStructure ?dislocationstructure.
 	?dislocationstructure diso:relatesToCrystallineMaterial ?crystallinematerial .  
 	?crystallinematerial cdo:hasCrystalStructure ?crystalstructure.
-	?crystal_structure diso:hasSlipPlane ?slip_plane FILTER CONTAINS(STR(?slip_plane), 'input'). 
+	?crystalstructure diso:hasSlipPlane ?slip_plane FILTER CONTAINS(STR(?slip_plane), 'input'). 
 	?slip_plane diso:planeMillerIndice ?slip_plane_miller_indice .
 }
 ```
@@ -134,7 +134,7 @@ PREFIX diso: <https://purls.helmholtz-metadaten.de/disos/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#> 
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>   
 
-SELECT ?dislocationstructure ?crystal_structure ?centering WHERE{
+SELECT ?dislocationstructure ?crystalstructure ?centering WHERE{
 	?dislocationsimulation diso:hasInputDislocationStructure ?dislocationstructure.
 	?dislocationstructure diso:relatesToCrystallineMaterial ?crystallinematerial .  
 	?crystallinematerial cdo:hasCrystalStructure ?crystalstructure.
@@ -151,11 +151,11 @@ PREFIX cso: <https://purls.helmholtz-metadaten.de/disos/cso#>
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/disos/cdo#>   
 PREFIX mdo: <https://w3id.org/mdo/structure/> 
 
-SELECT  ?dislocationstructure ?crystal_structure ?space_group ?point_group WHERE{
+SELECT  ?dislocationstructure ?crystalstructure ?space_group ?point_group WHERE{
 	?dislocationsimulation diso:hasInputDislocationStructure ?dislocationstructure.
 	?dislocationstructure diso:relatesToCrystallineMaterial ?crystallinematerial .  
-	?crystallinematerial cdo:hasCrystalStructure ?crystal_structure.
-	?crystal_structure mdo:hasSpaceGroup ?sg.
+	?crystallinematerial cdo:hasCrystalStructure ?crystalstructure.
+	?crystalstructure mdo:hasSpaceGroup ?sg.
 	?sg mdo:hasPointGroup ?pg ;
 	 	mdo:SpaceGroupSymbol ?space_group . 
 	?pg mdo:PointGroupHMName ?point_group .

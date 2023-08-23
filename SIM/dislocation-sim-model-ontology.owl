@@ -16,9 +16,9 @@
         <terms:created xml:lang="en">17.08.2023</terms:created>
         <terms:creator xml:lang="en">Ahmad Zainul Ihsan</terms:creator>
         <terms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
-        <terms:title xml:lang="en">Dislocation Simulation and Model Module</terms:title>
+        <terms:title xml:lang="en">Dislocation Simulation and Model Ontology</terms:title>
         <vann:preferredNamespacePrefix xml:lang="en">SIM</vann:preferredNamespacePrefix>
-        <rdfs:label xml:lang="en">Dislocation Simulation and Model Module</rdfs:label>
+        <rdfs:label xml:lang="en">Dislocation Simulation and Model Ontology</rdfs:label>
         <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
     </owl:Ontology>
     

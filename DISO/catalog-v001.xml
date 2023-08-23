@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="https://purls.helmholtz-metadaten.de/disos/cdo" uri="file:/Users/a.z.ihsan/Documents/PhD_Work/2020/Dislocation-Ontology-Suite/CDO/crystallographic-defect-ontology.owl"/>
+    <uri id="Imports Wizard Entry" name="https://purls.helmholtz-metadaten.de/disos/cso" uri="file:/Users/a.z.ihsan/Documents/PhD_Work/2020/Dislocation-Ontology-Suite/CSO/crystal-structure-ontology.owl"/>
     <uri id="Imports Wizard Entry" name="https://purls.helmholtz-metadaten.de/disos/cso" uri="file:/Users/a.z.ihsan/Documents/PhD_Work/2020/Dislocation-Ontology-Suite/CSO/crystal-structure-ontology.owl"/>
     <uri id="Imports Wizard Entry" name="https://w3id.org/mdo/core/1.1/" uri="https://w3id.org/mdo/core/1.1/"/>
     <uri id="Imports Wizard Entry" name="https://w3id.org/mdo/core/1.1/" uri="https://liusemweb.github.io/mdo/core/1.1/mdo-core.owl"/>

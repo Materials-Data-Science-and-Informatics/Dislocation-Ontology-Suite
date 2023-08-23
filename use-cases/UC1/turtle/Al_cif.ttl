@@ -534,16 +534,16 @@ mdo:hasSpecies a owl:ObjectProperty ;
 
 cso:Vector a owl:Class ;
     rdfs:label "Vector"@en ;
-    rdfs:subClassOf [ a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty cso:vectorMagnitude ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cso:hasVectorComponent ;
                         owl:someValuesFrom cso:VectorComponentOfBasis ] [ a owl:Restriction ;
                         owl:allValuesFrom cso:VectorComponentOfBasis ;
-                        owl:onProperty cso:hasVectorComponent ] ) ],
-        [ a owl:Restriction ;
-            owl:onDataRange xsd:double ;
-            owl:onProperty cso:vectorMagnitude ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
+                        owl:onProperty cso:hasVectorComponent ] ) ] ;
     skos:defintion "(Euclidean) vector used to represent quantities that both magnitude and direction."@en .
 
 mdo:hasSpaceGroup a owl:ObjectProperty ;
@@ -569,14 +569,7 @@ mdo:hasPointGroup a owl:ObjectProperty ;
 
 cso:CrystalStructure a owl:Class ;
     rdfs:label "Crystal Structure"@en ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:SpaceGroup ;
-                        owl:onProperty mdo:hasSpaceGroup ] [ a owl:Restriction ;
-                        owl:onClass mdo:SpaceGroup ;
-                        owl:onProperty mdo:hasSpaceGroup ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
-        [ a owl:Restriction ;
+    rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom cso:Lattice ;
             owl:onProperty cso:hasLattice ],
         [ a owl:Class ;
@@ -584,17 +577,24 @@ cso:CrystalStructure a owl:Class ;
                         owl:onProperty mdo:hasOccupancy ;
                         owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
                         owl:allValuesFrom mdo:Occupancy ;
-                        owl:onProperty mdo:hasOccupancy ] ) ] ;
+                        owl:onProperty mdo:hasOccupancy ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:SpaceGroup ;
+                        owl:onProperty mdo:hasSpaceGroup ] [ a owl:Restriction ;
+                        owl:onClass mdo:SpaceGroup ;
+                        owl:onProperty mdo:hasSpaceGroup ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ] ;
     skos:defintion "A crystal structure is described by both of the lattice geometry and atomic arrangements within the unit cell."@en .
 
 cso:Lattice a owl:Class ;
     rdfs:label "Lattice"@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasBasis ;
-                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:Basis ;
-                        owl:onProperty cso:hasBasis ] ) ],
+                        owl:onProperty cso:hasUnitCell ;
+                        owl:someValuesFrom cso:UnitCell ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:UnitCell ;
+                        owl:onProperty cso:hasUnitCell ] ) ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cso:hasCrystalSystem ;
@@ -603,26 +603,26 @@ cso:Lattice a owl:Class ;
                         owl:onProperty cso:hasCrystalSystem ] ) ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasUnitCell ;
-                        owl:someValuesFrom cso:UnitCell ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:UnitCell ;
-                        owl:onProperty cso:hasUnitCell ] ) ] ;
+                        owl:onProperty cso:hasBasis ;
+                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Basis ;
+                        owl:onProperty cso:hasBasis ] ) ] ;
     skos:defintion "A lattice defines a periodic arrangement of one or more atoms."@en .
 
 cso:UnitCell a owl:Class ;
     rdfs:label "Unit Cell"@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasLatticeParameterLength ;
-                        owl:someValuesFrom cso:LatticeParameterLength ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:LatticeParameterLength ;
-                        owl:onProperty cso:hasLatticeParameterLength ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cso:hasLatticeParameterAngle ;
                         owl:someValuesFrom cso:LatticeParameterAngle ] [ a owl:Restriction ;
                         owl:allValuesFrom cso:LatticeParameterAngle ;
-                        owl:onProperty cso:hasLatticeParameterAngle ] ) ] ;
+                        owl:onProperty cso:hasLatticeParameterAngle ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cso:hasLatticeParameterLength ;
+                        owl:someValuesFrom cso:LatticeParameterLength ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:LatticeParameterLength ;
+                        owl:onProperty cso:hasLatticeParameterLength ] ) ] ;
     skos:defintion "Basic structural unit or building block of the crystal structure and defines the crystal structure by virtue of its geometry and the atom positions within."@en .
 
 chebi:CHEBI_33250 a owl:Class ;
@@ -691,7 +691,7 @@ mdo:Basis a owl:Class ;
     rdfs:comment "A basis defines a spatial unit used to express fractional coordinates."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onClass mdo:CoordinateVector ;
-            owl:onProperty cso:hasSecondAxisVector ;
+            owl:onProperty cso:hasThirdAxisVector ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onClass mdo:CoordinateVector ;
@@ -699,7 +699,7 @@ mdo:Basis a owl:Class ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onClass mdo:CoordinateVector ;
-            owl:onProperty cso:hasThirdAxisVector ;
+            owl:onProperty cso:hasSecondAxisVector ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
     skos:defintion "Set of vector(in 2-D two vectors and in 3-D three vectors) that linearly independent."@en .
 
@@ -710,14 +710,14 @@ mdo:PointGroup a owl:Class ;
     rdfs:seeAlso "International Tables for Crystallography, Volume A, Fourth, revised edition, Section 8.1.5."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty cso:isPointGroupOf ;
-            owl:someValuesFrom cso:CrystalSystem ],
+            owl:someValuesFrom mdo:SpaceGroup ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:string ;
             owl:onProperty mdo:PointGroupHMName ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onProperty cso:isPointGroupOf ;
-            owl:someValuesFrom mdo:SpaceGroup ] .
+            owl:someValuesFrom cso:CrystalSystem ] .
 
 mdo:Occupancy a owl:Class ;
     rdfs:label "Occupancy"@en ;
@@ -740,17 +740,17 @@ mdo:Site a owl:Class ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:allValuesFrom mdo:CoordinateVector ;
-                        owl:onProperty mdo:hasCartesianCoordinates ] [ a owl:Restriction ;
-                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onClass mdo:CoordinateVector ;
-                        owl:onProperty mdo:hasCartesianCoordinates ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:CoordinateVector ;
                         owl:onProperty mdo:hasFractionalCoordinates ] [ a owl:Restriction ;
                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                         owl:onClass mdo:CoordinateVector ;
-                        owl:onProperty mdo:hasFractionalCoordinates ] ) ] ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] ) ] ;
     skos:defintion "A site is a point in a lattice."@en .
 
 mdo:Species a owl:Class ;
@@ -769,22 +769,22 @@ mdo:SpaceGroup a owl:Class ;
 First symbol defines the Bravais lattice centering, here is the cubic centering, C. The next three symbols defines symmetry elements with respect to viewing directions, which are different from crystal system to crystal system."""@en ;
     rdfs:seeAlso "International Tables for Crystallography, Volume !, Fourth, revised edition, Section 8.1.5."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty mdo:SpaceGroupSymbol ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
             owl:onDataRange xsd:integer ;
             owl:onProperty mdo:SpaceGroupID ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty mdo:SpaceGroupSymbol ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+            owl:onProperty cso:isSpaceGroupOf ;
+            owl:someValuesFrom cso:CrystalStructure ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty mdo:hasPointGroup ;
                         owl:someValuesFrom mdo:PointGroup ] [ a owl:Restriction ;
                         owl:allValuesFrom mdo:PointGroup ;
-                        owl:onProperty mdo:hasPointGroup ] ) ],
-        [ a owl:Restriction ;
-            owl:onProperty cso:isSpaceGroupOf ;
-            owl:someValuesFrom cso:CrystalStructure ] .
+                        owl:onProperty mdo:hasPointGroup ] ) ] .
 
 cso:CrystalSystem a owl:Class ;
     rdfs:label "Crystal System"@en ;
@@ -801,7 +801,7 @@ mdo:CoordinateVector a owl:Class ;
     rdfs:label "Coordinate Vector"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onDataRange xsd:double ;
-            owl:onProperty mdo:X_axisCoordinate ;
+            owl:onProperty mdo:Y_axisCoordinate ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:double ;
@@ -809,7 +809,7 @@ mdo:CoordinateVector a owl:Class ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:double ;
-            owl:onProperty mdo:Y_axisCoordinate ;
+            owl:onProperty mdo:X_axisCoordinate ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
     skos:defintion "A coordinate vector according to standard basis, i.e., e_x (1, 0, 0), e_y(0, 1, 0), and e_z (0, 0, 1)."@en .
 

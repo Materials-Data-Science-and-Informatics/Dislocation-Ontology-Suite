@@ -1,10 +1,12 @@
-### Crystal Structure Ontology
+### Crystal Structure Module
 
 Crystal Structure Ontology (CSO) is an ontology developed to represent crystallographic information needed to describe the dislocation. In CSO, several MDO classes are reused to describe the crystal coordinate system, motif/base in a crystal structure, point groups, and space groups. 
 The standard coordinate system is defined by `MDO:Basis` and `MDO:CoordinateVector` classes that CSO reuses. 
 The motif/base is an arrangement of chemical species in the crystal structure reuses `MDO:Occupancy`, `MDO:Site`, and `MDO:Species`. 
 Subsequently, to define the point groups and space groups of a crystal structure, `MDO:PointGroup` and `MDO:SpaceGroup` are reused. Lastly, to define the unit quantity of a property in CSO, the `QUDT:Quantity`, `QUDT:QuantityKind`, and `QUDT:QuantityValue` classes are reused.
-![CSO-classes-2](https://user-images.githubusercontent.com/71790028/165483629-0f66d3a9-cde7-4a35-a7b5-17d35429df02.png)
+
+![cso](https://github.com/Materials-Data-Science-and-Informatics/Dislocation-Ontology-Suite/assets/71790028/c8c7082c-ad27-458a-8172-a6d9d8910323)
+
 
 
 ### Project Structure
@@ -24,7 +26,16 @@ Subsequently, to define the point groups and space groups of a crystal structure
 ### Citation 
 please cite the following paper if you used any part of this work. 
 
-`@inproceedings{ihsan2021steps,
+`
+Ahmad Zainul Ihsan, Said Fathalla, and Stefan Sandfeld. 2023. DISO: A Domain
+Ontology for Modeling Dislocations in Crystalline Materials. In The 38th
+ACM/SIGAPP Symposium on Applied Computing (SAC ’23), March 27-March
+31, 2023, Tallinn, Estonia. ACM, New York, NY, USA, Article 4, 8 pages.
+https://doi.org/10.1145/3555776.3578739
+`
+
+`
+@inproceedings{ihsan2021steps,
 title={Steps towards a Dislocation Ontology for Crystalline Materials},
 author={Ahmad Zainul Ihsan and Danilo Dessì and Mehwish Alam and Harald Sack and Stefan Sandfeld},
 booktitle={Second International Workshop on Semantic Digital Twins },

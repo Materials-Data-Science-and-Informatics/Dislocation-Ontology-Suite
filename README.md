@@ -1,8 +1,9 @@
 # Dislocation Ontology Suite (DISOS)
-This repository is a home to Dislocation Ontology Suite (DISOS), an ontology suite comprising several modules describing materials scientific concepts, representations of dislocations, and different simulation models in the dislocation domain. Currently, DISOS comprises three ontologies, including: 
-* Dislocation Ontology ([DISO](https://purls.helmholtz-metadaten.de/disos/diso))
-* Crystal Structure Ontology ([CSO](https://purls.helmholtz-metadaten.de/disos/cso))
-* Crystallographic Defect Ontology ([CDO](https://purls.helmholtz-metadaten.de/disos/cdo))
+This repository is a home to Dislocation Ontology Suite (DISOS), an ontology suite comprising several modules describing materials scientific concepts, representations of dislocations, different simulation, and models in the dislocation domain. Currently, DISOS comprises four ontologies, including: 
+* Dislocation Ontology ([DISO](./DISO))
+* Crystal Structure Ontology ([CSO](./CSO))
+* Crystallographic Defect Ontology ([CDO](./CDO))
+* Dislocation Simulation and Model Ontology ([SIM](./SIM))
 
 ## Contact
 You may contact the author of DISOS via a.ihsan@fz-juelich.de

@@ -1,6 +1,4 @@
 import json
-import os
-from rdflib import Graph
 from rdf_serializer import rdf_serializer
 from pathlib import Path
 

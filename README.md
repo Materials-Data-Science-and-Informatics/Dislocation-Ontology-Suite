@@ -5,6 +5,9 @@ This repository is a home to Dislocation Ontology Suite (DISOS), an ontology sui
 * Crystallographic Defect Ontology ([CDO](./CDO))
 * Dislocation Simulation and Model Ontology ([SIM](./SIM))
 
+## Use cases
+You may visit [here](./use-cases) to see how DISOS annotate dislocation-related data.
+
 ## Contact
 You may contact the author of DISOS via a.ihsan@fz-juelich.de
 

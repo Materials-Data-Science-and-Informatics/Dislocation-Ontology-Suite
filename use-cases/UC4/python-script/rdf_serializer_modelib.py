@@ -267,7 +267,7 @@ def dislocation_structure_serializer(mat_info, cif_data, init_micro, node_data, 
         plane_normal_normalized = _normalized_vector(plane_normal)
 
         g.add((dislocation_structure, CDO.hasCrystallographicDefect, dislocation_loop))
-        g.add((dislocation_structure, DISO.relatesToCrystallineMaterial, crystal))
+        g.add((dislocation_structure, SIM.relatesToCrystallineMaterial, crystal))
         g.add((dislocation_loop, RDF.type, DISO.Dislocation))
         g.add((dislocation_loop, DISO.hasBurgersVector, Burgers_vector))
         g.add((dislocation_loop, DISO.movesOn, slip_plane))

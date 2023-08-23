@@ -34,9 +34,9 @@ def main():
 
     # Graph/Ontology population
     G = Graph()
-    IRI = 'http://dislockg.com/{}/'.format(uuid.uuid4())
-    person_IRI = 'http://dislockg.com/person/'
-    modelib_IRI = 'http://dislockg.com/'
+    IRI = 'http://example.org/dislocation-simulation/'
+    person_IRI = 'http://example.org/dislocation-simulation/person1'
+    modelib_IRI = 'http://example.org/dislocation-simulation/software/'
     ns = Namespace(IRI)
     person_ns = Namespace(person_IRI)
     modelib_ns = Namespace(modelib_IRI)

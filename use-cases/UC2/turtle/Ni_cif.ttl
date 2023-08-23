@@ -184,11 +184,11 @@ qudt:Quantity a owl:Class ;
     rdfs:isDefinedBy <http://qudt.org/2.0/schema/qudt>,
         <http://qudt.org/schema/qudt> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityValue ;
-            owl:onProperty qudt:quantityValue ],
-        [ a owl:Restriction ;
             owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:hasQuantityKind ] .
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityValue ;
+            owl:onProperty qudt:quantityValue ] .
 
 qudt:hasQuantityKind a owl:ObjectProperty ;
     rdfs:label "has quantity kind" ;
@@ -289,6 +289,7 @@ ex:Ni_cif_site_3 a mdo:Site ;
     mdo:hasFractionalCoordinates ex:Ni_cif_frac_coord_3 .
 
 ex:Ni_cif_slip_plane_0 a ns1:SlipPlane ;
+    ns1:familyPlaneMillerIndice "{111}"^^xsd:string ;
     ns1:hasNormalVector ex:Ni_cif_slip_plane_normal_0 ;
     ns1:hasSlipDirection ex:Ni_cif_slip_plane_0_slip_direction_0,
         ex:Ni_cif_slip_plane_0_slip_direction_1,
@@ -296,6 +297,7 @@ ex:Ni_cif_slip_plane_0 a ns1:SlipPlane ;
     ns1:planeMillerIndice "(11-1)"^^xsd:string .
 
 ex:Ni_cif_slip_plane_1 a ns1:SlipPlane ;
+    ns1:familyPlaneMillerIndice "{111}"^^xsd:string ;
     ns1:hasNormalVector ex:Ni_cif_slip_plane_normal_1 ;
     ns1:hasSlipDirection ex:Ni_cif_slip_plane_1_slip_direction_0,
         ex:Ni_cif_slip_plane_1_slip_direction_1,
@@ -303,6 +305,7 @@ ex:Ni_cif_slip_plane_1 a ns1:SlipPlane ;
     ns1:planeMillerIndice "(111)"^^xsd:string .
 
 ex:Ni_cif_slip_plane_2 a ns1:SlipPlane ;
+    ns1:familyPlaneMillerIndice "{111}"^^xsd:string ;
     ns1:hasNormalVector ex:Ni_cif_slip_plane_normal_2 ;
     ns1:hasSlipDirection ex:Ni_cif_slip_plane_2_slip_direction_0,
         ex:Ni_cif_slip_plane_2_slip_direction_1,
@@ -310,6 +313,7 @@ ex:Ni_cif_slip_plane_2 a ns1:SlipPlane ;
     ns1:planeMillerIndice "(1-11)"^^xsd:string .
 
 ex:Ni_cif_slip_plane_3 a ns1:SlipPlane ;
+    ns1:familyPlaneMillerIndice "{111}"^^xsd:string ;
     ns1:hasNormalVector ex:Ni_cif_slip_plane_normal_3 ;
     ns1:hasSlipDirection ex:Ni_cif_slip_plane_3_slip_direction_0,
         ex:Ni_cif_slip_plane_3_slip_direction_1,
@@ -724,40 +728,52 @@ qudt:Unit a owl:Class ;
 ex:Ni_cif_crystal_system a cso:Cubic .
 
 ex:Ni_cif_slip_plane_0_slip_direction_0 a ns1:SlipDirection ;
-    ns1:directionMillerIndice "[101]"^^xsd:string .
+    ns1:directionMillerIndice "[101]"^^xsd:string ;
+    ns1:familyDirectionMillerIndice "<110>"^^xsd:string .
 
 ex:Ni_cif_slip_plane_0_slip_direction_1 a ns1:SlipDirection ;
-    ns1:directionMillerIndice "[1-10]"^^xsd:string .
+    ns1:directionMillerIndice "[1-10]"^^xsd:string ;
+    ns1:familyDirectionMillerIndice "<110>"^^xsd:string .
 
 ex:Ni_cif_slip_plane_0_slip_direction_2 a ns1:SlipDirection ;
-    ns1:directionMillerIndice "[011]"^^xsd:string .
+    ns1:directionMillerIndice "[011]"^^xsd:string ;
+    ns1:familyDirectionMillerIndice "<110>"^^xsd:string .
 
 ex:Ni_cif_slip_plane_1_slip_direction_0 a ns1:SlipDirection ;
-    ns1:directionMillerIndice "[1-10]"^^xsd:string .
+    ns1:directionMillerIndice "[1-10]"^^xsd:string ;
+    ns1:familyDirectionMillerIndice "<110>"^^xsd:string .
 
 ex:Ni_cif_slip_plane_1_slip_direction_1 a ns1:SlipDirection ;
-    ns1:directionMillerIndice "[10-1]"^^xsd:string .
+    ns1:directionMillerIndice "[10-1]"^^xsd:string ;
+    ns1:familyDirectionMillerIndice "<110>"^^xsd:string .
 
 ex:Ni_cif_slip_plane_1_slip_direction_2 a ns1:SlipDirection ;
-    ns1:directionMillerIndice "[0-11]"^^xsd:string .
+    ns1:directionMillerIndice "[0-11]"^^xsd:string ;
+    ns1:familyDirectionMillerIndice "<110>"^^xsd:string .
 
 ex:Ni_cif_slip_plane_2_slip_direction_0 a ns1:SlipDirection ;
-    ns1:directionMillerIndice "[10-1]"^^xsd:string .
+    ns1:directionMillerIndice "[10-1]"^^xsd:string ;
+    ns1:familyDirectionMillerIndice "<110>"^^xsd:string .
 
 ex:Ni_cif_slip_plane_2_slip_direction_1 a ns1:SlipDirection ;
-    ns1:directionMillerIndice "[110]"^^xsd:string .
+    ns1:directionMillerIndice "[110]"^^xsd:string ;
+    ns1:familyDirectionMillerIndice "<110>"^^xsd:string .
 
 ex:Ni_cif_slip_plane_2_slip_direction_2 a ns1:SlipDirection ;
-    ns1:directionMillerIndice "[011]"^^xsd:string .
+    ns1:directionMillerIndice "[011]"^^xsd:string ;
+    ns1:familyDirectionMillerIndice "<110>"^^xsd:string .
 
 ex:Ni_cif_slip_plane_3_slip_direction_0 a ns1:SlipDirection ;
-    ns1:directionMillerIndice "[110]"^^xsd:string .
+    ns1:directionMillerIndice "[110]"^^xsd:string ;
+    ns1:familyDirectionMillerIndice "<110>"^^xsd:string .
 
 ex:Ni_cif_slip_plane_3_slip_direction_1 a ns1:SlipDirection ;
-    ns1:directionMillerIndice "[101]"^^xsd:string .
+    ns1:directionMillerIndice "[101]"^^xsd:string ;
+    ns1:familyDirectionMillerIndice "<110>"^^xsd:string .
 
 ex:Ni_cif_slip_plane_3_slip_direction_2 a ns1:SlipDirection ;
-    ns1:directionMillerIndice "[0-11]"^^xsd:string .
+    ns1:directionMillerIndice "[0-11]"^^xsd:string ;
+    ns1:familyDirectionMillerIndice "<110>"^^xsd:string .
 
 cso:BravaisLattice a owl:Class ;
     rdfs:label "Bravais Lattice"@en ;
@@ -1125,15 +1141,15 @@ ns1:LatticePlane a owl:Class ;
             owl:onDataRange xsd:string ;
             owl:onProperty ns1:planeMillerIndice ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom ns1:VectorOrigin ;
+            owl:onProperty ns1:hasVectorOrigin ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty ns1:hasLatticeDirection ;
                         owl:someValuesFrom ns1:LatticeDirection ] [ a owl:Restriction ;
                         owl:allValuesFrom ns1:LatticeDirection ;
                         owl:onProperty ns1:hasLatticeDirection ] ) ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom ns1:VectorOrigin ;
-            owl:onProperty ns1:hasVectorOrigin ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty ns1:hasLatticePoint ;
@@ -1170,27 +1186,27 @@ ns1:Dislocation a owl:Class ;
     rdfs:comment "Ein linearer oder eindimensionaler Defekt, um den herum einige der Atome falsch ausgerichtet sind. Im Mesoscale ist eine Versetzung ein linienförmiges Objekt, das eine Grenze darstellt, die die Regionen auf der Gleitebene, in denen ein Gleiten stattgefunden hat, von denen trennt, in denen dies nicht der Fall war."@de,
         "Linear or one-dimensional defect around which some of the atoms are misaligned. In the mesoscale, a dislocation is a line object that is a boundary separating the regions on the slip plane which have undergone slip from those that have not."@en,
         "The presence of dislocation introduces local disturbance of the atomic-level geometry."@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty ns1:movesOn ;
-            owl:someValuesFrom ns1:SlipPlane ],
-        [ a owl:Restriction ;
-            owl:onProperty ns1:observedBy ;
-            owl:someValuesFrom ns1:FieldIonMicroscopy ],
-        [ a owl:Restriction ;
-            owl:onProperty ns1:observedBy ;
-            owl:someValuesFrom ns1:TransmissionElectronMicroscopy ],
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty ns1:hasBurgersVector ;
+                        owl:someValuesFrom ns1:BurgersVector ] [ a owl:Restriction ;
+                        owl:allValuesFrom ns1:BurgersVector ;
+                        owl:onProperty ns1:hasBurgersVector ] ) ],
         [ a owl:Restriction ;
             owl:onProperty ns1:resultsIn ;
             owl:someValuesFrom ns1:LatticeDisplacement ],
         [ a owl:Restriction ;
             owl:onProperty ns1:hasMathematicalRepresentation ;
             owl:someValuesFrom ns1:Line ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty ns1:hasBurgersVector ;
-                        owl:someValuesFrom ns1:BurgersVector ] [ a owl:Restriction ;
-                        owl:allValuesFrom ns1:BurgersVector ;
-                        owl:onProperty ns1:hasBurgersVector ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty ns1:observedBy ;
+            owl:someValuesFrom ns1:FieldIonMicroscopy ],
+        [ a owl:Restriction ;
+            owl:onProperty ns1:movesOn ;
+            owl:someValuesFrom ns1:SlipPlane ],
+        [ a owl:Restriction ;
+            owl:onProperty ns1:observedBy ;
+            owl:someValuesFrom ns1:TransmissionElectronMicroscopy ],
         ns1:LineDefect .
 
 mdo:Basis a owl:Class ;
@@ -1202,11 +1218,11 @@ mdo:Basis a owl:Class ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onClass mdo:CoordinateVector ;
-            owl:onProperty cso:hasFirstAxisVector ;
+            owl:onProperty cso:hasThirdAxisVector ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onClass mdo:CoordinateVector ;
-            owl:onProperty cso:hasThirdAxisVector ;
+            owl:onProperty cso:hasFirstAxisVector ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
     skos:defintion "Set of vector(in 2-D two vectors and in 3-D three vectors) that linearly independent."@en .
 
@@ -1216,15 +1232,15 @@ mdo:PointGroup a owl:Class ;
         "In the symmetry point of view, a set of point groups (32 point groups) is classified into the crystal system. Note that the point group describes the symmetry of macroscopic or finite object, thus the Bravais lattice (translation symmetry) is negligible."@en ;
     rdfs:seeAlso "International Tables for Crystallography, Volume A, Fourth, revised edition, Section 8.1.5."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty mdo:PointGroupHMName ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
             owl:onProperty cso:isPointGroupOf ;
             owl:someValuesFrom mdo:SpaceGroup ],
         [ a owl:Restriction ;
             owl:onProperty cso:isPointGroupOf ;
-            owl:someValuesFrom cso:CrystalSystem ] .
+            owl:someValuesFrom cso:CrystalSystem ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty mdo:PointGroupHMName ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
 
 cso:Lattice a owl:Class ;
     rdfs:label "Lattice"@en ;
@@ -1232,28 +1248,10 @@ cso:Lattice a owl:Class ;
         "The mathematical concept to represent the periodicity of a crystal. A lattice defines a periodic arrangement of one or more atoms."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty ns1:hasLatticePoint ;
-                        owl:someValuesFrom ns1:LatticePoint ] [ a owl:Restriction ;
-                        owl:allValuesFrom ns1:LatticePoint ;
-                        owl:onProperty ns1:hasLatticePoint ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty ns1:hasLatticePlane ;
-                        owl:someValuesFrom ns1:LatticePlane ] [ a owl:Restriction ;
-                        owl:allValuesFrom ns1:LatticeDirection ;
-                        owl:onProperty ns1:hasLatticeDirection ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasBasis ;
-                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:Basis ;
-                        owl:onProperty cso:hasBasis ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty ns1:hasLatticeDirection ;
-                        owl:someValuesFrom ns1:LatticeDirection ] [ a owl:Restriction ;
-                        owl:allValuesFrom ns1:LatticeDirection ;
-                        owl:onProperty ns1:hasLatticeDirection ] ) ],
+                        owl:onProperty cso:hasCrystalSystem ;
+                        owl:someValuesFrom cso:CrystalSystem ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:CrystalSystem ;
+                        owl:onProperty cso:hasCrystalSystem ] ) ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cso:hasUnitCell ;
@@ -1262,10 +1260,28 @@ cso:Lattice a owl:Class ;
                         owl:onProperty cso:hasUnitCell ] ) ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasCrystalSystem ;
-                        owl:someValuesFrom cso:CrystalSystem ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:CrystalSystem ;
-                        owl:onProperty cso:hasCrystalSystem ] ) ] ;
+                        owl:onProperty ns1:hasLatticePlane ;
+                        owl:someValuesFrom ns1:LatticePlane ] [ a owl:Restriction ;
+                        owl:allValuesFrom ns1:LatticeDirection ;
+                        owl:onProperty ns1:hasLatticeDirection ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty ns1:hasLatticePoint ;
+                        owl:someValuesFrom ns1:LatticePoint ] [ a owl:Restriction ;
+                        owl:allValuesFrom ns1:LatticePoint ;
+                        owl:onProperty ns1:hasLatticePoint ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty ns1:hasLatticeDirection ;
+                        owl:someValuesFrom ns1:LatticeDirection ] [ a owl:Restriction ;
+                        owl:allValuesFrom ns1:LatticeDirection ;
+                        owl:onProperty ns1:hasLatticeDirection ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cso:hasBasis ;
+                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Basis ;
+                        owl:onProperty cso:hasBasis ] ) ] ;
     skos:defintion "A lattice defines a periodic arrangement of one or more atoms."@en .
 
 ns1:LatticeDirection a owl:Class ;
@@ -1273,16 +1289,16 @@ ns1:LatticeDirection a owl:Class ;
         "Lattice Direction"@en ;
     rdfs:comment "Die Vektorrichtung innerhalb des Gitters, die zwei Gitterpunkte verbindet."@de,
         "The vector direction inside the lattice that is connecting two lattice points."@en ;
-    rdfs:subClassOf [ a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty ns1:directionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty ns1:hasLatticePoint ;
                         owl:someValuesFrom ns1:LatticePoint ] [ a owl:Restriction ;
                         owl:allValuesFrom ns1:LatticePoint ;
                         owl:onProperty ns1:hasLatticePoint ] ) ],
-        [ a owl:Restriction ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty ns1:directionMillerIndice ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         cso:Vector,
         ns1:FamilyOfCrystalDirection .
 
@@ -1338,9 +1354,6 @@ cso:CrystalStructure a owl:Class ;
                         owl:onClass mdo:SpaceGroup ;
                         owl:onProperty mdo:hasSpaceGroup ;
                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom cso:Lattice ;
-            owl:onProperty cso:hasLattice ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty mdo:hasOccupancy ;
@@ -1349,16 +1362,19 @@ cso:CrystalStructure a owl:Class ;
                         owl:onProperty mdo:hasOccupancy ] ) ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty ns1:hasSlipSystem ;
-                        owl:someValuesFrom ns1:SlipSystem ] [ a owl:Restriction ;
-                        owl:allValuesFrom ns1:SlipSystem ;
-                        owl:onProperty ns1:hasSlipSystem ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty ns1:hasSlipPlane ;
                         owl:someValuesFrom ns1:SlipPlane ] [ a owl:Restriction ;
                         owl:allValuesFrom ns1:SlipPlane ;
-                        owl:onProperty ns1:hasSlipPlane ] ) ] ;
+                        owl:onProperty ns1:hasSlipPlane ] ) ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cso:Lattice ;
+            owl:onProperty cso:hasLattice ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty ns1:hasSlipSystem ;
+                        owl:someValuesFrom ns1:SlipSystem ] [ a owl:Restriction ;
+                        owl:allValuesFrom ns1:SlipSystem ;
+                        owl:onProperty ns1:hasSlipSystem ] ) ] ;
     skos:defintion "A crystal structure is described by both of the lattice geometry and atomic arrangements within the unit cell."@en .
 
 ns1:SlipPlaneNormal a owl:Class ;
@@ -1379,23 +1395,23 @@ mdo:SpaceGroup a owl:Class ;
         """The nomenclature consists of a maximum of four symbols for each space group, e.g., Fm-3m(Cubic)
 First symbol defines the Bravais lattice centering, here is the cubic centering, C. The next three symbols defines symmetry elements with respect to viewing directions, which are different from crystal system to crystal system."""@en ;
     rdfs:seeAlso "International Tables for Crystallography, Volume !, Fourth, revised edition, Section 8.1.5."@en ;
-    rdfs:subClassOf [ a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cso:isSpaceGroupOf ;
+            owl:someValuesFrom cso:CrystalStructure ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty mdo:SpaceGroupSymbol ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty mdo:hasPointGroup ;
                         owl:someValuesFrom mdo:PointGroup ] [ a owl:Restriction ;
                         owl:allValuesFrom mdo:PointGroup ;
                         owl:onProperty mdo:hasPointGroup ] ) ],
         [ a owl:Restriction ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty mdo:SpaceGroupSymbol ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
             owl:onDataRange xsd:integer ;
             owl:onProperty mdo:SpaceGroupID ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onProperty cso:isSpaceGroupOf ;
-            owl:someValuesFrom cso:CrystalStructure ] .
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
 
 ns1:SlipPlane a owl:Class ;
     rdfs:label "die Gleitebene"@de,
@@ -1404,19 +1420,19 @@ ns1:SlipPlane a owl:Class ;
         "The crystallographic/lattice plane along which the dislocation line traverses/moves. The slip plane is usually the plane with the highest density of atoms, i.e. most widely spaced."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty ns1:hasSlipDirection ;
-                        owl:someValuesFrom ns1:SlipDirection ] [ a owl:Restriction ;
-                        owl:allValuesFrom ns1:SlipDirection ;
-                        owl:onProperty ns1:hasSlipDirection ] ) ],
+                        owl:onProperty ns1:hasSlipPlaneNormal ;
+                        owl:someValuesFrom ns1:SlipPlaneNormal ] [ a owl:Restriction ;
+                        owl:allValuesFrom ns1:SlipPlaneNormal ;
+                        owl:onProperty ns1:hasSlipPlaneNormal ] ) ],
         [ a owl:Restriction ;
             owl:onProperty ns1:activeSlipPlane ;
             owl:someValuesFrom xsd:boolean ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty ns1:hasSlipPlaneNormal ;
-                        owl:someValuesFrom ns1:SlipPlaneNormal ] [ a owl:Restriction ;
-                        owl:allValuesFrom ns1:SlipPlaneNormal ;
-                        owl:onProperty ns1:hasSlipPlaneNormal ] ) ],
+                        owl:onProperty ns1:hasSlipDirection ;
+                        owl:someValuesFrom ns1:SlipDirection ] [ a owl:Restriction ;
+                        owl:allValuesFrom ns1:SlipDirection ;
+                        owl:onProperty ns1:hasSlipDirection ] ) ],
         ns1:LatticePlane .
 
 cso:CrystalSystem a owl:Class ;
@@ -1444,26 +1460,26 @@ ns1:SlipSystem a owl:Class ;
         "A slip system is defined as the set of slip planes with the same unit normal vector and the same slip direction."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty ns1:hasSlipPlaneNormal ;
-                        owl:someValuesFrom ns1:SlipPlaneNormal ] [ a owl:Restriction ;
-                        owl:allValuesFrom ns1:SlipPlaneNormal ;
-                        owl:onProperty ns1:hasSlipPlaneNormal ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty ns1:hasSlipDirection ;
                         owl:someValuesFrom ns1:SlipDirection ] [ a owl:Restriction ;
                         owl:allValuesFrom ns1:SlipDirection ;
-                        owl:onProperty ns1:hasSlipDirection ] ) ] .
+                        owl:onProperty ns1:hasSlipDirection ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty ns1:hasSlipPlaneNormal ;
+                        owl:someValuesFrom ns1:SlipPlaneNormal ] [ a owl:Restriction ;
+                        owl:allValuesFrom ns1:SlipPlaneNormal ;
+                        owl:onProperty ns1:hasSlipPlaneNormal ] ) ] .
 
 mdo:CoordinateVector a owl:Class ;
     rdfs:label "Coordinate Vector"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onDataRange xsd:double ;
-            owl:onProperty mdo:Y_axisCoordinate ;
+            owl:onProperty mdo:X_axisCoordinate ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:double ;
-            owl:onProperty mdo:X_axisCoordinate ;
+            owl:onProperty mdo:Y_axisCoordinate ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:double ;

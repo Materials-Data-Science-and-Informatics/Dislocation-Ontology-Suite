@@ -1,7 +1,6 @@
 from rdflib import Graph, Literal
 from rdflib.namespace import  Namespace, RDF, XSD
 
-
 #crystal structure ontology
 CSO = Namespace("https://purls.helmholtz-metadaten.de/disos/cso#")
 DISO = Namespace("https://purls.helmholtz-metadaten.de/disos/diso#")
@@ -96,16 +95,18 @@ def rdf_serializer(cif_dict, space_group, slip_plane_configs, slip_plane_normals
         g.add((frac_coord, MDO.X_axisCoordinate, Literal(cif_dict['_atom_site_fract_x'][i], datatype=XSD.double)))
         g.add((frac_coord, MDO.Y_axisCoordinate, Literal(cif_dict['_atom_site_fract_y'][i], datatype=XSD.double)))
         g.add((frac_coord, MDO.Z_axisCoordinate, Literal(cif_dict['_atom_site_fract_z'][i], datatype=XSD.double))) 
-
+       
         # add data about slip system, slip direction, slip      
         for (i, (key, list_item)) in enumerate(slip_plane_configs.items()):
             g.add((crystal_structure, DISO.hasSlipPlane, example['{}_slip_plane_{}'.format(mat_id, i)]))
             g.add((example['{}_slip_plane_{}'.format(mat_id,i)], RDF.type, DISO.SlipPlane))
             g.add((example['{}_slip_plane_{}'.format(mat_id,i)], DISO.planeMillerIndice, Literal(key, datatype=XSD.string)))
+            g.add((example['{}_slip_plane_{}'.format(mat_id,i)], DISO.familyPlaneMillerIndice, Literal('{111}', datatype=XSD.string)))
             for (j, item) in enumerate(list_item):
                 g.add((example['{}_slip_plane_{}_slip_direction_{}'.format(mat_id,i,j)], RDF.type, DISO.SlipDirection))
                 g.add((example['{}_slip_plane_{}'.format(mat_id,i)], DISO.hasSlipDirection, example['{}_slip_plane_{}_slip_direction_{}'.format(mat_id,i,j)]))
                 g.add((example['{}_slip_plane_{}_slip_direction_{}'.format(mat_id,i,j)], DISO.directionMillerIndice, Literal(item, datatype=XSD.string)))
+                g.add((example['{}_slip_plane_{}_slip_direction_{}'.format(mat_id,i,j)], DISO.familyDirectionMillerIndice, Literal('<110>', datatype=XSD.string)))
         
         for (i, (key, list_item)) in enumerate(slip_plane_normals.items()):
             for item in list_item:

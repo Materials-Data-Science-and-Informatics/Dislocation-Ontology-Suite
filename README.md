@@ -1,5 +1,5 @@
 # Dislocation Ontology Suite (DISOS)
-This repository is a home to Dislocation Ontology Suite (DISOS), an ontology suite comprising several modules describing materials scientific concepts, representations of dislocations, different simulation, and models in the dislocation domain. Currently, DISOS comprises four ontologies, including: 
+This repository is a home to Dislocation Ontology Suite (DISOS), an ontology suite comprising several modules describing materials scientific concepts, representations of dislocations, simulation, and model in the dislocation domain. Currently, DISOS comprises four ontologies, including: 
 * Dislocation Ontology ([DISO](./DISO))
 * Crystal Structure Ontology ([CSO](./CSO))
 * Crystallographic Defect Ontology ([CDO](./CDO))

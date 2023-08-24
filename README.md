@@ -9,7 +9,7 @@ This repository is a home to Dislocation Ontology Suite (DISOS), an ontology sui
 
 
 ## Use cases
-You may visit [here](./use-cases) to see how DISOS annotate dislocation-related data.
+You may visit [here](./use-cases) to see how DISOS transform dislocation-related data into linked data.
 
 ## Contact
 You may contact the author of DISOS via a.ihsan@fz-juelich.de

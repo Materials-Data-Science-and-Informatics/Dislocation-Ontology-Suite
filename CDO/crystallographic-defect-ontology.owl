@@ -136,7 +136,6 @@
     <!-- http://emmo.info/domain-crystallography/crystallography#EMMO_69dab453_6596_464d_a21d_d64643f4ed9b -->
 
     <owl:Class rdf:about="http://emmo.info/domain-crystallography/crystallography#EMMO_69dab453_6596_464d_a21d_d64643f4ed9b">
-        <owl:equivalentClass rdf:resource="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial"/>
         <rdfs:subClassOf rdf:resource="http://emmo.info/emmo#EMMO_a2b006f2_bbfd_4dba_bcaa_3fca20cd6be1"/>
         <skos:prefLabel xml:lang="en">Crystal</skos:prefLabel>
     </owl:Class>
@@ -163,6 +162,7 @@
     <!-- https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/disos/cdo#CrystallineMaterial">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/domain-crystallography/crystallography#EMMO_69dab453_6596_464d_a21d_d64643f4ed9b"/>
         <rdfs:subClassOf rdf:resource="http://emmo.info/emmo#EMMO_a2b006f2_bbfd_4dba_bcaa_3fca20cd6be1"/>
         <rdfs:subClassOf>
             <owl:Class>

@@ -13,6 +13,8 @@ The code is licensed under the [MIT license](./LICENSE). Copyright © 2022.
 ## Acknowledgements
 * European Research Council through the ERC Grant Agreement No. 759419 MuDiLingo (”A Multiscale Dislocation Language for Data-Driven Materials Science”)
 * Helmholtz Metadata Collaboration (HMC) within the Hub Information at the Forschungszentrum Jülich.
+* This work is funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under the National Research Data Infrastructure – NFDI 38/1 – project number 460247524.
+
 
 ## Citation 
 please cite the following paper if you used any part of this work. 
